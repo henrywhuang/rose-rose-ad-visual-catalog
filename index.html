@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rose Rose 爆款廣告視覺目錄</title>
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --ink: #221f1b;
+      --muted: #746b61;
+      --line: #ded4c8;
+      --panel: #fffdf9;
+      --accent: #b64f2a;
+      --accent-2: #2d7467;
+      --soft: #f0e5d8;
+      --shadow: 0 16px 44px rgba(47, 35, 25, .12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      letter-spacing: 0;
+    }
+    a { color: inherit; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px clamp(16px, 4vw, 44px);
+      background: rgba(247, 243, 238, .92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+    .brand strong { font-size: 16px; }
+    .brand span { color: var(--muted); font-size: 12px; }
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .btn {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 12px;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+      gap: clamp(20px, 4vw, 44px);
+      align-items: center;
+      padding: clamp(22px, 5vw, 56px) clamp(16px, 4vw, 44px) 22px;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(30px, 5vw, 64px);
+      line-height: 1.04;
+      font-weight: 760;
+    }
+    .hero p {
+      max-width: 680px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: clamp(14px, 1.8vw, 18px);
+      line-height: 1.6;
+    }
+    .hero-media {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--soft);
+      box-shadow: var(--shadow);
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+      max-width: 560px;
+    }
+    .stat {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 249, .7);
+    }
+    .stat b { display: block; font-size: 22px; }
+    .stat span { display: block; margin-top: 2px; color: var(--muted); font-size: 12px; }
+    main {
+      padding: 18px clamp(16px, 4vw, 44px) 56px;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 0 18px;
+      border-top: 1px solid var(--line);
+    }
+    .tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 249, .68);
+    }
+    .tab {
+      border: 0;
+      border-radius: 5px;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .tab.active {
+      background: var(--ink);
+      color: #fff;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: right;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(47, 35, 25, .07);
+    }
+    .visual {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 0;
+      padding: 0;
+      background: #eee;
+      cursor: zoom-in;
+      display: block;
+    }
+    .visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .meta {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .badge {
+      align-self: flex-start;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 11px;
+      font-weight: 650;
+      background: #ece6df;
+      color: var(--muted);
+    }
+    .badge.scale { background: #fae4da; color: var(--accent); }
+    .badge.stable { background: #dff0ea; color: var(--accent-2); }
+    .title {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.35;
+      font-weight: 720;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      padding-top: 2px;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+      min-width: 0;
+      background: #fffaf4;
+    }
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+    .metric b {
+      display: block;
+      margin-top: 3px;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(22, 18, 14, .76);
+    }
+    .modal.open { display: flex; }
+    .modal-inner {
+      width: min(960px, 100%);
+      max-height: 92vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      background: var(--panel);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .modal-img {
+      min-height: 0;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-img img {
+      width: 100%;
+      max-height: 92vh;
+      object-fit: contain;
+      display: block;
+    }
+    .modal-info {
+      padding: 18px;
+      overflow: auto;
+      border-left: 1px solid var(--line);
+    }
+    .close {
+      width: 100%;
+      margin-top: 14px;
+    }
+    @media (max-width: 880px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-media { max-height: 58vh; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .modal-inner { grid-template-columns: 1fr; }
+      .modal-info { border-left: 0; border-top: 1px solid var(--line); }
+    }
+    @media (max-width: 560px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .actions { justify-content: flex-start; }
+      .stats { grid-template-columns: 1fr; }
+      .controls { align-items: flex-start; flex-direction: column; }
+      .updated { text-align: left; }
+      .grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <strong>Rose Rose 廣告視覺目錄</strong>
+      <span>TW Reading H5 領課 · Meta 投放調控</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="catalog.csv" download>下載 CSV</a>
+      <a class="btn primary" href="download/Rose_Rose_ad_visual_catalog.zip" download>下載素材包</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>爆款廣告視覺目錄</h1>
+      <p>整理 Arkio 投放調控中建議加預算與穩定運行的 Reading 廣告視覺，方便快速對照素材、預算建議與近 7 日表現。</p>
+      <div class="stats">
+        <div class="stat"><b id="stat-total">9</b><span>總視覺數</span></div>
+        <div class="stat"><b id="stat-scale">5</b><span>建議加預算</span></div>
+        <div class="stat"><b id="stat-stable">4</b><span>穩定運行</span></div>
+      </div>
+    </div>
+    <a class="hero-media" href="contact_sheet.jpg" target="_blank" rel="noreferrer">
+      <img src="contact_sheet.jpg" alt="廣告視覺總覽">
+    </a>
+  </section>
+
+  <main>
+    <div class="controls">
+      <div class="tabs" aria-label="篩選">
+        <button class="tab active" type="button" data-filter="all">全部</button>
+        <button class="tab" type="button" data-filter="建議加預算">建議加預算</button>
+        <button class="tab" type="button" data-filter="穩定運行">穩定運行</button>
+      </div>
+      <div class="updated" id="updated">資料載入中</div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="素材預覽">
+    <div class="modal-inner">
+      <div class="modal-img"><img id="modal-img" alt=""></div>
+      <div class="modal-info">
+        <span class="badge" id="modal-badge"></span>
+        <h2 class="title" id="modal-title"></h2>
+        <p class="sub" id="modal-sub"></p>
+        <div class="metrics" id="modal-metrics"></div>
+        <button class="btn close" type="button" id="close">關閉</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const state = { items: [], filter: 'all' };
+    const grid = document.querySelector('#grid');
+    const modal = document.querySelector('#modal');
+    const fmt = (v, prefix = '') => v === null || v === undefined || v === '' ? '—' : `${prefix}${v}`;
+    const groupClass = group => group === '建議加預算' ? 'scale' : 'stable';
+
+    function metric(label, value) {
+      return `<div class="metric"><span>${label}</span><b>${value}</b></div>`;
+    }
+
+    function render() {
+      const items = state.filter === 'all' ? state.items : state.items.filter(item => item.group === state.filter);
+      grid.innerHTML = items.map(item => `
+        <article class="card">
+          <button class="visual" type="button" data-id="${item.id}" aria-label="開啟 ${item.adsetName}">
+            <img src="${item.image}" alt="${item.adsetName}" loading="lazy">
+          </button>
+          <div class="meta">
+            <span class="badge ${groupClass(item.group)}">${item.group}</span>
+            <h2 class="title">${item.adsetName}</h2>
+            <div class="sub">${item.adName || item.campaignName}</div>
+            <div class="metrics">
+              ${metric('CPL', fmt(item.primaryCost, '$'))}
+              ${metric('預算', `${fmt(item.dailyBudget)}→${fmt(item.suggestedBudget)}`)}
+              ${metric('7日領課', fmt(item.last7Leads))}
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function openModal(item) {
+      document.querySelector('#modal-img').src = item.image;
+      document.querySelector('#modal-img').alt = item.adsetName;
+      document.querySelector('#modal-badge').textContent = item.group;
+      document.querySelector('#modal-badge').className = `badge ${groupClass(item.group)}`;
+      document.querySelector('#modal-title').textContent = item.adsetName;
+      document.querySelector('#modal-sub').textContent = `${item.campaignName} · ${item.adName || ''}`;
+      document.querySelector('#modal-metrics').innerHTML = [
+        metric('建議', item.adviceText || '—'),
+        metric('CPL', fmt(item.primaryCost, '$')),
+        metric('預算', `${fmt(item.dailyBudget)}→${fmt(item.suggestedBudget)}`),
+        metric('7日花費', fmt(item.last7Spend, '$')),
+        metric('7日領課', fmt(item.last7Leads)),
+        metric('狀態', item.adsetStatus || '—')
+      ].join('');
+      modal.classList.add('open');
+    }
+
+    document.querySelector('.tabs').addEventListener('click', event => {
+      const button = event.target.closest('.tab');
+      if (!button) return;
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      button.classList.add('active');
+      state.filter = button.dataset.filter;
+      render();
+    });
+
+    grid.addEventListener('click', event => {
+      const button = event.target.closest('.visual');
+      if (!button) return;
+      const item = state.items.find(row => row.id === button.dataset.id);
+      if (item) openModal(item);
+    });
+
+    document.querySelector('#close').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', event => {
+      if (event.target === modal) modal.classList.remove('open');
+    });
+    window.addEventListener('keydown', event => {
+      if (event.key === 'Escape') modal.classList.remove('open');
+    });
+
+    fetch('data/catalog.json')
+      .then(res => res.json())
+      .then(data => {
+        state.items = data.items;
+        document.querySelector('#stat-total').textContent = data.items.length;
+        document.querySelector('#stat-scale').textContent = data.items.filter(item => item.group === '建議加預算').length;
+        document.querySelector('#stat-stable').textContent = data.items.filter(item => item.group === '穩定運行').length;
+        document.querySelector('#updated').textContent = `Arkio 更新：${data.lastUpdated}`;
+        render();
+      })
+      .catch(() => {
+        document.querySelector('#updated').textContent = '資料載入失敗';
+      });
+  </script>
+</body>
+</html>
