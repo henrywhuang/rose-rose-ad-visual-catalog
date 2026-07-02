@@ -347,7 +347,7 @@
     <div class="actions">
       <a class="btn" href="catalog.csv" download>下載 CSV</a>
       <a class="btn primary" href="download/Rose_Rose_ad_visual_catalog.zip" download>下載素材包</a>
-      <a class="btn primary" href="download/Rose_Rose_round1_ab.zip" download>下載迭代素材包</a>
+      <a class="btn primary" href="download/Rose_Rose_round2_template_ab.zip" download>下載模板迭代包</a>
     </div>
   </header>
 
@@ -379,10 +379,10 @@
     <section class="iteration-section" aria-labelledby="iteration-title">
       <div class="section-head">
         <div>
-          <h2 id="iteration-title">Round 1 A/B 迭代視覺</h2>
-          <p>從已下載的爆款素材中挑選 4 個主題，每個主題各做 2 張內容完全一致、只有配色不同的 A/B 測試圖，並附 Meta 投放用標題、長短文案、投放主文與受眾建議。</p>
+          <h2 id="iteration-title">Round 2 Template A/B 迭代視覺</h2>
+          <p>這版依 template_rules.md 與 template_library，直接用 4 張爆款母版重製。每個模板各 2 張，內容與版型一致，只替換配色，並附 Meta 投放用標題、長短文案、投放主文與受眾建議。</p>
         </div>
-        <a class="btn" href="data/round1_ab.csv" download>下載迭代文案 CSV</a>
+        <a class="btn" href="data/round2_template_ab.csv" download>下載模板文案 CSV</a>
       </div>
       <div class="iteration-grid" id="iteration-grid"></div>
     </section>
@@ -437,11 +437,11 @@
     function renderIterations(items) {
       iterationGrid.innerHTML = items.map(item => `
         <article class="card">
-          <a class="visual" href="${item.image}" target="_blank" rel="noreferrer" aria-label="開啟 ${item.theme} ${item.variant}">
-            <img src="${item.image}" alt="${item.theme} ${item.variant}">
+          <a class="visual" href="${item.image}" target="_blank" rel="noreferrer" aria-label="開啟 ${item.template || item.theme} ${item.variant}">
+            <img src="${item.image}" alt="${item.template || item.theme} ${item.variant}">
           </a>
           <div class="meta">
-            <span class="badge">${item.theme} ${item.variant} · ${item.palette}</span>
+            <span class="badge">${item.theme_id || ''} ${item.variant} · ${item.template || item.theme} · ${item.palette}</span>
             <h3 class="title">${item.title}</h3>
             <div class="copy-lines">
               <span><b>短文案：</b>${item.short_copy}</span>
@@ -512,7 +512,7 @@
         document.querySelector('#updated').textContent = '資料載入失敗';
       });
 
-    fetch('data/round1_ab.json')
+    fetch('data/round2_template_ab.json')
       .then(res => res.json())
       .then(data => renderIterations(data.items))
       .catch(() => {
