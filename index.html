@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
   <title>Rose Rose 爆款廣告視覺目錄</title>
   <style>
     :root {
@@ -162,6 +163,43 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
     }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 36px 0 16px;
+      border-top: 1px solid var(--line);
+      margin-top: 34px;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1.15;
+    }
+    .section-head p {
+      max-width: 660px;
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .iteration-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .copy-lines {
+      display: grid;
+      gap: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .copy-lines b {
+      color: var(--ink);
+      font-weight: 720;
+    }
     .card {
       overflow: hidden;
       border-radius: 8px;
@@ -283,6 +321,8 @@
       .hero { grid-template-columns: 1fr; }
       .hero-media { max-height: 58vh; }
       .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .iteration-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-head { align-items: flex-start; flex-direction: column; }
       .modal-inner { grid-template-columns: 1fr; }
       .modal-info { border-left: 0; border-top: 1px solid var(--line); }
     }
@@ -293,6 +333,7 @@
       .controls { align-items: flex-start; flex-direction: column; }
       .updated { text-align: left; }
       .grid { grid-template-columns: 1fr; }
+      .iteration-grid { grid-template-columns: 1fr; }
       .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
@@ -306,6 +347,7 @@
     <div class="actions">
       <a class="btn" href="catalog.csv" download>下載 CSV</a>
       <a class="btn primary" href="download/Rose_Rose_ad_visual_catalog.zip" download>下載素材包</a>
+      <a class="btn primary" href="download/Rose_Rose_round1_ab.zip" download>下載迭代素材包</a>
     </div>
   </header>
 
@@ -334,6 +376,16 @@
       <div class="updated" id="updated">資料載入中</div>
     </div>
     <div class="grid" id="grid"></div>
+    <section class="iteration-section" aria-labelledby="iteration-title">
+      <div class="section-head">
+        <div>
+          <h2 id="iteration-title">Round 1 A/B 迭代視覺</h2>
+          <p>從已下載的爆款素材中挑選 4 個主題，每個主題各做 2 張內容完全一致、只有配色不同的 A/B 測試圖，並附 Meta 投放用標題、長短文案、投放主文與受眾建議。</p>
+        </div>
+        <a class="btn" href="data/round1_ab.csv" download>下載迭代文案 CSV</a>
+      </div>
+      <div class="iteration-grid" id="iteration-grid"></div>
+    </section>
   </main>
 
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="素材預覽">
@@ -352,6 +404,7 @@
   <script>
     const state = { items: [], filter: 'all' };
     const grid = document.querySelector('#grid');
+    const iterationGrid = document.querySelector('#iteration-grid');
     const modal = document.querySelector('#modal');
     const fmt = (v, prefix = '') => v === null || v === undefined || v === '' ? '—' : `${prefix}${v}`;
     const groupClass = group => group === '建議加預算' ? 'scale' : 'stable';
@@ -375,6 +428,28 @@
               ${metric('CPL', fmt(item.primaryCost, '$'))}
               ${metric('預算', `${fmt(item.dailyBudget)}→${fmt(item.suggestedBudget)}`)}
               ${metric('7日領課', fmt(item.last7Leads))}
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderIterations(items) {
+      iterationGrid.innerHTML = items.map(item => `
+        <article class="card">
+          <a class="visual" href="${item.image}" target="_blank" rel="noreferrer" aria-label="開啟 ${item.theme} ${item.variant}">
+            <img src="${item.image}" alt="${item.theme} ${item.variant}">
+          </a>
+          <div class="meta">
+            <span class="badge">${item.theme} ${item.variant} · ${item.palette}</span>
+            <h3 class="title">${item.title}</h3>
+            <div class="copy-lines">
+              <span><b>短文案：</b>${item.short_copy}</span>
+              <span><b>長文案：</b>${item.long_copy}</span>
+              <span><b>投放主文：</b>${item.primary_text}</span>
+              <span><b>Headline：</b>${item.headline}</span>
+              <span><b>CTA：</b>${item.cta}</span>
+              <span><b>受眾：</b>${item.audience}</span>
             </div>
           </div>
         </article>
@@ -435,6 +510,13 @@
       })
       .catch(() => {
         document.querySelector('#updated').textContent = '資料載入失敗';
+      });
+
+    fetch('data/round1_ab.json')
+      .then(res => res.json())
+      .then(data => renderIterations(data.items))
+      .catch(() => {
+        iterationGrid.innerHTML = '<div class="sub">迭代資料載入失敗</div>';
       });
   </script>
 </body>
