@@ -29,6 +29,8 @@ header .meta{color:var(--sub);font-size:12.5px}
 .obj .otitle{font-size:14.5px;font-weight:800}
 .obj .otitle .tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;font-weight:700;
   border-radius:6px;padding:1px 7px;margin-right:7px;vertical-align:1px}
+.obj .ometric{font-size:11.8px;color:var(--warn);background:#181c10;border:1px solid #3a3714;
+  border-radius:8px;padding:5px 9px;margin:8px 0 2px;line-height:1.5}
 .obj ul{margin:9px 0 0;padding-left:0;list-style:none}
 .obj li{font-size:12.8px;color:var(--txt);padding:4px 0 4px 0;border-top:1px dashed var(--line);display:flex;gap:8px}
 .obj li:first-child{border-top:none}
@@ -74,6 +76,8 @@ tr:first-child td{border-top:none}
 .mtype.推進{background:#1e2540;color:#a5b4fc;border:1px solid #313a63}
 .mtype.完成{background:#0f2a1a;color:#86efac;border:1px solid #1f4d33}
 .mtype.階段{background:#2a2410;color:#fcd34d;border:1px solid #4a3f14}
+.mtype.常態{background:#0f2427;color:#5eead4;border:1px solid #164e4a}
+.mtype.決策{background:#2a1030;color:#f0abfc;border:1px solid #4a1e52}
 .tasktext{color:var(--txt)}
 td.c-status{width:104px} td.c-note{width:180px}
 
@@ -146,85 +150,116 @@ textarea.note::placeholder{color:#4b5674}
    ========================================================================= */
 const OKR_DATA = {
   meta:{
-    title:"黃威豪｜Q3 OKR 執行時間線",
+    title:"黃威豪｜2026 Q3 OKR 執行時間線",
     period:"2026 Q3 · 7 / 8 / 9 月（以週為單位）",
     updated:"2026-07-15",
-    isSample:true            // true 時顯示黃色「範例」提示條
+    isSample:false
   },
   objectives:[
-    { code:"O1", title:"（範例）穩定並擴大自有流量池體驗營進量",
+    { code:"O1", title:"TW 自有流量池（Read ROI ≥ 0.8、English ROI ≥ 10）",
+      metric:"季度領課：Read ≥1250（7/8/9月 440/420/390）｜English ≥2600（880/880/840）｜Math 新增 ≥1440（520/470/450）",
       krs:[
-        {code:"KR1", title:"閱讀池月均進量 87 → ≥ 100 人/期"},
-        {code:"KR2", title:"建立渠道紅綠燈監控週報，覆蓋率 100%"},
-        {code:"KR3", title:"英語池核心渠道（官方-Meta）佔比穩定 ≥ 40%"},
+        {code:"KR1", title:"值班→英語鉤子鏈路：Q3 英語值班 ≥8 次，輸出 ≥3 家長洞察，組裝 ≥1 組季度英語主題鉤子，≥2 渠道穩定供量（週 ≥20 人）"},
+        {code:"KR2", title:"跨科/回歸 campaign 鏈路：8月測『數入口帶閱讀+英語』、9月決定放大或切換；週目標 Read≥110/105/98、Eng≥220/220/210、Math≥130/118/113"},
+        {code:"KR3", title:"Math 擴科自動化：季度新增領課 ≥1440，自動化發送占總量 ≥80%"},
       ]},
-    { code:"O2", title:"（範例）AI 素材產線把爆款廣告產出效率翻倍",
+    { code:"O2", title:"TW Reading 投放（領課 3360、ROI ≥0.8；English K2 領課 50、ROI ≥10）",
+      metric:"投放領課：Reading ≥3360（7/8/9月 1100/1200/1060）｜English K2 ≥45（月均15）；成本 CPL Read ≤5、Eng ≤12 美元",
       krs:[
-        {code:"KR4", title:"AI 素材產線 SOP 定版，單批出圖 ≤ 30 分"},
-        {code:"KR5", title:"TW/EN/ES/JP 四語系各 ≥ 2 組爆款素材上架"},
-        {code:"KR6", title:"素材 A/B 測試建立回饋閉環，勝出率 ≥ 30%"},
+        {code:"KR1", title:"穩定投放補量：Reading 領課 ≥3360（週均 ≥280、工作日均 ≥38），週四五補量至當週目標 ≥70%；週三未達140/週四未達160 即判散熱"},
+        {code:"KR2", title:"補齊 Q2 預算調配：每週上新 5–8 套廣告(含AB)、月均 ≥20 套，每週 1 輪預算調整+素材迭代，守住 CPL"},
+        {code:"KR3", title:"廣告靈感自動化 workflow v1：3 類來源（去年同期/近14日勝出/監控台加碼）打通全流程，Q3 跑 ≥2 輪驗證"},
+      ]},
+    { code:"O3", title:"個人成長 — 建立台灣業務 AI campaign 能力（支撐 O1、O2）",
+      metric:"用 AI 支撐主題、鉤子、渠道配置、checkpoint 與儀表盤，打通可交給 AI 的鏈路",
+      krs:[
+        {code:"KR1", title:"AI 回覆規則庫 v2：修訂 ≥100 則留言、沉澱 ≥30 條 FAQ/話術、輸出 ≥3 洞察，Q3 ≥2 版迭代"},
+        {code:"KR2", title:"業務自動化 v1：打通 2 條主題鏈路，≥40% 高頻任務可 AI 觸發"},
+        {code:"KR3", title:"AI 獨立主導 ≥1 個完整 campaign（英語鉤子+跨科），產出可複用 AI campaign 包"},
+        {code:"KR4", title:"月度 AI checkpoint ×3：go/hold/stop 決策，累積 ≥5 個 AI 解題案例"},
       ]},
   ],
   months:[
-    { name:"7月", note:"打底 · 監控上線 · SOP 初版",
+    { name:"7月", note:"打底 · 自動化佈置 · 英語見習",
       weeks:[
         { code:"7W1", label:"W1", range:"7/1–7/6", tasks:[
-          {id:"t7a", kr:"KR2", type:"開始", text:"盤點 9 條渠道口徑，定義紅綠燈閾值（平均±1σ）"},
-          {id:"t7b", kr:"KR4", type:"開始", text:"整理現行 AI 出圖流程痛點，列 SOP 草綱"},
+          {id:"m7w1a", kr:"O1·KR3", type:"開始", text:"Jomath Admin 佈置話術、AB 策略測試（7月內完成）"},
+          {id:"m7w1b", kr:"O2·KR2", type:"開始", text:"首件預算調控：練習獨立完成一週預算分配，Arkio 做加碼判讀"},
+          {id:"m7w1c", kr:"O2·KR3", type:"開始", text:"打通『來源→brief→文案→版型→圖片』靈感自動化鏈路"},
+          {id:"m7w1d", kr:"O3·KR2", type:"開始", text:"打通第 1 條主題自動化主流程（值班→流量池→brief→素材→上架→回看）"},
         ]},
         { code:"7W2", label:"W2", range:"7/7–7/13", tasks:[
-          {id:"t7c", kr:"KR2", type:"推進", text:"產出第一版流量池渠道週報並回報行銷部"},
-          {id:"t7d", kr:"KR5", type:"推進", text:"TW / EN 各出 1 組 P2 素材測試"},
+          {id:"m7w2a", kr:"O2·KR1", type:"常態", text:"建立投放補量節奏：週一二上新、週三看起量、週四五補量至週目標 ≥70%（Q3 常態）"},
+          {id:"m7w2b", kr:"O2·KR2", type:"常態", text:"每週上新 5–8 套廣告(含AB版)、月均 ≥20 套，每週 1 輪預算調整＋素材迭代"},
         ]},
         { code:"7W3", label:"W3", range:"7/14–7/20", tasks:[
-          {id:"t7e", kr:"KR1", type:"階段", text:"閱讀池月均達 ≥ 92 人/期（往 100 推進）"},
-          {id:"t7f", kr:"KR4", type:"推進", text:"SOP 初版定稿，內部試跑一輪"},
+          {id:"m7w3a", kr:"O3·KR4", type:"開始", text:"建立月度 AI checkpoint 機制：分析月目標/週進度/危險值，出 go/hold/stop"},
+          {id:"m7w3b", kr:"O1·KR3", type:"推進", text:"數學擴科 AB 策略測試推進，確認自動化推送配置"},
         ]},
         { code:"7W4", label:"W4", range:"7/21–7/27", tasks:[
-          {id:"t7g", kr:"KR3", type:"推進", text:"英語池官方-Meta 佔比監控，調整投放配比"},
-          {id:"t7h", kr:"KR5", type:"完成", text:"ES / JP 各 1 組素材上架"},
+          {id:"m7w4a", kr:"O1·KR1", type:"開始", text:"英語班見習（7月 W4–W5），採集家長語言洞察"},
+          {id:"m7w4b", kr:"O3·KR1", type:"開始", text:"見習同步修訂 AI 回覆規則庫主問題（v2 起步）"},
         ]},
         { code:"7W5", label:"W5", range:"7/28–7/31", tasks:[
-          {id:"t7i", kr:"KR2", type:"完成", text:"7 月渠道監控週報 4 週全數交付"},
+          {id:"m7w5a", kr:"O1·KR3", type:"完成", text:"完成 Jomath Admin 話術佈置＋AB 策略測試（7月里程碑）"},
+          {id:"m7w5b", kr:"O3·KR2", type:"完成", text:"完成第 1 條主題自動化主流程"},
+          {id:"m7w5c", kr:"O3·KR4", type:"完成", text:"7月 AI checkpoint #1（月目標拆解＋脫軌判斷）"},
+          {id:"m7w5d", kr:"O1·KR2", type:"階段", text:"月度核對｜流量池：Read ≥440、English ≥880、Math ≥520"},
+          {id:"m7w5e", kr:"O2·KR1", type:"階段", text:"月度核對｜投放：Reading ≥1100，CPL Read ≤5 / Eng ≤12 美元"},
         ]},
       ]},
-    { name:"8月", note:"放大 · 產線提速 · A/B 閉環",
+    { name:"8月", note:"放大 · 值班常態 · 跨科 campaign",
       weeks:[
         { code:"8W1", label:"W1", range:"8/1–8/3", tasks:[
-          {id:"t8a", kr:"KR6", type:"開始", text:"建立素材 A/B 測試框架與勝出判定口徑"},
+          {id:"m8w1a", kr:"O1·KR1", type:"常態", text:"每週 2 次英語值班 8:00–12:00 開跑（8–9月，Q3 ≥8 次）"},
+          {id:"m8w1b", kr:"O1·KR1", type:"推進", text:"8月主打暑假先課：Phonics 聚焦 Sight Words 閱聽"},
+          {id:"m8w1c", kr:"O1·KR2", type:"開始", text:"跨科 campaign：測『數入口帶閱讀＋英語』場景"},
+          {id:"m8w1d", kr:"O1·KR2", type:"常態", text:"推送節奏：週二一推、週四二推、週六三推"},
+          {id:"m8w1e", kr:"O1·KR3", type:"推進", text:"數學擴科迭代新素材，覆蓋 ≥70% 推送量"},
+          {id:"m8w1f", kr:"O3·KR2", type:"開始", text:"打通第 2 條自動化鏈路（廣告來源→brief→素材→上架→回看）"},
         ]},
         { code:"8W2", label:"W2", range:"8/4–8/10", tasks:[
-          {id:"t8b", kr:"KR4", type:"完成", text:"AI 產線 SOP 定版，單批出圖壓到 ≤ 30 分"},
-          {id:"t8c", kr:"KR5", type:"推進", text:"四語系各補第 2 組爆款素材"},
+          {id:"m8w2a", kr:"O2·KR3", type:"推進", text:"驗證 3 類靈感來源→打包全流程（8–9月跑 ≥2 輪）"},
+          {id:"m8w2b", kr:"O3·KR1", type:"推進", text:"值班收集留言，AI 回覆規則庫 v2 迭代（Q3 ≥2 版）"},
         ]},
         { code:"8W3", label:"W3", range:"8/11–8/17", tasks:[
-          {id:"t8d", kr:"KR1", type:"階段", text:"閱讀池月均站上 ≥ 96 人/期"},
-          {id:"t8e", kr:"KR6", type:"推進", text:"跑第一批 A/B，回收勝出率數據"},
+          {id:"m8w3a", kr:"O2·KR2", type:"常態", text:"維持每週 ≥5 套廣告＋預算週調整，守住 CPL Read ≤5 / Eng ≤12 美元"},
         ]},
         { code:"8W4", label:"W4", range:"8/18–8/24", tasks:[
-          {id:"t8f", kr:"KR3", type:"階段", text:"官方-Meta 佔比連續 2 週 ≥ 40%"},
+          {id:"m8w4a", kr:"O3·KR3", type:"開始", text:"AI 獨立主導 1 個完整 campaign（英語鉤子＋跨科整合）"},
         ]},
         { code:"8W5", label:"W5", range:"8/25–8/31", tasks:[
-          {id:"t8g", kr:"KR5", type:"完成", text:"四語系各 ≥ 2 組爆款素材全數上架"},
+          {id:"m8w5a", kr:"O1·KR3", type:"階段", text:"8月底回看送達率、領課率，自動化占比往 ≥80% 推進"},
+          {id:"m8w5b", kr:"O3·KR2", type:"完成", text:"完成第 2 條自動化鏈路"},
+          {id:"m8w5c", kr:"O3·KR4", type:"完成", text:"8月 AI checkpoint #2"},
+          {id:"m8w5d", kr:"O1·KR2", type:"階段", text:"月度核對｜流量池：Read ≥420、English ≥880、Math ≥470"},
+          {id:"m8w5e", kr:"O2·KR1", type:"階段", text:"月度核對｜投放：Reading ≥1200"},
         ]},
       ]},
-    { name:"9月", note:"收斂 · 達標 · 復盤",
+    { name:"9月", note:"收斂 · 達標 · 覆盤",
       weeks:[
         { code:"9W1", label:"W1", range:"9/1–9/7", tasks:[
-          {id:"t9a", kr:"KR6", type:"推進", text:"迭代 A/B 第二批，勝出率往 ≥ 30% 收斂"},
+          {id:"m9w1a", kr:"O1·KR2", type:"決策", text:"依 8月結果決策：放大『數入口』場景 或 切回『閱讀入口帶數學＋英語』"},
+          {id:"m9w1b", kr:"O1·KR1", type:"推進", text:"9月主打開學收心／銜接主題（延續 Q4）"},
         ]},
         { code:"9W2", label:"W2", range:"9/8–9/14", tasks:[
-          {id:"t9b", kr:"KR1", type:"完成", text:"閱讀池月均達標 ≥ 100 人/期"},
+          {id:"m9w2a", kr:"O3·KR2", type:"推進", text:"9月穩固串接 2 條自動化鏈路"},
         ]},
         { code:"9W3", label:"W3", range:"9/15–9/21", tasks:[
-          {id:"t9c", kr:"KR6", type:"完成", text:"A/B 勝出率 ≥ 30%，回饋閉環固化為流程"},
-          {id:"t9d", kr:"KR3", type:"完成", text:"官方-Meta 佔比穩定 ≥ 40% 達標"},
+          {id:"m9w3a", kr:"O1·KR1", type:"完成", text:"季度英語主題鉤子 ≥1 組、≥2 渠道穩定供量(週 ≥20 人)、≥3 家長洞察"},
+          {id:"m9w3b", kr:"O1·KR2", type:"完成", text:"完成 1 輪跨科／回歸 campaign（8–9月）"},
+          {id:"m9w3c", kr:"O2·KR3", type:"完成", text:"靈感自動化 workflow v1 跑完 ≥2 輪驗證，沉澱『來源→場景→成效』表"},
+          {id:"m9w3d", kr:"O3·KR3", type:"完成", text:"完成 1 個 AI 主導 campaign（含 1 輪調整＋1 次覆盤），產出可複用 AI campaign 包"},
         ]},
         { code:"9W4", label:"W4", range:"9/22–9/28", tasks:[
-          {id:"t9e", kr:"O1", type:"階段", text:"O1 全 KR 收尾核對，補齊缺口"},
+          {id:"m9w4a", kr:"O3·KR1", type:"完成", text:"AI 回覆規則庫 v2：修訂 ≥100 留言、沉澱 ≥30 FAQ/話術、輸出 ≥3 洞察"},
+          {id:"m9w4b", kr:"O3·KR2", type:"完成", text:"業務自動化 v1：≥40% 高頻任務可 AI 觸發執行"},
+          {id:"m9w4c", kr:"O3·KR4", type:"完成", text:"9月 AI checkpoint #3，累積 ≥5 個 AI 解題案例"},
         ]},
         { code:"9W5", label:"W5", range:"9/29–9/30", tasks:[
-          {id:"t9f", kr:"O2", type:"完成", text:"Q3 OKR 復盤報告，計分並列 Q4 改善點"},
+          {id:"m9w5a", kr:"O3·KR3", type:"完成", text:"Q3 覆盤：『主題—鉤子—渠道—執行—覆盤』表定版"},
+          {id:"m9w5b", kr:"O1·KR2", type:"階段", text:"Q3 達標核對｜流量池：Read ≥1250、English ≥2600、Math ≥1440；ROI Read ≥0.8 / Eng ≥10"},
+          {id:"m9w5c", kr:"O2·KR1", type:"階段", text:"Q3 達標核對｜投放：Reading ≥3360、English K2 ≥45；CPL Read ≤5 / Eng ≤12 美元"},
         ]},
       ]},
   ]
@@ -257,6 +292,7 @@ if(OKR_DATA.meta.isSample) document.getElementById('sampleBanner').classList.add
 document.getElementById('objectives').innerHTML = OKR_DATA.objectives.map(o=>`
   <div class="obj">
     <div class="otitle"><span class="tag">${esc(o.code)}</span>${esc(o.title)}</div>
+    ${o.metric?`<div class="ometric">🎯 ${esc(o.metric)}</div>`:''}
     <ul>${o.krs.map(k=>`<li><span class="krtag">${esc(k.code)}</span><span class="krt">${esc(k.title)}</span></li>`).join('')}</ul>
   </div>`).join('');
 
