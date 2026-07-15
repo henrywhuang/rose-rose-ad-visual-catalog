@@ -1,4 +1,165 @@
-<!doctype html>
+// 動態流量池監控台生成器（自包含，Node18+ 內建 fetch，無需 npm 依賴）。
+// 由 GitHub Actions 於每週三、週五 09:00(台北) 自動執行，或本機 node marketing/build.mjs。
+// 需環境變數 LARK_APP_ID / LARK_APP_SECRET（本機可放 ../.lark_app）。
+// 產出：marketing/index.html（動態看板）與 marketing/data.json（原始運算結果）。
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dir = path.dirname(fileURLToPath(import.meta.url));
+const OUT = __dir;
+
+// ---- creds（優先環境變數，其次本機 ../.lark_app）----
+if (!process.env.LARK_APP_ID) {
+  const cf = path.resolve(__dir, '..', '..', '.lark_app');
+  if (fs.existsSync(cf)) for (const l of fs.readFileSync(cf, 'utf8').split('\n')) { const m = l.match(/^\s*([A-Za-z_]+)\s*=\s*(.+?)\s*$/); if (m) process.env[m[1].toUpperCase()] ??= m[2]; }
+}
+const APP_ID = process.env.LARK_APP_ID, APP_SECRET = process.env.LARK_APP_SECRET;
+if (!APP_ID || !APP_SECRET) { console.error('缺 LARK_APP_ID / LARK_APP_SECRET'); process.exit(1); }
+const BASE = 'https://open.larksuite.com/open-apis';
+const APP = 'basusvQmREyWA52Egg9UdF0JZIe';
+const CFG_TABLE = 'tblJ2USmoL6hL8uA', RD_TABLE = 'tbl7BVA7sBJRfUj5', EN_TABLE = 'tblgNYfP4gyrTqDq';
+
+const DAY = 86400000, TZ = 8 * 3600000; // 台北 UTC+8（無夏令）
+const now = Date.now();
+const tpDayKey = ts => new Date(ts + TZ).toISOString().slice(0, 10);
+const tpNow = new Date(now + TZ);
+const WD = ['日', '一', '二', '三', '四', '五', '六'];
+const checkpointWd = WD[tpNow.getUTCDay()];
+const genStamp = new Date(now + TZ).toISOString().slice(0, 16).replace('T', ' ');
+
+const tj = await (await fetch(`${BASE}/auth/v3/tenant_access_token/internal`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ app_id: APP_ID, app_secret: APP_SECRET }) })).json();
+if (tj.code !== 0) throw new Error('token ' + JSON.stringify(tj));
+const G = { Authorization: `Bearer ${tj.tenant_access_token}` };
+
+const cfgFields = (await (await fetch(`${BASE}/bitable/v1/apps/${APP}/tables/${CFG_TABLE}/fields?page_size=200`, { headers: G })).json()).data.items;
+const catMap = {}, subMap = {};
+for (const f of cfgFields) { if (f.field_name === '渠道分類') for (const o of f.property.options) catMap[o.id] = o.name; if (f.field_name === '子類') for (const o of f.property.options) subMap[o.id] = o.name; }
+
+async function pull(tid) { let it = [], pt = ''; do { const u = new URL(`${BASE}/bitable/v1/apps/${APP}/tables/${tid}/records`); u.searchParams.set('page_size', '500'); if (pt) u.searchParams.set('page_token', pt); const j = await (await fetch(u, { headers: G })).json(); if (j.code !== 0) throw new Error('records ' + JSON.stringify(j).slice(0, 200)); it = it.concat(j.data.items || []); pt = j.data.has_more ? j.data.page_token : ''; } while (pt); return it; }
+const one = v => Array.isArray(v) ? v[0] : v;
+const txt = v => v == null ? '' : Array.isArray(v) ? v.map(txt).join('') : (typeof v === 'object' ? (v.text ?? v.name ?? '') : String(v));
+const pnum = p => { const n = parseInt(String(p).replace(/[^0-9]/g, '')); return isNaN(n) ? null : n; };
+const toRecs = raw => raw.map(r => ({ period: pnum(txt(r.fields['期別'])), cat: catMap[one(r.fields['渠道分類'])] || '', sub: subMap[one(r.fields['渠道子類'])] || '', ts: one(r.fields['領取時間']) || null }));
+
+const rd = toRecs(await pull(RD_TABLE));
+const en = toRecs(await pull(EN_TABLE));
+
+// ---- 統計工具 ----
+const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
+const sd = a => { const m = mean(a); return Math.sqrt(a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length); };
+const R = v => Math.round(v * 10) / 10, R0 = v => Math.round(v);
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+const PALETTE = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#a855f7', '#0ea5e9', '#14b8a6', '#ec4899', '#84cc16', '#f97316', '#64748b', '#eab308', '#06b6d4', '#d946ef'];
+
+// 各期均為週末（六/日）開跑、7天一輪。偵測到的起跑日回貼到最近的週末，
+// 消除「爬升型」科目（如英語 day1 量小）造成的 ±1 天誤判。
+const snapWeekend = ms => { let d = ms; for (let i = 0; i < 6; i++) { const wd = new Date(d + TZ).getUTCDay(); if (wd === 0 || wd === 6) return d; d -= DAY; } return ms; };
+// 每期起跑日（科目層級偵測，避免拆池後零星早領誤判）：回傳 {期別: 台北零點UTC ms}
+function computeStarts(subjectRecs) {
+  const byPer = {};
+  for (const r of subjectRecs) { if (r.period == null || !r.ts) continue; (byPer[r.period] ??= []).push(r.ts); }
+  const starts = {};
+  for (const [per, ts] of Object.entries(byPer)) {
+    ts.sort((a, b) => a - b);
+    const dc = {}; for (const x of ts) { const d = tpDayKey(x); dc[d] = (dc[d] || 0) + 1; }
+    const days = Object.entries(dc).sort((a, b) => a[0] < b[0] ? -1 : 1);
+    const launch = days.find(([d, c]) => c >= 5) || days[0];
+    if (launch) starts[per] = snapWeekend(new Date(launch[0] + 'T00:00:00Z').getTime() - TZ);
+  }
+  return starts;
+}
+// 期內累積比例曲線：回傳 g[1..7]=第k天累積占全期比例（起跑日用科目層級 starts）
+function pacingCurve(poolRecs, periods, starts) {
+  const rows = [];
+  for (const per of periods) {
+    const start = starts[per]; if (start == null) continue;
+    const ts = poolRecs.filter(r => r.period === per && r.ts).map(r => r.ts).sort((a, b) => a - b);
+    const total = ts.filter(x => x >= start).length; if (total < 15) continue;
+    const frac = []; for (let k = 1; k <= 7; k++) { const cut = start + k * DAY; frac.push(ts.filter(x => x >= start && x < cut).length / total); }
+    rows.push(frac);
+  }
+  const g = []; for (let k = 0; k < 7; k++) g.push(rows.length ? mean(rows.map(r => r[k])) : (k + 1) / 7);
+  return g;
+}
+const interpCurve = (g, d) => { if (d <= 0) return 0; if (d >= 7) return Math.max(g[6], 0.999); const i = Math.floor(d), f = d - i; const a = i === 0 ? 0 : g[i - 1], b = g[i]; return a + (b - a) * f; };
+
+function analyzePool(name, key, subjectRecs, cats, baseN = 12) {
+  const data = subjectRecs;
+  const starts = computeStarts(subjectRecs);
+  const inPool = data.filter(r => r.period != null && (!cats || cats.has(r.cat)));
+  const allPeriods = [...new Set(inPool.map(r => r.period))].sort((a, b) => a - b);
+  const current = allPeriods[allPeriods.length - 1];
+  const completed = allPeriods.filter(p => p < current);
+  const basePeriods = completed.slice(-baseN);
+
+  // 各渠道基準：平均、σ、逐期序列
+  const subs = [...new Set(inPool.filter(r => basePeriods.includes(r.period)).map(r => r.sub || '(未分類)'))];
+  const chan = subs.map(s => {
+    const series = basePeriods.map(p => inPool.filter(r => r.period === p && (r.sub || '(未分類)') === s).length);
+    return { name: s, series, mean: mean(series), sd: sd(series), sum: series.reduce((x, y) => x + y, 0) };
+  }).sort((a, b) => b.mean - a.mean).filter(x => x.mean >= 0.3);
+
+  const totSeries = basePeriods.map(p => inPool.filter(r => r.period === p).length);
+  const poolMean = mean(totSeries), poolSd = sd(totSeries);
+
+  // 期內曲線與當期進度
+  const g = pacingCurve(inPool, basePeriods, starts);
+  const start = starts[current] ?? (now - 3 * DAY);
+  const elapsed = clamp((now - start) / DAY, 0, 7);
+  const expFrac = interpCurve(g, elapsed);
+  const curCount = s => inPool.filter(r => r.period === current && (r.sub || '(未分類)') === s).length;
+
+  const remainDays = Math.max(0.5, 7 - elapsed);
+  const channels = chan.map((c, i) => {
+    const target = c.mean, actual = curCount(c.name);
+    const expNow = target * expFrac;
+    const ratio = expNow > 0.3 ? actual / expNow : (actual > 0 ? 1.5 : 1);
+    const projected = expFrac > 0.02 ? actual / expFrac : actual;
+    const gap = Math.max(0, target - projected);
+    const retired = c.series.slice(-3).every(v => v === 0) && c.series.some(v => v > 0); // 近3期歸零＝退場
+    const small = target < 3; // 量太小（<3/期）不做進度預警，只列出
+    let status = 'ok';
+    if (retired) status = 'retired';
+    else if (small) status = 'small';
+    else if (ratio >= 1.15) status = 'ahead';
+    else if (ratio >= 0.9) status = 'ok';
+    else if (ratio >= 0.7) status = 'watch';
+    else status = 'behind';
+    return { name: c.name, color: PALETTE[i % PALETTE.length], target: R(target), actual,
+      expNow: R(expNow), ratio: R(ratio * 100), projected: R0(projected), gap: R0(gap),
+      perDay: R(gap / remainDays), status, series: c.series };
+  });
+
+  const totTarget = poolMean, totActual = inPool.filter(r => r.period === current).length;
+  const totExp = totTarget * expFrac, totProj = expFrac > 0.02 ? totActual / expFrac : totActual;
+  const totRatio = totExp > 0 ? totActual / totExp : 1;
+  const behind = channels.filter(c => c.status === 'behind');
+  const watch = channels.filter(c => c.status === 'watch');
+  const ahead = channels.filter(c => c.status === 'ahead');
+
+  return {
+    key, name, current, basePeriods, elapsed: R(elapsed), expFrac: R(expFrac * 100),
+    curve: g.map(v => R0(v * 100)),
+    pool: { target: R(totTarget), sd: R(poolSd), actual: totActual, expNow: R(totExp), ratio: R(totRatio * 100),
+      projected: R0(totProj), gap: R0(Math.max(0, totTarget - totProj)),
+      lo: R0(poolMean - poolSd), hi: R0(poolMean + poolSd) },
+    channels,
+    diag: { behind: behind.map(c => c.name), watch: watch.map(c => c.name), ahead: ahead.map(c => c.name) },
+  };
+}
+
+const POOLS = [
+  analyzePool('閱讀｜自有流量池', 'read', rd, new Set(['公域流量', '私域流量'])),
+  analyzePool('英語｜公領域', 'en_pub', en, new Set(['公域流量'])),
+  analyzePool('英語｜私領域', 'en_pri', en, new Set(['私域流量'])),
+];
+
+const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), pools: POOLS };
+fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
+
+// ================= HTML =================
+const html = `<!doctype html>
 <html lang="zh-Hant"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>流量池監控台｜閱讀・英語</title>
@@ -65,7 +226,7 @@ td.excl{color:var(--sub);font-style:italic}
 <div class="foot">Rose Rose 行銷部 · 自有流量池即時監控<br>資料源 Lark Base 體驗營追蹤表 · 最後更新 <span id="ls"></span></div>
 </div>
 <script>
-const DATA = {"genStamp":"2026-07-15 17:58","checkpointWd":"三","tpDate":"2026-07-15","pools":[{"key":"read","name":"閱讀｜自有流量池","current":280,"basePeriods":[268,269,270,271,272,273,274,275,276,277,278,279],"elapsed":3.7,"expFrac":44.8,"curve":[7,18,33,49,64,75,89],"pool":{"target":84.2,"sd":19.2,"actual":46,"expNow":37.7,"ratio":122.1,"projected":103,"gap":0,"lo":65,"hi":103},"channels":[{"name":"APP-課卡","color":"#6366f1","target":43.1,"actual":19,"expNow":19.3,"ratio":98.5,"projected":42,"gap":1,"perDay":0.2,"status":"ok","series":[44,48,45,48,41,25,36,24,52,50,51,53]},{"name":"轉化-活動","color":"#22c55e","target":19.4,"actual":21,"expNow":8.7,"ratio":241.5,"projected":47,"gap":0,"perDay":0,"status":"ahead","series":[18,34,13,6,6,11,6,17,26,49,34,13]},{"name":"APP-彈窗-全","color":"#f59e0b","target":7.8,"actual":0,"expNow":3.5,"ratio":0,"projected":0,"gap":8,"perDay":2.4,"status":"retired","series":[6,13,9,12,12,9,16,14,3,0,0,0]},{"name":"官方-官網","color":"#ef4444","target":6,"actual":5,"expNow":2.7,"ratio":186.1,"projected":11,"gap":0,"perDay":0,"status":"ahead","series":[3,5,9,5,4,5,7,8,4,7,7,8]},{"name":"官方-訊息","color":"#a855f7","target":3,"actual":1,"expNow":1.3,"ratio":74.4,"projected":2,"gap":1,"perDay":0.2,"status":"watch","series":[1,1,0,1,1,0,3,3,16,2,2,6]},{"name":"APP-彈窗-新用戶","color":"#0ea5e9","target":1.8,"actual":0,"expNow":0.8,"ratio":0,"projected":0,"gap":2,"perDay":0.6,"status":"small","series":[0,0,0,0,0,0,0,0,10,4,5,3]},{"name":"Math體驗-私訊","color":"#14b8a6","target":1.1,"actual":0,"expNow":0.5,"ratio":0,"projected":0,"gap":1,"perDay":0.3,"status":"small","series":[1,1,1,0,0,0,1,2,3,2,2,0]},{"name":"APP","color":"#ec4899","target":0.8,"actual":0,"expNow":0.3,"ratio":0,"projected":0,"gap":1,"perDay":0.2,"status":"retired","series":[7,0,2,0,0,0,0,0,0,0,0,0]},{"name":"轉化-私訊","color":"#84cc16","target":0.4,"actual":0,"expNow":0.2,"ratio":100,"projected":0,"gap":0,"perDay":0.1,"status":"retired","series":[0,0,0,0,1,2,1,0,1,0,0,0]}],"diag":{"behind":[],"watch":["官方-訊息"],"ahead":["轉化-活動","官方-官網"]}},{"key":"en_pub","name":"英語｜公領域","current":122,"basePeriods":[110,111,112,113,114,115,116,117,118,119,120,121],"elapsed":3.7,"expFrac":52,"curve":[10,27,40,56,68,80,95],"pool":{"target":62.3,"sd":10,"actual":24,"expNow":32.4,"ratio":74.1,"projected":46,"gap":16,"lo":52,"hi":72},"channels":[{"name":"APP-課卡","color":"#6366f1","target":44.1,"actual":18,"expNow":22.9,"ratio":78.6,"projected":35,"gap":9,"perDay":2.9,"status":"watch","series":[45,44,52,46,44,27,46,43,36,42,63,41]},{"name":"APP-彈窗-新用戶","color":"#22c55e","target":9.5,"actual":1,"expNow":4.9,"ratio":20.3,"projected":2,"gap":8,"perDay":2.3,"status":"behind","series":[15,10,11,6,14,10,9,10,6,3,10,10]},{"name":"官方-官網","color":"#f59e0b","target":6.6,"actual":2,"expNow":3.4,"ratio":58.5,"projected":4,"gap":3,"perDay":0.8,"status":"behind","series":[6,13,5,6,7,7,8,6,3,7,5,6]},{"name":"APP","color":"#ef4444","target":0.5,"actual":0,"expNow":0.3,"ratio":100,"projected":0,"gap":1,"perDay":0.2,"status":"small","series":[0,0,0,0,0,0,0,0,0,2,4,0]},{"name":"APP-彈窗-PU","color":"#a855f7","target":0.4,"actual":2,"expNow":0.2,"ratio":150,"projected":4,"gap":0,"perDay":0,"status":"small","series":[0,1,0,1,0,2,0,0,0,0,0,1]},{"name":"官方-Meta","color":"#0ea5e9","target":0.4,"actual":0,"expNow":0.2,"ratio":100,"projected":0,"gap":0,"perDay":0.1,"status":"retired","series":[0,1,0,0,0,0,1,2,1,0,0,0]},{"name":"矩陣號-小百科","color":"#14b8a6","target":0.3,"actual":0,"expNow":0.2,"ratio":100,"projected":0,"gap":0,"perDay":0.1,"status":"small","series":[1,1,0,0,0,0,1,0,0,0,0,1]},{"name":"官方-IG","color":"#ec4899","target":0.3,"actual":1,"expNow":0.2,"ratio":150,"projected":2,"gap":0,"perDay":0,"status":"small","series":[1,1,0,0,0,0,0,0,0,1,1,0]}],"diag":{"behind":["APP-彈窗-新用戶","官方-官網"],"watch":["APP-課卡"],"ahead":[]}},{"key":"en_pri","name":"英語｜私領域","current":122,"basePeriods":[110,111,112,113,114,115,116,117,118,119,120,121],"elapsed":3.7,"expFrac":46.9,"curve":[3,7,24,55,75,94,98],"pool":{"target":105.9,"sd":19.8,"actual":64,"expNow":49.7,"ratio":128.7,"projected":136,"gap":0,"lo":86,"hi":126},"channels":[{"name":"轉化-活動","color":"#6366f1","target":41.8,"actual":39,"expNow":19.6,"ratio":198.6,"projected":83,"gap":0,"perDay":0,"status":"ahead","series":[51,75,33,48,30,29,25,38,15,49,56,53]},{"name":"數學老師-導英語","color":"#22c55e","target":35.2,"actual":16,"expNow":16.5,"ratio":96.9,"projected":34,"gap":1,"perDay":0.3,"status":"ok","series":[0,0,35,29,44,74,64,33,29,43,57,14]},{"name":"轉化-SOP","color":"#f59e0b","target":14.7,"actual":6,"expNow":6.9,"ratio":87.1,"projected":13,"gap":2,"perDay":0.6,"status":"watch","series":[15,10,13,14,23,23,11,18,12,20,10,7]},{"name":"年課-活動","color":"#ef4444","target":3.8,"actual":0,"expNow":1.8,"ratio":0,"projected":0,"gap":4,"perDay":1.2,"status":"behind","series":[1,1,0,15,5,8,3,2,4,2,3,2]},{"name":"轉化-私訊","color":"#a855f7","target":3.3,"actual":0,"expNow":1.6,"ratio":0,"projected":0,"gap":3,"perDay":1,"status":"behind","series":[2,5,3,7,2,1,4,3,1,1,3,8]},{"name":"Math體驗-私訊","color":"#0ea5e9","target":3,"actual":0,"expNow":1.4,"ratio":0,"projected":0,"gap":3,"perDay":0.9,"status":"retired","series":[18,11,2,1,1,1,0,1,1,0,0,0]},{"name":"年課-私訊","color":"#14b8a6","target":2.4,"actual":1,"expNow":1.1,"ratio":88.1,"projected":2,"gap":0,"perDay":0.1,"status":"small","series":[1,0,4,5,1,1,5,3,3,0,4,2]},{"name":"轉化-群組","color":"#ec4899","target":0.8,"actual":1,"expNow":0.4,"ratio":284,"projected":2,"gap":0,"perDay":0,"status":"small","series":[1,1,1,0,0,0,1,1,0,3,0,1]},{"name":"漸進式訊息","color":"#84cc16","target":0.4,"actual":0,"expNow":0.2,"ratio":100,"projected":0,"gap":0,"perDay":0.1,"status":"small","series":[1,1,1,0,0,1,0,0,0,1,0,0]}],"diag":{"behind":["年課-活動","轉化-私訊"],"watch":["轉化-SOP"],"ahead":["轉化-活動"]}}]};
+const DATA = ${JSON.stringify(payload)};
 document.getElementById('ls').textContent = DATA.genStamp + '（台北）';
 document.getElementById('ck').innerHTML =
   '<div class="big">📍 本次檢查點：' + DATA.tpDate + '（週' + DATA.checkpointWd + '）09:00</div>' +
@@ -135,4 +296,8 @@ DATA.pools.forEach(p=>{
       plugins:{legend:{labels:{color:'#96a0bd',font:{size:10},boxWidth:10,padding:6}},tooltip:{callbacks:{footer:it=>'合計 '+it.reduce((a,b)=>a+b.parsed.y,0)}}},
       scales:{x:{stacked:true,ticks:{color:'#96a0bd',font:{size:9}},grid:{display:false}},y:{stacked:true,ticks:{color:'#96a0bd',font:{size:9}},grid:{color:'#2a3450'}}}}});
 });
-</script></body></html>
+</script></body></html>`;
+
+fs.writeFileSync(path.join(OUT, 'index.html'), html);
+console.log('生成完成 index.html + data.json @', genStamp, '週' + checkpointWd);
+for (const p of POOLS) console.log(`  ${p.name}: 當期${p.current} 已跑${p.elapsed}天(${p.expFrac}%) 實際${p.pool.actual}/應達${p.pool.expNow}=${p.pool.ratio}% 推估${p.pool.projected}/均${p.pool.target} | 落後:[${p.diag.behind.join(',')}] 略慢:[${p.diag.watch.join(',')}]`);
