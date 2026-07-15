@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>行銷部分析｜自有流量池渠道進量</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0b1020;--card:#151b2e;--card2:#1b2338;--line:#2a3450;--txt:#e8ecf6;--sub:#96a0bd;--good:#22c55e;--warn:#ef4444;--boom:#facc15;--accent:#6366f1}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:linear-gradient(180deg,#0b1020,#0e1428);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6;padding-bottom:60px}
+.wrap{max-width:860px;margin:0 auto;padding:18px 14px}
+header h1{font-size:20px;margin:0 0 4px}
+header .meta{color:var(--sub);font-size:12.5px}
+.legend-note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:12.5px;color:var(--sub);margin:14px 0}
+.legend-note b{color:var(--txt)}
+nav.tabs{position:sticky;top:0;z-index:9;display:flex;gap:8px;padding:10px 0;background:linear-gradient(180deg,#0b1020,#0b1020ee);overflow-x:auto}
+nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600}
+nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+section.pool{display:none;animation:fade .25s}
+section.pool.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+.pool h2{font-size:17px;margin:14px 0 2px}
+.pool .span{color:var(--sub);font-size:12px;margin-bottom:12px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px}
+.card .k{font-size:12px;color:var(--sub)}
+.card .v{font-size:22px;font-weight:800;margin-top:2px}
+.card .u{font-size:12px;color:var(--sub);font-weight:500}
+.band{grid-column:1/-1;background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:13px}
+.band .row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;font-size:14px;border-bottom:1px dashed var(--line)}
+.band .row:last-child{border-bottom:0}
+.band .row .lab{display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.band .num{font-weight:800;font-size:16px}
+.tag{font-size:11px;color:var(--sub)}
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 8px 8px;margin:14px 0}
+.chartbox h3{margin:2px 8px 8px;font-size:13.5px;color:var(--sub);font-weight:600}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;margin:14px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:12.5px;white-space:nowrap}
+th,td{padding:8px 10px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--card);font-weight:600}
+thead th{background:var(--card2);color:var(--sub);position:sticky;top:0}
+tbody tr:hover td{background:#1a2138}
+td.hi{color:var(--boom);font-weight:800}
+td.lo{color:var(--warn);font-weight:800}
+td.excl{color:var(--sub);font-style:italic}
+.chan-name{display:flex;align-items:center;gap:7px}
+details{margin:8px 0}
+summary{cursor:pointer;color:var(--sub);font-size:13px;padding:6px 2px}
+.foot{color:var(--sub);font-size:11.5px;text-align:center;margin-top:26px;line-height:1.8}
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;background:var(--card2);border:1px solid var(--line);color:var(--sub);margin-left:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>行銷部分析 · 自有流量池渠道進量</h1>
+    <div class="meta">閱讀 / 英語 體驗營各渠道進量 · 平均值與紅綠燈閾值 · 生成 <span id="gd"></span></div>
+  </header>
+  <div class="legend-note">
+    「進量」＝該期各渠道體驗營領取人數，源自 Lark Base 逐人紀錄按 <b>期別 × 渠道子類</b> 聚合，與儀表板三張圖表逐柱一致。
+    閾值＝<b>平均 ± 1 標準差（σ）</b>：<span style="color:var(--good)">帶內為正常波動</span>，<span style="color:var(--boom)">超上界為表現特好</span>，<span style="color:var(--warn)">跌破下界為警訊</span>。
+    ⚠️ 每池<b>最後一期為未完成期</b>（領取仍在累積），數字偏低不算警訊，已排除於基準統計。
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+  <div id="pools"></div>
+  <div class="foot">
+    Rose Rose 行銷部 · 自有流量池監控看板<br>
+    數據源：Lark Base 體驗營追蹤表 · 本頁為靜態快照，如需更新請重新生成
+  </div>
+</div>
+<script>
+const DATA = {"genDate":"2026-07-15","pools":[{"key":"read","name":"閱讀｜自有流量池","span":"266–280期 · 約 2026-04-12 ~ 07-15 · 近3個月（15期）","periods":["266","267","268","269","270","271","272","273","274","275","276","277","278","279","280"],"excl":["280"],"totAll":[108,108,81,102,81,74,65,52,71,69,115,115,101,85,43],"total":{"mean":87.6,"sd":19.6,"cv":22.4,"n":14,"lo":68,"hi":107,"boom":127,"crash":48},"channels":[{"name":"APP-課卡","series":[62,47,44,48,45,48,41,25,36,24,52,50,51,53,19],"sum":626,"mean":44.7,"sd":10.1,"lo":35,"hi":55,"color":"#6366f1"},{"name":"轉化-活動","series":[26,25,18,34,13,6,6,11,6,17,26,49,34,13,19],"sum":284,"mean":20.3,"sd":12.3,"lo":8,"hi":33,"color":"#22c55e"},{"name":"APP-彈窗-全","series":[9,17,6,13,9,12,12,9,16,14,3,0,0,0,0],"sum":120,"mean":8.6,"sd":5.7,"lo":3,"hi":14,"color":"#f59e0b"},{"name":"官方-官網","series":[9,11,3,5,9,5,4,5,7,8,4,7,7,9,4],"sum":93,"mean":6.6,"sd":2.3,"lo":4,"hi":9,"color":"#ef4444"},{"name":"官方-訊息","series":[2,3,1,1,0,1,1,0,3,3,16,2,2,6,1],"sum":41,"mean":2.9,"sd":3.9,"lo":0,"hi":7,"color":"#a855f7"},{"name":"APP-彈窗-新用戶","series":[0,0,0,0,0,0,0,0,0,0,10,4,5,3,0],"sum":22,"mean":1.6,"sd":2.9,"lo":0,"hi":4,"color":"#0ea5e9"},{"name":"Math體驗-私訊","series":[0,1,1,1,1,0,0,0,1,2,3,2,2,0,0],"sum":14,"mean":1,"sd":0.9,"lo":0,"hi":2,"color":"#14b8a6"},{"name":"APP","series":[0,0,7,0,2,0,0,0,0,0,0,0,0,0,0],"sum":9,"mean":0.6,"sd":1.8,"lo":0,"hi":2,"color":"#ec4899"},{"name":"轉化-私訊","series":[0,3,0,0,0,0,1,2,1,0,1,0,0,0,0],"sum":8,"mean":0.6,"sd":0.9,"lo":0,"hi":1,"color":"#84cc16"}]},{"key":"en_pub","name":"英語｜公領域","span":"102–122期 · 約 2026-03-02 ~ 07-15 · 週更（21期）","periods":["102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122"],"excl":["122"],"totAll":[105,87,62,82,68,67,63,54,69,71,68,59,65,46,65,61,46,55,84,60,21],"total":{"mean":66.9,"sd":13.7,"cv":20.5,"n":20,"lo":53,"hi":81,"boom":94,"crash":39},"channels":[{"name":"APP-課卡","series":[77,56,43,53,44,41,48,36,45,44,52,46,44,27,46,43,36,42,63,41,15],"sum":927,"mean":46.4,"sd":10.2,"lo":36,"hi":57,"color":"#6366f1"},{"name":"APP-彈窗-新用戶","series":[17,13,7,19,13,14,11,9,15,10,11,6,14,10,9,10,6,3,10,10,1],"sum":217,"mean":10.9,"sd":3.8,"lo":7,"hi":15,"color":"#22c55e"},{"name":"官方-官網","series":[5,12,3,7,7,7,4,4,6,13,5,6,7,7,8,6,3,7,6,6,2],"sum":129,"mean":6.5,"sd":2.4,"lo":4,"hi":9,"color":"#f59e0b"},{"name":"APP-BN","series":[3,1,4,3,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"sum":16,"mean":0.8,"sd":1.3,"lo":0,"hi":2,"color":"#ef4444"},{"name":"APP-彈窗-PU","series":[1,2,0,0,0,2,0,3,0,1,0,1,0,2,0,0,0,0,0,1,2],"sum":13,"mean":0.7,"sd":0.9,"lo":0,"hi":2,"color":"#a855f7"},{"name":"官方-Meta","series":[1,1,3,0,0,1,0,2,0,1,0,0,0,0,1,2,1,0,0,0,0],"sum":13,"mean":0.7,"sd":0.9,"lo":0,"hi":2,"color":"#0ea5e9"},{"name":"APP","series":[0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,4,0,0],"sum":8,"mean":0.4,"sd":1,"lo":0,"hi":1,"color":"#14b8a6"},{"name":"官方-IG","series":[1,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,1],"sum":7,"mean":0.4,"sd":0.5,"lo":0,"hi":1,"color":"#ec4899"}]},{"key":"en_pri","name":"英語｜私領域","span":"102–122期 · 約 2026-03-02 ~ 07-15 · 週更（21期）","periods":["102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122"],"excl":["122"],"totAll":[86,129,47,38,68,56,76,65,91,104,92,120,106,138,113,99,65,120,134,89,50],"total":{"mean":91.8,"sd":28.5,"cv":31,"n":20,"lo":63,"hi":120,"boom":149,"crash":35},"channels":[{"name":"轉化-活動","series":[50,83,26,17,39,22,39,30,51,75,33,48,30,29,25,38,15,49,56,53,30],"sum":808,"mean":40.4,"sd":17.5,"lo":23,"hi":58,"color":"#6366f1"},{"name":"數學老師-導英語","series":[0,0,0,0,0,0,0,0,0,0,35,29,44,74,64,33,29,43,57,14,12],"sum":422,"mean":21.1,"sd":24.4,"lo":0,"hi":45,"color":"#22c55e"},{"name":"轉化-SOP","series":[14,19,10,12,16,15,11,15,15,10,13,14,23,23,11,18,12,20,10,7,5],"sum":288,"mean":14.4,"sd":4.3,"lo":10,"hi":19,"color":"#f59e0b"},{"name":"Math體驗-私訊","series":[0,0,0,0,0,12,18,14,18,11,2,1,1,1,0,1,1,0,0,0,0],"sum":80,"mean":4,"sd":6.3,"lo":0,"hi":10,"color":"#ef4444"},{"name":"年課-活動","series":[6,4,3,0,3,4,0,2,1,1,0,15,5,8,3,2,4,2,3,2,0],"sum":68,"mean":3.4,"sd":3.3,"lo":0,"hi":7,"color":"#a855f7"},{"name":"轉化-私訊","series":[4,6,0,6,4,2,4,1,2,5,3,7,2,1,4,3,1,1,3,8,0],"sum":67,"mean":3.4,"sd":2.2,"lo":1,"hi":6,"color":"#0ea5e9"},{"name":"年課-私訊","series":[1,5,0,0,0,1,2,1,1,0,4,5,1,1,5,3,3,0,4,2,1],"sum":39,"mean":2,"sd":1.8,"lo":0,"hi":4,"color":"#14b8a6"},{"name":"漸進式訊息","series":[6,8,4,1,4,0,1,0,1,1,1,0,0,1,0,0,0,1,0,0,0],"sum":29,"mean":1.5,"sd":2.2,"lo":0,"hi":4,"color":"#ec4899"},{"name":"轉化-群組","series":[0,2,1,2,2,0,1,0,1,1,1,0,0,0,1,1,0,3,0,1,1],"sum":17,"mean":0.9,"sd":0.9,"lo":0,"hi":2,"color":"#84cc16"},{"name":"官方-訊息","series":[4,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1],"sum":9,"mean":0.5,"sd":1,"lo":0,"hi":1,"color":"#f97316"}]}]};
+document.getElementById('gd').textContent = DATA.genDate;
+const tabs = document.getElementById('tabs');
+const poolsEl = document.getElementById('pools');
+const charts = [];
+
+DATA.pools.forEach((p, idx) => {
+  const btn = document.createElement('button');
+  btn.textContent = p.name; btn.className = idx === 0 ? 'on' : '';
+  btn.onclick = () => {
+    document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('on'));
+    document.querySelectorAll('section.pool').forEach(s => s.classList.remove('on'));
+    btn.classList.add('on');
+    document.getElementById('sec-' + p.key).classList.add('on');
+  };
+  tabs.appendChild(btn);
+
+  const sec = document.createElement('section');
+  sec.className = 'pool' + (idx === 0 ? ' on' : '');
+  sec.id = 'sec-' + p.key;
+  const t = p.total;
+  const bandHtml =
+    '<div class="band">' +
+      '<div class="row"><div class="lab"><span class="dot" style="background:var(--boom)"></span>表現特好 <span class="tag">≥ 平均+1σ</span></div><div class="num" style="color:var(--boom)">≥ ' + t.hi + '</div></div>' +
+      '<div class="row"><div class="lab"><span class="dot" style="background:var(--good)"></span>可接受範圍 <span class="tag">平均±1σ</span></div><div class="num" style="color:var(--good)">' + t.lo + ' ~ ' + t.hi + '</div></div>' +
+      '<div class="row"><div class="lab"><span class="dot" style="background:var(--warn)"></span>警訊 <span class="tag">≤ 平均−1σ</span></div><div class="num" style="color:var(--warn)">≤ ' + t.lo + '</div></div>' +
+      '<div class="row"><div class="lab"><span class="tag">🚀 爆量 ≥+2σ ' + t.boom + '　·　🔻 嚴重 ≤−2σ ' + t.crash + '</span></div><div class="tag">波動 CV ' + t.cv + '%</div></div>' +
+    '</div>';
+  sec.innerHTML =
+    '<h2>' + p.name + '<span class="pill">n=' + t.n + ' 期</span></h2>' +
+    '<div class="span">' + p.span + '</div>' +
+    '<div class="cards">' +
+      '<div class="card"><div class="k">每期平均進量</div><div class="v">' + t.mean + ' <span class="u">人/期</span></div></div>' +
+      '<div class="card"><div class="k">標準差 σ</div><div class="v">' + t.sd + ' <span class="u">人</span></div></div>' +
+      bandHtml +
+    '</div>' +
+    '<div class="chartbox"><h3>各渠道逐期進量（堆疊）</h3><canvas id="c-' + p.key + '" height="220"></canvas></div>' +
+    buildTable(p);
+  poolsEl.appendChild(sec);
+});
+
+function buildTable(p) {
+  let h = '<div class="tablewrap"><table><thead><tr><th>渠道</th><th>合計</th><th>平均</th><th>可接受帶</th><th>特好≥</th><th>警訊≤</th></tr></thead><tbody>';
+  p.channels.forEach(c => {
+    h += '<tr><td><span class="chan-name"><span class="dot" style="background:' + c.color + '"></span>' + c.name + '</span></td>' +
+      '<td>' + c.sum + '</td><td><b>' + c.mean + '</b></td><td>' + c.lo + '~' + c.hi + '</td>' +
+      '<td style="color:var(--boom)">' + c.hi + '</td><td style="color:var(--warn)">' + c.lo + '</td></tr>';
+  });
+  h += '</tbody></table></div>';
+  // per-period detail (collapsible)
+  h += '<details><summary>展開各渠道逐期明細（' + p.periods.length + ' 期）</summary><div class="tablewrap"><table><thead><tr><th>渠道</th>';
+  p.periods.forEach(pp => { h += '<th' + (p.excl.includes(pp) ? ' class="excl"' : '') + '>' + pp + (p.excl.includes(pp) ? '⚠' : '') + '</th>'; });
+  h += '</tr></thead><tbody>';
+  p.channels.forEach(c => {
+    h += '<tr><td><span class="chan-name"><span class="dot" style="background:' + c.color + '"></span>' + c.name + '</span></td>';
+    c.series.forEach((v, i) => {
+      const cls = p.excl.includes(p.periods[i]) ? ' class="excl"' : (v >= c.hi && v > 0 ? ' class="hi"' : (v <= c.lo && !p.excl.includes(p.periods[i]) ? ' class="lo"' : ''));
+      h += '<td' + cls + '>' + v + '</td>';
+    });
+    h += '</tr>';
+  });
+  // total row
+  h += '<tr><td><b>每期總計</b></td>';
+  p.totAll.forEach((v, i) => { h += '<td' + (p.excl.includes(p.periods[i]) ? ' class="excl"' : '') + '><b>' + v + '</b></td>'; });
+  h += '</tr></tbody></table></div></details>';
+  return h;
+}
+
+function renderCharts() {
+  DATA.pools.forEach(p => {
+    const ctx = document.getElementById('c-' + p.key);
+    charts.push(new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: p.periods,
+        datasets: p.channels.map(c => ({ label: c.name, data: c.series, backgroundColor: c.color, borderWidth: 0, stack: 's' }))
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { labels: { color: '#96a0bd', font: { size: 10 }, boxWidth: 10, padding: 6 } },
+          tooltip: { callbacks: { footer: (it) => '合計 ' + it.reduce((a, b) => a + b.parsed.y, 0) } }
+        },
+        scales: {
+          x: { stacked: true, ticks: { color: '#96a0bd', font: { size: 9 } }, grid: { display: false } },
+          y: { stacked: true, ticks: { color: '#96a0bd', font: { size: 9 } }, grid: { color: '#2a3450' } }
+        }
+      }
+    }));
+  });
+}
+renderCharts();
+</script>
+</body>
+</html>
