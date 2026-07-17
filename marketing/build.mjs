@@ -302,6 +302,8 @@ DATA.pools.forEach((p, idx) => {
   let sum = '<div class="summary '+(behind.length||poolBehind?'red':'green')+'">';
   sum += '<div class="hd">'+(behind.length?('⚠️ '+behind.length+' 個渠道供應不足，需補量'):'✅ 各渠道供應大致正常')+'</div>';
   if (behind.length){ sum+='<ul>'; behind.forEach(c=>{ sum+='<li><b>'+c.name+'</b>：推估月底 '+c.proj+'（月均 '+c.norm+'）'+(c.gap>0?'，缺 <b>'+c.gap+'</b>':'')+(c.dropPct<=-20?'，較上月 <b class="neg">'+c.dropPct+'%</b>':'')+'　→ 建議加推'+(c.health==='warn'?'（近期已跌破警訊帶）':'')+'</li>'; }); sum+='</ul>'; }
+  const gapCh = p.channels.filter(c=>c.gap>0 && c.supply!=='small').sort((a,b)=>b.gap-a.gap).slice(0,3);
+  if (gapCh.length) sum += '<div style="margin-top:5px">📌 補量重點（推估缺口人數）：'+gapCh.map(c=>'<b>'+c.name+' −'+c.gap+'</b>').join('、')+(poolBehind?'　（本池需幫 '+subj.name+' 追進度）':'')+'</div>';
   if (watch.length) sum += '<div style="margin-top:5px">🟡 留意：'+watch.map(c=>c.name+'('+c.dropPct+'%)').join('、')+'</div>';
   if (warnHealth.length) sum += '<div style="margin-top:3px">🔴 已在警訊帶（近期<平均−1σ）：<b>'+warnHealth.map(c=>c.name).join('、')+'</b></div>';
   const aheadC = p.channels.filter(c=>c.supply==='ahead');
