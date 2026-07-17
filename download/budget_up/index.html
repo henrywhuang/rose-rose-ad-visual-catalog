@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>調漲預算廣告回報 ｜ Rose Rose</title>
+<style>
+  :root{
+    --bg:#f6f8fb; --ink:#1c2530; --muted:#6b7889; --line:#e2e8f1;
+    --panel:#ffffff; --up:#e8562a; --up-soft:#fdeee7; --acct:#2d7467;
+    --shadow:0 14px 40px rgba(28,45,72,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+    line-height:1.65;-webkit-text-size-adjust:100%}
+  .wrap{max-width:860px;margin:0 auto;padding:20px 16px 64px}
+  header.hero{background:linear-gradient(135deg,#ff8a5b,#e8562a);color:#fff;border-radius:20px;
+    padding:26px 22px;box-shadow:var(--shadow)}
+  header.hero h1{margin:0 0 6px;font-size:23px;letter-spacing:.5px}
+  header.hero p{margin:2px 0;font-size:13.5px;opacity:.95}
+  .kpis{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .kpi{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);border-radius:14px;
+    padding:10px 14px;flex:1;min-width:110px}
+  .kpi b{display:block;font-size:22px;line-height:1.2}
+  .kpi span{font-size:12px;opacity:.9}
+  .excluded{background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:12px 16px;margin:18px 0 6px;font-size:13px;color:var(--muted)}
+  .excluded b{color:var(--ink)}
+  .excluded s{color:#b0392a}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);margin-top:18px;overflow:hidden}
+  .card-head{display:flex;gap:12px;align-items:flex-start;padding:16px 18px 4px}
+  .idx{flex:none;width:30px;height:30px;border-radius:50%;background:var(--up);color:#fff;
+    font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;margin-top:2px}
+  .titles h2{margin:0;font-size:17px;line-height:1.4}
+  .meta{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}
+  .pill{font-size:12.5px;border-radius:999px;padding:4px 11px;display:inline-flex;align-items:center;gap:6px}
+  .pill.acct{background:#e7f2ef;color:var(--acct)}
+  .pill.acct code{background:#d4e8e2;padding:1px 6px;border-radius:6px;font-size:11px}
+  .pill.up{background:var(--up-soft);color:var(--up);font-weight:600}
+  .card-body{display:flex;gap:18px;padding:12px 18px 20px;flex-wrap:wrap}
+  .visual{margin:0;flex:0 0 240px;max-width:240px}
+  .visual img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;cursor:zoom-in}
+  .visual figcaption{font-size:11.5px;color:var(--muted);margin-top:6px;text-align:center}
+  .detail{flex:1;min-width:240px}
+  .sec-label{font-size:13px;font-weight:700;color:var(--ink);margin:14px 0 7px}
+  .sec-label:first-child{margin-top:0}
+  .raises{display:flex;flex-direction:column;gap:6px;margin-bottom:4px}
+  .raise{display:inline-flex;align-items:center;gap:8px;background:var(--up-soft);
+    border-radius:10px;padding:6px 12px;font-size:14px;color:var(--up);align-self:flex-start}
+  .raise .arw{opacity:.7}
+  .raise b{font-size:15px}
+  .raise em{font-style:normal;color:var(--muted);font-size:11.5px;margin-left:4px}
+  ul.heads{margin:0;padding-left:20px}
+  ul.heads li{font-size:14px;margin:3px 0}
+  .copy{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
+  .copy-tag{display:inline-block;background:var(--acct);color:#fff;font-size:11px;
+    border-radius:6px;padding:1px 8px;margin-bottom:6px}
+  .copy p{margin:0;font-size:13.5px;color:#333}
+  .note{background:#fff8e6;border:1px solid #f2e2a8;border-radius:10px;padding:9px 12px;
+    font-size:12.5px;color:#8a6d1a;margin-top:12px}
+  footer{margin-top:26px;text-align:center;color:var(--muted);font-size:12px;line-height:1.8}
+  footer a{color:var(--acct)}
+  @media(max-width:560px){
+    .visual{flex:0 0 100%;max-width:100%}
+    header.hero h1{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>📈 調漲預算廣告回報</h1>
+    <p>來源：投放調控執行回報（Nova）兩張截圖・2026-07-17</p>
+    <p>口徑：僅列「預算調升」廣告，已排除調降；重複調漲已統一為一支。素材取自 Arkio 素材庫。</p>
+    <div class="kpis">
+      <div class="kpi"><b>5</b><span>調漲廣告（去重後）</span></div>
+      <div class="kpi"><b>9</b><span>調漲次數合計</span></div>
+      <div class="kpi"><b>2</b><span>已排除的調降</span></div>
+    </div>
+  </header>
+
+  <div class="excluded">
+    <b>已排除（調降，不在本次回報）：</b>
+    25342 醜圖-我不是壞小孩-高雄市 <s>$15→$10</s>、
+    25831 醜圖-5日共讀徵集-台北市 <s>$11→$8</s>
+  </div>
+
+
+    <article class="card" id="ad-25922">
+      <div class="card-head">
+        <span class="idx">1</span>
+        <div class="titles">
+          <h2>25922　暑期幼兒英語營（Rose）</h2>
+          <div class="meta">
+            <span class="pill acct">投放主：育兒小百科<code>child_wiki</code></span>
+            <span class="pill up">預算共 +$5（$9→$14）</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <figure class="visual">
+          <a href="assets/1030.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/1030.png" alt="暑期幼兒英語營（Rose） 視覺"></a>
+          <figcaption>視覺｜25974 復刻-暑期幼兒英語營（Rose）-A</figcaption>
+        </figure>
+        <div class="detail">
+          <div class="raises">
+            <div class="sec-label">📈 調漲紀錄</div>
+            <span class="raise"><b>$9</b><span class="arw">→</span><b>$11</b><em>截圖2（單筆・TW01）</em></span><span class="raise"><b>$11</b><span class="arw">→</span><b>$14</b><em>截圖1（完成6筆）</em></span>
+          </div>
+          <div class="sec-label">✏️ 標題（Headlines）</div>
+          <ul class="heads"><li>🔤 暑期幼兒英語營｜2-8歲</li><li>會聽會看，開口還是小聲？</li><li>單字、發音、開口遊戲一次練</li><li>👄 每天10分鐘，先說出一個單字</li><li>🎁 0元領取英語啟蒙任務</li></ul>
+          <div class="sec-label">📝 文案（Primary Texts）</div>
+          <div class="copy"><span class="copy-tag">長版</span><p>🔤 孩子常見狀況是：<br>✅ 會看圖片<br>✅ 會聽到單字<br>✅ 但輪到自己說就變小聲<br><br>這份任務先練3件事：<br>1. 看圖認單字<br>2. 聽音跟著說<br>3. 每天說出一個生活單字<br><br>接觸前：apple 看過、聽過，但不一定說出口。<br>接觸後：看到圖片，願意跟著唸一次。<br><br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">短版</span><p>🔤 英語先不要塞太多。<br>看圖認單字、聽音跟著說，每天10分鐘。<br>從只看圖片，到願意說出一個生活單字<br><br>👇 點圖領取</p></div>
+          <div class="note">⚠️ Arkio 素材庫內無「25922」獨立素材；視覺與文案取自同主題複刻版 25974 復刻-暑期幼兒英語營（Rose），投放主 育兒小百科。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" id="ad-25954">
+      <div class="card-head">
+        <span class="idx">2</span>
+        <div class="titles">
+          <h2>25954　Codex-暑假識字練習（Rose）小百科</h2>
+          <div class="meta">
+            <span class="pill acct">投放主：育兒小百科<code>child_wiki</code></span>
+            <span class="pill up">預算共 +$8（$26→$34）</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <figure class="visual">
+          <a href="assets/948.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/948.png" alt="Codex-暑假識字練習（Rose）小百科 視覺"></a>
+          <figcaption>視覺｜25954 Codex-暑假識字練習（Rose）小百科-A</figcaption>
+        </figure>
+        <div class="detail">
+          <div class="raises">
+            <div class="sec-label">📈 調漲紀錄</div>
+            <span class="raise"><b>$26</b><span class="arw">→</span><b>$30</b><em>截圖2（完成5筆）</em></span><span class="raise"><b>$30</b><span class="arw">→</span><b>$34</b><em>截圖1（完成6筆）</em></span>
+          </div>
+          <div class="sec-label">✏️ 標題（Headlines）</div>
+          <ul class="heads"><li>暑假識字練習｜免費學習單</li><li>注音、詞語、短句一次練</li><li>每天10分鐘，把字慢慢讀熟</li><li>孩子看到字就跳過？先練這3格</li><li>正式學習單：3-8歲識字入門</li></ul>
+          <div class="sec-label">📝 文案（Primary Texts）</div>
+          <div class="copy"><span class="copy-tag">長版</span><p>✏️ 暑假不要只補進度，先把「看到字願意讀」練起來。<br><br>這份學習單用3格設計：<br>① 注音：先把聲音讀出來<br>② 詞語：把字放進常見詞<br>③ 短句：用一句話說出來<br><br>孩子原本看到字就跳過，練幾天後會開始願意跟著讀一行。<br><br>📄 免費下載暑假識字練習單，適合3-8歲</p></div><div class="copy"><span class="copy-tag">短版</span><p>✏️ 孩子看到字就跳過？<br>先練注音、詞語、短句3格。<br>每天10分鐘，從「不想讀字」到願意跟讀一行。<br><br>📄 免費下載</p></div>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="card" id="ad-25962">
+      <div class="card-head">
+        <span class="idx">3</span>
+        <div class="titles">
+          <h2>25962　Codex-108識字卡拼圖（Rose）</h2>
+          <div class="meta">
+            <span class="pill acct">投放主：輕鬆學國英數<code>easylearning_tw</code></span>
+            <span class="pill up">預算共 +$4（$8→$12）</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <figure class="visual">
+          <a href="assets/980.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/980.png" alt="Codex-108識字卡拼圖（Rose） 視覺"></a>
+          <figcaption>視覺｜25962 Codex-108識字卡拼圖（Rose）-A</figcaption>
+        </figure>
+        <div class="detail">
+          <div class="raises">
+            <div class="sec-label">📈 調漲紀錄</div>
+            <span class="raise"><b>$8</b><span class="arw">→</span><b>$10</b><em>截圖2（完成5筆）</em></span><span class="raise"><b>$10</b><span class="arw">→</span><b>$12</b><em>截圖1（完成6筆）</em></span>
+          </div>
+          <div class="sec-label">✏️ 標題（Headlines）</div>
+          <ul class="heads"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先練這16張</li><li>從圖片猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先玩一輪</li><li>🎒 108課綱識字卡，在家先試試</li></ul>
+          <div class="sec-label">📝 文案（Primary Texts）</div>
+          <div class="copy"><span class="copy-tag">長版</span><p>📚 暑假在家，孩子很容易從「每天讀一點」變成只翻圖。<br><br>先不用一次讀很長，從16張常見字卡開始：<br>✅ 看圖認字<br>✅ 圈出部首<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br><br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，願意先自己試著讀一個。<br><br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">短版</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天認4個：看圖、圈字、讀詞、說一句。<br>從「等大人唸」到願意先讀一個字<br><br>👇 點圖領取</p></div>
+          
+        </div>
+      </div>
+    </article>
+
+    <article class="card" id="ad-25968">
+      <div class="card-head">
+        <span class="idx">4</span>
+        <div class="titles">
+          <h2>25968　Codex-108識字卡拼圖（Rose）</h2>
+          <div class="meta">
+            <span class="pill acct">投放主：育兒小百科<code>child_wiki</code></span>
+            <span class="pill up">預算共 +$4（$8→$12）</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <figure class="visual">
+          <a href="assets/992.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/992.png" alt="Codex-108識字卡拼圖（Rose） 視覺"></a>
+          <figcaption>視覺｜25968 Codex-108識字卡拼圖（Rose）-A</figcaption>
+        </figure>
+        <div class="detail">
+          <div class="raises">
+            <div class="sec-label">📈 調漲紀錄</div>
+            <span class="raise"><b>$8</b><span class="arw">→</span><b>$10</b><em>截圖2（完成5筆）</em></span><span class="raise"><b>$10</b><span class="arw">→</span><b>$12</b><em>截圖1（完成6筆）</em></span>
+          </div>
+          <div class="sec-label">✏️ 標題（Headlines）</div>
+          <ul class="heads"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先練這16張</li><li>從圖片猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先玩一輪</li><li>🎒 108課綱識字卡，在家先試試</li></ul>
+          <div class="sec-label">📝 文案（Primary Texts）</div>
+          <div class="copy"><span class="copy-tag">長版</span><p>📚 暑假在家，孩子很容易從「每天讀一點」變成只翻圖。<br><br>先不用一次讀很長，從16張常見字卡開始：<br>✅ 看圖認字<br>✅ 圈出部首<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br><br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，願意先自己試著讀一個。<br><br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">短版</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天認4個：看圖、圈字、讀詞、說一句。<br>從「等大人唸」到願意先讀一個字<br><br>👇 點圖領取</p></div>
+          <div class="note">⚠️ 視覺與 25962 為同一張 108課綱識字卡（不同投放主），依 SOP 共用素材。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" id="ad-25969">
+      <div class="card-head">
+        <span class="idx">5</span>
+        <div class="titles">
+          <h2>25969　復刻-108識字卡拼圖2（Rose）</h2>
+          <div class="meta">
+            <span class="pill acct">投放主：親子愛共讀<code>parent_reading</code></span>
+            <span class="pill up">預算共 +$3（$5→$8）</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <figure class="visual">
+          <a href="assets/1020.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/1020.png" alt="復刻-108識字卡拼圖2（Rose） 視覺"></a>
+          <figcaption>視覺｜25969 復刻-108識字卡拼圖2（Rose）-A</figcaption>
+        </figure>
+        <div class="detail">
+          <div class="raises">
+            <div class="sec-label">📈 調漲紀錄</div>
+            <span class="raise"><b>$5</b><span class="arw">→</span><b>$6</b><em>截圖2（完成5筆）</em></span><span class="raise"><b>$6</b><span class="arw">→</span><b>$8</b><em>截圖1（完成6筆）</em></span>
+          </div>
+          <div class="sec-label">✏️ 標題（Headlines）</div>
+          <ul class="heads"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先玩16張</li><li>從看圖猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先練一輪</li><li>🎒 每天4張，讀詞再說一句</li></ul>
+          <div class="sec-label">📝 文案（Primary Texts）</div>
+          <div class="copy"><span class="copy-tag">長版</span><p>📚 孩子在暑假很容易只翻圖、不看字。<br>可以先不用要求讀整本，從一張卡做完3件事：<br>✅ 看圖認一個字<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br><br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，會先試著讀出詞，再說一句。<br><br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">短版</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天4張：看圖、讀詞、說一句。<br>從等大人唸，到願意先試著讀一個詞<br><br>👇 點圖領取</p></div>
+          
+        </div>
+      </div>
+    </article>
+
+  <footer>
+    Rose Rose ｜ 廣告優化 · 調漲預算回報 H5<br>
+    圖片點擊可放大；投放主 code 對應 Arkio social account。<br>
+    產出時間：2026-07-17
+  </footer>
+</div>
+</body>
+</html>
