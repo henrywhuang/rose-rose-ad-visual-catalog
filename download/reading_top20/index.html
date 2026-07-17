@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>近2個月・最佳閱讀廣告 Top 20 ｜ Rose Rose</title>
+<title>最佳閱讀廣告（去重・分主題） ｜ Rose Rose</title>
 <style>
   :root{--bg:#f5f7fa;--ink:#1b2430;--muted:#6c7a8c;--line:#e3e9f0;--panel:#fff;
     --shadow:0 12px 34px rgba(24,40,66,.09);}
@@ -15,10 +15,10 @@
   header.hero{background:linear-gradient(135deg,#3a7bd5,#2d7467);color:#fff;border-radius:22px;
     padding:28px 24px;box-shadow:var(--shadow)}
   header.hero h1{margin:0 0 8px;font-size:24px;letter-spacing:.4px}
-  header.hero p{margin:3px 0;font-size:13.5px;opacity:.95;max-width:820px}
+  header.hero p{margin:3px 0;font-size:13.5px;opacity:.95;max-width:840px}
   .kpis{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
   .kpi{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:14px;
-    padding:10px 16px;flex:1;min-width:120px}
+    padding:10px 16px;flex:1;min-width:110px}
   .kpi b{display:block;font-size:22px}.kpi span{font-size:12px;opacity:.9}
   .method{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px;
     margin:16px 0;font-size:12.8px;color:var(--muted)}
@@ -35,85 +35,100 @@
   .theme-head h2{margin:0;font-size:19px}
   .tcount{font-size:13px;color:var(--tc);margin-left:8px;font-weight:600}
   .theme-head p{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
     overflow:hidden;display:flex;flex-direction:column}
-  .chead{display:flex;gap:10px;align-items:center;padding:14px 16px 6px}
-  .rank{flex:none;background:var(--tc);color:#fff;font-weight:700;font-size:13px;border-radius:8px;padding:3px 9px}
+  .chead{display:flex;gap:10px;align-items:flex-start;padding:14px 16px 6px}
+  .rank{flex:none;background:var(--tc);color:#fff;font-weight:700;font-size:13px;border-radius:8px;padding:3px 9px;margin-top:2px}
   .ctitle h3{margin:0;font-size:15.5px;line-height:1.35}
-  .cno{font-size:11.5px;color:var(--muted);margin-top:2px}
+  .tags{margin-top:5px;display:flex;gap:5px;flex-wrap:wrap}
+  .tag{font-size:10.5px;border-radius:6px;padding:2px 7px;font-weight:600}
+  .tnew{background:#e8f6ec;color:#1a8a44;border:1px solid #bfe6cc}
+  .tmerge{background:#eef0fb;color:#4655b0;border:1px solid #d4d9f2}
   .cbody{padding:8px 16px 16px}
   .visual{margin:0 0 12px}
   .visual img{width:100%;border-radius:11px;border:1px solid var(--line);display:block;cursor:zoom-in;background:#faf7f2}
-  .visual img.thumb{image-rendering:auto;filter:saturate(1.05)}
   .visual figcaption{font-size:11px;color:var(--muted);margin-top:5px;text-align:center}
-  .noimg{aspect-ratio:1;border:1px dashed var(--line);border-radius:11px;display:flex;align-items:center;
-    justify-content:center;color:var(--muted);font-size:13px}
-  .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
-  .metrics .m{background:#f6f9fc;border:1px solid var(--line);border-radius:9px;padding:7px 4px;text-align:center}
-  .metrics .m b{display:block;font-size:15px;color:var(--tc)}
-  .metrics .m span{font-size:10px;color:var(--muted)}
-  .owners{font-size:12.5px;margin-bottom:8px}
+  .noimg{aspect-ratio:1;border:1px dashed var(--line);border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px}
+  .owners{font-size:12.5px;margin-bottom:4px}
   .pill{display:inline-block;border-radius:999px;padding:2px 9px;font-size:11.5px;margin:2px 3px 0 0}
   .pill.owner{background:#eef3f8;color:#3a516e;border:1px solid #dbe6f0}
   .sec{font-size:12.5px;font-weight:700;margin:12px 0 6px}
+  .mtable{width:100%;border-collapse:collapse;font-size:12px}
+  .mtable th,.mtable td{border:1px solid var(--line);padding:5px 7px;text-align:center}
+  .mtable th{background:#f4f7fb;color:var(--muted);font-weight:600;font-size:11px}
+  .mtable td.ow{text-align:left;color:#3a516e}
+  .mtable td b{color:var(--tc)}
+  .mtable tfoot td{background:#fbfcfe;font-weight:600;color:var(--muted);font-size:11px}
+  .mtable.multi{box-shadow:0 0 0 2px #eef0fb inset;border-radius:6px}
+  .libnote{background:#fff8e6;border:1px solid #f0e2a6;border-radius:8px;padding:7px 10px;font-size:12px;color:#8a6d1a}
   ul.titles{margin:0;padding-left:18px}ul.titles li{font-size:12.8px;margin:2px 0}
   .copy{background:#f7f9fc;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:7px 0}
   .copy-tag{display:inline-block;background:var(--tc);color:#fff;font-size:10.5px;border-radius:6px;padding:1px 7px;margin-bottom:5px}
-  .copy p{margin:0;font-size:12.5px;color:#333;white-space:normal}
+  .copy p{margin:0;font-size:12.5px;color:#333}
   .note{background:#fff8e6;border:1px solid #f0e2a6;border-radius:9px;padding:8px 11px;font-size:11.8px;color:#8a6d1a;margin-top:10px}
   footer{margin-top:34px;text-align:center;color:var(--muted);font-size:12px;line-height:1.9}
-  @media(max-width:560px){.grid{grid-template-columns:1fr}header.hero h1{font-size:20px}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}header.hero h1{font-size:20px}.mtable{font-size:11px}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
-    <h1>📚 近2個月・最佳閱讀廣告 Top 20</h1>
-    <p>從 30 支在投閱讀廣告中，篩出近 2 個月<b style="color:#fff">持續有在領課</b>、且成本低 / CTR 高的前 20 支，含視覺、文案、投放主，依四大主題分類。</p>
+    <h1>📚 最佳閱讀廣告・去重分主題版</h1>
+    <p>相同視覺已合併為同一組（標注多個投放主、成效分開紀錄）；補上 5 個獨立視覺的好創意。共 20 組，依四大主題分類。</p>
     <div class="kpis">
-      <div class="kpi"><b>20</b><span>精選廣告</span></div>
-      <div class="kpi"><b>4</b><span>主題分類</span></div>
-      <div class="kpi"><b>2,840</b><span>近2月合計領課</span></div>
-      <div class="kpi"><b>06/04–07/17</b><span>觀察窗口</span></div>
+      <div class="kpi"><b>20</b><span>廣告組（去重後）</span></div>
+      <div class="kpi"><b>5</b><span>合併重複視覺</span></div>
+      <div class="kpi"><b>5</b><span>本次新增創意</span></div>
+      <div class="kpi"><b>2,533</b><span>近2月合計領課</span></div>
     </div>
   </header>
 
   <div class="method">
-    <b>口徑說明：</b>資料源＝Arkio 投放看板（績效，即時）＋ Meta 廣告素材（視覺／文案／投放主）。
-    範圍限 <b>Reading（閱讀）</b>業務線；領課以後端回傳 <b>leads_backend</b> 為準，後端回傳不準者回退 Meta 口徑。
-    排序主指標＝<b>近2月累計領課量</b>，並參考「持續領課天數 / 領課成本 CPL / 近7日 CTR」。
-    相同視覺跨多個投放帳號者已<b>統一為一支</b>並合併領課、列出全部投放主。窗口由兩份看板快照（07-02、07-17）合併而成，約 6 週。
+    <b>本次調整：</b>①「相同視覺文案」只算一組，合併後在同一張卡列出<b>多個投放主與各自成效</b>（🔗 標記，共 5 組，含 108識字卡、我不是壞小孩、我們免費了、我會好好說、復刻識字卡2）。
+    ② 因合併與汰換，<b>新增 5 個獨立視覺好創意</b>（🆕 標記：情緒學習單、暑假識字練習、注音尋寶卡、暑假注音先修、暑假繪本練習包）。
+    ③ 原「ㄈㄊ正音班」為動態素材、平台僅回傳縮圖且素材主題與命名不符（實為識字/共讀），視覺無法正確呈現，<b>已移除</b>。
+    <br><b>口徑：</b>績效＝Arkio 投放看板；視覺／文案／投放主＝Meta 廣告素材（素材庫精選者標注無投放數據）。領課以後端 leads_backend 為準，窗口約近 6 週（06-04→07-17）。
   </div>
 
-  <nav class="themes"><a href="#theme-%E6%83%85%E7%B7%92" style="--tc:#e0567f">💗 情緒 <b>5</b></a><a href="#theme-%E8%AD%98%E5%AD%97" style="--tc:#2d7467">📖 識字 <b>5</b></a><a href="#theme-%E6%AD%A3%E9%9F%B3%E8%A1%A8%E9%81%94" style="--tc:#e8862a">🔤 正音表達 <b>3</b></a><a href="#theme-%E5%85%B6%E4%BB%96" style="--tc:#5b6c9a">✨ 其他 <b>7</b></a></nav>
+  <nav class="themes"><a href="#theme-%E6%83%85%E7%B7%92" style="--tc:#e0567f">💗 情緒 <b>5</b></a><a href="#theme-%E8%AD%98%E5%AD%97" style="--tc:#2d7467">📖 識字 <b>5</b></a><a href="#theme-%E6%AD%A3%E9%9F%B3%E8%A1%A8%E9%81%94" style="--tc:#e8862a">🔤 正音表達 <b>4</b></a><a href="#theme-%E5%85%B6%E4%BB%96" style="--tc:#5b6c9a">✨ 其他 <b>6</b></a></nav>
 
   <section class="theme" id="theme-%E6%83%85%E7%B7%92" style="--tc:#e0567f">
     <div class="theme-head">
       <span class="temoji">💗</span>
-      <div><h2>情緒<span class="tcount">5 支</span></h2><p>情緒覺察・脾氣・表達　·　小計領課 459</p></div>
+      <div><h2>情緒<span class="tcount">5 組</span></h2><p>情緒覺察・脾氣・表達　·　小計領課 459</p></div>
     </div>
     <div class="grid">
   <article class="card" data-theme="情緒">
     <div class="chead">
       <span class="rank">#1</span>
-      <div class="ctitle"><h3>中班情緒痛點・純字短文案</h3><div class="cno">編號 25248</div></div>
+      <div class="ctitle"><h3>中班情緒痛點・純文字鉤子</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25248.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25248.png" alt="中班情緒痛點・純字短文案"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25248.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25248.png" alt="中班情緒痛點・純文字鉤子"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>137</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.85</b><span>領課成本</span></div>
-          <div class="m"><b>3.77%</b><span>近7日CTR</span></div>
-          <div class="m"><b>25/26</b><span>領課/活躍天</span></div>
-        </div>
         <div class="owners">投放主：<span class="pill owner">Claire｜雙語媽媽號</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">Claire｜雙語媽媽號</td>
+      <td><b>137</b></td>
+      <td>$6.86</td>
+      <td>3.77%</td>
+      <td>25/26</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>情緒敏感不是錯，4歲正是教表達的關鍵期</li><li>你知道嗎？「哭」其實是孩子唯一的語言</li><li>幼兒園階段不教情緒，小學只會更難帶</li><li>小事就大哭？其實是還說不出來</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>我家哥哥從小就很敏感，一點小事就會大哭。<br>明明只是玩具被拿走、積木倒了，情緒就崩潰到沒辦法溝通，常常讓我又心疼又無力。<br><br>朋友推薦我試試 #JOJO閱讀 的情緒教養課，<br>🌱 是以繪本故事+互動任務的方式幫孩子認識情緒、說出感受，<br>我們每天陪他一起聽故事、玩表情卡，慢慢發現她願意開口說「我現在不開心」「我想要一個人安靜一下」…<br><br>雖然還是會哭，但他開始會「說出原因」了，<br>我覺得這就是很大的進步。<br><br>#高敏感孩子 #情緒教養 #JOJO閱讀<br>#孩子哭鬧不是故意的 <br>#媽媽的耐心也需要被看見</p></div><div class="copy"><span class="copy-tag">文案2</span><p>我家哥哥從小就超敏感，別人不小心碰一下、玩具被拿走，她就會大哭。<br>我有時候也會覺得「你是不是太誇張了？」但後來看了 #HSP 的說法，才知道那是他的大腦對情緒特別敏感。<br>在別人眼裡是「小題大作」，對他來說是真的「受傷」了。<br><br>後來我報名了 #JOJO閱讀 的情緒課，開始練習帶他說：「我不開心，因為你搶了我玩具。」<br>📚 課程用繪本故事＋情境對話＋表達練習卡片<br>🎈 慢慢會說出感受，也不再只是哭了<br>看他學會說「我只是難過，不是生氣」的那一刻，真的好感動。<br><br><br>#高敏感小孩也能穩穩長大<br>#JOJO情緒課是我們的好幫手<br>#孩子的情緒需要出口不是壓抑</p></div>
-        <div class="note">ℹ️ 純文字痛點鉤子，情緒主題近2月最高領課</div>
+        <div class="note">ℹ️ 純文字痛點，情緒主題領課最高</div>
       </div>
     </div>
   </article>
@@ -121,18 +136,28 @@
   <article class="card" data-theme="情緒">
     <div class="chead">
       <span class="rank">#2</span>
-      <div class="ctitle"><h3>情緒繪本復刻・冷靜</h3><div class="cno">編號 25942</div></div>
+      <div class="ctitle"><h3>情緒繪本課・冷靜</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25942.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25942.png" alt="情緒繪本復刻・冷靜"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25942.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25942.png" alt="情緒繪本課・冷靜"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>128</b><span>近2月領課</span></div>
-          <div class="m"><b>$4.85</b><span>領課成本</span></div>
-          <div class="m"><b>3.37%</b><span>近7日CTR</span></div>
-          <div class="m"><b>24/24</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">JoJo閱讀 - 專為3-6歲孩子設計的互動閱讀課程</span></div>
+        <div class="owners">投放主：<span class="pill owner">JoJo閱讀</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">JoJo閱讀</td>
+      <td><b>128</b></td>
+      <td>$4.85</td>
+      <td>3.37%</td>
+      <td>24/24</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>用繪本，教會孩子「冷靜下來」</li><li>生氣 BYE BYE：讀著讀著就懂了</li><li>3-6 歲｜全台免費 5 日繪本情緒課</li></ul>
         <div class="sec">📝 文案</div>
@@ -145,18 +170,28 @@
   <article class="card" data-theme="情緒">
     <div class="chead">
       <span class="rank">#3</span>
-      <div class="ctitle"><h3>怒火小寶貝復刻</h3><div class="cno">編號 25554</div></div>
+      <div class="ctitle"><h3>怒火小寶貝・拒當情緒化</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25554.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25554.png" alt="怒火小寶貝復刻"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25554.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25554.png" alt="怒火小寶貝・拒當情緒化"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>115</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.19</b><span>領課成本</span></div>
-          <div class="m"><b>2.16%</b><span>近7日CTR</span></div>
-          <div class="m"><b>40/44</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
+        <div class="owners">投放主：<span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科</td>
+      <td><b>115</b></td>
+      <td>$6.19</td>
+      <td>2.16%</td>
+      <td>40/44</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>孩子失控了？高雄家長必看</li><li>高雄福利🎁情緒繪本免費領</li><li>【高雄無料索取】情緒繪本</li></ul>
         <div class="sec">📝 文案</div>
@@ -169,23 +204,47 @@
   <article class="card" data-theme="情緒">
     <div class="chead">
       <span class="rank">#4</span>
-      <div class="ctitle"><h3>我不是壞小孩・通投</h3><div class="cno">編號 25332</div></div>
+      <div class="ctitle"><h3>我不是壞小孩・我只是很生氣</h3>
+        <div class="tags"><span class="tag tmerge">🔗 已合併重複視覺</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25332.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25332.png" alt="我不是壞小孩・通投"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25332.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25332.png" alt="我不是壞小孩・我只是很生氣"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>56</b><span>近2月領課</span></div>
-          <div class="m"><b>$3.63</b><span>領課成本</span></div>
-          <div class="m"><b>3.94%</b><span>近7日CTR</span></div>
-          <div class="m"><b>13/14</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span><span class="pill owner">JoJo閱讀 - 專為3-6歲孩子設計的互動閱讀課程</span></div>
+        <div class="owners">投放主（2）：<span class="pill owner">育兒小百科</span><span class="pill owner">JoJo閱讀</span></div>
+        <div class="sec">📊 成效（分投放主/城市）</div>
+        
+    <table class="mtable multi">
+      <thead><tr><th>投放主 / 城市</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科（通投）</td>
+      <td><b>28</b></td>
+      <td>$3.48</td>
+      <td>3.94%</td>
+      <td>13/14</td>
+    </tr>
+    <tr>
+      <td class="ow">JoJo閱讀（通投）</td>
+      <td><b>28</b></td>
+      <td>$3.79</td>
+      <td>2.98%</td>
+      <td>13/14</td>
+    </tr>
+    <tr>
+      <td class="ow">JoJo閱讀（高雄市）</td>
+      <td><b>23</b></td>
+      <td>$5.8</td>
+      <td>3.22%</td>
+      <td>9/14</td>
+    </tr></tbody>
+      <tfoot><tr><td>合計</td><td><b>79</b></td><td colspan="3">領課加總（成效分列如上）</td></tr></tfoot>
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>情緒爆炸前，他只是想被理解</li><li>情緒需要練習，不是天生就會</li><li>生氣不代表故意搗蛋 &gt;&gt;</li><li>他不是不乖，只是不會說</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>你知道嗎？3-6歲是「情緒發展關鍵期」<br>但有時候，孩子不是不聽話，而是還不會「好好說出感受」。<br><br>❓生氣時丟玩具<br>❓不順意就尖叫<br>這些行為，可能是「不會表達情緒」的求救訊號。<br><br>✦ #小百科 ✦ 和 #JOJO閱讀 聯名合作<br>面對孩子的壞脾氣，從「閱讀」開始📚<br>用4堂動畫故事＋每日小任務<br>陪孩子從「知道情緒」到「說出情緒」<br><br>✦ #小百科社群福利 #繪本情緒課<br> ▍適用年齡：3-6歲孩童<br> ▍5天學：3種表達句和1種情緒<br>🕒 學習時間：一天15分鐘<br>💲 費用：市價499元，0元體驗限額50名<br><br>【 👉 點擊圖片 #陪孩子掌控情緒 】<br>#讓孩子說出感受不再用哭的說</p></div><div class="copy"><span class="copy-tag">文案2</span><p>研究指出：3-6歲是「情緒識別力」關鍵期<br>✅ 孩子能不能好好說出「我不開心」，影響一輩子的情緒管理力<br>✅ 閱讀＋練習=幼兒最佳的情緒入門方式<br><br>你知道嗎？孩子不是不講理，而是不知道怎麼說自己「不開心」💔<br><br>✦ #小百科 聯名 #JOJO閱讀<br>✦ 給3-6歲的繪本情緒課<br>#認識情緒：「我好氣」「我委屈」學會說出來<br>#故事共讀：4堂主題繪本＋情境對話<br><br>🕒 學習時間：一天15分鐘<br>💰 費用：市價499元，0元體驗名額30名<br><br>🎁 #小百科 鼓勵閱讀加碼送福利<br>05月20日-06月30日 領取繪本情緒課<br>可獲得【超過50+頁的情緒學習卡】<br><br> ⬇️ 【點擊圖片報名】⬇️</p></div>
-        <div class="note">ℹ️ 同視覺跨育兒小百科＋JoJo閱讀兩投放主，領課合併</div>
+        <div class="note">ℹ️ 同視覺跨 育兒小百科 + JoJo閱讀 兩投放主（含高雄專投），成效分列</div>
       </div>
     </div>
   </article>
@@ -193,23 +252,21 @@
   <article class="card" data-theme="情緒">
     <div class="chead">
       <span class="rank">#5</span>
-      <div class="ctitle"><h3>我不是壞小孩・高雄市</h3><div class="cno">編號 25342</div></div>
+      <div class="ctitle"><h3>情緒表達學習單・9種情緒詞</h3>
+        <div class="tags"><span class="tag tnew">🆕 新增創意</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25342.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25342.png" alt="我不是壞小孩・高雄市"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25909.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25909.png" alt="情緒表達學習單・9種情緒詞"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>23</b><span>近2月領課</span></div>
-          <div class="m"><b>$5.78</b><span>領課成本</span></div>
-          <div class="m"><b>3.22%</b><span>近7日CTR</span></div>
-          <div class="m"><b>9/14</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">JoJo閱讀 - 專為3-6歲孩子設計的互動閱讀課程</span></div>
+        <div class="owners">投放主（2）：<span class="pill owner">輕鬆學國英數</span><span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效</div>
+        <div class="libnote">素材庫精選・尚無近2月投放數據</div>
         <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>高雄家長免費索取 &gt;&gt;</li><li>高雄市家長限時福利 &gt;&gt;</li><li>高雄市3-6歲免費補助 &gt;&gt;</li></ul>
+        <ul class="titles"><li>3-8歲情緒學習單，免費領</li><li>9種情緒詞認識，孩子學會表達</li><li>表情圖像+文字標籤，免費下載</li></ul>
         <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>你知道嗎？3-6歲是「情緒發展關鍵期」<br>但有時候，孩子不是不聽話，而是還不會「好好說出感受」。<br><br>❓生氣時丟玩具<br>❓不順意就尖叫<br>這些行為，可能是「不會表達情緒」的求救訊號。<br><br>面對孩子的壞脾氣，從「閱讀」開始📚<br>用4堂動畫故事＋每日小任務<br>陪孩子從「知道情緒」到「說出情緒」<br><br>✦ #JOJO閱讀社群福利 #繪本情緒課<br> ▍適用年齡：3-6歲孩童<br> ▍5天學：3種表達句和1種情緒<br>🕒 學習時間：一天15分鐘<br>💲 費用：市價499元，0元體驗限額50名<br><br>【 👉 點擊圖片 #陪孩子掌控情緒 】<br>#讓孩子說出感受不再用哭的說</p></div><div class="copy"><span class="copy-tag">文案2</span><p>研究指出：3-6歲是「情緒識別力」關鍵期<br>✅ 孩子能不能好好說出「我不開心」，影響一輩子的情緒管理力<br>✅ 閱讀＋練習=幼兒最佳的情緒入門方式<br><br>你知道嗎？孩子不是不講理，而是不知道怎麼說自己「不開心」💔<br><br>✦ #JOJO閱讀社群福利<br>✦ 給3-6歲的繪本情緒課<br>#認識情緒：「我好氣」「我委屈」學會說出來<br>#故事共讀：4堂主題繪本＋情境對話<br><br>🕒 學習時間：一天15分鐘<br>💰 費用：市價499元，0元體驗名額30名<br><br>🎁 #JOJO閱讀 鼓勵閱讀加碼送福利<br>05月20日-06月30日 領取繪本情緒課<br>可獲得【超過50+頁的情緒學習卡】<br><br> ⬇️ 【點擊圖片報名】⬇️</p></div>
-        
+        <div class="copy"><span class="copy-tag">主文案</span><p>😊 3-8 歲情緒學習單，免費領！<br><br>9 種情緒詞（開心、生氣、難過、驚訝、害怕、緊張、興奮、放鬆、驕傲），孩子認識情緒從這份卡開始。<br><br>▍3-8歲家長免費領<br>👉 點擊圖片立即下載</p></div><div class="copy"><span class="copy-tag">文案2</span><p>😊 情緒教育從識字開始。<br>這份免費學習單用 9 種日常情緒詞 + 表情圖像，幫 3-8 歲孩子認識並表達自己的感覺。<br><br>▍3-8歲家長免費領<br>👉 點擊圖片立即下載</p></div>
+        <div class="note">ℹ️ 素材庫精選・情緒表達主題補充；視覺與文案完整，尚未在近2月投放池，供測試放大</div>
       </div>
     </div>
   </article></div>
@@ -218,29 +275,39 @@
   <section class="theme" id="theme-%E8%AD%98%E5%AD%97" style="--tc:#2d7467">
     <div class="theme-head">
       <span class="temoji">📖</span>
-      <div><h2>識字<span class="tcount">5 支</span></h2><p>識字卡・學習單・常見字　·　小計領課 1225</p></div>
+      <div><h2>識字<span class="tcount">5 組</span></h2><p>識字卡・學習單・常見字　·　小計領課 1,228</p></div>
     </div>
     <div class="grid">
   <article class="card" data-theme="識字">
     <div class="chead">
       <span class="rank">#1</span>
-      <div class="ctitle"><h3>108課綱識字卡拼圖・多圖藍</h3><div class="cno">編號 25325</div></div>
+      <div class="ctitle"><h3>108課綱識字卡拼圖・多圖藍</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25325.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25325.png" alt="108課綱識字卡拼圖・多圖藍"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25325.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25325.png" alt="108課綱識字卡拼圖・多圖藍"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>1111</b><span>近2月領課</span></div>
-          <div class="m"><b>$3.66</b><span>領課成本</span></div>
-          <div class="m"><b>3.87%</b><span>近7日CTR</span></div>
-          <div class="m"><b>43/45</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">輕鬆學國小國英數</span></div>
+        <div class="owners">投放主：<span class="pill owner">輕鬆學國英數</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">輕鬆學國英數</td>
+      <td><b>736</b></td>
+      <td>$2.87</td>
+      <td>3.36%</td>
+      <td>43/44</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>60張識字卡，幫孩子從認字到應用都補齊</li><li>掌握108課綱高頻國字，國語素養穩穩起步</li><li>小一語文考的不只是注音，而是理解與應用</li><li>從圖像、部首到造詞，識字學習更完整</li><li>每天2～3個字，輕鬆補上小一必備識字</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>【108課綱國語學習新需求】<br>你知道嗎？根據課綱要求，國小1年級學生平均要掌握1000個常見字！<br><br>為了讓孩子從基礎穩穩打底<br>✦ #輕鬆學 聯名 #JOJO閱讀 推出<br>「108課綱識字卡」＋「識字遊戲課」<br>✅ 選出最常見的60個關鍵國字<br>✅ 圖像＋注音＋造句任務，搭配短小練習，讓孩子看得懂、記得住、用得出來！<br><br>📘 適用年級：國小一年級～二年級<br>📘 學習時間：每日5~10分鐘就能累積進度<br><br>⬇️ 【點擊圖片報名】⬇️<br>** 免費課程截止日期：2025年6月30日<br><br>#國語識字素養 #學習也可以很有成就感<br>#108課綱備課工具 #家長在家也能陪孩子學識字</p></div><div class="copy"><span class="copy-tag">文案2</span><p>你知道嗎？108課綱識字要求變高了！<br>😱 光認得字還不夠，還要看得懂用得出<br>🎓 #輕鬆學 聯名 #JOJO閱讀 推出<br><br>「108課綱識字卡」＋「識字遊戲課」<br>✅ 從【部首＋語詞＋句子】出發<br>✅ 讓孩子從基礎認字，一步步建立語文邏輯<br>✅ 每天練習2~3個字＋短句造詞，幫助孩子掌握高頻字，面對考題不再卡住<br><br>⭐️ 適用對象：小一新生、備考108課綱家庭<br>\ 有效累積關鍵字詞量，減少學習焦慮！/<br><br>⬇️ 【點擊圖片報名】⬇️<br>** 免費課程截止日期：2025年6月30日<br><br>#國語素養不能靠背單字<br>#關鍵字卡讓孩子識字變簡單<br>#學60字用100詞</p></div>
-        <div class="note">ℹ️ 鉤子測試冠軍款，跨帳號合併領課逾千</div>
+        <div class="note">ℹ️ 鉤子測試冠軍款，跨帳號合併領課逾千（輕鬆學）</div>
       </div>
     </div>
   </article>
@@ -248,18 +315,28 @@
   <article class="card" data-theme="識字">
     <div class="chead">
       <span class="rank">#2</span>
-      <div class="ctitle"><h3>暑假識字練習・學習單</h3><div class="cno">編號 25954</div></div>
+      <div class="ctitle"><h3>暑假識字練習・學習單（水/ㄅ格）</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25954.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25954.png" alt="暑假識字練習・學習單"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25954.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25954.png" alt="暑假識字練習・學習單（水/ㄅ格）"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>58</b><span>近2月領課</span></div>
-          <div class="m"><b>$4.28</b><span>領課成本</span></div>
-          <div class="m"><b>1.31%</b><span>近7日CTR</span></div>
-          <div class="m"><b>17/17</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
+        <div class="owners">投放主：<span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科</td>
+      <td><b>58</b></td>
+      <td>$4.27</td>
+      <td>1.31%</td>
+      <td>17/17</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>暑假識字練習｜免費學習單</li><li>注音、詞語、短句一次練</li><li>每天10分鐘，把字慢慢讀熟</li><li>孩子看到字就跳過？先練這3格</li><li>正式學習單：3-8歲識字入門</li></ul>
         <div class="sec">📝 文案</div>
@@ -272,23 +349,40 @@
   <article class="card" data-theme="識字">
     <div class="chead">
       <span class="rank">#3</span>
-      <div class="ctitle"><h3>108識字卡拼圖（育兒小百科）</h3><div class="cno">編號 25968</div></div>
+      <div class="ctitle"><h3>108課綱識字卡・白卡格</h3>
+        <div class="tags"><span class="tag tmerge">🔗 已合併重複視覺</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25968.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25968.png" alt="108識字卡拼圖（育兒小百科）"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25962.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25962.png" alt="108課綱識字卡・白卡格"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>24</b><span>近2月領課</span></div>
-          <div class="m"><b>$2.75</b><span>領課成本</span></div>
-          <div class="m"><b>2.74%</b><span>近7日CTR</span></div>
-          <div class="m"><b>9/10</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
+        <div class="owners">投放主（2）：<span class="pill owner">輕鬆學國英數</span><span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效（分投放主/城市）</div>
+        
+    <table class="mtable multi">
+      <thead><tr><th>投放主 / 城市</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">輕鬆學國英數</td>
+      <td><b>23</b></td>
+      <td>$2.67</td>
+      <td>3.24%</td>
+      <td>9/10</td>
+    </tr>
+    <tr>
+      <td class="ow">育兒小百科</td>
+      <td><b>24</b></td>
+      <td>$2.75</td>
+      <td>2.74%</td>
+      <td>9/10</td>
+    </tr></tbody>
+      <tfoot><tr><td>合計</td><td><b>47</b></td><td colspan="3">領課加總（成效分列如上）</td></tr></tfoot>
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先練這16張</li><li>從圖片猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先玩一輪</li><li>🎒 108課綱識字卡，在家先試試</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>📚 暑假在家，孩子很容易從「每天讀一點」變成只翻圖。<br>​<br>先不用一次讀很長，從16張常見字卡開始：<br>✅ 看圖認字<br>✅ 圈出部首<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br>​<br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，願意先自己試著讀一個。<br>​<br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天認4個：看圖、圈字、讀詞、說一句。<br>從「等大人唸」到願意先讀一個字<br>​<br>👇 點圖領取</p></div>
-        
+        <div class="note">ℹ️ 同視覺跨 輕鬆學國英數 + 育兒小百科 兩投放主，成效分列</div>
       </div>
     </div>
   </article>
@@ -296,23 +390,40 @@
   <article class="card" data-theme="識字">
     <div class="chead">
       <span class="rank">#4</span>
-      <div class="ctitle"><h3>108識字卡拼圖（輕鬆學）</h3><div class="cno">編號 25962</div></div>
+      <div class="ctitle"><h3>復刻・108識字卡拼圖2（彩色頁籤）</h3>
+        <div class="tags"><span class="tag tmerge">🔗 已合併重複視覺</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25962.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25962.png" alt="108識字卡拼圖（輕鬆學）"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25969.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25969.png" alt="復刻・108識字卡拼圖2（彩色頁籤）"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>23</b><span>近2月領課</span></div>
-          <div class="m"><b>$2.65</b><span>領課成本</span></div>
-          <div class="m"><b>3.24%</b><span>近7日CTR</span></div>
-          <div class="m"><b>9/10</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">輕鬆學國小國英數</span></div>
-        <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先練這16張</li><li>從圖片猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先玩一輪</li><li>🎒 108課綱識字卡，在家先試試</li></ul>
-        <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>📚 暑假在家，孩子很容易從「每天讀一點」變成只翻圖。<br>​<br>先不用一次讀很長，從16張常見字卡開始：<br>✅ 看圖認字<br>✅ 圈出部首<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br>​<br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，願意先自己試著讀一個。<br>​<br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天認4個：看圖、圈字、讀詞、說一句。<br>從「等大人唸」到願意先讀一個字<br>​<br>👇 點圖領取</p></div>
+        <div class="owners">投放主（2）：<span class="pill owner">親子愛共讀</span><span class="pill owner">繪本福利社</span></div>
+        <div class="sec">📊 成效（分投放主/城市）</div>
         
+    <table class="mtable multi">
+      <thead><tr><th>投放主 / 城市</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">親子愛共讀</td>
+      <td><b>9</b></td>
+      <td>$2.15</td>
+      <td>2.83%</td>
+      <td>3/5</td>
+    </tr>
+    <tr>
+      <td class="ow">繪本福利社</td>
+      <td><b>1</b></td>
+      <td>$15.06</td>
+      <td>2.43%</td>
+      <td>1/4</td>
+    </tr></tbody>
+      <tfoot><tr><td>合計</td><td><b>10</b></td><td colspan="3">領課加總（成效分列如上）</td></tr></tfoot>
+    </table>
+        <div class="sec">✏️ 標題</div>
+        <ul class="titles"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先玩16張</li><li>從看圖猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先練一輪</li><li>🎒 每天4張，讀詞再說一句</li></ul>
+        <div class="sec">📝 文案</div>
+        <div class="copy"><span class="copy-tag">主文案</span><p>📚 孩子在暑假很容易只翻圖、不看字。<br>可以先不用要求讀整本，從一張卡做完3件事：<br>✅ 看圖認一個字<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br>​<br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，會先試著讀出詞，再說一句。<br>​<br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天4張：看圖、讀詞、說一句。<br>從等大人唸，到願意先試著讀一個詞<br>​<br>👇 點圖領取</p></div>
+        <div class="note">ℹ️ 同視覺跨 親子愛共讀 + 繪本福利社 兩投放主，成效分列</div>
       </div>
     </div>
   </article>
@@ -320,23 +431,33 @@
   <article class="card" data-theme="識字">
     <div class="chead">
       <span class="rank">#5</span>
-      <div class="ctitle"><h3>復刻・108識字卡拼圖2</h3><div class="cno">編號 25969</div></div>
+      <div class="ctitle"><h3>暑假識字練習・注音＋詞語＋短句</h3>
+        <div class="tags"><span class="tag tnew">🆕 新增創意</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25969.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25969.png" alt="復刻・108識字卡拼圖2"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25972.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25972.png" alt="暑假識字練習・注音＋詞語＋短句"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>9</b><span>近2月領課</span></div>
-          <div class="m"><b>$2.11</b><span>領課成本</span></div>
-          <div class="m"><b>2.83%</b><span>近7日CTR</span></div>
-          <div class="m"><b>3/5</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">親子愛共讀｜知識分享繪本</span></div>
-        <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>📚 108課綱識字卡｜3-8歲免費領</li><li>孩子看到字就等你唸？先玩16張</li><li>從看圖猜字，到自己讀出詞</li><li>✏️ 小一前常見字，暑假先練一輪</li><li>🎒 每天4張，讀詞再說一句</li></ul>
-        <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>📚 孩子在暑假很容易只翻圖、不看字。<br>可以先不用要求讀整本，從一張卡做完3件事：<br>✅ 看圖認一個字<br>✅ 把字放進詞語<br>✅ 用一句話說出來<br>​<br>接觸前：看到字就等大人唸。<br>接觸後：看到常見字，會先試著讀出詞，再說一句。<br>​<br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>📚 暑假先把常見字看熟。<br>16張識字卡，每天4張：看圖、讀詞、說一句。<br>從等大人唸，到願意先試著讀一個詞<br>​<br>👇 點圖領取</p></div>
+        <div class="owners">投放主：<span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效</div>
         
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科</td>
+      <td><b>2</b></td>
+      <td>$7.27</td>
+      <td>2%</td>
+      <td>2/4</td>
+    </tr></tbody>
+      
+    </table>
+        <div class="sec">✏️ 標題</div>
+        <ul class="titles"><li>📄 暑假識字練習｜3-8歲免費領</li><li>看到字就跳過？先練這3格</li><li>注音、詞語、短句一次做完</li><li>✏️ 每天10分鐘，先讀出一小句</li><li>🧠 小百科推薦：識字入門練習</li></ul>
+        <div class="sec">📝 文案</div>
+        <div class="copy"><span class="copy-tag">主文案</span><p>📄 如果孩子看到字就跳過，先不要急著要求讀整篇。<br>用一張練習單拆成3格：<br>✅ 注音：先把聲音讀出來<br>✅ 詞語：把字放進常見詞<br>✅ 短句：最後讀一小句<br>​<br>接觸前：看到字就說不會。<br>接觸後：會先看注音、讀詞，再試著讀一句。<br>​<br>📌 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>📄 孩子看到字就跳過？<br>先練注音、詞語、短句3格。<br>每天10分鐘，從不想讀字到願意試著讀一句<br>​<br>👉 點擊領取</p></div>
+        <div class="note">ℹ️ 新上架創意，與冠軍識字系列同調性、版式不同</div>
       </div>
     </div>
   </article></div>
@@ -345,29 +466,39 @@
   <section class="theme" id="theme-%E6%AD%A3%E9%9F%B3%E8%A1%A8%E9%81%94" style="--tc:#e8862a">
     <div class="theme-head">
       <span class="temoji">🔤</span>
-      <div><h2>正音表達<span class="tcount">3 支</span></h2><p>注音・正音・發音開口　·　小計領課 686</p></div>
+      <div><h2>正音表達<span class="tcount">4 組</span></h2><p>注音・正音・發音開口　·　小計領課 375</p></div>
     </div>
     <div class="grid">
   <article class="card" data-theme="正音表達">
     <div class="chead">
       <span class="rank">#1</span>
-      <div class="ctitle"><h3>注音識字班</h3><div class="cno">編號 25904</div></div>
+      <div class="ctitle"><h3>注音識字班・5日免費</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25904.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25904.png" alt="注音識字班"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25904.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25904.png" alt="注音識字班・5日免費"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>365</b><span>近2月領課</span></div>
-          <div class="m"><b>$5.78</b><span>領課成本</span></div>
-          <div class="m"><b>2.26%</b><span>近7日CTR</span></div>
-          <div class="m"><b>38/39</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">JoJo閱讀 - 專為3-6歲孩子設計的互動閱讀課程</span></div>
+        <div class="owners">投放主：<span class="pill owner">JoJo閱讀</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">JoJo閱讀</td>
+      <td><b>365</b></td>
+      <td>$5.78</td>
+      <td>2.26%</td>
+      <td>38/39</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>注音識字班招生中，5日0元</li><li>4-7歲注音37音+基礎國字100</li><li>升小一銜接，每天10分鐘紮根</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>🔤 注音識字班｜招生中<br>5 日免費體驗，名額有限。<br>​<br>✅ 招生對象：4-7 歲幼大至小二<br>⏰ 上課時間：每天 10 分鐘，累積成果<br>📚 課程內容：注音 37 音 + 基礎國字 100<br>💰 課程費用：5 日 0 元（市值 590 元）<br>​<br>幼兒園升小一銜接的最關鍵基礎，從注音開始紮根。<br>​<br>▍5日0元，立即報名<br>👉 點擊圖片立即領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>🔤 注音 37 音 + 基礎國字 100，5 日打底計畫。<br>4-7 歲升小一前最必要的銜接準備，免費體驗。<br>​<br>▍5日0元，名額有限<br>👉 點擊圖片立即報名</p></div>
-        <div class="note">ℹ️ 正音主題最高領課</div>
+        <div class="note">ℹ️ 正音主題領課最高</div>
       </div>
     </div>
   </article>
@@ -375,23 +506,33 @@
   <article class="card" data-theme="正音表達">
     <div class="chead">
       <span class="rank">#2</span>
-      <div class="ctitle"><h3>ㄈㄊ正音班</h3><div class="cno">編號 25884</div></div>
+      <div class="ctitle"><h3>正音班・新北市（招生中）</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25884.png" target="_blank" rel="noopener"><img class="thumb" loading="lazy" src="assets/25884.png" alt="ㄈㄊ正音班"></a><figcaption>縮圖</figcaption></figure>
+      <figure class="visual"><a href="assets/23942.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/23942.png" alt="正音班・新北市（招生中）"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>314</b><span>近2月領課</span></div>
-          <div class="m"><b>$7.65</b><span>領課成本</span></div>
-          <div class="m"><b>1.99%</b><span>近7日CTR</span></div>
-          <div class="m"><b>45/45</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
+        <div class="owners">投放主：<span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科</td>
+      <td><b>7</b></td>
+      <td>$7.51</td>
+      <td>1.95%</td>
+      <td>6/10</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>台北市3-8歲，識字基礎免費建</li><li>母親節禮物，和孩子一起學識字</li><li>母親節活動｜5日故事正音班</li><li>3-8歲識字啟蒙卡｜免費領取</li><li>免費領教材：注音識字遊戲卡</li><li>認符號、發音、筆順，一張圖看懂</li></ul>
+        <ul class="titles"><li>新北補助：5日暑假正音班👉</li><li>暑假限定，僅限新北3-6歲寶貝</li><li>暑假限定正音班🙌 新北免費加</li></ul>
         <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>台北市3-8歲的孩子，識字準備好了嗎？<br>​<br>5日家庭共讀計畫，每天15分鐘，媽媽和孩子一起建立閱讀習慣，識字量穩穩提升。<br>​<br>▍母親節獻禮，台北市免費報名<br>👉 點擊圖片立即領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>"孩子認字總是卡住？<br>​<br>可以先不用硬背生字表。<br>把注音、圖片和字放在同一張練習卡裡，孩子比較容易記住，也比較願意反覆看。<br>​<br>5-8歲識字啟蒙免費體驗：<br>✓ 注音迷宮卡<br>✓ 常見字小任務<br>✓ 短句閱讀暖身<br>​<br>👉 加入官方LINE，免費領識字練習</p></div><div class="copy"><span class="copy-tag">文案3</span><p>📌 注音不是只背符號！<br>孩子要發對音、也知道筆順怎麼寫，後面拼讀才會流暢😊<br><br>免費上正音班：<br>✅ 認識注音符號<br>✅ 練正確發音<br>✅ 寫一寫加深印象<br><br>🎁 3-8歲｜免費學習</p></div><div class="copy"><span class="copy-tag">文案4</span><p>4-6歲學注音，不只要「看懂符號」！<br>如果發音、筆順沒有一起練，後面拼讀和閱讀理解就容易卡住～<br><br>正音班內容｜適合 3-8 歲：<br>1️⃣ 認識符號和發音<br>2️⃣ 學習正確筆順<br>3️⃣ 學會表達句子<br><br>圖卡示範：<br>⛵ ㄈ：唇齒音，帆船圖卡<br>🐰 ㄐ：舌尖音，兔子圖卡<br><br>🎁 暑假先幫孩子打底｜點擊圖片免費學</p></div>
-        <div class="note">ℹ️ 此為動態素材（Meta dynamic creative），平台僅回傳縮圖，視覺以實際投放為準。</div>
+        <div class="copy"><span class="copy-tag">主文案</span><p>「講話口齒不清晰，只有媽咪能聽懂😖」<br>「不敢主動打招呼，自信說話很困難😭」<br>#新北暑假 #幼小銜接 #流利表達<br><br>【小百科強推】暑假限定正音班<br>✅ 5日閱讀破千字，幫助口說發音<br>✅ 5日學表達3要素，隨時自信開口<br>✅ 5日國字發音練習，清晰口條字音<br><br>\ 👧🏻 暑假貼心體驗班 3-6歲寶貝玩中學/<br>【#新北家庭點擊圖片參加 ⬇️】</p></div><div class="copy"><span class="copy-tag">文案2</span><p>#新北免費 #邊讀故事邊正音 #閱讀收心<br>【3-6歲領補助】5日暑假正音班 ⬇️<br>打好發音基礎，開學贏在起跑線！<br><br>~ 小百科推薦 x 台師大教育團隊設計 ~<br>【新北兒童免費補助 #5日暑假正音班】<br>🎒 活動1：5日閱讀破千字，幫助口說發音<br>🎒 活動2：5日學表達3要素，隨時自信開口<br>🎒 活動3：5日國字發音練習，清晰口條字音<br><br>【新北故事正音班】活動詳情<br>🫧 參與對象：3-6歲幼兒園寶貝<br>🫧 活動地點：涼爽的家中<br>🫧 活動時間：每週一至五<br>🫧 活動費用：暑假限時免費<br><br>\ 👧🏻 暑假貼心體驗班 3-6歲寶貝玩中學/<br>【#新北家庭點擊圖片參加 ⬇️】</p></div>
+        
       </div>
     </div>
   </article>
@@ -399,23 +540,67 @@
   <article class="card" data-theme="正音表達">
     <div class="chead">
       <span class="rank">#3</span>
-      <div class="ctitle"><h3>正音班・新北市</h3><div class="cno">編號 23942</div></div>
+      <div class="ctitle"><h3>暑假注音先修班・手寫＋拼音</h3>
+        <div class="tags"><span class="tag tnew">🆕 新增創意</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/23942.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/23942.png" alt="正音班・新北市"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25971.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25971.png" alt="暑假注音先修班・手寫＋拼音"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>7</b><span>近2月領課</span></div>
-          <div class="m"><b>$7.57</b><span>領課成本</span></div>
-          <div class="m"><b>1.95%</b><span>近7日CTR</span></div>
-          <div class="m"><b>6/10</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
-        <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>新北補助：5日暑假正音班👉</li><li>暑假限定，僅限新北3-6歲寶貝</li><li>暑假限定正音班🙌 新北免費加</li></ul>
-        <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>「講話口齒不清晰，只有媽咪能聽懂😖」<br>「不敢主動打招呼，自信說話很困難😭」<br>#新北暑假 #幼小銜接 #流利表達<br><br>【小百科強推】暑假限定正音班<br>✅ 5日閱讀破千字，幫助口說發音<br>✅ 5日學表達3要素，隨時自信開口<br>✅ 5日國字發音練習，清晰口條字音<br><br>\ 👧🏻 暑假貼心體驗班 3-6歲寶貝玩中學/<br>【#新北家庭點擊圖片參加 ⬇️】</p></div><div class="copy"><span class="copy-tag">文案2</span><p>#新北免費 #邊讀故事邊正音 #閱讀收心<br>【3-6歲領補助】5日暑假正音班 ⬇️<br>打好發音基礎，開學贏在起跑線！<br><br>~ 小百科推薦 x 台師大教育團隊設計 ~<br>【新北兒童免費補助 #5日暑假正音班】<br>🎒 活動1：5日閱讀破千字，幫助口說發音<br>🎒 活動2：5日學表達3要素，隨時自信開口<br>🎒 活動3：5日國字發音練習，清晰口條字音<br><br>【新北故事正音班】活動詳情<br>🫧 參與對象：3-6歲幼兒園寶貝<br>🫧 活動地點：涼爽的家中<br>🫧 活動時間：每週一至五<br>🫧 活動費用：暑假限時免費<br><br>\ 👧🏻 暑假貼心體驗班 3-6歲寶貝玩中學/<br>【#新北家庭點擊圖片參加 ⬇️】</p></div>
+        <div class="owners">投放主：<span class="pill owner">親子愛共讀</span></div>
+        <div class="sec">📊 成效</div>
         
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">親子愛共讀</td>
+      <td><b>2</b></td>
+      <td>$8.55</td>
+      <td>2.38%</td>
+      <td>2/4</td>
+    </tr></tbody>
+      
+    </table>
+        <div class="sec">✏️ 標題</div>
+        <ul class="titles"><li>✏️ 暑假注音先修班｜0元領取</li><li>注音會唸，放進詞語就卡？</li><li>幼兒園到小一，先練這3步</li><li>📄 注音手寫＋拼音＋短句</li><li>🎒 每天15分鐘，把注音接到閱讀</li></ul>
+        <div class="sec">📝 文案</div>
+        <div class="copy"><span class="copy-tag">主文案</span><p>✏️ 孩子常見的卡點不是完全不會注音，而是：<br>✅ 單個符號會唸<br>✅ 拼在一起變慢<br>✅ 放進詞語和短句就停住<br>​<br>這份任務先拆成3步：<br>1. 注音手寫<br>2. 拼音練習<br>3. 短句閱讀<br>​<br>接觸前：只會一個一個唸。<br>接觸後：開始把注音、詞語、短句接起來。<br>​<br>👉 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>✏️ 注音先不要只背符號。<br>先練：手寫、拼音、短句。<br>從單個會唸，到放進詞語也願意試著讀<br>​<br>👇 點圖領取</p></div>
+        <div class="note">ℹ️ 新上架創意，注音先修主題</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="card" data-theme="正音表達">
+    <div class="chead">
+      <span class="rank">#4</span>
+      <div class="ctitle"><h3>注音尋寶卡・大象迷宮</h3>
+        <div class="tags"><span class="tag tnew">🆕 新增創意</span></div>
+      </div>
+    </div>
+    <div class="cbody">
+      <figure class="visual"><a href="assets/25869.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25869.png" alt="注音尋寶卡・大象迷宮"></a><figcaption>投放視覺</figcaption></figure>
+      <div class="cdetail">
+        <div class="owners">投放主：<span class="pill owner">JoJo閱讀</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">JoJo閱讀</td>
+      <td><b>1</b></td>
+      <td>$8.52</td>
+      <td>4.32%</td>
+      <td>1/3</td>
+    </tr></tbody>
+      
+    </table>
+        <div class="sec">✏️ 標題</div>
+        <ul class="titles"><li>3-8歲兒童無料索取👉</li><li>3-8歲夏日閱讀清單👉</li><li>3-8歲補助👉30頁學習單免費領</li></ul>
+        <div class="sec">📝 文案</div>
+        <div class="copy"><span class="copy-tag">主文案</span><p>我一直擔心孩子過度玩手機會影響學習😟，但自從發現 JOJO閱讀這個軟體後，我心裡的石頭終於放下了。<br>裡面的互動故事和小遊戲不僅有趣，還能幫助孩子學習新單字，真的是讓學習變得更有趣！✨ <br>我們用了幾次後，孩子的學習態度改善了不少。現在每天還能領免費學習單，感覺真的很划算～<br>反正試用免費，不喜歡隨時停，也不怕浪費錢。推薦給跟我一樣煩惱的爸媽們！💖</p></div><div class="copy"><span class="copy-tag">文案2</span><p>我家寶貝以前也是手機不離手，搞得我超頭痛的😩。<br>後來聽朋友介紹了 JOJO閱讀，我決定讓他試試看，結果發現裡面的小故事和互動遊戲不僅有趣，還能學到不少單字呢！✨ <br>我們玩了幾次之後，寶貝特別喜歡，而且我發現他比以前更愛學習了～<br>這真的是個好工具！最棒的是，還能免費領取學習單，一邊玩一邊學，不怕花冤枉錢呢！<br>這麼好用的軟體，真心推薦給大家！😌</p></div>
+        <div class="note">ℹ️ 新上架・注音迷宮遊戲卡新形式，CTR 4.3%</div>
       </div>
     </div>
   </article></div>
@@ -424,29 +609,46 @@
   <section class="theme" id="theme-%E5%85%B6%E4%BB%96" style="--tc:#5b6c9a">
     <div class="theme-head">
       <span class="temoji">✨</span>
-      <div><h2>其他<span class="tcount">7 支</span></h2><p>福利鉤子・測評・繪本推薦　·　小計領課 470</p></div>
+      <div><h2>其他<span class="tcount">6 組</span></h2><p>福利鉤子・測評・繪本推薦　·　小計領課 471</p></div>
     </div>
     <div class="grid">
   <article class="card" data-theme="其他">
     <div class="chead">
       <span class="rank">#1</span>
-      <div class="ctitle"><h3>我們免費了・桃園市</h3><div class="cno">編號 25606</div></div>
+      <div class="ctitle"><h3>我們免費了・專注力遊戲卡</h3>
+        <div class="tags"><span class="tag tmerge">🔗 已合併重複視覺</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25606.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25606.png" alt="我們免費了・桃園市"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25606.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25606.png" alt="我們免費了・專注力遊戲卡"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>247</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.45</b><span>領課成本</span></div>
-          <div class="m"><b>3.42%</b><span>近7日CTR</span></div>
-          <div class="m"><b>38/43</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">親子愛共讀｜知識分享繪本</span></div>
+        <div class="owners">投放主：<span class="pill owner">親子愛共讀</span></div>
+        <div class="sec">📊 成效（分投放主/城市）</div>
+        
+    <table class="mtable multi">
+      <thead><tr><th>投放主 / 城市</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">親子愛共讀（桃園市）</td>
+      <td><b>247</b></td>
+      <td>$6.45</td>
+      <td>3.42%</td>
+      <td>38/43</td>
+    </tr>
+    <tr>
+      <td class="ow">親子愛共讀（台中市）</td>
+      <td><b>161</b></td>
+      <td>$6.54</td>
+      <td>3.11%</td>
+      <td>35/38</td>
+    </tr></tbody>
+      <tfoot><tr><td>合計</td><td><b>408</b></td><td colspan="3">領課加總（成效分列如上）</td></tr></tfoot>
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>桃園限定｜孩子專注力救援！</li><li>桃園家長推薦！玩出專注力</li><li>桃園爸媽都在領的專注力卡</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>最近是不是也覺得孩子越來越坐不住？😵‍💫<br> 寫功課3分鐘就分心、上課還常愛亂動？<br> 其實這是孩子「專注力發展還不成熟」的表現！<br>專家建議：只要每天進行「眼腦協調 × 聽覺反應」的刺激訓練，<br> 就能幫助孩子慢慢專心下來✨<br>🎯 【桃園市限定｜專注力遊戲卡】免費開放中<br> 包含70+頁互動遊戲，讓孩子一邊玩、一邊練專注：<br> 👀 找找圖 → 訓練觀察力與眼球追蹤<br> 👂 聲音配對 → 強化聽覺注意與記憶<br> 🧩 步驟任務 → 養成持續專注的好習慣<br>每天10分鐘，從遊戲中練出專心力 💪<br> #桃園限定 #3至8歲專注力訓練 #家長一致好評<br> 👉 點擊圖片立即領取「專注力遊戲卡」！</p></div><div class="copy"><span class="copy-tag">文案2</span><p>桃園爸媽注意！📣<br> 孩子上課坐不住、寫功課三分鐘就分心？<br> 專家提醒：這是「專注力發展未成熟」💡<br> 試試【專注力遊戲卡】<br> 👀 找找圖 × 聽聲音 × 做任務<br> 每天10分鐘，遊戲中練出專心力✨<br>#桃園限定 #3至8歲專注力訓練<br> 👉 免費領取70+頁互動遊戲卡</p></div>
-        <div class="note">ℹ️ 品牌福利鉤子，領課量前段班</div>
+        <div class="note">ℹ️ 同視覺換城市（桃園/台中），投放主皆為親子愛共讀，成效分列</div>
       </div>
     </div>
   </article>
@@ -454,42 +656,28 @@
   <article class="card" data-theme="其他">
     <div class="chead">
       <span class="rank">#2</span>
-      <div class="ctitle"><h3>我們免費了・台中市</h3><div class="cno">編號 25607</div></div>
-    </div>
-    <div class="cbody">
-      <figure class="visual"><a href="assets/25607.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25607.png" alt="我們免費了・台中市"></a><figcaption>投放視覺</figcaption></figure>
-      <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>161</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.55</b><span>領課成本</span></div>
-          <div class="m"><b>3.11%</b><span>近7日CTR</span></div>
-          <div class="m"><b>35/38</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">親子愛共讀｜知識分享繪本</span></div>
-        <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>台中限定｜孩子專注力救援！</li><li>台中家長推薦！玩出專注力</li><li>台中爸媽都在領的專注力卡</li></ul>
-        <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>最近是不是也覺得孩子越來越坐不住？😵‍💫<br> 寫功課3分鐘就分心、上課還常愛亂動？<br> 其實這是孩子「專注力發展還不成熟」的表現！<br>專家建議：只要每天進行「眼腦協調 × 聽覺反應」的刺激訓練，<br> 就能幫助孩子慢慢專心下來✨<br>🎯 【台中市限定｜專注力遊戲卡】免費開放中<br> 包含70+頁互動遊戲，讓孩子一邊玩、一邊練專注：<br> 👀 找找圖 → 訓練觀察力與眼球追蹤<br> 👂 聲音配對 → 強化聽覺注意與記憶<br> 🧩 步驟任務 → 養成持續專注的好習慣<br>每天10分鐘，從遊戲中練出專心力 💪<br> #台中限定 #3至8歲專注力訓練 #家長一致好評<br> 👉 點擊圖片立即領取「專注力遊戲卡」！</p></div><div class="copy"><span class="copy-tag">文案2</span><p>台中爸媽注意！📣<br> 孩子上課坐不住、寫功課三分鐘就分心？<br> 專家提醒：這是「專注力發展未成熟」💡<br> 試試【專注力遊戲卡】<br> 👀 找找圖 × 聽聲音 × 做任務<br> 每天10分鐘，遊戲中練出專心力✨<br>#台中限定 #3至8歲專注力訓練<br> 👉 免費領取70+頁互動遊戲卡</p></div>
-        
+      <div class="ctitle"><h3>ADHD 自測表 1・大腦額葉</h3>
+        <div class="tags"></div>
       </div>
     </div>
-  </article>
-
-  <article class="card" data-theme="其他">
-    <div class="chead">
-      <span class="rank">#3</span>
-      <div class="ctitle"><h3>ADHD自測表 1</h3><div class="cno">編號 25457-1</div></div>
-    </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25457-1.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25457-1.png" alt="ADHD自測表 1"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25457-1.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25457-1.png" alt="ADHD 自測表 1・大腦額葉"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>25</b><span>近2月領課</span></div>
-          <div class="m"><b>$4.76</b><span>領課成本</span></div>
-          <div class="m"><b>8.13%</b><span>近7日CTR</span></div>
-          <div class="m"><b>12/15</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">JoJo閱讀 - 專為3-6歲孩子設計的互動閱讀課程</span></div>
+        <div class="owners">投放主：<span class="pill owner">JoJo閱讀</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">JoJo閱讀</td>
+      <td><b>25</b></td>
+      <td>$4.76</td>
+      <td>8.13%</td>
+      <td>12/15</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>ADHD孩子的大腦額葉，為什麼活化程度低 30%？</li><li>專注力差，不只是坐不住 &gt;&gt;</li><li>專注力不回來，成績進步也變慢</li><li>孩子能不能坐得住，差在這 10 分鐘</li><li>每天10分鐘，2週看見專注力進步</li></ul>
         <div class="sec">📝 文案</div>
@@ -501,19 +689,29 @@
 
   <article class="card" data-theme="其他">
     <div class="chead">
-      <span class="rank">#4</span>
-      <div class="ctitle"><h3>5日共讀徵集・台北市</h3><div class="cno">編號 25831</div></div>
+      <span class="rank">#3</span>
+      <div class="ctitle"><h3>5日親子共讀徵集・台北市</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25831.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25831.png" alt="5日共讀徵集・台北市"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25831.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25831.png" alt="5日親子共讀徵集・台北市"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>17</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.41</b><span>領課成本</span></div>
-          <div class="m"><b>1.99%</b><span>近7日CTR</span></div>
-          <div class="m"><b>7/11</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
+        <div class="owners">投放主：<span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科</td>
+      <td><b>17</b></td>
+      <td>$6.39</td>
+      <td>1.99%</td>
+      <td>7/11</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>台北市限定，5日親子共讀挑戰開始</li><li>台北市100個家庭名額，快來報名</li><li>親子共讀5天，免費領70+頁學習單</li></ul>
         <div class="sec">📝 文案</div>
@@ -525,19 +723,29 @@
 
   <article class="card" data-theme="其他">
     <div class="chead">
-      <span class="rank">#5</span>
-      <div class="ctitle"><h3>ADHD自測表 7</h3><div class="cno">編號 25457-7</div></div>
+      <span class="rank">#4</span>
+      <div class="ctitle"><h3>ADHD 自測表 7・專注力</h3>
+        <div class="tags"></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25457-7.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25457-7.png" alt="ADHD自測表 7"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25457-7.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25457-7.png" alt="ADHD 自測表 7・專注力"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>11</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.91</b><span>領課成本</span></div>
-          <div class="m"><b>11.62%</b><span>近7日CTR</span></div>
-          <div class="m"><b>8/15</b><span>領課/活躍天</span></div>
-        </div>
         <div class="owners">投放主：<span class="pill owner">Claire｜雙語媽媽號</span></div>
+        <div class="sec">📊 成效</div>
+        
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">Claire｜雙語媽媽號</td>
+      <td><b>11</b></td>
+      <td>$6.93</td>
+      <td>11.62%</td>
+      <td>8/15</td>
+    </tr></tbody>
+      
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>90%專注力差的孩子，成績掉到後段班</li><li>專注力不好，成績很快就看得出差距</li><li>專注力不好，成績跟著掉</li><li>孩子能不能坐得住，差在這 10 分鐘</li><li>每天10分鐘，2週看見專注力進步</li></ul>
         <div class="sec">📝 文案</div>
@@ -549,56 +757,83 @@
 
   <article class="card" data-theme="其他">
     <div class="chead">
-      <span class="rank">#6</span>
-      <div class="ctitle"><h3>博客來小孩繪本・台北市</h3><div class="cno">編號 25299</div></div>
+      <span class="rank">#5</span>
+      <div class="ctitle"><h3>我會好好說・5日繪本情緒課</h3>
+        <div class="tags"><span class="tag tmerge">🔗 已合併重複視覺</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25299.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25299.png" alt="博客來小孩繪本・台北市"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25299.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25299.png" alt="我會好好說・5日繪本情緒課"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>5</b><span>近2月領課</span></div>
-          <div class="m"><b>$3.8</b><span>領課成本</span></div>
-          <div class="m"><b>5.43%</b><span>近7日CTR</span></div>
-          <div class="m"><b>1/4</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
+        <div class="owners">投放主：<span class="pill owner">育兒小百科</span></div>
+        <div class="sec">📊 成效（分投放主/城市）</div>
+        
+    <table class="mtable multi">
+      <thead><tr><th>投放主 / 城市</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">育兒小百科（台北市）</td>
+      <td><b>5</b></td>
+      <td>$3.77</td>
+      <td>5.43%</td>
+      <td>1/4</td>
+    </tr>
+    <tr>
+      <td class="ow">育兒小百科（新竹縣市）</td>
+      <td><b>4</b></td>
+      <td>$6.36</td>
+      <td>2.46%</td>
+      <td>2/4</td>
+    </tr></tbody>
+      <tfoot><tr><td>合計</td><td><b>9</b></td><td colspan="3">領課加總（成效分列如上）</td></tr></tfoot>
+    </table>
         <div class="sec">✏️ 標題</div>
         <ul class="titles"><li>台北家長免費索取 &gt;&gt;</li><li>台北市家長限時福利 &gt;&gt;</li><li>台北市3-6歲免費補助 &gt;&gt;</li></ul>
         <div class="sec">📝 文案</div>
         <div class="copy"><span class="copy-tag">主文案</span><p>你知道嗎，幼兒園是「情緒發展關鍵期」<br>學習「情緒管理」對幼兒成長有重要影響<br>#台北市3至6歲 #繪本情緒課<br><br>3-6歲孩子好難安靜與專注？ <br>小百科 邀請 #台北市爸媽們 👩👦 <br>面對孩子的壞脾氣，從「閱讀」開始📚<br>5天時間，學會控制表達情感❤️<br><br> #小百科社群福利 #繪本情緒課<br> ▍適用年齡：3-6歲孩童<br> ▍5天學：3種表達句和1種情緒<br>🕒 學習時間：一天15分鐘<br>💲 費用：市價499元，0元體驗限額50名<br><br>\ 情緒表達好😊上學0煩惱 /<br>【 👉 點擊圖片 #陪孩子掌控情緒 】<br><br>#3至6歲養成情緒素養高EQ<br>#讓閱讀帶給孩子正向情緒😀</p></div><div class="copy"><span class="copy-tag">文案2</span><p>孩子常常哭鬧不想上學？😫<br>每次面對孩子壞脾氣，媽媽覺得好無助🥺<br>#台北市3至6歲限定 #繪本情緒課<br><br>✦ 4堂互動閱讀課 + 1堂複習遊戲課<br>✦ 5天學3種表達句型＋認識1種情緒<br>✦ 幫助認識情緒、學習冷靜說出情緒<br>🕒 學習時間：一天15分鐘<br>💰 費用：市價499元，0元體驗名額30名<br><br>🎁 #小百科 鼓勵閱讀加碼送福利<br>05月20日-06月30日 領取繪本情緒課<br>可獲得【超過50+頁的情緒學習卡】<br><br>📣 歡迎邀請 #台北市家長 一起<br>不怕孩子鬧脾氣<br>用閱讀讓孩子學習正確表達情緒 💖<br><br> ⬇️ 【點擊圖片報名】⬇️</p></div>
-        
+        <div class="note">ℹ️ 同視覺換城市（台北/新竹），投放主皆為育兒小百科，成效分列</div>
       </div>
     </div>
   </article>
 
   <article class="card" data-theme="其他">
     <div class="chead">
-      <span class="rank">#7</span>
-      <div class="ctitle"><h3>博客來小孩繪本・新竹縣市</h3><div class="cno">編號 25304</div></div>
+      <span class="rank">#6</span>
+      <div class="ctitle"><h3>暑假繪本練習包・故事卡＋提問單</h3>
+        <div class="tags"><span class="tag tnew">🆕 新增創意</span></div>
+      </div>
     </div>
     <div class="cbody">
-      <figure class="visual"><a href="assets/25304.png" target="_blank" rel="noopener"><img class="" loading="lazy" src="assets/25304.png" alt="博客來小孩繪本・新竹縣市"></a><figcaption>投放視覺</figcaption></figure>
+      <figure class="visual"><a href="assets/25973.png" target="_blank" rel="noopener"><img loading="lazy" src="assets/25973.png" alt="暑假繪本練習包・故事卡＋提問單"></a><figcaption>投放視覺</figcaption></figure>
       <div class="cdetail">
-        <div class="metrics">
-          <div class="m"><b>4</b><span>近2月領課</span></div>
-          <div class="m"><b>$6.25</b><span>領課成本</span></div>
-          <div class="m"><b>2.46%</b><span>近7日CTR</span></div>
-          <div class="m"><b>2/4</b><span>領課/活躍天</span></div>
-        </div>
-        <div class="owners">投放主：<span class="pill owner">育兒小百科｜正向教養｜分齡指南</span></div>
-        <div class="sec">✏️ 標題</div>
-        <ul class="titles"><li>新竹家長免費索取 &gt;&gt;</li><li>新竹縣市家長限時福利 &gt;&gt;</li><li>新竹縣市3-6歲免費補助 &gt;&gt;</li></ul>
-        <div class="sec">📝 文案</div>
-        <div class="copy"><span class="copy-tag">主文案</span><p>你知道嗎，幼兒園是「情緒發展關鍵期」<br>學習「情緒管理」對幼兒成長有重要影響<br>#新竹縣市3至6歲 #繪本情緒課<br><br>3-6歲孩子好難安靜與專注？ <br>小百科 邀請 #新竹縣市爸媽們 👩👦 <br>面對孩子的壞脾氣，從「閱讀」開始📚<br>5天時間，學會控制表達情感❤️<br><br> #小百科社群福利 #繪本情緒課<br> ▍適用年齡：3-6歲孩童<br> ▍5天學：3種表達句和1種情緒<br>🕒 學習時間：一天15分鐘<br>💲 費用：市價499元，0元體驗限額50名<br><br>\ 情緒表達好😊上學0煩惱 /<br>【 👉 點擊圖片 #陪孩子掌控情緒 】<br><br>#3至6歲養成情緒素養高EQ<br>#讓閱讀帶給孩子正向情緒😀</p></div><div class="copy"><span class="copy-tag">文案2</span><p>孩子常常哭鬧不想上學？😫<br>每次面對孩子壞脾氣，媽媽覺得好無助🥺<br>#新竹縣市3至6歲限定 #繪本情緒課<br><br>✦ 4堂互動閱讀課 + 1堂複習遊戲課<br>✦ 5天學3種表達句型＋認識1種情緒<br>✦ 幫助認識情緒、學習冷靜說出情緒<br>🕒 學習時間：一天15分鐘<br>💰 費用：市價499元，0元體驗名額30名<br><br>🎁 #小百科 鼓勵閱讀加碼送福利<br>05月20日-06月30日 領取繪本情緒課<br>可獲得【超過50+頁的情緒學習卡】<br><br>📣 歡迎邀請 #新竹縣市家長 一起<br>不怕孩子鬧脾氣<br>用閱讀讓孩子學習正確表達情緒 💖<br><br> ⬇️ 【點擊圖片報名】⬇️</p></div>
+        <div class="owners">投放主：<span class="pill owner">繪本福利社</span></div>
+        <div class="sec">📊 成效</div>
         
+    <table class="mtable ">
+      <thead><tr><th>投放主</th><th>領課</th><th>CPL</th><th>CTR</th><th>領課/活躍天</th></tr></thead>
+      <tbody>
+    <tr>
+      <td class="ow">繪本福利社</td>
+      <td><b>1</b></td>
+      <td>$17.31</td>
+      <td>2.13%</td>
+      <td>2/5</td>
+    </tr></tbody>
+      
+    </table>
+        <div class="sec">✏️ 標題</div>
+        <ul class="titles"><li>📚 暑假繪本練習包｜免費領</li><li>故事卡＋提問單，在家就能做</li><li>讀完說不出來？用3張卡練</li><li>🧩 讀前猜、讀中找、讀後說</li><li>🎁 繪本福利社：暑假閱讀包開放</li></ul>
+        <div class="sec">📝 文案</div>
+        <div class="copy"><span class="copy-tag">主文案</span><p>📚 很多孩子不是不翻書，是翻完就結束。<br>共讀可以多加3張卡：<br>✅ 讀前猜：看封面猜故事<br>✅ 讀中找：找一個畫面細節<br>✅ 讀後說：用一句話說喜歡哪裡<br>​<br>接觸前：繪本翻完就跑。<br>接觸後：會指著畫面說出一個細節。<br>​<br>🎁 點擊領取</p></div><div class="copy"><span class="copy-tag">文案2</span><p>📚 繪本不要只翻完。<br>用3張卡：讀前猜、讀中找、讀後說。<br>從只看圖片，到能說出一個畫面細節<br>​<br>👇 點圖領取</p></div>
+        <div class="note">ℹ️ 新上架・繪本閱讀練習包新形式</div>
       </div>
     </div>
   </article></div>
   </section>
 
   <footer>
-    Rose Rose ｜ 廣告優化 · 最佳閱讀廣告 Top 20（依主題分類）<br>
-    圖片點擊可放大；領課成本 CPL＝區間花費 ÷ 領課數。<br>
+    Rose Rose ｜ 廣告優化 · 最佳閱讀廣告（去重・分主題）<br>
+    圖片點擊可放大；🔗 為合併的重複視覺、🆕 為本次新增創意；CPL＝區間花費 ÷ 領課數。<br>
     產出時間：2026-07-17
   </footer>
 </div>
