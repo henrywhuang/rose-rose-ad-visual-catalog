@@ -20,8 +20,18 @@ const READING = { key: 'read', name: '閱讀', q3Target: 3360, monthTargets: { '
 const ENGLISH = { key: 'en', name: '英語', q3Target: 50, monthTargets: { '2026-07': null, '2026-08': null, '2026-09': null }, ref: true };
 const WEEK_DIVISOR = 4;          // 單週合格線＝該週所屬月目標 ÷ 4（Rose 口徑：7月 950/4≈238）
 const PRIMARY = 'm';             // 主口徑 m=成果(meta) / b=後端(backend)
+const RECENT_DAYS = 10;          // 「近N天上架廣告分析」視窗
 const API = 'https://www.arkio.me/api/v1/ad-budget/dashboard';
+const CREATIVE_API = 'https://www.arkio.me/api/v1/marketing/creative-library/';
 const ROSE_RE = /rose/i;
+// 投放主（social_account_code → 粉專中文名），未列出者顯示原代碼
+const PAGE_NAME = {
+  child_wiki: '育兒小百科', parent_reading: '愛共讀', easylearning_tw: '輕鬆學',
+  little_pages_club: '小頁俱樂部', mommy_emilylee: 'Emily 媽咪', claire_tw: 'Claire',
+  jojoreading_tw: 'JOJO 閱讀',
+};
+const numOf = s => { const m = String(s || '').match(/\b(2[0-9]{4})\b/); return m ? m[1] : null; }; // 廣告編號(如25982)
+const theme = s => String(s || '').replace(/^\s*2[0-9]{4}\s*/, '').replace(/[（(]\s*Rose\s*[)）]/ig, '').replace(/[-\s]*[ABＡＢ]$/,'').replace(/[✅👌🪝❌]/g,'').replace(/\s+/g,' ').trim();
 
 // ============== 時間工具（台北 UTC+8）==============
 const DAY = 86400000, TZ = 8 * 3600000;
@@ -57,6 +67,22 @@ async function fetchDashboard(tok) {
     const j = await r.json(); return j.data || j;
   } finally { clearTimeout(to); }
 }
+// 抓 creative library（分頁），回傳含 Rose 的 creative（附視覺 OSS 圖、投放主、上架日）
+async function fetchCreatives(tok) {
+  let all = [], page = 1;
+  while (page <= 12) {
+    const ac = new AbortController(); const to = setTimeout(() => ac.abort(), 25000);
+    let list;
+    try {
+      const r = await fetch(`${CREATIVE_API}?page=${page}&page_size=200`, { headers: { Authorization: `Bearer ${tok}`, Accept: 'application/json' }, signal: ac.signal });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const j = await r.json(); const arr = j.data || j; list = Array.isArray(arr) ? arr : [];
+    } finally { clearTimeout(to); }
+    all = all.concat(list); if (list.length < 200) break; page++;
+  }
+  return all.filter(c => ROSE_RE.test(c.name || ''));
+}
+const imgsOf = c => { try { return JSON.parse(c.assets || '[]').filter(a => a.kind === 'image' && a.gcs_url).map(a => a.gcs_url); } catch { return []; } };
 
 // ============== 帳本累計 ==============
 function loadLedger() {
@@ -91,7 +117,7 @@ function mergeSnapshot(ledger, root) {
 // ============== 主流程 ==============
 const ledger = loadLedger();
 const tok = readToken();
-let fetchStatus = 'error', expDate = tok ? tokenExp(tok) : null, nAds = 0, companyGoals = null;
+let fetchStatus = 'error', expDate = tok ? tokenExp(tok) : null, nAds = 0, companyGoals = null, roseCreatives = [];
 if (!tok) { console.error('⚠ 無 ARKIO_TOKEN，改用既有帳本輸出（資料不更新）'); }
 else {
   try {
@@ -106,7 +132,15 @@ else {
     fetchStatus = 'stale'; ledger.last_fetch_status = 'stale:' + e.message;
     console.error('⚠ 抓取失敗，改用既有帳本：', e.message);
   }
+  try {
+    const cr = await fetchCreatives(tok);
+    // 精簡保存（只留看板需要的欄位），供抓取失敗時回退
+    roseCreatives = cr.map(c => ({ name: c.name, social_account_code: c.social_account_code, uploaded_at: c.uploaded_at, meta_pushed_at: c.meta_pushed_at, project_code: c.project_code, assets: c.assets }));
+    if (roseCreatives.length) { ledger.creatives = roseCreatives; fs.writeFileSync(LEDGER_PATH, JSON.stringify(ledger, null, 0)); }
+    console.log(`✓ creative library：Rose 素材 ${roseCreatives.length} 個`);
+  } catch (e) { console.error('⚠ creative library 抓取失敗，回退帳本既有素材：', e.message); }
 }
+if (!roseCreatives.length && Array.isArray(ledger.creatives)) roseCreatives = ledger.creatives;
 
 // ---- 從帳本計算 ----
 const R = v => Math.round(v * 10) / 10, R0 = v => Math.round(v);
@@ -224,6 +258,47 @@ function adsetRows() {
 const subjects = [subjectAnalysis(READING), subjectAnalysis(ENGLISH)];
 const rows = adsetRows();
 
+// ---- 近N天上架廣告分析（creative library ⋈ 帳本成效）----
+function recentAdsAnalysis() {
+  const cutoff = addDays(today, -(RECENT_DAYS - 1));
+  // 帳本 adset 依編號建成效索引（近N天領課/花費 + 近7日CTR + 狀態）
+  const perfByNum = {};
+  for (const a of adsetList) {
+    const n = numOf(a.name); if (!n) continue;
+    let m10 = 0, s10 = 0; for (const [d, v] of Object.entries(a.daily)) { if (d >= cutoff && d <= today) { m10 += v.m; s10 += v.s; } }
+    perfByNum[n] = { name: a.name, bl: a.business_line, acct: a.account, status: a.status, paused: /PAUSED/i.test(a.status || ''), m10, s10, ctr7: a.last7?.ctr ?? null, clicks7: a.last7?.clicks ?? null, imp7: a.last7?.impressions ?? null };
+  }
+  // creative library 依編號分組
+  const byNum = {};
+  for (const c of roseCreatives) {
+    const n = numOf(c.name); if (!n) continue;
+    (byNum[n] ??= { num: n, names: [], imgs: [], pages: new Set(), uploaded: [], pushed: false, project: c.project_code });
+    const g = byNum[n]; g.names.push(c.name); if (c.social_account_code) g.pages.add(c.social_account_code);
+    g.uploaded.push((c.uploaded_at || '').slice(0, 10)); if (c.meta_pushed_at) g.pushed = true;
+    for (const u of imgsOf(c)) if (!g.imgs.includes(u)) g.imgs.push(u);
+  }
+  // 近N天上架：任一 creative 上傳日在視窗內
+  const recent = Object.values(byNum).filter(g => g.uploaded.some(d => d && d >= cutoff));
+  const out = recent.map(g => {
+    const up = g.uploaded.filter(Boolean).sort().pop();
+    const p = perfByNum[g.num] || null;
+    const m10 = p ? R0(p.m10) : null, s10 = p ? R0(p.s10) : null;
+    const cpl = (p && p.m10 > 0) ? R(p.s10 / p.m10) : null;
+    const pages = [...g.pages].map(c => ({ code: c, name: PAGE_NAME[c] || c }));
+    return {
+      num: g.num, theme: theme(g.names[0]), fullname: g.names[0].replace(/[-\s]*[ABＡＢ]$/, ''),
+      uploaded: up, imgs: g.imgs.slice(0, 4), pages, pushed: g.pushed,
+      bl: p ? p.bl : (/英語|英文|english|abc|字母|發音|單字|letter|phonic/i.test(g.names[0]) ? 'English' : 'Reading'),
+      status: p ? p.status : null, hasPerf: !!p,
+      m10, s10, cpl, ctr7: p && p.ctr7 != null ? R(p.ctr7) : null,
+    };
+  });
+  // 預設依領課排序（無成效者置底）
+  out.sort((a, b) => (b.m10 ?? -1) - (a.m10 ?? -1) || (b.ctr7 ?? -1) - (a.ctr7 ?? -1));
+  return { cutoff, days: RECENT_DAYS, items: out };
+}
+const recentAds = recentAdsAnalysis();
+
 // 補量建議（以閱讀當月為準）
 const rd = subjects[0];
 const winners = rows.filter(r => r.bl === 'Reading' && !r.paused && r.m7 > 0).sort((a, b) => b.m7 - a.m7);
@@ -243,7 +318,7 @@ rows.forEach((r, i) => r.color = PALETTE[i % PALETTE.length]);
 const payload = {
   genStamp, checkpointWd, today, fetchStatus, expDate, nAds, curYM,
   quarter: QUARTER, dayOfQuarter, dayOfMonth, dim,
-  subjects, rows, advice, primary: PRIMARY,
+  subjects, rows, advice, primary: PRIMARY, recentAds,
   companyNote: companyGoals?.data_quality_warnings || null,
 };
 fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
@@ -256,6 +331,7 @@ console.log(`生成完成 @ ${genStamp} 週${checkpointWd} | Q3 第${dayOfQuarte
 for (const s of subjects) console.log(`  [${s.name}] Q3 ${s.q3.actual}/${s.q3.target}(${s.q3.prog}%,推估${s.q3.proj}) | 當月 ${s.cur.actual}/${s.cur.target}(推估${s.cur.proj},缺${s.cur.gap}) ${s.cur.status}`);
 console.log(`  [補量] 安全=${safe} 需日均${needPerDay}(近7日均${rd.cur.recent7Rate}) 需再+${R(addlPerDay)}/日 ≈ ${adsNeeded}檔爆款`);
 console.log(`  [排行] 加碼:${advice.topScale.map(r => r.name.slice(0, 12)).join(',')} | 迭代:${advice.iterate.map(r => r.name.slice(0, 12)).join(',')}`);
+console.log(`  [近${RECENT_DAYS}天上架] ${recentAds.items.length} 檔（上架≥${recentAds.cutoff}）：${recentAds.items.slice(0, 6).map(r => r.theme + '(領' + (r.m10 ?? '-') + ')').join('、')}`);
 
 // ---------- 渲染函式 ----------
 function renderHTML(D) {
@@ -322,6 +398,29 @@ nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card
 nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .foot{color:var(--sub);font-size:11px;text-align:center;margin-top:24px;line-height:1.8}
 .pill{display:inline-block;font-size:10px;padding:1px 6px;border-radius:6px;background:#0000002e;border:1px solid var(--line);color:var(--sub);margin-left:5px}
+.sortbar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--sub);margin:6px 2px 10px}
+.sortbar button{border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600}
+.sortbar button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+@media(max-width:720px){.rgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.rgrid{grid-template-columns:1fr}}
+.rcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);display:flex;flex-direction:column}
+.rcard.nodata{opacity:.62}
+.rank{position:absolute;top:6px;left:6px;background:#000000a8;color:#fff;font-size:11px;font-weight:800;border-radius:8px;padding:1px 7px}
+.rthumb{position:relative;width:100%;aspect-ratio:1/1;background:#0a0f1e;display:flex;overflow:hidden}
+.rthumb img{width:100%;height:100%;object-fit:cover;flex:1 1 0;min-width:0;border-right:1px solid #0a0f1e}
+.rthumb img:last-child{border-right:0}
+.rthumb .new{position:absolute;top:6px;right:6px;background:#ef4444;color:#fff;font-size:10px;font-weight:800;border-radius:8px;padding:1px 7px}
+.rbody{padding:9px 11px 11px}
+.rbody .th{font-size:13.5px;font-weight:800;line-height:1.35;margin-bottom:3px}
+.rbody .mp{font-size:11px;color:var(--sub);margin-bottom:7px}
+.rbody .mp b{color:var(--txt)}
+.rmetrics{display:flex;gap:6px;flex-wrap:wrap}
+.rmetrics .mx{flex:1 1 0;min-width:56px;background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:5px 7px;text-align:center}
+.rmetrics .mx .v{font-size:16px;font-weight:800}.rmetrics .mx .k{font-size:10px;color:var(--sub)}
+.rmetrics .mx.lead .v{color:#86efac}.rmetrics .mx.cpl .v{color:#fdba74}.rmetrics .mx.ctr .v{color:#7dd3fc}
+.rtag{font-size:10.5px;padding:2px 7px;border-radius:999px;margin-top:8px;display:inline-block}
+.rtag.act{background:#123322;color:#86efac}.rtag.pau{background:#20263a;color:#96a0bd}.rtag.non{background:#2a1418;color:#fca5a5}
 </style></head><body><div class="wrap">
 <h1>廣告 OKR 監控台 · 閱讀 / 英語</h1>
 <div class="meta">篩選 campaign／廣告名含「Rose」· 主數字＝Ads Manager 成果(meta)，括號為後端領課 · 自動更新每週三・日 09:00（台北）</div>
@@ -331,21 +430,27 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div id="okr" class="okr"></div>
 <div class="note">進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。進度在白線左邊＝落後，差距即缺口。推估＝累計 ÷ 時間進度。Q3 累計自 7/1 起持續疊加。</div>
 
-<div class="sec-t">② 每週追蹤（閱讀・以週為單位）</div>
+<div class="sec-t">② 近${RECENT_DAYS}天上架廣告分析（視覺・投放主・成效）</div>
+<div id="recentSum"></div>
+<div class="sortbar">排序：<button data-k="m10" class="on">領課成果</button><button data-k="cpl">CPL（低→高）</button><button data-k="ctr7">CTR</button><button data-k="uploaded">上架日</button></div>
+<div id="recentGrid" class="rgrid"></div>
+<div class="note">視覺＝creative library 素材圖（同編號取 A/B）；投放主＝發佈粉專；上架日＝素材上傳日。<b>領課/CPL＝近${RECENT_DAYS}天</b>（帳本 meta 成果），<b>CTR＝近7日</b>（adset 口徑，無每日點擊資料）。剛上架者可能只有 CTR 尚無領課，屬正常早期訊號。灰底＝已上傳但目前無投放成效數據。</div>
+
+<div class="sec-t">③ 每週追蹤（閱讀・以週為單位）</div>
 <div id="weekSum"></div>
 <div class="chartbox"><h3>每週領課 vs 合格線（Mon–Sun）</h3><canvas id="wkchart" height="200"></canvas></div>
 <div id="weekTable"></div>
 <div class="note">單週合格線＝當月目標 ÷ 4（7月 950/4≈<b>238</b>、8月 1160/4=290、9月 1250/4≈313）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
 
-<div class="sec-t">③ 每月缺口</div>
+<div class="sec-t">④ 每月缺口</div>
 <div id="monthTable"></div>
 
-<div class="sec-t">④ 廣告成效排行 + 迭代建議</div>
+<div class="sec-t">⑤ 廣告成效排行 + 迭代建議（本季累計）</div>
 <div id="reco"></div>
 <nav class="tabs" id="blTabs"></nav>
 <div id="adTable"></div>
 
-<div class="sec-t">⑤ 依 Campaign 匯總</div>
+<div class="sec-t">⑥ 依 Campaign 匯總</div>
 <div id="campTable"></div>
 
 <div class="foot">Rose Rose 行銷部 · 廣告投放 OKR 監控<br>資料源 Arkio Ad Pilot dashboard · 最後更新 <span id="ls"></span></div>
@@ -398,7 +503,45 @@ D.subjects.forEach(s=>{
   });
 });
 
-// ② 每週
+// ② 近N天上架廣告分析
+const RA=D.recentAds;
+const withPerf=RA.items.filter(x=>x.hasPerf);
+const totLead=withPerf.reduce((s,x)=>s+(x.m10||0),0);
+const activeN=RA.items.filter(x=>x.status&&!/PAUSED/i.test(x.status)).length;
+$('recentSum').innerHTML='<div class="summary '+(totLead>0?'green':'')+'"><div class="hd">🆕 近'+RA.days+'天上架 '+RA.items.length+' 檔廣告（上架日 ≥ '+RA.cutoff+'）</div>'+
+  '<div>其中 '+activeN+' 檔投放中，近'+RA.days+'天合計貢獻領課 <b>'+totLead+'</b>。剛上架者多半只有 CTR、尚無領課，看 CTR 找有潛力的續投；已有領課且 CPL 低者可加碼。</div></div>';
+const grid=$('recentGrid');
+function pageLine(x){ return x.pages.map(p=>p.name).join('／')||'—'; }
+function renderRecent(sortKey){
+  const items=[...RA.items];
+  const val=(x,k)=> k==='cpl' ? (x.cpl==null?Infinity:x.cpl) : k==='uploaded' ? (x.uploaded||'') : (x[k]==null?-1:x[k]);
+  items.sort((a,b)=>{ if(sortKey==='cpl'){return val(a,'cpl')-val(b,'cpl');} if(sortKey==='uploaded'){return val(b,'uploaded')<val(a,'uploaded')?-1:1;} return val(b,sortKey)-val(a,sortKey); });
+  grid.innerHTML='';
+  items.forEach((x,i)=>{
+    const isNew=x.uploaded>=D.recentAds.cutoff && (x.m10==null||x.m10===0);
+    const tagCls=!x.hasPerf?'non':(x.status&&/PAUSED/i.test(x.status)?'pau':'act');
+    const tagTxt=!x.hasPerf?'無投放成效':(x.status&&/PAUSED/i.test(x.status)?'已暫停':'投放中');
+    const imgs=(x.imgs.length?x.imgs:['']).slice(0,2).map(u=>u?'<img loading="lazy" src="'+u+'" alt="">':'<div style="flex:1;display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:11px">無圖</div>').join('');
+    const c=document.createElement('div'); c.className='rcard'+(x.hasPerf?'':' nodata');
+    c.innerHTML=
+      '<div class="rthumb"><span class="rank">#'+(i+1)+'</span>'+imgs+(x.uploaded?'<span class="new">'+x.uploaded.slice(5)+' 上架</span>':'')+'</div>'+
+      '<div class="rbody">'+
+        '<div class="th">'+x.theme+' <span class="pill">'+(x.bl==='English'?'英':'閱')+'</span></div>'+
+        '<div class="mp">投放主 <b>'+pageLine(x)+'</b>　·　#'+x.num+'</div>'+
+        '<div class="rmetrics">'+
+          '<div class="mx lead"><div class="v">'+(x.m10==null?'—':x.m10)+'</div><div class="k">近'+RA.days+'天領課</div></div>'+
+          '<div class="mx cpl"><div class="v">'+(x.cpl==null?'—':'$'+x.cpl)+'</div><div class="k">CPL</div></div>'+
+          '<div class="mx ctr"><div class="v">'+(x.ctr7==null?'—':x.ctr7+'%')+'</div><div class="k">CTR·7日</div></div>'+
+        '</div>'+
+        '<span class="rtag '+tagCls+'">'+tagTxt+'</span>'+
+      '</div>';
+    grid.appendChild(c);
+  });
+}
+document.querySelectorAll('.sortbar button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.sortbar button').forEach(x=>x.classList.remove('on'));b.classList.add('on');renderRecent(b.dataset.k);});
+renderRecent('m10');
+
+// ③ 每週
 const wk=D.subjects[0].weeks;
 const cur=D.subjects[0].cur;
 const passed=wk.filter(w=>w.status==='pass').length, failed=wk.filter(w=>w.status==='fail').length;

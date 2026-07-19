@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-07-19 12:21",
+ "genStamp": "2026-07-19 20:53",
  "checkpointWd": "日",
  "today": "2026-07-19",
  "fetchStatus": "ok",
@@ -1056,6 +1056,348 @@
   ]
  },
  "primary": "m",
+ "recentAds": {
+  "cutoff": "2026-07-10",
+  "days": 10,
+  "items": [
+   {
+    "num": "25969",
+    "theme": "復刻-108識字卡拼圖2",
+    "fullname": "25969 復刻-108識字卡拼圖2（Rose）",
+    "uploaded": "2026-07-13",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/29b0fd0b-978b-4d24-8ff5-36c3cbfa6a4d.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/ee4cde87-06c3-49e7-b715-8983e28f6d87.png"
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 12,
+    "s10": 36,
+    "cpl": 3,
+    "ctr7": 2.6
+   },
+   {
+    "num": "25973",
+    "theme": "復刻-暑假繪本練習包",
+    "fullname": "25973 復刻-暑假繪本練習包（Rose）",
+    "uploaded": "2026-07-13",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/e4c0fdf1-fe64-478c-900f-27c20a812307.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/76488fc9-6a68-44ec-bb29-bebcbb5fb752.png"
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 2,
+    "s10": 27,
+    "cpl": 13.7,
+    "ctr7": 2.3
+   },
+   {
+    "num": "25972",
+    "theme": "復刻-暑假識字練習",
+    "fullname": "25972 復刻-暑假識字練習（Rose）",
+    "uploaded": "2026-07-13",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/44e5d3a2-743c-4430-864a-533182d582f9.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/2a3f90c5-f6ce-4381-99fe-5016019f2b6f.png"
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 2,
+    "s10": 15,
+    "cpl": 7.3,
+    "ctr7": 2
+   },
+   {
+    "num": "25974",
+    "theme": "復刻-暑期幼兒英語營",
+    "fullname": "25974 復刻-暑期幼兒英語營（Rose）",
+    "uploaded": "2026-07-13",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/f402c5b0-e50e-4e8c-bb5a-c1129835516e.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/acce07dc-356d-489d-830f-3b45082622ce.png"
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "English",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 19,
+    "cpl": 18.7,
+    "ctr7": 3.3
+   },
+   {
+    "num": "25970",
+    "theme": "復刻-108識字卡拼圖2",
+    "fullname": "25970 復刻-108識字卡拼圖2（Rose）",
+    "uploaded": "2026-07-13",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/ef94e2bc-c442-4080-b9ce-883d64a43a48.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/09e96425-23c5-4aba-b780-e6c9d37a182c.png"
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 15,
+    "cpl": 15.1,
+    "ctr7": 2.4
+   },
+   {
+    "num": "25971",
+    "theme": "復刻-暑假注音先修",
+    "fullname": "25971 復刻-暑假注音先修（Rose）",
+    "uploaded": "2026-07-13",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/ab1e12b7-da95-489d-b629-e14c3f20a96c.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/13/e4181143-f483-4592-9c31-8a4aa25f6ee3.png"
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 17,
+    "cpl": 17.1,
+    "ctr7": 2.4
+   },
+   {
+    "num": "25978",
+    "theme": "復刻-情緒九宮格",
+    "fullname": "25978 復刻-情緒九宮格（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/b86dde03-911d-49f8-86da-3676e713fb3f.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/482d226a-769e-4b38-b23e-7beb6b262e33.png"
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1,
+    "cpl": null,
+    "ctr7": 5
+   },
+   {
+    "num": "25976",
+    "theme": "復刻-我不壞",
+    "fullname": "25976 復刻-我不壞（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/10d747dc-baf1-43d3-bb97-e0695b794274.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/76afc348-00c2-4bf7-be6e-395044e4b9ab.png"
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1,
+    "cpl": null,
+    "ctr7": 4.6
+   },
+   {
+    "num": "25980",
+    "theme": "開學前補識字",
+    "fullname": "25980 開學前補識字（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/5d95b4c8-d1e2-4697-bf75-c2c085d7b198.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/43a9cfad-504f-48f7-abc6-7fa1050351ad.png"
+    ],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 0,
+    "cpl": null,
+    "ctr7": 4.3
+   },
+   {
+    "num": "25981",
+    "theme": "暑假超前部署",
+    "fullname": "25981 暑假超前部署（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/d066a90e-f2a8-4404-b565-64278114f790.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/a357be98-e7dd-430e-8f4f-78ceded5d743.png"
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 0,
+    "cpl": null,
+    "ctr7": 3.5
+   },
+   {
+    "num": "25977",
+    "theme": "復刻-怒火寶貝",
+    "fullname": "25977 復刻-怒火寶貝（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/eb04fc12-8269-4c52-9f2f-a7986eab1229.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/011e81f2-d0ae-47a6-bddf-8c20e9c25306.png"
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 0,
+    "cpl": null,
+    "ctr7": 3.4
+   },
+   {
+    "num": "25979",
+    "theme": "閱讀特訓班",
+    "fullname": "25979 閱讀特訓班（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/69756c0b-c9da-40b1-bbec-d1dd81c2b100.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/b46a358d-259d-459f-b9f0-2840370a52d7.png"
+    ],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1,
+    "cpl": null,
+    "ctr7": 3.3
+   },
+   {
+    "num": "25975",
+    "theme": "復刻-我會冷靜",
+    "fullname": "25975 復刻-我會冷靜（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/6477ec32-a8af-4c97-a5cb-deb25633abae.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/a06beb77-ce72-48b4-b9ef-d9c25a6c61b9.png"
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 0,
+    "cpl": null,
+    "ctr7": 3
+   },
+   {
+    "num": "25982",
+    "theme": "讀完說不出來嗎",
+    "fullname": "25982 讀完說不出來嗎（Rose）",
+    "uploaded": "2026-07-18",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/140fc401-6179-4924-a133-223c2dd72470.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/07/18/43ff0d16-6b0c-4199-add4-5a255d3da3ec.png"
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 0,
+    "cpl": null,
+    "ctr7": 1.4
+   }
+  ]
+ },
  "companyNote": [
   "後端資料庫遷移中：Math APP 註冊數 + Math H5 領課數從 2026-05-26 起異常偏低。Reading / English 領課不受影響。",
   "Damer MCP 與 Lark bitable 已交叉驗證：數字相同（共用後端），切換 Damer 無法解決，等待開發完成遷移。"
