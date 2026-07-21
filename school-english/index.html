@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7df">
+  <meta name="description" content="開學季限定英語啟蒙練習冊，陪孩子從 ABC、首音到第一個英文句子。">
+  <meta property="og:title" content="開學英語啟蒙｜我的第一本 Back to School 練習冊">
+  <meta property="og:description" content="6 個趣味任務，8 分鐘完成孩子的開學英語熱身。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://henrywhuang.github.io/rose-rose-ad-visual-catalog/school-english/">
+  <title>開學英語啟蒙｜JOJO English</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='14' width='64' height='64' fill='%23ffcf4b'/%3E%3Ctext x='32' y='45' font-size='39' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-sky" aria-hidden="true">
+    <span class="cloud cloud-a"></span>
+    <span class="cloud cloud-b"></span>
+    <span class="doodle doodle-a">A</span>
+    <span class="doodle doodle-b">b</span>
+    <span class="doodle doodle-c">★</span>
+  </div>
+
+  <div class="app-shell">
+    <header class="site-header">
+      <button class="icon-button header-back is-hidden" id="headerBack" type="button" aria-label="回到首頁">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <a class="brand" href="./" aria-label="JOJO English 首頁">
+        <span class="brand-mark">JOJO</span>
+        <span class="brand-sub">ENGLISH</span>
+      </a>
+      <button class="icon-button sound-toggle" id="soundToggle" type="button" aria-label="關閉聲音" aria-pressed="true">
+        <svg class="sound-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15 9a4 4 0 0 1 0 6M17.5 6.5a8 8 0 0 1 0 11"/></svg>
+        <svg class="sound-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 5m0-5-5 5"/></svg>
+      </button>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+  </div>
+
+  <noscript>
+    <div class="noscript">請開啟 JavaScript，才能開始英語練習。</div>
+  </noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>
