@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-07-22 12:36",
+ "genStamp": "2026-07-22 12:41",
  "checkpointWd": "三",
  "tpDate": "2026-07-22",
  "OKR": {
@@ -38,18 +38,18 @@
    "name": "英語",
    "key": "en",
    "target": 880,
-   "actual": 565,
+   "actual": 566,
    "actualPub": 175,
-   "actualPri": 390,
+   "actualPri": 391,
    "source": "lark",
-   "prog": 64.2,
+   "prog": 64.3,
    "timeProg": 71,
-   "diff": -6.8,
-   "proj": 796,
-   "attain": 90.5,
-   "gap": 84,
-   "remain": 315,
-   "needPerDay": 35,
+   "diff": -6.6,
+   "proj": 798,
+   "attain": 90.6,
+   "gap": 82,
+   "remain": 314,
+   "needPerDay": 34.9,
    "dayRateNow": 25.7,
    "lastMonAll": 666,
    "status": "behind",
@@ -62,19 +62,19 @@
    "name": "數學",
    "key": "math",
    "target": 520,
-   "actual": 401,
+   "actual": 402,
    "actualPub": 17,
-   "actualPri": 384,
+   "actualPri": 385,
    "source": "arkio",
-   "prog": 77.1,
+   "prog": 77.3,
    "timeProg": 71,
-   "diff": 6.1,
-   "proj": 565,
-   "attain": 108.7,
+   "diff": 6.3,
+   "proj": 566,
+   "attain": 108.9,
    "gap": 0,
-   "remain": 119,
-   "needPerDay": 13.2,
-   "dayRateNow": 18.2,
+   "remain": 118,
+   "needPerDay": 13.1,
+   "dayRateNow": 18.3,
    "lastMonAll": 497,
    "status": "ahead",
    "poolKeys": [
@@ -1290,7 +1290,7 @@
     134,
     87,
     123,
-    73
+    74
    ],
    "channels": [
     {
@@ -1481,7 +1481,7 @@
       3,
       2,
       5,
-      1
+      2
      ],
      "mean": 3.6,
      "sd": 3.6,
@@ -1492,16 +1492,16 @@
      "recent3": [
       2,
       5,
-      1
+      2
      ],
      "norm": 15.3,
      "lastMon": 13,
-     "mtd": 9,
-     "proj": 13,
-     "gap": 3,
-     "dropPct": -2,
+     "mtd": 10,
+     "proj": 14,
+     "gap": 1,
+     "dropPct": 8,
      "health": "ok",
-     "supply": "watch"
+     "supply": "ok"
     },
     {
      "name": "轉化-私訊",
@@ -1899,7 +1899,7 @@
     723,
     498,
     497,
-    401
+    402
    ],
    "band": {
     "mean": 572.7,
@@ -1996,7 +1996,7 @@
       103,
       108,
       108,
-      71
+      72
      ],
      "mean": 106.3,
      "sd": 0,
@@ -2005,14 +2005,14 @@
      "recent3": [
       108,
       108,
-      71
+      72
      ],
      "norm": 106.3,
      "lastMon": 108,
-     "mtd": 71,
-     "proj": 100,
-     "gap": 6,
-     "dropPct": -7,
+     "mtd": 72,
+     "proj": 101,
+     "gap": 5,
+     "dropPct": -6,
      "health": "small",
      "supply": "ok"
     },
