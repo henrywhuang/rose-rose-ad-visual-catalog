@@ -15,9 +15,9 @@ const LEDGER_PATH = path.join(OUT, 'ledger.json');
 
 // ============== 設定（Rose 給定目標，可調整）==============
 const QUARTER = { label: '2026-Q3', start: '2026-07-01', end: '2026-09-30', totalDays: 92, months: ['2026-07', '2026-08', '2026-09'] };
-const READING = { key: 'read', name: '閱讀', q3Target: 3360, monthTargets: { '2026-07': 950, '2026-08': 1160, '2026-09': 1250 } };
-// 英語：OKR 圖示「English K2 領課50」為參考；Rose 本次僅要求追蹤數量，目標待確認。
-const ENGLISH = { key: 'en', name: '英語', q3Target: 50, monthTargets: { '2026-07': null, '2026-08': null, '2026-09': null }, ref: true };
+const READING = { key: 'read', name: '閱讀', q3Target: 3360, monthTargets: { '2026-07': 950, '2026-08': 1150, '2026-09': 1260 } };
+// 英語 K2：Rose 2026-07-22 確認 季目標 50、每月 17（正式目標，非參考）。
+const ENGLISH = { key: 'en', name: '英語', q3Target: 50, monthTargets: { '2026-07': 17, '2026-08': 17, '2026-09': 17 } };
 const WEEK_DIVISOR = 4;          // 單週合格線＝該週所屬月目標 ÷ 4（Rose 口徑：7月 950/4≈238）
 const PRIMARY = 'm';             // 主口徑 m=成果(meta) / b=後端(backend)
 const RECENT_DAYS = 10;          // 「近N天上架廣告分析」視窗
@@ -440,7 +440,7 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div id="weekSum"></div>
 <div class="chartbox"><h3>每週領課 vs 合格線（Mon–Sun）</h3><canvas id="wkchart" height="200"></canvas></div>
 <div id="weekTable"></div>
-<div class="note">單週合格線＝當月目標 ÷ 4（7月 950/4≈<b>238</b>、8月 1160/4=290、9月 1250/4≈313）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
+<div class="note">單週合格線＝當月目標 ÷ 4（7月 950/4≈<b>238</b>、8月 1150/4≈288、9月 1260/4=315）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
 
 <div class="sec-t">④ 每月缺口</div>
 <div id="monthTable"></div>
@@ -472,17 +472,7 @@ const okr=$('okr');
 D.subjects.forEach(s=>{
   [{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天'},
    {scope:D.curYM+' 當月',o:s.cur,tp:s.cur.timeProg,extra:D.dayOfMonth+'/'+D.dim+'天',isMonth:true}].forEach(seg=>{
-    if(s.key==='en'&&seg.isMonth) return; // 英語僅顯示季累計(目標待確認)，不做當月判定
     const o=seg.o;
-    // 參考科目(英語)：只顯示追蹤數量＋參考目標，不做超前/落後判定，避免誤導
-    if(s.ref){
-      const div=document.createElement('div'); div.className='ocard na';
-      div.innerHTML=
-        '<div class="hd"><div class="nm">'+s.name+' <span class="pill">'+seg.scope+' · 追蹤</span></div></div>'+
-        '<div class="big">'+o.actual+'<small> 領課（後端 '+o.actualBk+'）</small></div>'+
-        '<div class="row2"><span class="chip">參考目標 '+(o.target||'—')+'（待 Rose 確認月/季）</span><span class="chip">近7日均 '+D.subjects[1].cur.recent7Rate+'</span></div>';
-      okr.appendChild(div); return;
-    }
     const cls=o.status||'na';
     const prog=o.prog||0, tp=seg.tp||0;
     const barCol=cls==='behind'?'var(--warn)':cls==='watch'?'var(--watch)':cls==='ahead'?'var(--good)':'var(--sub)';

@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-07-22 10:46",
+ "genStamp": "2026-07-22 12:16",
  "checkpointWd": "三",
  "today": "2026-07-22",
  "fetchStatus": "ok",
@@ -27,8 +27,8 @@
    "q3Target": 3360,
    "monthTargets": {
     "2026-07": 950,
-    "2026-08": 1160,
-    "2026-09": 1250
+    "2026-08": 1150,
+    "2026-09": 1260
    },
    "q3": {
     "target": 3360,
@@ -76,26 +76,26 @@
     },
     {
      "ym": "2026-08",
-     "target": 1160,
+     "target": 1150,
      "actual": 0,
      "actualBk": 0,
      "isCur": false,
      "isPast": false,
      "proj": 0,
-     "gap": 1160,
+     "gap": 1150,
      "prog": 0,
      "timeProg": 0,
      "status": "na"
     },
     {
      "ym": "2026-09",
-     "target": 1250,
+     "target": 1260,
      "actual": 0,
      "actualBk": 0,
      "isCur": false,
      "isPast": false,
      "proj": 0,
-     "gap": 1250,
+     "gap": 1260,
      "prog": 0,
      "timeProg": 0,
      "status": "na"
@@ -157,11 +157,10 @@
    "name": "英語",
    "q3Target": 50,
    "monthTargets": {
-    "2026-07": null,
-    "2026-08": null,
-    "2026-09": null
+    "2026-07": 17,
+    "2026-08": 17,
+    "2026-09": 17
    },
-   "ref": true,
    "q3": {
     "target": 50,
     "actual": 27,
@@ -177,58 +176,58 @@
    },
    "cur": {
     "ym": "2026-07",
-    "target": 0,
+    "target": 17,
     "actual": 27,
     "actualBk": 20,
-    "prog": 0,
+    "prog": 158.8,
     "timeProg": 71,
     "proj": 38,
-    "attain": 0,
-    "gap": null,
+    "attain": 223.5,
+    "gap": 0,
     "remain": 0,
     "needPerDay": 0,
     "dayRateNow": 1.2,
     "recent7Rate": 0.6,
-    "diff": 0,
-    "status": "na"
+    "diff": 87.9,
+    "status": "ahead"
    },
    "months": [
     {
      "ym": "2026-07",
-     "target": null,
+     "target": 17,
      "actual": 27,
      "actualBk": 20,
      "isCur": true,
      "isPast": false,
      "proj": 38,
-     "gap": null,
-     "prog": null,
+     "gap": 0,
+     "prog": 158.8,
      "timeProg": 71,
-     "status": "na"
+     "status": "watch"
     },
     {
      "ym": "2026-08",
-     "target": null,
+     "target": 17,
      "actual": 0,
      "actualBk": 0,
      "isCur": false,
      "isPast": false,
      "proj": 0,
-     "gap": null,
-     "prog": null,
+     "gap": 17,
+     "prog": 0,
      "timeProg": 0,
      "status": "na"
     },
     {
      "ym": "2026-09",
-     "target": null,
+     "target": 17,
      "actual": 0,
      "actualBk": 0,
      "isCur": false,
      "isPast": false,
      "proj": 0,
-     "gap": null,
-     "prog": null,
+     "gap": 17,
+     "prog": 0,
      "timeProg": 0,
      "status": "na"
     }
@@ -240,11 +239,11 @@
      "effFrom": "2026-07-01",
      "effTo": "2026-07-05",
      "isCur": false,
-     "line": null,
+     "line": 4,
      "actual": 5,
      "actualBk": 5,
-     "gap": null,
-     "status": "na"
+     "gap": 0,
+     "status": "pass"
     },
     {
      "start": "2026-07-06",
@@ -252,11 +251,11 @@
      "effFrom": "2026-07-06",
      "effTo": "2026-07-12",
      "isCur": false,
-     "line": null,
+     "line": 4,
      "actual": 14,
      "actualBk": 9,
-     "gap": null,
-     "status": "na"
+     "gap": 0,
+     "status": "pass"
     },
     {
      "start": "2026-07-13",
@@ -264,11 +263,11 @@
      "effFrom": "2026-07-13",
      "effTo": "2026-07-19",
      "isCur": false,
-     "line": null,
+     "line": 4,
      "actual": 8,
      "actualBk": 6,
-     "gap": null,
-     "status": "na"
+     "gap": 0,
+     "status": "pass"
     },
     {
      "start": "2026-07-20",
@@ -276,11 +275,11 @@
      "effFrom": "2026-07-20",
      "effTo": "2026-07-22",
      "isCur": true,
-     "line": null,
+     "line": 4,
      "actual": 0,
      "actualBk": 0,
-     "gap": null,
-     "status": "na"
+     "gap": 4,
+     "status": "current"
     }
    ]
   }
