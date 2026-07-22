@@ -3,7 +3,7 @@
 // 篩選：campaign_name 或 adset 名稱含 "rose"（不分大小寫）。主數字＝Ads Manager 成果口徑(leads_meta)，backend 作校驗。
 // 累計法：把每次抓到的 trend_30d 每日領課併入持久帳本 ledger.json（同日以最新一次覆蓋，處理回補），
 //        因此 Q3 累計可跨越 30 天視窗，8 月後仍算得到 7/1 起的總量。
-// 由 GitHub Actions 每週三、週日 09:00(台北) 自動更新，或本機 `node ad/build.mjs`。
+// 由 GitHub Actions 每天 09:00(台北) 自動更新，或本機 `node ad/build.mjs`。
 // 憑證：環境變數 ARKIO_TOKEN，本機退回讀 ../../.arkio_token。
 import fs from 'node:fs';
 import path from 'node:path';
@@ -423,7 +423,7 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 .rtag.act{background:#123322;color:#86efac}.rtag.pau{background:#20263a;color:#96a0bd}.rtag.non{background:#2a1418;color:#fca5a5}
 </style></head><body><div class="wrap">
 <h1>廣告 OKR 監控台 · 閱讀 / 英語</h1>
-<div class="meta">篩選 campaign／廣告名含「Rose」· 主數字＝Ads Manager 成果(meta)，括號為後端領課 · 自動更新每週三・日 09:00（台北）</div>
+<div class="meta">篩選 campaign／廣告名含「Rose」· 主數字＝Ads Manager 成果(meta)，括號為後端領課 · 每天 09:00（台北）自動更新</div>
 <div id="alerts"></div>
 
 <div class="sec-t">① 季度 / 當月 OKR 進度</div>

@@ -1,9 +1,9 @@
 name: Update ad dashboard
 
-# 台北時間每週三、週日 09:00 自動更新（= UTC 週三/日 01:00）
+# 台北時間每天 09:00 自動更新（= UTC 每天 01:00）
 on:
   schedule:
-    - cron: '0 1 * * 0,3'
+    - cron: '0 1 * * *'
   workflow_dispatch: {}
 
 permissions:
