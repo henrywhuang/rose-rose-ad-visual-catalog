@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-07-22 12:19",
+ "genStamp": "2026-07-22 13:36",
  "checkpointWd": "三",
  "today": "2026-07-22",
  "fetchStatus": "ok",
@@ -313,7 +313,7 @@
    "declineType": null,
    "tag": "reactivate",
    "tagTxt": "⏸ 已暫停(曾有量)",
-   "color": "#6366f1"
+   "color": "#0f9d6b"
   },
   {
    "id": "120250705597430392",
@@ -343,7 +343,7 @@
    "declineType": null,
    "tag": "keep",
    "tagTxt": "✅ 維持",
-   "color": "#22c55e"
+   "color": "#f59e0b"
   },
   {
    "id": "120250997803280392",
@@ -373,7 +373,7 @@
    "declineType": null,
    "tag": "scale",
    "tagTxt": "🔥 加碼",
-   "color": "#f59e0b"
+   "color": "#e2603e"
   },
   {
    "id": "120250997796650392",
@@ -403,7 +403,7 @@
    "declineType": null,
    "tag": "scale",
    "tagTxt": "🔥 加碼",
-   "color": "#ef4444"
+   "color": "#6366f1"
   },
   {
    "id": "120250075411580392",
@@ -433,7 +433,7 @@
    "declineType": null,
    "tag": "reactivate",
    "tagTxt": "⏸ 已暫停(曾有量)",
-   "color": "#a855f7"
+   "color": "#0d9488"
   },
   {
    "id": "120251174246100392",
@@ -463,7 +463,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#0ea5e9"
+   "color": "#d946ef"
   },
   {
    "id": "120231639051860392",
@@ -493,7 +493,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#14b8a6"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251357927590392",
@@ -523,7 +523,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#ec4899"
+   "color": "#ca8a04"
   },
   {
    "id": "120251174253190392",
@@ -553,7 +553,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#84cc16"
+   "color": "#7c3aed"
   },
   {
    "id": "120251174295520392",
@@ -583,7 +583,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f97316"
+   "color": "#16a34a"
   },
   {
    "id": "120251357968630392",
@@ -613,7 +613,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#64748b"
+   "color": "#db2777"
   },
   {
    "id": "120251174203910392",
@@ -643,7 +643,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#eab308"
+   "color": "#64748b"
   },
   {
    "id": "120251174248740392",
@@ -673,7 +673,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251174257120392",
@@ -703,7 +703,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#22c55e"
+   "color": "#f59e0b"
   },
   {
    "id": "120251357942270392",
@@ -733,7 +733,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#e2603e"
   },
   {
    "id": "120251357971650392",
@@ -763,7 +763,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ef4444"
+   "color": "#6366f1"
   },
   {
    "id": "120249865301330392",
@@ -793,7 +793,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#a855f7"
+   "color": "#0d9488"
   },
   {
    "id": "120251392701640392",
@@ -823,7 +823,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#d946ef"
   },
   {
    "id": "120251357934880392",
@@ -853,7 +853,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#14b8a6"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251357948340392",
@@ -883,7 +883,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#ec4899"
+   "color": "#ca8a04"
   },
   {
    "id": "120251357954270392",
@@ -913,7 +913,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#84cc16"
+   "color": "#7c3aed"
   },
   {
    "id": "120251357961160392",
@@ -943,7 +943,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f97316"
+   "color": "#16a34a"
   },
   {
    "id": "120251392566490392",
@@ -973,7 +973,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#db2777"
   },
   {
    "id": "120251392697060392",
@@ -1003,7 +1003,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#eab308"
+   "color": "#64748b"
   },
   {
    "id": "120251392704280392",
@@ -1033,7 +1033,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251392711460392",
@@ -1063,7 +1063,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#22c55e"
+   "color": "#f59e0b"
   },
   {
    "id": "120251392716380392",
@@ -1093,7 +1093,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#e2603e"
   },
   {
    "id": "120251392721370392",
@@ -1123,7 +1123,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ef4444"
+   "color": "#6366f1"
   },
   {
    "id": "120251392729890392",
@@ -1153,7 +1153,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#a855f7"
+   "color": "#0d9488"
   },
   {
    "id": "120251392738000392",
@@ -1183,7 +1183,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#d946ef"
   },
   {
    "id": "120251392746480392",
@@ -1213,7 +1213,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#14b8a6"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251421328580392",
@@ -1243,7 +1243,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#ec4899"
+   "color": "#ca8a04"
   },
   {
    "id": "120251421623250392",
@@ -1273,7 +1273,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#84cc16"
+   "color": "#7c3aed"
   },
   {
    "id": "120251421634940392",
@@ -1303,7 +1303,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#f97316"
+   "color": "#16a34a"
   },
   {
    "id": "120251421646040392",
@@ -1333,7 +1333,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#64748b"
+   "color": "#db2777"
   },
   {
    "id": "120251421653290392",
@@ -1363,7 +1363,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#eab308"
+   "color": "#64748b"
   },
   {
    "id": "120251421671390392",
@@ -1393,7 +1393,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#6366f1"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251421675940392",
@@ -1423,7 +1423,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#22c55e"
+   "color": "#f59e0b"
   },
   {
    "id": "120251421682660392",
@@ -1453,7 +1453,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#f59e0b"
+   "color": "#e2603e"
   },
   {
    "id": "120251421690330392",
@@ -1483,7 +1483,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#ef4444"
+   "color": "#6366f1"
   },
   {
    "id": "120251421699840392",
@@ -1513,7 +1513,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#a855f7"
+   "color": "#0d9488"
   }
  ],
  "advice": {
@@ -1551,7 +1551,7 @@
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
-    "color": "#f59e0b"
+    "color": "#e2603e"
    },
    {
     "id": "120250997796650392",
@@ -1581,7 +1581,7 @@
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
-    "color": "#ef4444"
+    "color": "#6366f1"
    }
   ],
   "iterate": [
@@ -1613,7 +1613,7 @@
     "declineType": null,
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
-    "color": "#6366f1"
+    "color": "#0f9d6b"
    },
    {
     "id": "120250075411580392",
@@ -1643,7 +1643,7 @@
     "declineType": null,
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
-    "color": "#a855f7"
+    "color": "#0d9488"
    }
   ],
   "bestByCpl": [
@@ -1675,7 +1675,7 @@
     "declineType": null,
     "tag": "testing",
     "tagTxt": "🧪 測試中",
-    "color": "#14b8a6"
+    "color": "#0ea5e9"
    },
    {
     "id": "120251357927590392",
@@ -1705,7 +1705,7 @@
     "declineType": null,
     "tag": "testing",
     "tagTxt": "🧪 測試中",
-    "color": "#ec4899"
+    "color": "#ca8a04"
    },
    {
     "id": "120250997796650392",
@@ -1735,7 +1735,7 @@
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
-    "color": "#ef4444"
+    "color": "#6366f1"
    },
    {
     "id": "120250997803280392",
@@ -1765,7 +1765,7 @@
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
-    "color": "#f59e0b"
+    "color": "#e2603e"
    }
   ]
  },
