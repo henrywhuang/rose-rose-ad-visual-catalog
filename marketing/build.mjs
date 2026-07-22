@@ -140,48 +140,91 @@ function analyzePool(name, key, recs, cats, periodWin) {
   };
 }
 
-// ---- 科目 OKR ----
-function subjectOKR(name, key, recs, target) {
-  const mm = subjectMonthly(recs);
-  const cur = mm[curYM], prev = mm[MONTHS[MONTHS.length - 2]];
-  const actual = cur.all, prog = target > 0 ? actual / target : 0;
+// ---- 科目 OKR 卡（通用，接受數字）----
+function makeSubject(name, key, { actual, pub, pri, target, lastMon, poolKeys, source }) {
+  const prog = target > 0 ? actual / target : 0;
   const proj = OKR.timeProg > 0.02 ? actual / OKR.timeProg : actual;
-  const diff = prog - OKR.timeProg;                         // 百分點差（正=超前）
+  const diff = prog - OKR.timeProg;
   const remain = Math.max(0, target - actual);
   const remainDays = Math.max(0.5, OKR.daysInMonth - OKR.daysElapsed);
-  const dayRateNow = OKR.daysElapsed > 0 ? actual / OKR.daysElapsed : 0;
   return {
-    name, key, target, actual, actualPub: cur.pub, actualPri: cur.pri,
+    name, key, target, actual, actualPub: pub, actualPri: pri, source: source || 'lark',
     prog: R(prog * 100), timeProg: R(OKR.timeProg * 100), diff: R(diff * 100),
     proj: R0(proj), attain: R(target > 0 ? proj / target * 100 : 0), gap: R0(Math.max(0, target - proj)),
-    remain, needPerDay: R(remain / remainDays), dayRateNow: R(dayRateNow),
-    lastMonAll: prev.all,
-    status: diff < -0.02 ? 'behind' : diff < 0 ? 'watch' : 'ahead',
+    remain, needPerDay: R(remain / remainDays), dayRateNow: R(OKR.daysElapsed > 0 ? actual / OKR.daysElapsed : 0),
+    lastMonAll: lastMon,
+    status: diff < -0.02 ? 'behind' : diff < 0 ? 'watch' : 'ahead', poolKeys,
   };
 }
+function subjectFromLark(name, key, recs, target, poolKeys) {
+  const mm = subjectMonthly(recs);
+  return makeSubject(name, key, { actual: mm[curYM].all, pub: mm[curYM].pub, pri: mm[curYM].pri, target, lastMon: mm[MONTHS[MONTHS.length - 2]].all, poolKeys, source: 'lark' });
+}
 
-const okrRead = subjectOKR('閱讀', 'read', rd, OKR.targetRead);
-const okrEng = subjectOKR('英語', 'en', en, OKR.targetEng);
+// ---- 數學：Arkio self-traffic OKR（含渠道明細；token 過期則優雅降級）----
+const ARKIO_TOKEN = (process.env.ARKIO_TOKEN || (() => { const f = path.resolve(__dir, '..', '..', '.arkio_token'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8').trim() : ''; })());
+const mathMonths = MONTHS.slice(-4); // 近4月 04..07
+function mathFamily(ch) {
+  const med = (ch.channel.split('_')[2] || '其他');
+  const map = { Card: '卡片', Popup: '彈窗', LINE: 'LINE好友', SOP: 'SOP試用', IG: 'IG', FB: 'FB', Trail: '試用', Premium: 'Premium' };
+  return (ch.domain === 'pub' ? '公域·' : '私域·') + (map[med] || med);
+}
+let okrMath = null, mathPool = null, arkioOk = false, arkioErr = '';
+try {
+  if (!ARKIO_TOKEN) throw new Error('無 Arkio token');
+  const AG = { Authorization: `Bearer ${ARKIO_TOKEN}`, Accept: 'application/json' };
+  const perMonth = {};
+  for (const ym of mathMonths) {
+    const r = await fetch(`https://www.arkio.me/api/v1/ops/self-traffic/okr?from=${ym}&to=${ym}&region=TW`, { headers: AG });
+    if (!r.ok) throw new Error('Arkio HTTP ' + r.status + (r.status === 401 ? '（token 已過期，請更新 .arkio_token / ARKIO_TOKEN）' : ''));
+    perMonth[ym] = (await r.json()).data.subjects;
+  }
+  const curM = perMonth[curYM].Math, prevM = perMonth[mathMonths[mathMonths.length - 2]].Math;
+  okrMath = makeSubject('數學', 'math', { actual: curM.actual, pub: curM.pub, pri: curM.private, target: curM.target, lastMon: prevM.actual, poolKeys: ['math'], source: 'arkio' });
+  // 家族月度矩陣
+  const fam = {};
+  for (const ym of mathMonths) for (const ch of (perMonth[ym].Math.channels || [])) { const f = mathFamily(ch); (fam[f] ??= {}); fam[f][ym] = (fam[f][ym] || 0) + ch.count; }
+  const prevMonths = mathMonths.slice(0, -1);
+  const channels = Object.keys(fam).map(f => {
+    const seriesWin = mathMonths.map(ym => fam[f][ym] || 0);
+    const norm = mean(prevMonths.slice(-3).map(ym => fam[f][ym] || 0));
+    const lastMon = fam[f][mathMonths[mathMonths.length - 2]] || 0;
+    const mtd = fam[f][curYM] || 0;
+    const proj = OKR.timeProg > 0.02 ? mtd / OKR.timeProg : mtd;
+    const dropPct = lastMon > 0 ? (proj - lastMon) / lastMon * 100 : (proj > 0 ? 100 : 0);
+    let supply = 'ok';
+    if (norm < 3) supply = 'small';
+    else if (proj <= norm * 0.7 || dropPct <= -35) supply = 'behind';
+    else if (proj < norm * 0.9 || dropPct <= -20) supply = 'watch';
+    else if (proj >= norm * 1.15) supply = 'ahead';
+    return { name: f, color: '', seriesWin, mean: R(mean(prevMonths.map(ym => fam[f][ym] || 0))), sd: 0, lo: 0, hi: 0, recent3: seriesWin.slice(-3), norm: R(norm), lastMon, mtd, proj: R0(proj), gap: R0(Math.max(0, norm - proj)), dropPct: R0(dropPct), health: 'small', supply };
+  }).sort((a, b) => b.norm - a.norm);
+  channels.forEach((c, i) => c.color = PALETTE[i % PALETTE.length]);
+  const totSeriesWin = mathMonths.map(ym => (perMonth[ym].Math.actual) || 0);
+  mathPool = { key: 'math', name: '數學｜自有領課', granularity: '月', hasHealth: false, current: curYM, winPeriods: mathMonths, totSeriesWin, band: { mean: R(mean(totSeriesWin.slice(0, -1))), sd: 0, lo: 0, hi: 0 }, channels };
+  arkioOk = true;
+} catch (e) { arkioErr = e.message; console.error('Arkio 讀取失敗:', e.message); }
+
+const okrRead = subjectFromLark('閱讀', 'read', rd, OKR.targetRead, ['read']);
+const okrEng = subjectFromLark('英語', 'en', en, OKR.targetEng, ['en_pub', 'en_pri']);
 
 const POOLS = [
   analyzePool('閱讀｜自有流量池', 'read', rd, new Set(['公域流量', '私域流量']), 20),
   analyzePool('英語｜公領域', 'en_pub', en, new Set(['公域流量']), 17),
   analyzePool('英語｜私領域', 'en_pri', en, new Set(['私域流量']), 17),
 ];
-// 把池掛到科目
-const SUBJECTS = [
-  { ...okrRead, poolKeys: ['read'] },
-  { ...okrEng, poolKeys: ['en_pub', 'en_pri'] },
-];
+const SUBJECTS = [okrRead, okrEng];
+if (okrMath) SUBJECTS.push(okrMath);
+if (mathPool) POOLS.push(mathPool);
 
-const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), OKR, subjects: SUBJECTS, pools: POOLS, months: MONTHS };
+const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), OKR, subjects: SUBJECTS, pools: POOLS, months: MONTHS, arkio: { ok: arkioOk, err: arkioErr } };
 fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
 
 // ================= HTML =================
 const html = `<!doctype html>
 <html lang="zh-Hant"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>OKR 流量監控台｜閱讀・英語</title>
+<title>JoTW流量池 監控台｜閱讀・英語・數學</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 :root{--bg:#0b1020;--card:#151b2e;--card2:#1b2338;--line:#2a3450;--txt:#e8ecf6;--sub:#96a0bd;--good:#22c55e;--warn:#ef4444;--watch:#f59e0b;--ahead:#38bdf8;--boom:#facc15;--accent:#6366f1}
@@ -191,8 +234,7 @@ body{margin:0;background:linear-gradient(180deg,#0b1020,#0e1428);color:var(--txt
 h1{font-size:19px;margin:0 0 3px}
 .meta{color:var(--sub);font-size:12px}
 .sec-t{font-size:13px;color:var(--sub);font-weight:700;letter-spacing:1px;margin:22px 4px 8px;text-transform:uppercase}
-.okr{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-@media(max-width:560px){.okr{grid-template-columns:1fr}}
+.okr{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px}
 .ocard{border-radius:16px;padding:15px;border:1px solid}
 .ocard.behind{background:linear-gradient(135deg,#2a1416,#1a1220);border-color:#7f1d1d}
 .ocard.watch{background:linear-gradient(135deg,#2a2312,#1a1622);border-color:#7c5e12}
@@ -240,17 +282,18 @@ details{margin:8px 0}summary{cursor:pointer;color:var(--sub);font-size:13px;padd
 .foot{color:var(--sub);font-size:11px;text-align:center;margin-top:24px;line-height:1.8}
 td.excl{color:var(--sub);font-style:italic}
 </style></head><body><div class="wrap">
-<h1>OKR 流量監控台 · 閱讀 / 英語</h1>
+<h1>JoTW流量池 監控台 · 閱讀 / 英語 / 數學</h1>
 <div class="meta">月目標 vs 時間進度 → 渠道供應診斷 → 每期健康基準 · 自動更新每週三・五 09:00（台北）</div>
 
 <div class="sec-t">① 當月 OKR 進度（自有領課）</div>
 <div id="okr" class="okr"></div>
-<div class="note">月進度＝當月至今自有領課 ÷ 月目標；時間進度＝已過天數 ÷ 當月天數（白線）。<b>月進度低於白線＝落後</b>，落後的百分點就是最該補的缺口。推估月底＝當月至今 ÷ 時間進度。</div>
+<div id="arkio-note"></div>
+<div class="note">月進度＝當月至今自有領課 ÷ 月目標；時間進度＝已過天數 ÷ 當月天數（白線）。<b>月進度低於白線＝落後</b>，落後的百分點就是最該補的缺口。推估月底＝當月至今 ÷ 時間進度。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
 
 <div class="sec-t">② 各渠道供應診斷 + 健康基準</div>
 <nav class="tabs" id="tabs"></nav>
 <div id="pools"></div>
-<div class="foot">Rose Rose 行銷部 · OKR 自有流量監控<br>資料源 Lark Base（年度目標＋體驗營追蹤）· 最後更新 <span id="ls"></span></div>
+<div class="foot">Rose Rose 行銷部 · JoTW 自有流量監控<br>資料源 Lark Base（年度目標＋體驗營追蹤）＋ Arkio self-traffic OKR · 最後更新 <span id="ls"></span></div>
 </div>
 <script>
 const DATA = ${JSON.stringify(payload)};
@@ -275,15 +318,18 @@ DATA.subjects.forEach(s => {
       '<span class="chip">推估月底 <b>' + s.proj + '</b>（達成 ' + s.attain.toFixed(0) + '%）</span>' +
       (s.gap>0?'<span class="chip">預估缺口 <b class="neg">' + s.gap + '</b> 人</span>':'<span class="chip pos">預估達標 ✓</span>') +
       '<span class="chip">尚缺 <b>' + s.remain + '</b>／需日均 <b>' + s.needPerDay + '</b>（近日均 ' + s.dayRateNow + '）</span>' +
-      (s.actualPub!==undefined&&s.name==='英語'?'<span class="chip">公域 '+s.actualPub+' ／ 私域 '+s.actualPri+'</span>':'') +
+      (s.actualPub!==undefined?'<span class="chip">公域 '+s.actualPub+' ／ 私域 '+s.actualPri+'</span>':'') +
       '<span class="chip">上月 ' + s.lastMonAll + '</span>' +
+      (s.source==='arkio'?'<span class="chip" style="opacity:.7">源 Arkio</span>':'') +
     '</div>';
   okrEl.appendChild(div);
 });
+if (!DATA.arkio || !DATA.arkio.ok) document.getElementById('arkio-note').innerHTML =
+  '<div class="note" style="border-color:#7c5e12;color:#fcd34d">⚠️ 數學（Arkio）資料暫時無法讀取：' + ((DATA.arkio&&DATA.arkio.err)||'') + '。閱讀・英語不受影響（Arkio token 8/4 到期，過期請更新）。</div>';
 
 const tabs = document.getElementById('tabs'), poolsEl = document.getElementById('pools');
 const stName = { behind:'🔴 落後', warn:'🔴 警訊', watch:'🟡 留意', ok:'🟢 正常', ahead:'🔥 超前', boom:'🔥 特好', small:'· 量小' };
-const poolSubject = { read:'閱讀', en_pub:'英語', en_pri:'英語' };
+const poolSubject = { read:'閱讀', en_pub:'英語', en_pri:'英語', math:'數學' };
 
 DATA.pools.forEach((p, idx) => {
   const nBad = p.channels.filter(c=>c.supply==='behind').length;
@@ -313,14 +359,20 @@ DATA.pools.forEach((p, idx) => {
   const sec = document.createElement('section');
   sec.className='pool'+(idx===0?' on':''); sec.id='sec-'+p.key;
   const b=p.band;
+  const monthly = p.granularity==='月', u = monthly?'月':'期';
+  const spanTxt = monthly
+    ? '視窗 '+p.winPeriods[0]+'–'+p.winPeriods[p.winPeriods.length-1]+'（近'+p.winPeriods.length+'個月，末月未完成）· 資料源 Arkio（pro）· 渠道依 UTM 媒介歸類'
+    : '視窗 '+p.winPeriods[0]+'–'+p.winPeriods[p.winPeriods.length-1]+'期（近'+p.winPeriods.length+'期 ≈4個月）· 每期基準 '+b.mean+'±'+b.sd+'（可接受 '+b.lo+'~'+b.hi+'）';
   sec.innerHTML =
     '<h2>'+p.name+' <span style="font-size:11px;color:var(--sub)">（'+poolSubject[p.key]+' 科目）</span></h2>'+
-    '<div class="span">視窗 '+p.winPeriods[0]+'–'+p.winPeriods[p.winPeriods.length-1]+'期（近'+p.winPeriods.length+'期 ≈4個月）· 每期基準 '+b.mean+'±'+b.sd+'（可接受 '+b.lo+'~'+b.hi+'）</div>'+
+    '<div class="span">'+spanTxt+'</div>'+
     sum+
-    '<div class="chartbox"><h3>各渠道逐期進量趨勢（近'+p.winPeriods.length+'期，末期未完成）</h3><canvas id="c-'+p.key+'" height="215"></canvas></div>'+
+    '<div class="chartbox"><h3>各渠道逐'+u+'進量趨勢（近'+p.winPeriods.length+u+'，末'+u+'未完成）</h3><canvas id="c-'+p.key+'" height="215"></canvas></div>'+
     '<div class="sub-t">本月供應診斷（月）</div>'+supplyTable(p)+
-    '<div class="sub-t">每期健康基準（平均 / 可接受帶 / 特好 / 警訊）</div>'+healthTable(p)+
-    '<details><summary>展開｜各渠道逐期明細（'+p.winPeriods.length+'期）</summary>'+detailTable(p)+'</details>';
+    (p.hasHealth!==false
+      ? '<div class="sub-t">每期健康基準（平均 / 可接受帶 / 特好 / 警訊）</div>'+healthTable(p)+
+        '<details><summary>展開｜各渠道逐期明細（'+p.winPeriods.length+'期）</summary>'+detailTable(p)+'</details>'
+      : '<div class="note">數學為 Arkio 月粒度資料（pro），無每期健康基準；以上為月度供應診斷與逐月趨勢。渠道明細已按 UTM 媒介歸類為 公域/私域 家族。</div>');
   poolsEl.appendChild(sec);
 });
 
