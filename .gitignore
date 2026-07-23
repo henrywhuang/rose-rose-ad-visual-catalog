@@ -1,3 +1,7 @@
 .arkio_token
 *_token
 *.token
+download/reading_monitor/.image_cache/
+download/reading_monitor/raw_2m.json
+download/reading_monitor/creative_library.json
+download/reading_monitor/candidates_2m.json

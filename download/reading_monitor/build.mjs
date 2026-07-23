@@ -1,5 +1,5 @@
 // 生成「廣告創意監控台 · 投放主 × Top創意」H5（自包含）。
-// 数据：monitor_data.json（6 投放主 × 各 ~10 創意；A=近4月成效驗證，B=素材庫參考）。
+// 数据：monitor_data.json（6 投放主；A=近2月實際領課，B=素材庫參考）。
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,11 +9,11 @@ const data = JSON.parse(fs.readFileSync(path.join(__dir, 'monitor_data.json'), '
 
 // 投放主顺序 + 元信息
 const ACCOUNTS = [
+  { key: '親子愛共讀', slug: 'parent', color: '#e8862a', note: '知識分享繪本號・專注力/共讀鉤子' },
   { key: '育兒小百科', slug: 'wiki', color: '#2d7467', note: '正向教養內容號・識字/情緒/共讀主力' },
   { key: '輕鬆學國英數', slug: 'easy', color: '#3a7bd5', note: '國小國英數內容號・識字卡＋數學計算' },
-  { key: 'JoJo閱讀', slug: 'jojo', color: '#e0567f', note: '3-6歲互動閱讀品牌號・情緒/注音/識字' },
-  { key: '親子愛共讀', slug: 'parent', color: '#e8862a', note: '知識分享繪本號・專注力/共讀鉤子' },
   { key: '繪本福利社', slug: 'pages', color: '#7a5bd0', note: 'Picture Book Club・多為計算/數學素材' },
+  { key: 'JoJo閱讀', slug: 'jojo', color: '#e0567f', note: '3-6歲互動閱讀品牌號・情緒/注音/識字' },
   { key: 'Emily', slug: 'emily', color: '#5b8c5a', note: '媽媽號 mommy_emilylee・英語/注音檢核' },
 ];
 
@@ -28,8 +28,8 @@ const titleOf = e => {
 function accStats(items) {
   const A = items.filter(e => e.tier === 'A');
   const leads = A.reduce((s, e) => s + (e.leads || 0), 0);
-  const cpls = A.filter(e => e.cpl != null).map(e => e.cpl);
-  const avgCpl = cpls.length ? (cpls.reduce((s, x) => s + x, 0) / cpls.length) : null;
+  const spend = A.reduce((s, e) => s + (e.spend || 0), 0);
+  const avgCpl = leads ? spend / leads : null;
   const bestCtr = A.length ? Math.max(...A.map(e => e.ctr || 0)) : null;
   return { aCount: A.length, bCount: items.length - A.length, leads, avgCpl, bestCtr };
 }
@@ -37,16 +37,28 @@ function accStats(items) {
 function card(e) {
   const isA = e.tier === 'A';
   const badge = isA
-    ? `<span class="tag ta">✅ 近4月成效</span>`
+    ? `<span class="tag ta">✅ 近2月有領課</span>`
     : `<span class="tag tb">📁 素材庫參考</span>`;
-  const cityBits = (e.cities && e.cities.length) ? `<span class="chip">${e.cities.length}城市/變體</span>` : '';
+  const chips = [];
+  if (isA && e.flags?.continuous) chips.push('持續領課');
+  if (isA && e.flags?.improving) chips.push('近期成長');
+  if (isA && e.flags?.newImproving) chips.push('新上架進步');
+  if (isA && e.variants > 1) chips.push(`${e.variants} 個投放變體已合併`);
+  const chipsHtml = chips.length ? `<div class="chips">${chips.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div>` : '';
+  const trendClass = (e.recent14Leads || 0) > (e.previous14Leads || 0) ? 'up' : ((e.recent14Leads || 0) < (e.previous14Leads || 0) ? 'down' : 'flat');
+  const trendArrow = trendClass === 'up' ? '↗' : trendClass === 'down' ? '↘' : '→';
   const metrics = isA
     ? `<div class="mrow">
-         <div class="m"><b>${e.leads}</b><span>近4月領課</span></div>
+         <div class="m"><b>${e.leads}</b><span>近2月領課</span></div>
          <div class="m"><b>${e.cpl != null ? '$' + e.cpl : '—'}</b><span>CPL</span></div>
          <div class="m"><b>${e.ctr != null ? e.ctr + '%' : '—'}</b><span>CTR</span></div>
-       </div>${cityBits ? `<div class="chips">${cityBits}</div>` : ''}`
-    : `<div class="libnote">素材庫創意・尚無近4月投放數據，供迭代參考</div>`;
+       </div>
+       <div class="trend ${trendClass}">
+         <span>近14天 <b>${e.recent14Leads ?? 0}</b></span>
+         <i>${trendArrow}</i>
+         <span>前14天 <b>${e.previous14Leads ?? 0}</b></span>
+       </div>${chipsHtml}`
+    : `<div class="libnote">素材庫創意・近2月無可歸屬成效，僅供視覺與文案迭代參考</div>`;
   const heads = (e.headlines || []).slice(0, 4).map(h => `<li>${esc(h)}</li>`).join('');
   const body = (e.bodies && e.bodies[0]) ? `<div class="copy"><span class="copy-tag">文案</span><p>${nl2br(e.bodies[0])}</p></div>` : '';
   return `
@@ -72,9 +84,9 @@ const sections = ACCOUNTS.map(acc => {
       <div class="acc-title"><h2>${esc(acc.key)}</h2><p>${esc(acc.note)}</p></div>
       <div class="acc-kpis">
         <div class="k"><b>${items.length}</b><span>創意</span></div>
-        <div class="k"><b>${st.aCount}</b><span>成效驗證</span></div>
-        <div class="k"><b>${st.leads.toLocaleString()}</b><span>近4月領課</span></div>
-        <div class="k"><b>${st.avgCpl != null ? '$' + st.avgCpl.toFixed(1) : '—'}</b><span>平均CPL</span></div>
+        <div class="k"><b>${st.aCount}</b><span>實際有領課</span></div>
+        <div class="k"><b>${st.leads.toLocaleString()}</b><span>近2月領課</span></div>
+        <div class="k"><b>${st.avgCpl != null ? '$' + st.avgCpl.toFixed(1) : '—'}</b><span>加權CPL</span></div>
         <div class="k"><b>${st.bestCtr != null ? st.bestCtr + '%' : '—'}</b><span>最佳CTR</span></div>
       </div>
     </div>
@@ -88,7 +100,7 @@ const nav = ACCOUNTS.map(a => {
   const n = data.filter(e => e.account === a.key).length;
   return `<a href="#acc-${a.slug}" style="--ac:${a.color}">${esc(a.key)} <b>${n}</b></a>`;
 }).join('');
-const genDate = process.env.GEN_DATE || '2026-07-17';
+const genDate = process.env.GEN_DATE || '2026-07-23';
 
 const html = `<!doctype html>
 <html lang="zh-Hant">
@@ -141,7 +153,9 @@ const html = `<!doctype html>
   .mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
   .mrow .m{background:#f5f8fb;border:1px solid var(--line);border-radius:8px;padding:6px 3px;text-align:center}
   .mrow .m b{display:block;font-size:14px;color:var(--ac)}.mrow .m span{font-size:9.5px;color:var(--muted)}
-  .chips{margin-top:6px}.chip{display:inline-block;background:#fff3e8;color:#c96a1b;border:1px solid #f2ddc4;border-radius:999px;font-size:10.5px;padding:1px 8px}
+  .trend{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:7px;border-radius:8px;padding:5px 7px;font-size:10.5px;background:#f6f8fb;color:var(--muted)}
+  .trend span b{color:var(--ink);font-size:12px}.trend i{font-style:normal;font-weight:800;font-size:15px}.trend.up i{color:#168451}.trend.down i{color:#c06b27}.trend.flat i{color:#78859a}
+  .chips{margin-top:6px;display:flex;gap:4px;flex-wrap:wrap}.chip{display:inline-block;background:#fff3e8;color:#c96a1b;border:1px solid #f2ddc4;border-radius:999px;font-size:10.5px;padding:1px 8px}
   .libnote{background:#f4f6f9;border:1px dashed #cfd8e3;border-radius:8px;padding:7px 9px;font-size:11.5px;color:#78859a}
   .sec{font-size:11.5px;font-weight:700;margin:9px 0 4px;color:var(--muted)}
   ul.titles{margin:0;padding-left:16px}ul.titles li{font-size:11.8px;margin:1px 0}
@@ -157,20 +171,20 @@ const html = `<!doctype html>
 <div class="wrap">
   <header class="hero">
     <h1>📊 廣告創意監控台 · 投放主 × Top 創意</h1>
-    <p>以 6 個投放主分類，每主找出最優異的創意（近 4 個月領課累計、CPL、CTR），作為迭代參考主力。時間線橫跨 2026-03-17 → 07-18。</p>
+    <p>近兩個月實際領課優先，兼看持續領課、近14天成長與新上架進步；同圖跨城市、複本與投放主已做視覺去重。時間窗：2026-05-24 → 07-23。</p>
     <div class="kpis">
       <div class="kpi"><b>6</b><span>投放主</span></div>
       <div class="kpi"><b>${data.length}</b><span>創意內容</span></div>
-      <div class="kpi"><b>${totalA}</b><span>近4月成效驗證</span></div>
+      <div class="kpi"><b>${totalA}</b><span>近2月實際有領課</span></div>
       <div class="kpi"><b>${totalLeads.toLocaleString()}</b><span>成效款合計領課</span></div>
     </div>
   </header>
 
   <div class="method">
-    <b>口徑：</b>領課＝Meta 像素 initiate_checkout（開始領課/結帳），時間窗 4 個月；資料源＝Arkio 代理 Meta Insights（成效）＋ Arkio 素材庫（視覺/文案）。
-    同一視覺跨城市/複本已<b>合併為一個創意</b>並累計領課（標「N城市/變體」）。
-    <b>✅ 近4月成效</b>＝有實際投放數據並達標（領課>10，或 CPL 低且領課>5）；<b>📁 素材庫參考</b>＝該投放主投放款不足10個時，以素材庫優異創意補充（無近4月數據，供迭代）。
-    <br>注：<b>繪本福利社</b>近期多投計算/數學、閱讀領課少；<b>Emily(mommy_emilylee)</b> 近4月無投放數據，僅列素材庫創意（共9個）。
+    <b>口徑：</b>領課＝Meta 像素 initiate_checkout，資料源＝Arkio 代理 Meta Insights（廣告層級）＋ Arkio 素材庫。
+    排序先看近2月領課與CPL，再加權近14天持續領課／成長、新上架後進步；同一底圖跨城市、複本或投放主以感知雜湊去重，近似圖合併累計。
+    <b>✅ 近2月有領課</b>＝期間內至少有1次可歸屬領課；<b>📁 素材庫參考</b>＝投放成效款不足目標數時，以近期獨立視覺補充，不冒充成效款。
+    <br>本版共 70 個不重複視覺：<b>親子愛共讀／育兒小百科各15個</b>，其餘各10個；繪本福利社為9個成效款＋1個素材庫參考，Emily為10個素材庫參考。
   </div>
 
   <div class="toolbar">
@@ -182,7 +196,7 @@ ${sections}
 
   <footer>
     Rose Rose ｜ 廣告優化 · 廣告創意監控台（投放主 × Top創意）<br>
-    圖片點擊放大；CPL＝區間花費÷領課；成效款依近4月領課排序，素材庫款供補充參考。<br>
+    圖片點擊放大；CPL＝區間花費÷領課；近14天與前14天用來判斷近期變化，素材庫款僅供補充參考。<br>
     產出時間：${genDate}
   </footer>
 </div>
