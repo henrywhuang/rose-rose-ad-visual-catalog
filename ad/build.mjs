@@ -23,6 +23,7 @@ const PRIMARY = 'm';             // 主口徑 m=成果(meta) / b=後端(backend)
 const RECENT_DAYS = 10;          // 「近N天上架廣告分析」視窗
 const API = 'https://www.arkio.me/api/v1/ad-budget/dashboard';
 const CREATIVE_API = 'https://www.arkio.me/api/v1/marketing/creative-library/';
+const META_ADSET_API = 'https://www.arkio.me/api/v1/meta/ads/adset/';
 const ROSE_RE = /rose/i;
 // 投放主（social_account_code → 粉專中文名），未列出者顯示原代碼
 const PAGE_NAME = {
@@ -32,6 +33,11 @@ const PAGE_NAME = {
 };
 const numOf = s => { const m = String(s || '').match(/\b(2[0-9]{4})\b/); return m ? m[1] : null; }; // 廣告編號(如25982)
 const theme = s => String(s || '').replace(/^\s*2[0-9]{4}\s*/, '').replace(/[（(]\s*Rose\s*[)）]/ig, '').replace(/[-\s]*[ABＡＢ]$/,'').replace(/[✅👌🪝❌]/g,'').replace(/\s+/g,' ').trim();
+const variantOf = s => {
+  const hits = [...String(s || '').matchAll(/[-_\s（(]([ABＡＢ])(?=[）)\s]|$)/ig)];
+  if (!hits.length) return null;
+  return /[AＡ]/i.test(hits[hits.length - 1][1]) ? 'A' : 'B';
+};
 
 // ============== 時間工具（台北 UTC+8）==============
 const DAY = 86400000, TZ = 8 * 3600000;
@@ -83,6 +89,48 @@ async function fetchCreatives(tok) {
   return all.filter(c => ROSE_RE.test(c.name || ''));
 }
 const imgsOf = c => { try { return JSON.parse(c.assets || '[]').filter(a => a.kind === 'image' && a.gcs_url).map(a => a.gcs_url); } catch { return []; } };
+const actionValue = (actions, type) => {
+  const row = (actions || []).find(a => a.action_type === type);
+  return row ? Number(row.value || 0) : 0;
+};
+async function fetchAdVariants(tok, adset, cutoff) {
+  const fields = `id,name,ads.limit(100){id,name,effective_status,creative{id,name},insights.time_range({'since':'${cutoff}','until':'${today}'}){actions,spend,clicks,impressions,ctr}}`;
+  const u = new URL(META_ADSET_API + encodeURIComponent(adset.id));
+  u.searchParams.set('fields', fields);
+  const ac = new AbortController(); const to = setTimeout(() => ac.abort(), 30000);
+  try {
+    const r = await fetch(u, { headers: { Authorization: `Bearer ${tok}`, Accept: 'application/json' }, signal: ac.signal });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const j = await r.json();
+    const grouped = {};
+    for (const ad of (j.ads?.data || [])) {
+      const label = variantOf(ad.creative?.name) || variantOf(ad.name);
+      if (!label) continue;
+      const ins = ad.insights?.data?.[0] || {};
+      const v = (grouped[label] ??= { label, leads: 0, spend: 0, clicks: 0, impressions: 0, ads: 0 });
+      v.leads += actionValue(ins.actions, 'initiate_checkout');
+      v.spend += Number(ins.spend || 0);
+      v.clicks += Number(ins.clicks || 0);
+      v.impressions += Number(ins.impressions || 0);
+      v.ads++;
+    }
+    return Object.values(grouped).sort((a, b) => a.label.localeCompare(b.label)).map(v => ({
+      label: v.label, leads: R0(v.leads), spend: R(v.spend),
+      ctr: v.impressions ? R(v.clicks / v.impressions * 100) : null, ads: v.ads,
+    }));
+  } finally { clearTimeout(to); }
+}
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length); let cursor = 0;
+  async function worker() {
+    while (cursor < items.length) {
+      const i = cursor++;
+      try { out[i] = await fn(items[i]); } catch (e) { out[i] = { error: e.message }; }
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return out;
+}
 
 // ============== 帳本累計 ==============
 function loadLedger() {
@@ -259,8 +307,35 @@ const subjects = [subjectAnalysis(READING), subjectAnalysis(ENGLISH)];
 const rows = adsetRows();
 
 // ---- 近N天上架廣告分析（creative library ⋈ 帳本成效）----
+const recentCutoff = addDays(today, -(RECENT_DAYS - 1));
+const recentCreativeNums = new Set(roseCreatives
+  .filter(c => (c.uploaded_at || '').slice(0, 10) >= recentCutoff)
+  .map(c => numOf(c.name)).filter(Boolean));
+const recentAdsets = adsetList.filter(a => recentCreativeNums.has(numOf(a.name)));
+let variantPerfByNum = {};
+if (tok && recentAdsets.length) {
+  const fetched = await mapLimit(recentAdsets, 4, a => fetchAdVariants(tok, a, recentCutoff));
+  let ok = 0;
+  recentAdsets.forEach((a, i) => {
+    if (Array.isArray(fetched[i])) {
+      const n = numOf(a.name); if (!n) return;
+      variantPerfByNum[n] = fetched[i]; ok++;
+      (ledger.ad_variants ??= {})[a.id] = {
+        num: n, cutoff: recentCutoff, until: today, fetched_at: genStamp, variants: fetched[i],
+      };
+    }
+  });
+  fs.writeFileSync(LEDGER_PATH, JSON.stringify(ledger, null, 0));
+  console.log(`✓ Meta A/B 明細：${ok}/${recentAdsets.length} 個近期廣告組`);
+}
+if (ledger.ad_variants) {
+  for (const x of Object.values(ledger.ad_variants)) {
+    if (!variantPerfByNum[x.num] && x.cutoff === recentCutoff && Array.isArray(x.variants)) variantPerfByNum[x.num] = x.variants;
+  }
+}
+
 function recentAdsAnalysis() {
-  const cutoff = addDays(today, -(RECENT_DAYS - 1));
+  const cutoff = recentCutoff;
   // 帳本 adset 依編號建成效索引（近N天領課/花費 + 近7日CTR + 狀態）
   const perfByNum = {};
   for (const a of adsetList) {
@@ -272,25 +347,39 @@ function recentAdsAnalysis() {
   const byNum = {};
   for (const c of roseCreatives) {
     const n = numOf(c.name); if (!n) continue;
-    (byNum[n] ??= { num: n, names: [], imgs: [], pages: new Set(), uploaded: [], pushed: false, project: c.project_code });
+    (byNum[n] ??= { num: n, names: [], imgs: [], variants: {}, pages: new Set(), uploaded: [], pushed: false, project: c.project_code });
     const g = byNum[n]; g.names.push(c.name); if (c.social_account_code) g.pages.add(c.social_account_code);
     g.uploaded.push((c.uploaded_at || '').slice(0, 10)); if (c.meta_pushed_at) g.pushed = true;
-    for (const u of imgsOf(c)) if (!g.imgs.includes(u)) g.imgs.push(u);
+    const label = variantOf(c.name);
+    for (const u of imgsOf(c)) {
+      if (!g.imgs.includes(u)) g.imgs.push(u);
+      if (label && !g.variants[label]) g.variants[label] = { label, img: u, name: c.name };
+    }
   }
   // 近N天上架：任一 creative 上傳日在視窗內
   const recent = Object.values(byNum).filter(g => g.uploaded.some(d => d && d >= cutoff));
   const out = recent.map(g => {
     const up = g.uploaded.filter(Boolean).sort().pop();
     const p = perfByNum[g.num] || null;
-    const m10 = p ? R0(p.m10) : null, s10 = p ? R0(p.s10) : null;
-    const cpl = (p && p.m10 > 0) ? R(p.s10 / p.m10) : null;
+    const detail = variantPerfByNum[g.num] || [];
+    const detailLeads = detail.reduce((s, v) => s + (v.leads || 0), 0);
+    const detailSpend = detail.reduce((s, v) => s + (v.spend || 0), 0);
+    const hasVariantPerf = detail.length > 0;
+    const m10 = hasVariantPerf ? R0(detailLeads) : (p ? R0(p.m10) : null);
+    const s10 = hasVariantPerf ? R(detailSpend) : (p ? R0(p.s10) : null);
+    const cpl = m10 > 0 ? R(s10 / m10) : null;
     const pages = [...g.pages].map(c => ({ code: c, name: PAGE_NAME[c] || c }));
+    const detailByLabel = Object.fromEntries(detail.map(v => [v.label, v]));
+    const variants = Object.values(g.variants).sort((a, b) => a.label.localeCompare(b.label)).map(v => ({
+      ...v, leads: detailByLabel[v.label]?.leads ?? null,
+    }));
     return {
       num: g.num, theme: theme(g.names[0]), fullname: g.names[0].replace(/[-\s]*[ABＡＢ]$/, ''),
-      uploaded: up, imgs: g.imgs.slice(0, 4), pages, pushed: g.pushed,
+      uploaded: up, imgs: g.imgs.slice(0, 4), variants, pages, pushed: g.pushed,
       bl: p ? p.bl : (/英語|英文|english|abc|字母|發音|單字|letter|phonic/i.test(g.names[0]) ? 'English' : 'Reading'),
       status: p ? p.status : null, hasPerf: !!p,
       m10, s10, cpl, ctr7: p && p.ctr7 != null ? R(p.ctr7) : null,
+      hasVariantPerf, leadBreakdown: m10 > 0 && variants.some(v => v.leads != null),
     };
   });
   // 預設依領課排序（無成效者置底）
@@ -401,20 +490,25 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 .sortbar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--sub);margin:6px 2px 10px}
 .sortbar button{border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600}
 .sortbar button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
-.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
-@media(max-width:720px){.rgrid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:460px){.rgrid{grid-template-columns:1fr}}
+.rgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+@media(max-width:680px){.rgrid{grid-template-columns:1fr}}
 .rcard{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);display:flex;flex-direction:column;box-shadow:0 4px 16px rgba(38,51,44,.06)}
 .rcard.nodata{opacity:.66}
 .rank{position:absolute;top:6px;left:6px;background:#0f9d6bdd;color:#fff;font-size:11px;font-weight:800;border-radius:8px;padding:1px 7px}
-.rthumb{position:relative;width:100%;aspect-ratio:1/1;background:#f0ede4;display:flex;overflow:hidden}
-.rthumb img{width:100%;height:100%;object-fit:cover;flex:1 1 0;min-width:0;border-right:1px solid #fff}
-.rthumb img:last-child{border-right:0}
+.rthumb{position:relative;width:100%;background:#f0ede4;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;overflow:hidden;padding-top:31px}
+.rvariant{background:#fff;min-width:0}
+.rvariant a{display:block;background:#f6f3ec}
+.rvariant img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain}
+.vhead{height:30px;padding:4px 7px;display:flex;gap:5px;align-items:center;background:#f6f3ec}
+.vlabel{background:#26332ce8;color:#fff;font-size:11px;font-weight:800;border-radius:7px;padding:2px 7px}
+.vlead{background:#dcfce7;color:#15803d;border:1px solid #86d5a4;font-size:11px;font-weight:800;border-radius:7px;padding:1px 7px}
+.vlead.zero{background:#f1f2ed;color:#72817a;border-color:#d7dbd3}
+.rthumb.one{grid-template-columns:1fr}
 .rthumb .new{position:absolute;top:6px;right:6px;background:#16a34a;color:#fff;font-size:10px;font-weight:800;border-radius:8px;padding:1px 7px}
 .rbody{padding:9px 11px 11px}
 .rbody .th{font-size:13.5px;font-weight:800;line-height:1.35;margin-bottom:3px}
-.rbody .mp{font-size:11px;color:var(--sub);margin-bottom:7px}
-.rbody .mp b{color:var(--txt)}
+.rbody .mp{font-size:12px;color:var(--sub);margin:5px 0 8px;padding:6px 8px;background:#f3f7f1;border-radius:8px}
+.rbody .mp b{color:var(--txt);font-size:13px}
 .rmetrics{display:flex;gap:6px;flex-wrap:wrap}
 .rmetrics .mx{flex:1 1 0;min-width:56px;background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:5px 7px;text-align:center}
 .rmetrics .mx .v{font-size:16px;font-weight:800}.rmetrics .mx .k{font-size:10px;color:var(--sub)}
@@ -434,7 +528,7 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div id="recentSum"></div>
 <div class="sortbar">排序：<button data-k="m10" class="on">領課成果</button><button data-k="cpl">CPL（低→高）</button><button data-k="ctr7">CTR</button><button data-k="uploaded">上架日</button></div>
 <div id="recentGrid" class="rgrid"></div>
-<div class="note">視覺＝creative library 素材圖（同編號取 A/B）；投放主＝發佈粉專；上架日＝素材上傳日。<b>領課/CPL＝近${RECENT_DAYS}天</b>（帳本 meta 成果），<b>CTR＝近7日</b>（adset 口徑，無每日點擊資料）。剛上架者可能只有 CTR 尚無領課，屬正常早期訊號。灰底＝已上傳但目前無投放成效數據。</div>
+<div class="note">A/B 圖皆以完整比例顯示，可點圖放大；<b>有領課的廣告會在每張圖上分列 A、B 成果</b>，整組無領課則不顯示拆分。投放主＝發佈粉專；上架日＝素材上傳日。<b>領課/CPL＝近${RECENT_DAYS}天</b>（Meta 單條廣告明細），<b>CTR＝近7日</b>（adset 口徑）。灰底＝已上傳但目前無投放成效數據。</div>
 
 <div class="sec-t">③ 每週追蹤（閱讀・以週為單位）</div>
 <div id="weekSum"></div>
@@ -511,13 +605,18 @@ function renderRecent(sortKey){
     const isNew=x.uploaded>=D.recentAds.cutoff && (x.m10==null||x.m10===0);
     const tagCls=!x.hasPerf?'non':(x.status&&/PAUSED/i.test(x.status)?'pau':'act');
     const tagTxt=!x.hasPerf?'無投放成效':(x.status&&/PAUSED/i.test(x.status)?'已暫停':'投放中');
-    const imgs=(x.imgs.length?x.imgs:['']).slice(0,2).map(u=>u?'<img loading="lazy" src="'+u+'" alt="">':'<div style="flex:1;display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:11px">無圖</div>').join('');
+    const visualItems=(x.variants&&x.variants.length?x.variants:x.imgs.slice(0,2).map((u,j)=>({label:String.fromCharCode(65+j),img:u,leads:null}))).slice(0,2);
+    const imgs=visualItems.length?visualItems.map(v=>
+      '<div class="rvariant"><div class="vhead"><span class="vlabel">'+v.label+' 款</span>'+
+      (x.leadBreakdown?'<span class="vlead '+(v.leads===0?'zero':'')+'">領課 '+(v.leads??0)+'</span>':'')+
+      '</div><a href="'+v.img+'" target="_blank" rel="noopener" title="開啟完整 '+v.label+' 款"><img loading="lazy" src="'+v.img+'" alt="'+x.theme+' '+v.label+' 款完整廣告圖"></a></div>'
+    ).join(''):'<div style="padding:80px 10px;text-align:center;color:var(--sub);font-size:11px">無圖</div>';
     const c=document.createElement('div'); c.className='rcard'+(x.hasPerf?'':' nodata');
     c.innerHTML=
-      '<div class="rthumb"><span class="rank">#'+(i+1)+'</span>'+imgs+(x.uploaded?'<span class="new">'+x.uploaded.slice(5)+' 上架</span>':'')+'</div>'+
+      '<div class="rthumb '+(visualItems.length===1?'one':'')+'"><span class="rank">#'+(i+1)+'</span>'+imgs+(x.uploaded?'<span class="new">'+x.uploaded.slice(5)+' 上架</span>':'')+'</div>'+
       '<div class="rbody">'+
         '<div class="th">'+x.theme+' <span class="pill">'+(x.bl==='English'?'英':'閱')+'</span></div>'+
-        '<div class="mp">投放主 <b>'+pageLine(x)+'</b>　·　#'+x.num+'</div>'+
+        '<div class="mp">👤 投放主：<b>'+pageLine(x)+'</b>　·　#'+x.num+'</div>'+
         '<div class="rmetrics">'+
           '<div class="mx lead"><div class="v">'+(x.m10==null?'—':x.m10)+'</div><div class="k">近'+RA.days+'天領課</div></div>'+
           '<div class="mx cpl"><div class="v">'+(x.cpl==null?'—':'$'+x.cpl)+'</div><div class="k">CPL</div></div>'+
