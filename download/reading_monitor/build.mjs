@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const data = JSON.parse(fs.readFileSync(path.join(__dir, 'monitor_data.json'), 'utf8'));
+const mathData = JSON.parse(fs.readFileSync(path.join(__dir, 'math_data.json'), 'utf8'));
 
 // 投放主顺序 + 元信息
 const ACCOUNTS = [
@@ -24,6 +25,7 @@ const titleOf = e => {
   let t = (e.headlines && e.headlines[0]) ? e.headlines[0] : e.concept;
   return t;
 };
+const mathTitleOf = e => (e.headlines && e.headlines[0]) ? e.headlines[0] : e.name;
 
 function accStats(items) {
   const A = items.filter(e => e.tier === 'A');
@@ -74,6 +76,32 @@ function card(e) {
   </article>`;
 }
 
+function mathCard(e) {
+  const accountDetails = (e.accountBreakdown || [])
+    .map(x => `${esc(x.account)} ${x.leads}領課`)
+    .join('・');
+  const chips = [];
+  if (e.variants > 1) chips.push(`${e.variants} 個投放變體已合併`);
+  if (e.cities?.length) chips.push(`${e.cities.length} 個縣市版已合併`);
+  return `
+  <article class="card a math-card" data-tier="A">
+    <div class="chead"><span class="rank">#${e.rank}</span><span class="tag tm">🏆 台灣數學 Top 20</span></div>
+    <a class="visual" href="${e.image}" target="_blank" rel="noopener"><img loading="lazy" src="${e.image}" alt="${esc(mathTitleOf(e))}"></a>
+    <div class="cbody">
+      <h4>${esc(mathTitleOf(e))}</h4>
+      <div class="owner"><span>投放主</span><b>${esc(e.account)}</b>${accountDetails ? `<small>${accountDetails}</small>` : ''}</div>
+      <div class="mrow">
+        <div class="m"><b>${e.leads}</b><span>近2月領課</span></div>
+        <div class="m"><b>${e.ctr != null ? e.ctr + '%' : '—'}</b><span>CTR</span></div>
+        <div class="m"><b>${e.cpl != null ? '$' + e.cpl : '—'}</b><span>CPL</span></div>
+      </div>
+      ${chips.length ? `<div class="chips">${chips.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div>` : ''}
+      ${(e.headlines || []).length ? `<div class="sec">標題</div><ul class="titles">${e.headlines.slice(0, 4).map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+      ${(e.bodies && e.bodies[0]) ? `<div class="copy"><span class="copy-tag">文案</span><p>${nl2br(e.bodies[0])}</p></div>` : ''}
+    </div>
+  </article>`;
+}
+
 const sections = ACCOUNTS.map(acc => {
   const items = data.filter(e => e.account === acc.key).sort((a, b) => a.rank - b.rank);
   const st = accStats(items);
@@ -96,11 +124,32 @@ const sections = ACCOUNTS.map(acc => {
 
 const totalLeads = data.filter(e => e.tier === 'A').reduce((s, e) => s + (e.leads || 0), 0);
 const totalA = data.filter(e => e.tier === 'A').length;
+const mathLeads = mathData.reduce((sum, e) => sum + (e.leads || 0), 0);
+const mathSpend = mathData.reduce((sum, e) => sum + (e.spend || 0), 0);
+const mathImpressions = mathData.reduce((sum, e) => sum + (e.impressions || 0), 0);
+const mathClicks = mathData.reduce((sum, e) => sum + (e.clicks || 0), 0);
+const mathCpl = mathLeads ? mathSpend / mathLeads : null;
+const mathCtr = mathImpressions ? mathClicks / mathImpressions * 100 : null;
+const mathSection = `
+  <section class="acc math-acc" id="acc-math" data-acc="math" style="--ac:#c14f30">
+    <div class="acc-head">
+      <div class="acc-title"><h2>台灣數學廣告 Top 20</h2><p>近兩個月領課最多・跨縣市／複本／投放主同底圖合併</p></div>
+      <div class="acc-kpis">
+        <div class="k"><b>${mathData.length}</b><span>獨立視覺</span></div>
+        <div class="k"><b>${mathLeads.toLocaleString()}</b><span>近2月領課</span></div>
+        <div class="k"><b>${mathCpl != null ? '$' + mathCpl.toFixed(1) : '—'}</b><span>加權CPL</span></div>
+        <div class="k"><b>${mathCtr != null ? mathCtr.toFixed(2) + '%' : '—'}</b><span>加權CTR</span></div>
+      </div>
+    </div>
+    <div class="math-note">範圍：SMART BEAN-TW01 台灣投放帳號，2026-05-29 → 07-28。以 Meta initiate_checkout 排名；同一視覺跨縣市或不同投放主已合併領課，卡片內列出投放主與各自領課。</div>
+    <div class="grid">${mathData.map(mathCard).join('\n')}</div>
+  </section>`;
 const nav = ACCOUNTS.map(a => {
   const n = data.filter(e => e.account === a.key).length;
   return `<a href="#acc-${a.slug}" style="--ac:${a.color}">${esc(a.key)} <b>${n}</b></a>`;
 }).join('');
-const genDate = process.env.GEN_DATE || '2026-07-23';
+const fullNav = `<a href="#acc-math" style="--ac:#c14f30">台灣數學 Top <b>20</b></a>${nav}`;
+const genDate = process.env.GEN_DATE || '2026-07-28';
 
 const html = `<!doctype html>
 <html lang="zh-Hant">
@@ -108,7 +157,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>廣告創意監控台 · 投放主 × Top創意 ｜ Rose Rose</title>
+<title>廣告創意監控台 · 閱讀投放主 × 台灣數學 Top ｜ Rose Rose</title>
 <style>
   :root{--bg:#eef1f6;--ink:#1a2330;--muted:#6a7889;--line:#e0e6ee;--panel:#fff;--shadow:0 10px 30px rgba(20,35,60,.08);}
   *{box-sizing:border-box}html,body{margin:0}
@@ -146,10 +195,14 @@ const html = `<!doctype html>
   .tag{font-size:10.5px;border-radius:6px;padding:2px 7px;font-weight:600}
   .ta{background:#e6f5ec;color:#1a8a44;border:1px solid #bfe6cc}
   .tb{background:#eef0f4;color:#6a7889;border:1px solid #dde2ea}
+  .tm{background:#fff0e9;color:#b84326;border:1px solid #f2c5b5}
   .visual{display:block;margin:10px 12px 0;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:#faf7f2;cursor:zoom-in}
   .visual img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
   .cbody{padding:10px 12px 13px}
   .cbody h4{margin:0 0 8px;font-size:13.5px;line-height:1.35}
+  .owner{background:#fff7f2;border:1px solid #f0d8cd;border-radius:8px;padding:7px 9px;margin-bottom:7px}
+  .owner span{display:block;font-size:9.5px;color:var(--muted)}.owner b{display:block;font-size:12.5px;color:#9f3f27}
+  .owner small{display:block;font-size:10px;color:var(--muted);margin-top:2px}
   .mrow{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
   .mrow .m{background:#f5f8fb;border:1px solid var(--line);border-radius:8px;padding:6px 3px;text-align:center}
   .mrow .m b{display:block;font-size:14px;color:var(--ac)}.mrow .m span{font-size:9.5px;color:var(--muted)}
@@ -157,6 +210,7 @@ const html = `<!doctype html>
   .trend span b{color:var(--ink);font-size:12px}.trend i{font-style:normal;font-weight:800;font-size:15px}.trend.up i{color:#168451}.trend.down i{color:#c06b27}.trend.flat i{color:#78859a}
   .chips{margin-top:6px;display:flex;gap:4px;flex-wrap:wrap}.chip{display:inline-block;background:#fff3e8;color:#c96a1b;border:1px solid #f2ddc4;border-radius:999px;font-size:10.5px;padding:1px 8px}
   .libnote{background:#f4f6f9;border:1px dashed #cfd8e3;border-radius:8px;padding:7px 9px;font-size:11.5px;color:#78859a}
+  .math-note{background:#fff7f2;border:1px solid #efd5ca;border-radius:11px;padding:9px 12px;margin:-3px 0 12px;font-size:11.5px;color:#76564b}
   .sec{font-size:11.5px;font-weight:700;margin:9px 0 4px;color:var(--muted)}
   ul.titles{margin:0;padding-left:16px}ul.titles li{font-size:11.8px;margin:1px 0}
   .copy{background:#f7f9fc;border:1px solid var(--line);border-radius:8px;padding:7px 9px;margin-top:8px}
@@ -170,13 +224,13 @@ const html = `<!doctype html>
 <body>
 <div class="wrap">
   <header class="hero">
-    <h1>📊 廣告創意監控台 · 投放主 × Top 創意</h1>
-    <p>近兩個月實際領課優先，兼看持續領課、近14天成長與新上架進步；同圖跨城市、複本與投放主已做視覺去重。時間窗：2026-05-24 → 07-23。</p>
+    <h1>📊 廣告創意監控台 · 閱讀投放主 × 台灣數學 Top</h1>
+    <p>閱讀創意依投放主整理；新增近兩個月台灣數學廣告 Top 20。同圖跨城市、複本與投放主皆做視覺去重與成效合併。</p>
     <div class="kpis">
-      <div class="kpi"><b>6</b><span>投放主</span></div>
-      <div class="kpi"><b>${data.length}</b><span>創意內容</span></div>
-      <div class="kpi"><b>${totalA}</b><span>近2月實際有領課</span></div>
-      <div class="kpi"><b>${totalLeads.toLocaleString()}</b><span>成效款合計領課</span></div>
+      <div class="kpi"><b>6</b><span>閱讀投放主</span></div>
+      <div class="kpi"><b>${data.length}</b><span>閱讀分類創意</span></div>
+      <div class="kpi"><b>${mathData.length}</b><span>台灣數學 Top</span></div>
+      <div class="kpi"><b>${mathLeads.toLocaleString()}</b><span>數學 Top 20 領課</span></div>
     </div>
   </header>
 
@@ -184,19 +238,21 @@ const html = `<!doctype html>
     <b>口徑：</b>領課＝Meta 像素 initiate_checkout，資料源＝Arkio 代理 Meta Insights（廣告層級）＋ Arkio 素材庫。
     排序先看近2月領課與CPL，再加權近14天持續領課／成長、新上架後進步；同一底圖跨城市、複本或投放主以感知雜湊去重，近似圖合併累計。
     <b>✅ 近2月有領課</b>＝期間內至少有1次可歸屬領課；<b>📁 素材庫參考</b>＝投放成效款不足目標數時，以近期獨立視覺補充，不冒充成效款。
-    <br>本版共 70 個不重複視覺：<b>親子愛共讀／育兒小百科各15個</b>，其餘各10個；繪本福利社為9個成效款＋1個素材庫參考，Emily為10個素材庫參考。
+    <br>閱讀區共 70 個不重複視覺：<b>親子愛共讀／育兒小百科各15個</b>，其餘各10個；另有<b>台灣數學廣告 Top 20</b>，按近2月領課由高至低排名並標示投放主、CTR、CPL與領課。
   </div>
 
   <div class="toolbar">
-    <nav class="accnav">${nav}</nav>
+    <nav class="accnav">${fullNav}</nav>
     <div class="filter"><button class="on" data-f="all">全部創意</button><button data-f="a">只看成效驗證</button></div>
   </div>
+
+${mathSection}
 
 ${sections}
 
   <footer>
     Rose Rose ｜ 廣告優化 · 廣告創意監控台（投放主 × Top創意）<br>
-    圖片點擊放大；CPL＝區間花費÷領課；近14天與前14天用來判斷近期變化，素材庫款僅供補充參考。<br>
+    圖片點擊放大；CPL＝區間花費÷領課；數學榜單依近2月領課排序，閱讀區近14天與前14天用來判斷近期變化。<br>
     產出時間：${genDate}
   </footer>
 </div>
@@ -210,5 +266,5 @@ ${sections}
 </body>
 </html>`;
 
-fs.writeFileSync(path.join(__dir, 'index.html'), html);
+fs.writeFileSync(path.join(__dir, 'index.html'), html.replace(/[ \t]+$/gm, ''));
 console.log('built monitor |', data.length, 'creatives |', ACCOUNTS.length, 'accounts | A:', totalA);
