@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-07-29 11:52",
+ "genStamp": "2026-07-29 11:57",
  "checkpointWd": "三",
  "today": "2026-07-29",
  "fetchStatus": "ok",
@@ -2411,7 +2411,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 9.7,
+    "s10": 9.8,
     "cpl": 4.9,
     "ctr7": 3.7,
     "hasVariantPerf": true,
