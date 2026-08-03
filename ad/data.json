@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-03 12:22",
+ "genStamp": "2026-08-03 14:05",
  "checkpointWd": "一",
  "today": "2026-08-03",
  "fetchStatus": "ok",
@@ -26,9 +26,9 @@
    "name": "閱讀",
    "q3Target": 3360,
    "monthTargets": {
-    "2026-07": 950,
+    "2026-07": 1000,
     "2026-08": 1150,
-    "2026-09": 1260
+    "2026-09": 1210
    },
    "q3": {
     "target": 3360,
@@ -63,14 +63,14 @@
    "months": [
     {
      "ym": "2026-07",
-     "target": 950,
+     "target": 1000,
      "actual": 1026,
      "actualBk": 1030,
      "isCur": false,
      "isPast": true,
      "proj": 1026,
      "gap": 0,
-     "prog": 108,
+     "prog": 102.6,
      "timeProg": 100,
      "status": "ahead"
     },
@@ -89,13 +89,13 @@
     },
     {
      "ym": "2026-09",
-     "target": 1260,
+     "target": 1210,
      "actual": 0,
      "actualBk": 0,
      "isCur": false,
      "isPast": false,
      "proj": 0,
-     "gap": 1260,
+     "gap": 1210,
      "prog": 0,
      "timeProg": 0,
      "status": "na"
@@ -108,10 +108,10 @@
      "effFrom": "2026-07-01",
      "effTo": "2026-07-05",
      "isCur": false,
-     "line": 238,
+     "line": 250,
      "actual": 57,
      "actualBk": 52,
-     "gap": 181,
+     "gap": 193,
      "status": "fail"
     },
     {
@@ -120,10 +120,10 @@
      "effFrom": "2026-07-06",
      "effTo": "2026-07-12",
      "isCur": false,
-     "line": 238,
+     "line": 250,
      "actual": 151,
      "actualBk": 142,
-     "gap": 87,
+     "gap": 99,
      "status": "fail"
     },
     {
@@ -132,10 +132,10 @@
      "effFrom": "2026-07-13",
      "effTo": "2026-07-19",
      "isCur": false,
-     "line": 238,
+     "line": 250,
      "actual": 144,
      "actualBk": 155,
-     "gap": 94,
+     "gap": 106,
      "status": "fail"
     },
     {
@@ -144,7 +144,7 @@
      "effFrom": "2026-07-20",
      "effTo": "2026-07-26",
      "isCur": false,
-     "line": 238,
+     "line": 250,
      "actual": 367,
      "actualBk": 370,
      "gap": 0,
@@ -180,11 +180,7 @@
    "key": "en",
    "name": "英語",
    "q3Target": 50,
-   "monthTargets": {
-    "2026-07": 17,
-    "2026-08": 17,
-    "2026-09": 17
-   },
+   "monthTargets": {},
    "q3": {
     "target": 50,
     "actual": 28,
@@ -200,58 +196,55 @@
    },
    "cur": {
     "ym": "2026-08",
-    "target": 17,
+    "target": 0,
     "actual": 0,
     "actualBk": 0,
     "prog": 0,
     "timeProg": 9.7,
     "proj": 0,
     "attain": 0,
-    "gap": 17,
-    "remain": 17,
-    "needPerDay": 0.6,
+    "gap": null,
+    "remain": 0,
+    "needPerDay": 0,
     "dayRateNow": 0,
     "recent7Rate": 0,
-    "diff": -9.7,
-    "status": "behind"
+    "diff": 0,
+    "status": "na"
    },
    "months": [
     {
      "ym": "2026-07",
-     "target": 17,
      "actual": 28,
      "actualBk": 20,
      "isCur": false,
      "isPast": true,
      "proj": 28,
-     "gap": 0,
-     "prog": 164.7,
+     "gap": null,
+     "prog": null,
      "timeProg": 100,
-     "status": "ahead"
+     "status": "na"
     },
     {
      "ym": "2026-08",
-     "target": 17,
      "actual": 0,
      "actualBk": 0,
      "isCur": true,
      "isPast": false,
      "proj": 0,
-     "gap": 17,
-     "prog": 0,
+     "gap": null,
+     "prog": null,
      "timeProg": 9.7,
-     "status": "behind"
+     "status": "na"
     },
     {
      "ym": "2026-09",
-     "target": 17,
      "actual": 0,
      "actualBk": 0,
      "isCur": false,
      "isPast": false,
      "proj": 0,
-     "gap": 17,
-     "prog": 0,
+     "gap": null,
+     "prog": null,
      "timeProg": 0,
      "status": "na"
     }
@@ -263,11 +256,11 @@
      "effFrom": "2026-07-01",
      "effTo": "2026-07-05",
      "isCur": false,
-     "line": 4,
+     "line": null,
      "actual": 5,
      "actualBk": 5,
-     "gap": 0,
-     "status": "pass"
+     "gap": null,
+     "status": "na"
     },
     {
      "start": "2026-07-06",
@@ -275,11 +268,11 @@
      "effFrom": "2026-07-06",
      "effTo": "2026-07-12",
      "isCur": false,
-     "line": 4,
+     "line": null,
      "actual": 14,
      "actualBk": 9,
-     "gap": 0,
-     "status": "pass"
+     "gap": null,
+     "status": "na"
     },
     {
      "start": "2026-07-13",
@@ -287,11 +280,11 @@
      "effFrom": "2026-07-13",
      "effTo": "2026-07-19",
      "isCur": false,
-     "line": 4,
+     "line": null,
      "actual": 8,
      "actualBk": 6,
-     "gap": 0,
-     "status": "pass"
+     "gap": null,
+     "status": "na"
     },
     {
      "start": "2026-07-20",
@@ -299,11 +292,11 @@
      "effFrom": "2026-07-20",
      "effTo": "2026-07-26",
      "isCur": false,
-     "line": 4,
+     "line": null,
      "actual": 1,
      "actualBk": 0,
-     "gap": 3,
-     "status": "fail"
+     "gap": null,
+     "status": "na"
     },
     {
      "start": "2026-07-27",
@@ -311,11 +304,11 @@
      "effFrom": "2026-07-27",
      "effTo": "2026-08-02",
      "isCur": false,
-     "line": 4,
+     "line": null,
      "actual": 0,
      "actualBk": 0,
-     "gap": 4,
-     "status": "fail"
+     "gap": null,
+     "status": "na"
     },
     {
      "start": "2026-08-03",
@@ -323,11 +316,11 @@
      "effFrom": "2026-08-03",
      "effTo": "2026-08-03",
      "isCur": true,
-     "line": 4,
+     "line": null,
      "actual": 0,
      "actualBk": 0,
-     "gap": 4,
-     "status": "current"
+     "gap": null,
+     "status": "na"
     }
    ]
   }
@@ -2396,8 +2389,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 10,
-    "s10": 56.3,
-    "cpl": 5.6,
+    "s10": 57.2,
+    "cpl": 5.7,
     "ctr7": 4.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -2436,8 +2429,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 14.9,
-    "cpl": 7.5,
+    "s10": 15.5,
+    "cpl": 7.8,
     "ctr7": 4.3,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -2556,8 +2549,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 13.6,
-    "cpl": 13.6,
+    "s10": 13.7,
+    "cpl": 13.7,
     "ctr7": 2.1,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3000,6 +2993,406 @@
     "cpl": null,
     "ctr7": 0.9,
     "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26033",
+    "theme": "我會冷靜一下0803",
+    "fullname": "26033 我會冷靜一下（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/0dddc6dd-c9db-4e31-9740-d5f56f5a4808.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/8fb116ab-b7f7-49a0-b49e-8e8d9102931a.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/8fb116ab-b7f7-49a0-b49e-8e8d9102931a.png",
+      "name": "26033 我會冷靜一下（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/0dddc6dd-c9db-4e31-9740-d5f56f5a4808.png",
+      "name": "26033 我會冷靜一下（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "jojoreading_tw",
+      "name": "JOJO 閱讀"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26034",
+    "theme": "閱讀任務包免費領0803",
+    "fullname": "26034 閱讀任務包免費領（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/c29aa080-9512-4174-98aa-c3223cb02317.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/fc52a66e-2ec5-4e0d-90ed-2e1bcf8d58f7.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/fc52a66e-2ec5-4e0d-90ed-2e1bcf8d58f7.png",
+      "name": "26034 閱讀任務包免費領（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/c29aa080-9512-4174-98aa-c3223cb02317.png",
+      "name": "26034 閱讀任務包免費領（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26035",
+    "theme": "108識字卡拼圖0803",
+    "fullname": "26035 108識字卡拼圖（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/6eaeed84-12a0-4f92-8a0a-387ccafed2aa.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/7fcac025-ce8f-40ad-b7c4-bb909571a3bd.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/7fcac025-ce8f-40ad-b7c4-bb909571a3bd.png",
+      "name": "26035 108識字卡拼圖（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/6eaeed84-12a0-4f92-8a0a-387ccafed2aa.png",
+      "name": "26035 108識字卡拼圖（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26036",
+    "theme": "108識字卡拼圖20803",
+    "fullname": "26036 108識字卡拼圖2（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/a03313bf-382e-4860-8872-208a6ef66fcf.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/1ffe9d03-6e13-4217-9cba-ab9665b4ed23.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/1ffe9d03-6e13-4217-9cba-ab9665b4ed23.png",
+      "name": "26036 108識字卡拼圖2（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/a03313bf-382e-4860-8872-208a6ef66fcf.png",
+      "name": "26036 108識字卡拼圖2（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26037",
+    "theme": "暑假108識字卡0803",
+    "fullname": "26037 暑假108識字卡（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/eaa4ec4c-579c-4185-b9e0-ae2938c4854e.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/acac10b6-f86b-4009-b27f-bf309b0a87e1.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/acac10b6-f86b-4009-b27f-bf309b0a87e1.png",
+      "name": "26037 暑假108識字卡（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/eaa4ec4c-579c-4185-b9e0-ae2938c4854e.png",
+      "name": "26037 暑假108識字卡（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26038",
+    "theme": "108識字卡拼圖30803",
+    "fullname": "26038 108識字卡拼圖3（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/65f3220c-2e99-42d3-b2de-8c6632954010.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/41ff3b23-6c48-4b3a-913e-72f77ad1f44d.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/41ff3b23-6c48-4b3a-913e-72f77ad1f44d.png",
+      "name": "26038 108識字卡拼圖3（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/65f3220c-2e99-42d3-b2de-8c6632954010.png",
+      "name": "26038 108識字卡拼圖3（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26039",
+    "theme": "暑假識字練習0803",
+    "fullname": "26039 暑假識字練習（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/3d5686af-0b66-4cbe-b55d-e8394954182f.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/86a9fe0d-017f-45a2-983c-e871e9bdddc3.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/86a9fe0d-017f-45a2-983c-e871e9bdddc3.png",
+      "name": "26039 暑假識字練習（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/3d5686af-0b66-4cbe-b55d-e8394954182f.png",
+      "name": "26039 暑假識字練習（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26040",
+    "theme": "暑假超前部署0803",
+    "fullname": "26040 暑假超前部署（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/24312884-28a0-4f72-a0cb-18f4ac73509f.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/9fc4ac24-e7d2-46cb-a559-bb1a16a50015.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/9fc4ac24-e7d2-46cb-a559-bb1a16a50015.png",
+      "name": "26040 暑假超前部署（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/24312884-28a0-4f72-a0cb-18f4ac73509f.png",
+      "name": "26040 暑假超前部署（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26041",
+    "theme": "情緒力九宮格0803",
+    "fullname": "26041 情緒力九宮格（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/4509ec19-096c-4a1f-bcdc-255c868571a9.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/4b25f54b-f232-473e-9182-975eed069de5.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/4b25f54b-f232-473e-9182-975eed069de5.png",
+      "name": "26041 情緒力九宮格（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/4509ec19-096c-4a1f-bcdc-255c868571a9.png",
+      "name": "26041 情緒力九宮格（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26042",
+    "theme": "正音識字班0803",
+    "fullname": "26042 正音識字班（Rose）0803",
+    "uploaded": "2026-08-03",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/afb0f2cd-9599-47d3-9d63-032436a6e260.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/b06d69d1-255b-4133-98cb-5abce7ca7a40.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/b06d69d1-255b-4133-98cb-5abce7ca7a40.png",
+      "name": "26042 正音識字班（Rose）0803-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/afb0f2cd-9599-47d3-9d63-032436a6e260.png",
+      "name": "26042 正音識字班（Rose）0803-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
     "leadBreakdown": false
    }
   ]

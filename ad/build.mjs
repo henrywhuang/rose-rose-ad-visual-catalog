@@ -15,9 +15,10 @@ const LEDGER_PATH = path.join(OUT, 'ledger.json');
 
 // ============== 設定（Rose 給定目標，可調整）==============
 const QUARTER = { label: '2026-Q3', start: '2026-07-01', end: '2026-09-30', totalDays: 92, months: ['2026-07', '2026-08', '2026-09'] };
-const READING = { key: 'read', name: '閱讀', q3Target: 3360, monthTargets: { '2026-07': 950, '2026-08': 1150, '2026-09': 1260 } };
-// 英語 K2：Rose 2026-07-22 確認 季目標 50、每月 17（正式目標，非參考）。
-const ENGLISH = { key: 'en', name: '英語', q3Target: 50, monthTargets: { '2026-07': 17, '2026-08': 17, '2026-09': 17 } };
+// Rose 2026-08-03 確認：TW Reading 季目標 3,360（7月 1,000／8月 1,150／9月 1,210）。
+const READING = { key: 'read', name: '閱讀', q3Target: 3360, monthTargets: { '2026-07': 1000, '2026-08': 1150, '2026-09': 1210 } };
+// English K2 僅追蹤當季目標 50，不拆每月目標。
+const ENGLISH = { key: 'en', name: '英語', q3Target: 50, monthTargets: {} };
 const WEEK_DIVISOR = 4;          // 單週合格線＝該週所屬月目標 ÷ 4（Rose 口徑：7月 950/4≈238）
 const PRIMARY = 'm';             // 主口徑 m=成果(meta) / b=後端(backend)
 const RECENT_DAYS = 10;          // 「近N天上架廣告分析」視窗
@@ -564,8 +565,9 @@ $('alerts').innerHTML=al;
 // ① OKR 卡
 const okr=$('okr');
 D.subjects.forEach(s=>{
-  [{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天'},
-   {scope:D.curYM+' 當月',o:s.cur,tp:s.cur.timeProg,extra:D.dayOfMonth+'/'+D.dim+'天',isMonth:true}].forEach(seg=>{
+  const segments=[{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天'}];
+  if(s.cur.target) segments.push({scope:D.curYM+' 當月',o:s.cur,tp:s.cur.timeProg,extra:D.dayOfMonth+'/'+D.dim+'天',isMonth:true});
+  segments.forEach(seg=>{
     const o=seg.o;
     const cls=o.status||'na';
     const prog=o.prog||0, tp=seg.tp||0;
