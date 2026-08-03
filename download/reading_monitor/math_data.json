@@ -5,15 +5,15 @@
     "accountBreakdown": [
       {
         "account": "JoJo數學",
-        "leads": 576
+        "leads": 588
       }
     ],
-    "leads": 576,
-    "spend": 2016.68,
-    "cpl": 3.5,
-    "ctr": 4.48,
-    "impressions": 498563,
-    "clicks": 22320,
+    "leads": 588,
+    "spend": 2038.44,
+    "cpl": 3.47,
+    "ctr": 4.5,
+    "impressions": 506144,
+    "clicks": 22799,
     "variants": 2,
     "cities": [],
     "headlines": [
@@ -28,8 +28,8 @@
     ],
     "rank": 1,
     "image": "assets/math_01.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35757 GPT-粉色暑假計算特訓-通投(JoJo數學)",
@@ -37,19 +37,19 @@
     "accountBreakdown": [
       {
         "account": "繪本福利社",
-        "leads": 111
+        "leads": 131
       },
       {
         "account": "JoJo數學",
-        "leads": 103
+        "leads": 105
       }
     ],
-    "leads": 214,
-    "spend": 765.33,
-    "cpl": 3.58,
-    "ctr": 2.68,
-    "impressions": 121104,
-    "clicks": 3243,
+    "leads": 236,
+    "spend": 884,
+    "cpl": 3.75,
+    "ctr": 2.7,
+    "impressions": 137565,
+    "clicks": 3719,
     "variants": 2,
     "cities": [],
     "headlines": [
@@ -65,8 +65,8 @@
     ],
     "rank": 2,
     "image": "assets/math_02.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35694 GPT-Claude批量-夏令營基礎班-極簡夏天(JOJO數學)",
@@ -74,15 +74,15 @@
     "accountBreakdown": [
       {
         "account": "JoJo數學",
-        "leads": 201
+        "leads": 210
       }
     ],
-    "leads": 201,
-    "spend": 819.35,
-    "cpl": 4.08,
+    "leads": 210,
+    "spend": 864.84,
+    "cpl": 4.12,
     "ctr": 2.03,
-    "impressions": 210325,
-    "clicks": 4264,
+    "impressions": 219113,
+    "clicks": 4445,
     "variants": 1,
     "cities": [],
     "headlines": [
@@ -98,8 +98,8 @@
     ],
     "rank": 3,
     "image": "assets/math_03.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35746-caiyi-九九乘法強化班-A",
@@ -131,8 +131,8 @@
     ],
     "rank": 4,
     "image": "assets/math_04.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "JoMath_專注力+超前學習-arkio純字（Lei）",
@@ -140,15 +140,15 @@
     "accountBreakdown": [
       {
         "account": "Claire國小數學",
-        "leads": 123
+        "leads": 121
       }
     ],
-    "leads": 123,
-    "spend": 462.62,
-    "cpl": 3.76,
-    "ctr": 5.61,
-    "impressions": 119614,
-    "clicks": 6716,
+    "leads": 121,
+    "spend": 450.75,
+    "cpl": 3.73,
+    "ctr": 5.6,
+    "impressions": 116262,
+    "clicks": 6507,
     "variants": 1,
     "cities": [],
     "headlines": [
@@ -164,38 +164,41 @@
     ],
     "rank": 5,
     "image": "assets/math_05.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
-    "name": "25000 免費了贈教材（JOJO數學)",
-    "account": "JoJo數學",
+    "name": "35770-H5九九乘法強化班B-輕鬆學",
+    "account": "輕鬆學國英數",
     "accountBreakdown": [
       {
-        "account": "JoJo數學",
-        "leads": 102
+        "account": "輕鬆學國英數",
+        "leads": 120
       }
     ],
-    "leads": 102,
-    "spend": 422.83,
-    "cpl": 4.15,
-    "ctr": 1.89,
-    "impressions": 85734,
-    "clicks": 1623,
+    "leads": 120,
+    "spend": 313.7,
+    "cpl": 2.61,
+    "ctr": 2.41,
+    "impressions": 93156,
+    "clicks": 2241,
     "variants": 1,
     "cities": [],
     "headlines": [
-      "🐤【我們免費了！加減法練習 2000+頁大放送】",
-      "✏️【暑假計算不退步｜中班到小四分齡加減教材免費領】",
-      "📘【2000+頁暑假練習包｜中班～四年級爸媽必收！】"
+      "🌞 暑假九九特訓",
+      "🧮 每天10分鐘",
+      "📩 免費領取名額",
+      "✅ 高頻題不再卡",
+      "⭐ 市價630元免費"
     ],
     "bodies": [
-      "📣 我們免費了！\n整整超過 2000 頁的數學練習內容，免費開放給爸媽！\n\n孩子在學校跟不上？總覺得計算卡卡？\n你不是不努力，只是一直找不到一套真的有系統又能陪著走的練習工具。\n\n🎯 這套 JOJO 數學練習，專為 中班到四年級 孩子設計：\n✅ 加減乘除，分齡規劃、逐步引導\n✅ 不混題、不硬背，每天 10 分鐘，練出節奏感\n✅ 家長看得懂，孩子做得下去，還有學習小貼紙 + 成就卡，讓孩子自己想繼續往下練！\n\n📌 點擊圖片就能領取\n\n#我們免費了 #JOJO數學 #2000頁免費練習 #爸媽的好幫手 #每天十分鐘 #孩子的計算力打底工程"
+      "孩子會背九九乘法，不代表真的算得快。\n​\n暑假可以用每天 10 分鐘，把高頻題練到更熟：7×8、9×6、8×7，不再每次卡住。\n九九特訓班限時 0 元，市價 630 元。\n​\n📩 點圖免費報名。",
+      "乘法表熟不熟，會直接影響後面的乘除法速度。\n​\n這次暑假九九特訓班，適合想在開學前補底的孩子。\n每天短練，不需要一次壓很久。\n​\n📩 現在 0 元領取名額。"
     ],
     "rank": 6,
     "image": "assets/math_06.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "JoMath_GPT批量_夏令營-城市版（Lei）",
@@ -227,8 +230,8 @@
     ],
     "rank": 7,
     "image": "assets/math_07.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "JoMath_GPT批量_夏令營-城市版（Lei）",
@@ -260,41 +263,8 @@
     ],
     "rank": 8,
     "image": "assets/math_08.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
-  },
-  {
-    "name": "35770-H5九九乘法強化班B-輕鬆學",
-    "account": "輕鬆學國英數",
-    "accountBreakdown": [
-      {
-        "account": "輕鬆學國英數",
-        "leads": 83
-      }
-    ],
-    "leads": 83,
-    "spend": 205.07,
-    "cpl": 2.47,
-    "ctr": 2.35,
-    "impressions": 57228,
-    "clicks": 1344,
-    "variants": 1,
-    "cities": [],
-    "headlines": [
-      "🌞 暑假九九特訓",
-      "🧮 每天10分鐘",
-      "📩 免費領取名額",
-      "✅ 高頻題不再卡",
-      "⭐ 市價630元免費"
-    ],
-    "bodies": [
-      "孩子會背九九乘法，不代表真的算得快。\n​\n暑假可以用每天 10 分鐘，把高頻題練到更熟：7×8、9×6、8×7，不再每次卡住。\n九九特訓班限時 0 元，市價 630 元。\n​\n📩 點圖免費報名。",
-      "乘法表熟不熟，會直接影響後面的乘除法速度。\n​\n這次暑假九九特訓班，適合想在開學前補底的孩子。\n每天短練，不需要一次壓很久。\n​\n📩 現在 0 元領取名額。"
-    ],
-    "rank": 9,
-    "image": "assets/math_09.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35747-caiyi-九九乘法強化班-B",
@@ -324,10 +294,40 @@
       "☀️ 暑假兩個月，是孩子數學「翻身」最好的時機\n​\n與其讓孩子整個暑假滑平板，不如每天 10 分鐘，把基礎打穩。\n【九九乘法強化班】2026 暑假限定：\n✅ 從背誦到速算，整個暑假練到熟\n✅ 每天 10 分鐘，在家就能上\n✅ 招生對象：小二、小三生\n✅ 6-8 月暑假限時體驗\n​\n🎁 課程費用 0 元（市價 630 元）· 名額有限\n​\n📲 點圖立即報名\n​\n#暑假夏令營 #小學數學 #計算力 #輕鬆學",
       "還在煩惱孩子暑假怎麼安排？這個夏令營免費 🎒\n​\n【九九乘法強化班】：\n✅ 從背誦到速算，整個暑假練到熟\n✅ 在家就能上，不用接送\n✅ 小二、小三生 適用\n✅ 0 元體驗（市價 630 元）\n​\n名額有限，先報先贏。\n​\n📲 點圖立即報名\n​\n#暑假安排 #免費課程 #國小數學 #輕鬆學"
     ],
+    "rank": 9,
+    "image": "assets/math_09.jpg",
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
+  },
+  {
+    "name": "25000 免費了贈教材（JOJO數學)",
+    "account": "JoJo數學",
+    "accountBreakdown": [
+      {
+        "account": "JoJo數學",
+        "leads": 77
+      }
+    ],
+    "leads": 77,
+    "spend": 327.82,
+    "cpl": 4.26,
+    "ctr": 1.94,
+    "impressions": 67615,
+    "clicks": 1313,
+    "variants": 1,
+    "cities": [],
+    "headlines": [
+      "🐤【我們免費了！加減法練習 2000+頁大放送】",
+      "✏️【暑假計算不退步｜中班到小四分齡加減教材免費領】",
+      "📘【2000+頁暑假練習包｜中班～四年級爸媽必收！】"
+    ],
+    "bodies": [
+      "📣 我們免費了！\n整整超過 2000 頁的數學練習內容，免費開放給爸媽！\n\n孩子在學校跟不上？總覺得計算卡卡？\n你不是不努力，只是一直找不到一套真的有系統又能陪著走的練習工具。\n\n🎯 這套 JOJO 數學練習，專為 中班到四年級 孩子設計：\n✅ 加減乘除，分齡規劃、逐步引導\n✅ 不混題、不硬背，每天 10 分鐘，練出節奏感\n✅ 家長看得懂，孩子做得下去，還有學習小貼紙 + 成就卡，讓孩子自己想繼續往下練！\n\n📌 點擊圖片就能領取\n\n#我們免費了 #JOJO數學 #2000頁免費練習 #爸媽的好幫手 #每天十分鐘 #孩子的計算力打底工程"
+    ],
     "rank": 10,
     "image": "assets/math_10.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35722-九九乘法強化班-A",
@@ -359,8 +359,8 @@
     ],
     "rank": 11,
     "image": "assets/math_11.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35700-我會加減法-日系繪本-小百科",
@@ -396,8 +396,8 @@
     ],
     "rank": 12,
     "image": "assets/math_12.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35723-九九乘法強化班-B",
@@ -429,8 +429,8 @@
     ],
     "rank": 13,
     "image": "assets/math_13.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "25346 nano圖測試-國小知識點-Claire國小數學",
@@ -438,15 +438,15 @@
     "accountBreakdown": [
       {
         "account": "Claire國小數學",
-        "leads": 34
+        "leads": 30
       }
     ],
-    "leads": 34,
-    "spend": 82.66,
-    "cpl": 2.43,
-    "ctr": 9.07,
-    "impressions": 29456,
-    "clicks": 2671,
+    "leads": 30,
+    "spend": 70.17,
+    "cpl": 2.34,
+    "ctr": 9.05,
+    "impressions": 25738,
+    "clicks": 2329,
     "variants": 1,
     "cities": [],
     "headlines": [
@@ -460,8 +460,8 @@
     ],
     "rank": 14,
     "image": "assets/math_14.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35686 GPT-Claude批量-計算力夏令營2(JOJO數學)",
@@ -490,8 +490,8 @@
     ],
     "rank": 15,
     "image": "assets/math_15.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35769-H5九九乘法強化班A-輕鬆學",
@@ -503,10 +503,10 @@
       }
     ],
     "leads": 23,
-    "spend": 82.96,
+    "spend": 83.04,
     "cpl": 3.61,
     "ctr": 2.59,
-    "impressions": 21844,
+    "impressions": 21862,
     "clicks": 566,
     "variants": 1,
     "cities": [],
@@ -523,8 +523,8 @@
     ],
     "rank": 16,
     "image": "assets/math_16.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "JoMath_GPT批量_caiyi風格計算力圖（Lei）",
@@ -556,8 +556,8 @@
     ],
     "rank": 17,
     "image": "assets/math_17.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "JoMath_GPT批量_caiyi風格計算力圖（Lei）",
@@ -589,8 +589,8 @@
     ],
     "rank": 18,
     "image": "assets/math_18.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35716-直式計算強化班-A",
@@ -622,8 +622,8 @@
     ],
     "rank": 19,
     "image": "assets/math_19.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   },
   {
     "name": "35743-caiyi-計算力夏令營-B",
@@ -655,7 +655,7 @@
     ],
     "rank": 20,
     "image": "assets/math_20.jpg",
-    "windowFrom": "2026-05-29",
-    "windowTo": "2026-07-28"
+    "windowFrom": "2026-06-04",
+    "windowTo": "2026-08-03"
   }
 ]

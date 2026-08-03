@@ -7,6 +7,10 @@ import { fileURLToPath } from 'node:url';
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const data = JSON.parse(fs.readFileSync(path.join(__dir, 'monitor_data.json'), 'utf8'));
 const mathData = JSON.parse(fs.readFileSync(path.join(__dir, 'math_data.json'), 'utf8'));
+const readingFrom = data[0]?.windowFrom || mathData[0]?.windowFrom || '—';
+const readingTo = data[0]?.windowTo || mathData[0]?.windowTo || '—';
+const mathFrom = mathData[0]?.windowFrom || readingFrom;
+const mathTo = mathData[0]?.windowTo || readingTo;
 
 // 投放主顺序 + 元信息
 const ACCOUNTS = [
@@ -141,7 +145,7 @@ const mathSection = `
         <div class="k"><b>${mathCtr != null ? mathCtr.toFixed(2) + '%' : '—'}</b><span>加權CTR</span></div>
       </div>
     </div>
-    <div class="math-note">範圍：SMART BEAN-TW01 台灣投放帳號，2026-05-29 → 07-28。以 Meta initiate_checkout 排名；同一視覺跨縣市或不同投放主已合併領課，卡片內列出投放主與各自領課。</div>
+    <div class="math-note">範圍：SMART BEAN-TW01 台灣投放帳號，${mathFrom} → ${mathTo}。以 Meta initiate_checkout 排名；同一視覺跨縣市或不同投放主已合併領課，卡片內列出投放主與各自領課。</div>
     <div class="grid">${mathData.map(mathCard).join('\n')}</div>
   </section>`;
 const nav = ACCOUNTS.map(a => {
@@ -149,7 +153,7 @@ const nav = ACCOUNTS.map(a => {
   return `<a href="#acc-${a.slug}" style="--ac:${a.color}">${esc(a.key)} <b>${n}</b></a>`;
 }).join('');
 const fullNav = `<a href="#acc-math" style="--ac:#c14f30">台灣數學 Top <b>20</b></a>${nav}`;
-const genDate = process.env.GEN_DATE || '2026-07-28';
+const genDate = process.env.GEN_DATE || mathTo;
 
 const html = `<!doctype html>
 <html lang="zh-Hant">
@@ -225,7 +229,7 @@ const html = `<!doctype html>
 <div class="wrap">
   <header class="hero">
     <h1>📊 廣告創意監控台 · 閱讀投放主 × 台灣數學 Top</h1>
-    <p>閱讀創意依投放主整理；新增近兩個月台灣數學廣告 Top 20。同圖跨城市、複本與投放主皆做視覺去重與成效合併。</p>
+    <p>資料截至 ${genDate}。閱讀創意依投放主整理；台灣數學廣告 Top 20 依近兩個月領課排名。同圖跨城市、複本與投放主皆做視覺去重與成效合併。</p>
     <div class="kpis">
       <div class="kpi"><b>6</b><span>閱讀投放主</span></div>
       <div class="kpi"><b>${data.length}</b><span>閱讀分類創意</span></div>
@@ -238,7 +242,7 @@ const html = `<!doctype html>
     <b>口徑：</b>領課＝Meta 像素 initiate_checkout，資料源＝Arkio 代理 Meta Insights（廣告層級）＋ Arkio 素材庫。
     排序先看近2月領課與CPL，再加權近14天持續領課／成長、新上架後進步；同一底圖跨城市、複本或投放主以感知雜湊去重，近似圖合併累計。
     <b>✅ 近2月有領課</b>＝期間內至少有1次可歸屬領課；<b>📁 素材庫參考</b>＝投放成效款不足目標數時，以近期獨立視覺補充，不冒充成效款。
-    <br>閱讀區共 70 個不重複視覺：<b>親子愛共讀／育兒小百科各15個</b>，其餘各10個；另有<b>台灣數學廣告 Top 20</b>，按近2月領課由高至低排名並標示投放主、CTR、CPL與領課。
+    <br>閱讀區間：<b>${readingFrom} → ${readingTo}</b>，共 70 個不重複視覺：<b>親子愛共讀／育兒小百科各15個</b>，其餘各10個；另有<b>台灣數學廣告 Top 20</b>，按近2月領課由高至低排名並標示投放主、CTR、CPL與領課。
   </div>
 
   <div class="toolbar">

@@ -16,10 +16,18 @@ const ACCOUNTS = {
 
 const FROM = raw.date_from;
 const TO = raw.date_to;
-const RECENT14 = '2026-07-10';
-const PREV14 = '2026-06-26';
-const RECENT7 = '2026-07-17';
-const PREV7 = '2026-07-10';
+const addDays = (date, days) => {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+};
+const RECENT14 = addDays(TO, -13);
+const PREV14 = addDays(TO, -27);
+const PREV14_END = addDays(TO, -14);
+const RECENT7 = addDays(TO, -6);
+const PREV7 = addDays(TO, -13);
+const PREV7_END = addDays(TO, -7);
+const NEW_CUTOFF = addDays(TO, -20);
 
 function num(v) {
   const n = Number(v);
@@ -139,14 +147,14 @@ function round(n, digits = 2) {
 const candidates = [...groups.values()].map(group => {
   const total = sumRange(group.days, FROM);
   const recent14 = sumRange(group.days, RECENT14);
-  const previous14 = sumRange(group.days, PREV14, '2026-07-09');
+  const previous14 = sumRange(group.days, PREV14, PREV14_END);
   const recent7 = sumRange(group.days, RECENT7);
-  const previous7 = sumRange(group.days, PREV7, '2026-07-16');
+  const previous7 = sumRange(group.days, PREV7, PREV7_END);
   const leadDates = Object.entries(group.days).filter(([, d]) => d.leads > 0).map(([date]) => date).sort();
   const created = [...new Set(group.createdDates)].sort();
   const growth14 = previous14.leads > 0 ? recent14.leads / previous14.leads : (recent14.leads > 0 ? 9.99 : 0);
   const growth7 = previous7.leads > 0 ? recent7.leads / previous7.leads : (recent7.leads > 0 ? 9.99 : 0);
-  const isNew = (created.at(-1) || '') >= '2026-07-03';
+  const isNew = (created.at(-1) || '') >= NEW_CUTOFF;
   const continuous = recent14.leadDays >= 3 || (recent7.leadDays >= 2 && recent14.leads >= 3);
   const improving = recent14.leads >= 2 && growth14 >= 1.15;
   const newImproving = isNew && recent7.leads >= 1 && growth7 >= 1;

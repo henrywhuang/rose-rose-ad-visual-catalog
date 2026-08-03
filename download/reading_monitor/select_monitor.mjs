@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const candidates = JSON.parse(fs.readFileSync(path.join(__dir, 'candidates_2m.json'), 'utf8'));
 const library = JSON.parse(fs.readFileSync(path.join(__dir, 'creative_library.json'), 'utf8'));
+const raw = JSON.parse(fs.readFileSync(path.join(__dir, 'raw_2m.json'), 'utf8'));
 const CACHE_DIR = path.join(__dir, '.image_cache');
 const ASSET_DIR = path.join(__dir, 'assets');
 fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -22,6 +23,12 @@ const ACCOUNT_ORDER = [
   { account: 'JoJo閱讀', code: 'jojoreading_tw', slug: 'jojo', target: 10 },
   { account: 'Emily', code: 'mommy_emilylee', slug: 'emily', target: 10 },
 ];
+const addDays = (date, days) => {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+};
+const NEW_CUTOFF = addDays(raw.date_to, -20);
 
 function round(n, digits = 2) {
   return n == null || !Number.isFinite(n) ? null : Number(n.toFixed(digits));
@@ -73,7 +80,7 @@ function rescore(item) {
   const growth = item.previous14.leads > 0
     ? item.recent14.leads / item.previous14.leads
     : (item.recent14.leads > 0 ? 9.99 : 0);
-  const isNew = String(item.latestCreated || '') >= '2026-07-03';
+  const isNew = String(item.latestCreated || '') >= NEW_CUTOFF;
   const efficient = item.total.leads > 5 && item.total.cpl != null && item.total.cpl < 8;
   const continuous = item.recent14.leadDays >= 3 || item.recent14.leads >= 5;
   const improving = item.recent14.leads >= 2 && growth >= 1.15;
@@ -321,6 +328,8 @@ for (const spec of ACCOUNT_ORDER) {
       bodies: (row.bodies || []).slice(0, 2),
       source: row.tier === 'A' ? 'Meta Insights' : 'Arkio 素材庫',
       libraryId: row.libraryId || null,
+      windowFrom: raw.date_from,
+      windowTo: raw.date_to,
     });
   }
   console.log(`${spec.account}: ${local.filter(x => x.tier === 'A').length} performance + ${local.filter(x => x.tier === 'B').length} library = ${local.length}`);

@@ -11,8 +11,16 @@ const TOKEN_PATH = path.join(ROOT, '.arkio_token');
 const RAW_PATH = path.join(__dir, 'raw_2m.json');
 const API = 'https://www.arkio.me/api/v1';
 const ACCOUNT_ID = 'act_2336553763364202';
-const DATE_FROM = process.env.DATE_FROM || '2026-05-24';
-const DATE_TO = process.env.DATE_TO || '2026-07-23';
+const dateInShanghai = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
+}).format(new Date());
+const addDays = (date, days) => {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+};
+const DATE_TO = process.env.DATE_TO || dateInShanghai;
+const DATE_FROM = process.env.DATE_FROM || addDays(DATE_TO, -60);
 const CONCURRENCY = Math.max(1, Number(process.env.CONCURRENCY || 8));
 
 const token = fs.readFileSync(TOKEN_PATH, 'utf8').trim();
