@@ -69,7 +69,8 @@ OKR.timeProg = OKR.daysElapsed / OKR.daysInMonth;
 const mean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
 const sd = a => { const m = mean(a); return a.length ? Math.sqrt(a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length) : 0; };
 const R = v => Math.round(v * 10) / 10, R0 = v => Math.round(v);
-const PALETTE = ['#6366f1', '#22c55e', '#f59e0b', '#ef4444', '#a855f7', '#0ea5e9', '#14b8a6', '#ec4899', '#84cc16', '#f97316', '#64748b', '#eab308', '#06b6d4', '#d946ef'];
+// 莫內花園色盤：睡蓮綠、霧藍、薰衣草、柔玫瑰與暖土色。
+const PALETTE = ['#6f8f72', '#7b91bd', '#b27ba0', '#d09a64', '#6fa6a0', '#9b83b5', '#c87976', '#849fbb', '#96a66e', '#b58c70', '#6f7f78', '#b6a05b', '#7399a8', '#9b7892'];
 const OWNED = new Set(['公域流量', '私域流量']);
 
 // 某科目自有(公+私)本月至今 / 上月 / 各月，並拆公私
@@ -227,18 +228,18 @@ const html = `<!doctype html>
 <title>JoTW流量池 監控台｜閱讀・英語・數學</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
-:root{--bg:#0b1020;--card:#151b2e;--card2:#1b2338;--line:#2a3450;--txt:#e8ecf6;--sub:#96a0bd;--good:#22c55e;--warn:#ef4444;--watch:#f59e0b;--ahead:#38bdf8;--boom:#facc15;--accent:#6366f1}
+:root{--bg:#f4f3e8;--card:#fffefa;--card2:#edf2ea;--line:#cbd5c7;--txt:#24342f;--sub:#5f6f69;--good:#4f7f67;--warn:#b85c62;--watch:#a36b22;--ahead:#537da0;--boom:#7b5c8e;--accent:#627d9d}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;background:linear-gradient(180deg,#0b1020,#0e1428);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6;padding-bottom:60px}
+body{margin:0;background:radial-gradient(circle at 10% 0%,#e7ecda 0,transparent 34%),radial-gradient(circle at 90% 8%,#e8e1ee 0,transparent 32%),linear-gradient(180deg,#f8f5e9,#edf2eb 62%,#e8efea);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.6;padding-bottom:60px}
 .wrap{max-width:920px;margin:0 auto;padding:16px 13px}
-h1{font-size:19px;margin:0 0 3px}
+h1{font-size:19px;margin:0 0 3px;color:#30483f}
 .meta{color:var(--sub);font-size:12px}
-.sec-t{font-size:13px;color:var(--sub);font-weight:700;letter-spacing:1px;margin:22px 4px 8px;text-transform:uppercase}
+.sec-t{font-size:13px;color:#536d63;font-weight:800;letter-spacing:1px;margin:22px 4px 8px;text-transform:uppercase}
 .okr{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:11px}
-.ocard{border-radius:16px;padding:15px;border:1px solid}
-.ocard.behind{background:linear-gradient(135deg,#2a1416,#1a1220);border-color:#7f1d1d}
-.ocard.watch{background:linear-gradient(135deg,#2a2312,#1a1622);border-color:#7c5e12}
-.ocard.ahead{background:linear-gradient(135deg,#0f2417,#121a22);border-color:#1e5b39}
+.ocard{border-radius:16px;padding:15px;border:1px solid;box-shadow:0 8px 22px rgba(54,78,69,.07)}
+.ocard.behind{background:linear-gradient(135deg,#fff7f3,#f3e8ee);border-color:#d8a7ac}
+.ocard.watch{background:linear-gradient(135deg,#fff9e9,#f2edda);border-color:#d6be84}
+.ocard.ahead{background:linear-gradient(135deg,#eef8f0,#eaf1f5);border-color:#9fbfae}
 .ocard .hd{display:flex;justify-content:space-between;align-items:baseline}
 .ocard .nm{font-size:16px;font-weight:800}
 .ocard .df{font-size:15px;font-weight:800}
@@ -246,14 +247,14 @@ h1{font-size:19px;margin:0 0 3px}
 .ocard .big small{font-size:14px;color:var(--sub);font-weight:600}
 .dualbar{margin:10px 0 4px}
 .dualbar .lab{display:flex;justify-content:space-between;font-size:11px;color:var(--sub);margin-bottom:3px}
-.track{height:9px;background:#25304d;border-radius:5px;position:relative;overflow:hidden}
+.track{height:9px;background:#d9e2dc;border-radius:5px;position:relative;overflow:hidden}
 .track > i{position:absolute;left:0;top:0;height:100%;border-radius:5px}
-.track > .tick{position:absolute;top:-2px;width:2px;height:13px;background:#e8ecf6;opacity:.85}
+.track > .tick{position:absolute;top:-2px;width:2px;height:13px;background:#344a42;opacity:.88}
 .ocard .row2{display:flex;gap:6px;font-size:11.5px;color:var(--sub);margin-top:8px;flex-wrap:wrap}
 .ocard .row2 b{color:var(--txt)}
-.chip{background:#0000002e;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
-nav.tabs{position:sticky;top:0;z-index:9;display:flex;gap:8px;padding:9px 0;background:#0b1020ee;backdrop-filter:blur(6px);overflow-x:auto}
-nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--sub);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;position:relative}
+.chip{background:#ffffffa8;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
+nav.tabs{position:sticky;top:0;z-index:9;display:flex;gap:8px;padding:9px 0;background:#f4f3e8e8;backdrop-filter:blur(8px);overflow-x:auto}
+nav.tabs button{flex:0 0 auto;border:1px solid var(--line);background:#fffefa;color:#566b64;border-radius:999px;padding:7px 14px;font-size:13px;font-weight:700;position:relative;box-shadow:0 2px 8px rgba(54,78,69,.05)}
 nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 nav.tabs button .badge{position:absolute;top:-5px;right:-5px;background:var(--warn);color:#fff;font-size:10px;min-width:16px;height:16px;line-height:16px;border-radius:8px;padding:0 3px}
 section.pool{display:none}section.pool.on{display:block}
@@ -261,21 +262,21 @@ h2{font-size:16px;margin:8px 0 2px}
 .span{color:var(--sub);font-size:11.5px;margin-bottom:8px}
 .sub-t{font-size:12px;color:var(--txt);font-weight:700;margin:14px 4px 4px}
 .summary{border-radius:13px;padding:12px 13px;margin:9px 0;font-size:13px;border:1px solid;background:var(--card2);border-color:var(--line)}
-.summary.red{background:#2a1416;border-color:#7f1d1d}.summary.green{background:#0f2417;border-color:#1e5b39}
+.summary.red{background:#fff4f1;border-color:#d9a7a8}.summary.green{background:#edf7ef;border-color:#a5c3af}
 .summary .hd{font-weight:800;font-size:14px;margin-bottom:4px}
 .summary ul{margin:5px 0 0;padding-left:17px}.summary li{margin:2px 0}
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:13px;margin:10px 0;-webkit-overflow-scrolling:touch}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:13px;margin:10px 0;-webkit-overflow-scrolling:touch;background:var(--card);box-shadow:0 5px 16px rgba(54,78,69,.05)}
 table{border-collapse:collapse;width:100%;font-size:12px;white-space:nowrap}
 th,td{padding:7px 9px;text-align:right;border-bottom:1px solid var(--line)}
 th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1}
 thead th{background:var(--card2);color:var(--sub);position:sticky;top:0}
 .st{font-weight:700;font-size:10.5px;padding:2px 7px;border-radius:999px;display:inline-block}
-.st.behind,.st.warn{background:#3a1518;color:#fca5a5}.st.watch{background:#3a2c12;color:#fcd34d}
-.st.ok{background:#123322;color:#86efac}.st.ahead,.st.boom{background:#0e2c3d;color:#7dd3fc}.st.small{background:#20263a;color:#96a0bd}
+.st.behind,.st.warn{background:#f6dfe0;color:#8f3f47}.st.watch{background:#f5e9c8;color:#80591d}
+.st.ok{background:#dcece0;color:#35634c}.st.ahead,.st.boom{background:#dce8f1;color:#3f6885}.st.small{background:#e7ebe8;color:#66756f}
 .chan-name{display:flex;align-items:center;gap:6px}.dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
-.neg{color:#fca5a5}.pos{color:#86efac}
+.neg{color:#9f4850}.pos{color:#3f7358}
 details{margin:8px 0}summary{cursor:pointer;color:var(--sub);font-size:13px;padding:6px 2px}
-.chartbox{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 8px 8px;margin:10px 0}
+.chartbox{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:12px 8px 8px;margin:10px 0;box-shadow:0 5px 16px rgba(54,78,69,.05)}
 .chartbox h3{margin:2px 8px 8px;font-size:13px;color:var(--sub)}
 .note{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:9px 12px;font-size:11.5px;color:var(--sub);margin:9px 0}
 .note b{color:var(--txt)}
@@ -288,7 +289,7 @@ td.excl{color:var(--sub);font-style:italic}
 <div class="sec-t">① 當月 OKR 進度（自有領課）</div>
 <div id="okr" class="okr"></div>
 <div id="arkio-note"></div>
-<div class="note">月進度＝當月至今自有領課 ÷ 月目標；時間進度＝已過天數 ÷ 當月天數（白線）。<b>月進度低於白線＝落後</b>，落後的百分點就是最該補的缺口。推估月底＝當月至今 ÷ 時間進度。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
+<div class="note">月進度＝當月至今自有領課 ÷ 月目標；時間進度＝已過天數 ÷ 當月天數（深色刻度）。<b>月進度低於刻度＝落後</b>，落後的百分點就是最該補的缺口。推估月底＝當月至今 ÷ 時間進度。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
 
 <div class="sec-t">② 各渠道供應診斷 + 健康基準</div>
 <nav class="tabs" id="tabs"></nav>
@@ -325,7 +326,7 @@ DATA.subjects.forEach(s => {
   okrEl.appendChild(div);
 });
 if (!DATA.arkio || !DATA.arkio.ok) document.getElementById('arkio-note').innerHTML =
-  '<div class="note" style="border-color:#7c5e12;color:#fcd34d">⚠️ 數學（Arkio）資料暫時無法讀取：' + ((DATA.arkio&&DATA.arkio.err)||'') + '。閱讀・英語不受影響（Arkio token 8/4 到期，過期請更新）。</div>';
+  '<div class="note" style="border-color:#d6be84;background:#fff8e7;color:#80591d">⚠️ 數學（Arkio）資料暫時無法讀取：' + ((DATA.arkio&&DATA.arkio.err)||'') + '。閱讀・英語不受影響，請更新 Arkio 憑證。</div>';
 
 const tabs = document.getElementById('tabs'), poolsEl = document.getElementById('pools');
 const stName = { behind:'🔴 落後', warn:'🔴 警訊', watch:'🟡 留意', ok:'🟢 正常', ahead:'🔥 超前', boom:'🔥 特好', small:'· 量小' };
@@ -424,8 +425,8 @@ DATA.pools.forEach(p=>{
   new Chart(document.getElementById('c-'+p.key),{type:'bar',
     data:{labels:p.winPeriods,datasets:p.channels.map(c=>({label:c.name,data:c.seriesWin,backgroundColor:c.color,borderWidth:0,stack:'s'}))},
     options:{responsive:true,maintainAspectRatio:true,interaction:{mode:'index',intersect:false},
-      plugins:{legend:{labels:{color:'#96a0bd',font:{size:9},boxWidth:10,padding:5}},tooltip:{callbacks:{footer:it=>'合計 '+it.reduce((a,b)=>a+b.parsed.y,0)}}},
-      scales:{x:{stacked:true,ticks:{color:'#96a0bd',font:{size:8}},grid:{display:false}},y:{stacked:true,ticks:{color:'#96a0bd',font:{size:8}},grid:{color:'#2a3450'}}}}});
+      plugins:{legend:{labels:{color:'#5f6f69',font:{size:9},boxWidth:10,padding:5}},tooltip:{callbacks:{footer:it=>'合計 '+it.reduce((a,b)=>a+b.parsed.y,0)}}},
+      scales:{x:{stacked:true,ticks:{color:'#5f6f69',font:{size:8}},grid:{display:false}},y:{stacked:true,ticks:{color:'#5f6f69',font:{size:8}},grid:{color:'#d7dfd8'}}}}});
 });
 </script></body></html>`;
 

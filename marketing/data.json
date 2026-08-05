@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-05 10:03",
+ "genStamp": "2026-08-05 12:58",
  "checkpointWd": "三",
  "tpDate": "2026-08-05",
  "OKR": {
@@ -15,19 +15,19 @@
    "name": "閱讀",
    "key": "read",
    "target": 420,
-   "actual": 57,
+   "actual": 58,
    "actualPub": 38,
-   "actualPri": 19,
+   "actualPri": 20,
    "source": "lark",
-   "prog": 13.6,
+   "prog": 13.8,
    "timeProg": 16.1,
-   "diff": -2.6,
-   "proj": 353,
-   "attain": 84.1,
-   "gap": 67,
-   "remain": 363,
-   "needPerDay": 14,
-   "dayRateNow": 11.4,
+   "diff": -2.3,
+   "proj": 360,
+   "attain": 85.6,
+   "gap": 60,
+   "remain": 362,
+   "needPerDay": 13.9,
+   "dayRateNow": 11.6,
    "lastMonAll": 389,
    "status": "behind",
    "poolKeys": [
@@ -38,19 +38,19 @@
    "name": "英語",
    "key": "en",
    "target": 880,
-   "actual": 72,
+   "actual": 80,
    "actualPub": 31,
-   "actualPri": 41,
+   "actualPri": 49,
    "source": "lark",
-   "prog": 8.2,
+   "prog": 9.1,
    "timeProg": 16.1,
-   "diff": -7.9,
-   "proj": 446,
-   "attain": 50.7,
-   "gap": 434,
-   "remain": 808,
-   "needPerDay": 31.1,
-   "dayRateNow": 14.4,
+   "diff": -7,
+   "proj": 496,
+   "attain": 56.4,
+   "gap": 384,
+   "remain": 800,
+   "needPerDay": 30.8,
+   "dayRateNow": 16,
    "lastMonAll": 808,
    "status": "behind",
    "poolKeys": [
@@ -62,19 +62,19 @@
    "name": "數學",
    "key": "math",
    "target": 470,
-   "actual": 54,
+   "actual": 59,
    "actualPub": 2,
-   "actualPri": 52,
+   "actualPri": 57,
    "source": "arkio",
-   "prog": 11.5,
+   "prog": 12.6,
    "timeProg": 16.1,
-   "diff": -4.6,
-   "proj": 335,
-   "attain": 71.2,
-   "gap": 135,
-   "remain": 416,
-   "needPerDay": 16,
-   "dayRateNow": 10.8,
+   "diff": -3.6,
+   "proj": 366,
+   "attain": 77.8,
+   "gap": 104,
+   "remain": 411,
+   "needPerDay": 15.8,
+   "dayRateNow": 11.8,
    "lastMonAll": 574,
    "status": "behind",
    "poolKeys": [
@@ -136,12 +136,12 @@
     84,
     75,
     83,
-    41
+    42
    ],
    "channels": [
     {
      "name": "APP-課卡",
-     "color": "#6366f1",
+     "color": "#6f8f72",
      "seriesWin": [
       0,
       62,
@@ -185,7 +185,7 @@
     },
     {
      "name": "轉化-活動",
-     "color": "#22c55e",
+     "color": "#7b91bd",
      "seriesWin": [
       1,
       26,
@@ -205,7 +205,7 @@
       29,
       11,
       23,
-      16
+      17
      ],
      "mean": 19.3,
      "sd": 12,
@@ -216,20 +216,20 @@
      "recent3": [
       11,
       23,
-      16
+      17
      ],
      "norm": 81,
      "lastMon": 109,
-     "mtd": 16,
-     "proj": 99,
+     "mtd": 17,
+     "proj": 105,
      "gap": 0,
-     "dropPct": -9,
+     "dropPct": -3,
      "health": "ok",
      "supply": "ahead"
     },
     {
      "name": "官方-官網",
-     "color": "#f59e0b",
+     "color": "#b27ba0",
      "seriesWin": [
       0,
       9,
@@ -273,7 +273,7 @@
     },
     {
      "name": "APP-彈窗-全",
-     "color": "#ef4444",
+     "color": "#d09a64",
      "seriesWin": [
       0,
       9,
@@ -317,7 +317,7 @@
     },
     {
      "name": "官方-訊息",
-     "color": "#a855f7",
+     "color": "#6fa6a0",
      "seriesWin": [
       0,
       2,
@@ -361,7 +361,7 @@
     },
     {
      "name": "APP-彈窗-新用戶",
-     "color": "#0ea5e9",
+     "color": "#9b83b5",
      "seriesWin": [
       0,
       0,
@@ -405,7 +405,7 @@
     },
     {
      "name": "Math體驗-私訊",
-     "color": "#14b8a6",
+     "color": "#c87976",
      "seriesWin": [
       0,
       0,
@@ -449,7 +449,7 @@
     },
     {
      "name": "APP-BN",
-     "color": "#ec4899",
+     "color": "#849fbb",
      "seriesWin": [
       0,
       0,
@@ -493,7 +493,7 @@
     },
     {
      "name": "轉化-私訊",
-     "color": "#84cc16",
+     "color": "#96a66e",
      "seriesWin": [
       0,
       0,
@@ -537,7 +537,7 @@
     },
     {
      "name": "官方-IG",
-     "color": "#f97316",
+     "color": "#b58c70",
      "seriesWin": [
       0,
       0,
@@ -581,7 +581,7 @@
     },
     {
      "name": "官方-Meta",
-     "color": "#64748b",
+     "color": "#6f7f78",
      "seriesWin": [
       0,
       0,
@@ -625,7 +625,7 @@
     },
     {
      "name": "APP",
-     "color": "#eab308",
+     "color": "#b6a05b",
      "seriesWin": [
       0,
       0,
@@ -669,7 +669,7 @@
     },
     {
      "name": "APP-學習報告",
-     "color": "#06b6d4",
+     "color": "#7399a8",
      "seriesWin": [
       0,
       0,
@@ -713,7 +713,7 @@
     },
     {
      "name": "官方-選單",
-     "color": "#d946ef",
+     "color": "#9b7892",
      "seriesWin": [
       0,
       0,
@@ -757,7 +757,7 @@
     },
     {
      "name": "矩陣號-輕鬆學",
-     "color": "#6366f1",
+     "color": "#6f8f72",
      "seriesWin": [
       0,
       0,
@@ -855,7 +855,7 @@
    "channels": [
     {
      "name": "APP-課卡",
-     "color": "#6366f1",
+     "color": "#6f8f72",
      "seriesWin": [
       36,
       45,
@@ -897,7 +897,7 @@
     },
     {
      "name": "APP-彈窗-新用戶",
-     "color": "#22c55e",
+     "color": "#7b91bd",
      "seriesWin": [
       9,
       15,
@@ -939,7 +939,7 @@
     },
     {
      "name": "官方-官網",
-     "color": "#f59e0b",
+     "color": "#b27ba0",
      "seriesWin": [
       4,
       6,
@@ -981,7 +981,7 @@
     },
     {
      "name": "APP-彈窗-PU",
-     "color": "#ef4444",
+     "color": "#d09a64",
      "seriesWin": [
       3,
       0,
@@ -1023,7 +1023,7 @@
     },
     {
      "name": "APP",
-     "color": "#a855f7",
+     "color": "#6fa6a0",
      "seriesWin": [
       0,
       0,
@@ -1065,7 +1065,7 @@
     },
     {
      "name": "官方-Meta",
-     "color": "#0ea5e9",
+     "color": "#9b83b5",
      "seriesWin": [
       2,
       0,
@@ -1107,7 +1107,7 @@
     },
     {
      "name": "官方-IG",
-     "color": "#14b8a6",
+     "color": "#c87976",
      "seriesWin": [
       0,
       1,
@@ -1149,7 +1149,7 @@
     },
     {
      "name": "矩陣號-小百科",
-     "color": "#ec4899",
+     "color": "#849fbb",
      "seriesWin": [
       0,
       1,
@@ -1191,7 +1191,7 @@
     },
     {
      "name": "APP-BN",
-     "color": "#84cc16",
+     "color": "#96a66e",
      "seriesWin": [
       0,
       0,
@@ -1233,7 +1233,7 @@
     },
     {
      "name": "APP-彈窗-L2",
-     "color": "#f97316",
+     "color": "#b58c70",
      "seriesWin": [
       0,
       1,
@@ -1324,12 +1324,12 @@
     118,
     154,
     105,
-    35
+    41
    ],
    "channels": [
     {
      "name": "轉化-活動",
-     "color": "#6366f1",
+     "color": "#6f8f72",
      "seriesWin": [
       30,
       51,
@@ -1347,7 +1347,7 @@
       58,
       56,
       32,
-      24
+      27
      ],
      "mean": 42.3,
      "sd": 15.1,
@@ -1358,20 +1358,20 @@
      "recent3": [
       56,
       32,
-      24
+      27
      ],
      "norm": 172.7,
      "lastMon": 248,
-     "mtd": 26,
-     "proj": 161,
-     "gap": 11,
-     "dropPct": -35,
+     "mtd": 29,
+     "proj": 180,
+     "gap": 0,
+     "dropPct": -27,
      "health": "ok",
      "supply": "watch"
     },
     {
      "name": "數學老師-導英語",
-     "color": "#22c55e",
+     "color": "#7b91bd",
      "seriesWin": [
       0,
       0,
@@ -1413,7 +1413,7 @@
     },
     {
      "name": "轉化-SOP",
-     "color": "#f59e0b",
+     "color": "#b27ba0",
      "seriesWin": [
       15,
       15,
@@ -1431,7 +1431,7 @@
       9,
       17,
       7,
-      1
+      4
      ],
      "mean": 13.6,
      "sd": 4.9,
@@ -1442,20 +1442,20 @@
      "recent3": [
       17,
       7,
-      1
+      4
      ],
      "norm": 58,
      "lastMon": 40,
-     "mtd": 0,
-     "proj": 0,
-     "gap": 58,
-     "dropPct": -100,
+     "mtd": 3,
+     "proj": 19,
+     "gap": 39,
+     "dropPct": -53,
      "health": "ok",
      "supply": "behind"
     },
     {
      "name": "年課-活動",
-     "color": "#ef4444",
+     "color": "#d09a64",
      "seriesWin": [
       2,
       1,
@@ -1497,7 +1497,7 @@
     },
     {
      "name": "官方-訊息",
-     "color": "#a855f7",
+     "color": "#6fa6a0",
      "seriesWin": [
       0,
       0,
@@ -1539,7 +1539,7 @@
     },
     {
      "name": "轉化-私訊",
-     "color": "#0ea5e9",
+     "color": "#9b83b5",
      "seriesWin": [
       1,
       2,
@@ -1581,7 +1581,7 @@
     },
     {
      "name": "漸進式訊息",
-     "color": "#14b8a6",
+     "color": "#c87976",
      "seriesWin": [
       0,
       1,
@@ -1623,7 +1623,7 @@
     },
     {
      "name": "年課-私訊",
-     "color": "#ec4899",
+     "color": "#849fbb",
      "seriesWin": [
       1,
       1,
@@ -1665,7 +1665,7 @@
     },
     {
      "name": "轉化-群組",
-     "color": "#84cc16",
+     "color": "#96a66e",
      "seriesWin": [
       0,
       1,
@@ -1707,7 +1707,7 @@
     },
     {
      "name": "Math體驗-私訊",
-     "color": "#f97316",
+     "color": "#b58c70",
      "seriesWin": [
       14,
       18,
@@ -1749,7 +1749,7 @@
     },
     {
      "name": "轉化-訊報",
-     "color": "#64748b",
+     "color": "#6f7f78",
      "seriesWin": [
       1,
       0,
@@ -1791,7 +1791,7 @@
     },
     {
      "name": "官方-數學",
-     "color": "#eab308",
+     "color": "#b6a05b",
      "seriesWin": [
       0,
       0,
@@ -1833,7 +1833,7 @@
     },
     {
      "name": "官方-選單",
-     "color": "#06b6d4",
+     "color": "#7399a8",
      "seriesWin": [
       0,
       0,
@@ -1875,7 +1875,7 @@
     },
     {
      "name": "轉化-自動化",
-     "color": "#d946ef",
+     "color": "#9b7892",
      "seriesWin": [
       0,
       1,
@@ -1933,7 +1933,7 @@
     498,
     497,
     574,
-    54
+    59
    ],
    "band": {
     "mean": 523,
@@ -1944,7 +1944,7 @@
    "channels": [
     {
      "name": "私域·卡片",
-     "color": "#6366f1",
+     "color": "#6f8f72",
      "seriesWin": [
       119,
       150,
@@ -1971,7 +1971,7 @@
     },
     {
      "name": "私域·彈窗",
-     "color": "#22c55e",
+     "color": "#7b91bd",
      "seriesWin": [
       112,
       117,
@@ -1998,12 +1998,12 @@
     },
     {
      "name": "私域·SOP試用",
-     "color": "#f59e0b",
+     "color": "#b27ba0",
      "seriesWin": [
       108,
       108,
       113,
-      2
+      7
      ],
      "mean": 109.7,
      "sd": 0,
@@ -2012,20 +2012,20 @@
      "recent3": [
       108,
       113,
-      2
+      7
      ],
      "norm": 109.7,
      "lastMon": 113,
-     "mtd": 2,
-     "proj": 12,
-     "gap": 97,
-     "dropPct": -89,
+     "mtd": 7,
+     "proj": 43,
+     "gap": 66,
+     "dropPct": -62,
      "health": "small",
      "supply": "behind"
     },
     {
      "name": "私域·LINE好友",
-     "color": "#ef4444",
+     "color": "#d09a64",
      "seriesWin": [
       127,
       85,
@@ -2052,7 +2052,7 @@
     },
     {
      "name": "公域·IG",
-     "color": "#a855f7",
+     "color": "#6fa6a0",
      "seriesWin": [
       9,
       17,
@@ -2079,7 +2079,7 @@
     },
     {
      "name": "公域·FB",
-     "color": "#0ea5e9",
+     "color": "#9b83b5",
      "seriesWin": [
       12,
       5,
@@ -2106,7 +2106,7 @@
     },
     {
      "name": "公域·LINE好友",
-     "color": "#14b8a6",
+     "color": "#c87976",
      "seriesWin": [
       2,
       8,
@@ -2133,7 +2133,7 @@
     },
     {
      "name": "私域·campaign",
-     "color": "#ec4899",
+     "color": "#849fbb",
      "seriesWin": [
       4,
       6,
@@ -2160,7 +2160,7 @@
     },
     {
      "name": "私域·2026-Ava-1",
-     "color": "#84cc16",
+     "color": "#96a66e",
      "seriesWin": [
       2,
       1,
@@ -2187,7 +2187,7 @@
     },
     {
      "name": "私域·2026-M-1",
-     "color": "#f97316",
+     "color": "#b58c70",
      "seriesWin": [
       3,
       0,
