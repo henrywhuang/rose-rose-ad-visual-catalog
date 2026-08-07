@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-07 10:37",
+ "genStamp": "2026-08-07 11:42",
  "checkpointWd": "五",
  "today": "2026-08-07",
  "fetchStatus": "ok",
@@ -2628,8 +2628,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 6,
-    "s10": 24.6,
-    "cpl": 4.1,
+    "s10": 25,
+    "cpl": 4.2,
     "ctr7": 4.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -2668,7 +2668,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 5,
-    "s10": 24.3,
+    "s10": 24.7,
     "cpl": 4.9,
     "ctr7": 2.4,
     "hasVariantPerf": true,
@@ -2688,7 +2688,7 @@
       "label": "A",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/9fc4ac24-e7d2-46cb-a559-bb1a16a50015.png",
       "name": "26040 暑假超前部署（Rose）0803-A",
-      "leads": 4
+      "leads": 5
      },
      {
       "label": "B",
@@ -2707,9 +2707,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 4,
-    "s10": 24.8,
-    "cpl": 6.2,
+    "m10": 5,
+    "s10": 25.2,
+    "cpl": 5,
     "ctr7": 1.5,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -2748,8 +2748,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 3,
-    "s10": 20.3,
-    "cpl": 6.8,
+    "s10": 20.8,
+    "cpl": 6.9,
     "ctr7": 1.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -2828,8 +2828,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 15.1,
-    "cpl": 7.6,
+    "s10": 15.7,
+    "cpl": 7.9,
     "ctr7": 1.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
