@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-11 10:58",
+ "genStamp": "2026-08-11 14:10",
  "checkpointWd": "二",
  "today": "2026-08-11",
  "fetchStatus": "ok",
@@ -2938,7 +2938,7 @@
       "label": "B",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/0dddc6dd-c9db-4e31-9740-d5f56f5a4808.png",
       "name": "26033 我會冷靜一下（Rose）0803-B",
-      "leads": 21
+      "leads": 23
      }
     ],
     "pages": [
@@ -2951,9 +2951,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 21,
-    "s10": 67.2,
-    "cpl": 3.2,
+    "m10": 23,
+    "s10": 69.4,
+    "cpl": 3,
     "ctr7": 2.4,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -2978,7 +2978,7 @@
       "label": "B",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/4509ec19-096c-4a1f-bcdc-255c868571a9.png",
       "name": "26041 情緒力九宮格（Rose）0803-B",
-      "leads": 15
+      "leads": 16
      }
     ],
     "pages": [
@@ -2991,9 +2991,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 15,
-    "s10": 68.2,
-    "cpl": 4.5,
+    "m10": 16,
+    "s10": 70.7,
+    "cpl": 4.4,
     "ctr7": 5.9,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3012,7 +3012,7 @@
       "label": "A",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/86a9fe0d-017f-45a2-983c-e871e9bdddc3.png",
       "name": "26039 暑假識字練習（Rose）0803-A",
-      "leads": 9
+      "leads": 10
      },
      {
       "label": "B",
@@ -3031,9 +3031,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 9,
-    "s10": 50.2,
-    "cpl": 5.6,
+    "m10": 10,
+    "s10": 51.9,
+    "cpl": 5.2,
     "ctr7": 1.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3072,8 +3072,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 8,
-    "s10": 53,
-    "cpl": 6.6,
+    "s10": 53.2,
+    "cpl": 6.7,
     "ctr7": 1.8,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3152,8 +3152,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 5.2,
-    "cpl": 2.6,
+    "s10": 5.8,
+    "cpl": 2.9,
     "ctr7": 2.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3192,8 +3192,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 5.2,
-    "cpl": 5.2,
+    "s10": 5.7,
+    "cpl": 5.7,
     "ctr7": 4,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3232,8 +3232,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 4.8,
-    "cpl": 4.8,
+    "s10": 5.2,
+    "cpl": 5.2,
     "ctr7": 4,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3272,8 +3272,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 4.6,
-    "cpl": 4.6,
+    "s10": 5.5,
+    "cpl": 5.5,
     "ctr7": 3.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3432,7 +3432,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 4.2,
+    "s10": 4.8,
     "cpl": null,
     "ctr7": 4.6,
     "hasVariantPerf": true,
@@ -3472,7 +3472,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 4.3,
+    "s10": 4.9,
     "cpl": null,
     "ctr7": 2.2,
     "hasVariantPerf": true,
@@ -3512,7 +3512,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 4.3,
+    "s10": 4.9,
     "cpl": null,
     "ctr7": 2.2,
     "hasVariantPerf": true,
@@ -3632,7 +3632,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 3.5,
+    "s10": 4.4,
     "cpl": null,
     "ctr7": 1.2,
     "hasVariantPerf": true,
@@ -3672,7 +3672,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 3.6,
+    "s10": 4.6,
     "cpl": null,
     "ctr7": 1,
     "hasVariantPerf": true,
