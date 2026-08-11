@@ -1,33 +1,33 @@
 {
- "genStamp": "2026-08-09 17:40",
- "checkpointWd": "日",
- "tpDate": "2026-08-09",
+ "genStamp": "2026-08-11 14:10",
+ "checkpointWd": "二",
+ "tpDate": "2026-08-11",
  "OKR": {
   "ym": "2026-08",
-  "daysElapsed": 9,
+  "daysElapsed": 11,
   "daysInMonth": 31,
   "targetRead": 420,
   "targetEng": 880,
-  "timeProg": 0.2903225806451613
+  "timeProg": 0.3548387096774194
  },
  "subjects": [
   {
    "name": "閱讀",
    "key": "read",
    "target": 420,
-   "actual": 97,
-   "actualPub": 67,
-   "actualPri": 30,
+   "actual": 116,
+   "actualPub": 84,
+   "actualPri": 32,
    "source": "lark",
-   "prog": 23.1,
-   "timeProg": 29,
-   "diff": -5.9,
-   "proj": 334,
-   "attain": 79.6,
-   "gap": 86,
-   "remain": 323,
-   "needPerDay": 14.7,
-   "dayRateNow": 10.8,
+   "prog": 27.6,
+   "timeProg": 35.5,
+   "diff": -7.9,
+   "proj": 327,
+   "attain": 77.8,
+   "gap": 93,
+   "remain": 304,
+   "needPerDay": 15.2,
+   "dayRateNow": 10.5,
    "lastMonAll": 389,
    "status": "behind",
    "poolKeys": [
@@ -38,19 +38,19 @@
    "name": "英語",
    "key": "en",
    "target": 880,
-   "actual": 135,
-   "actualPub": 56,
-   "actualPri": 79,
+   "actual": 155,
+   "actualPub": 63,
+   "actualPri": 92,
    "source": "lark",
-   "prog": 15.3,
-   "timeProg": 29,
-   "diff": -13.7,
-   "proj": 465,
-   "attain": 52.8,
-   "gap": 415,
-   "remain": 745,
-   "needPerDay": 33.9,
-   "dayRateNow": 15,
+   "prog": 17.6,
+   "timeProg": 35.5,
+   "diff": -17.9,
+   "proj": 437,
+   "attain": 49.6,
+   "gap": 443,
+   "remain": 725,
+   "needPerDay": 36.3,
+   "dayRateNow": 14.1,
    "lastMonAll": 808,
    "status": "behind",
    "poolKeys": [
@@ -62,19 +62,19 @@
    "name": "數學",
    "key": "math",
    "target": 470,
-   "actual": 112,
-   "actualPub": 4,
-   "actualPri": 108,
+   "actual": 152,
+   "actualPub": 6,
+   "actualPri": 146,
    "source": "arkio",
-   "prog": 23.8,
-   "timeProg": 29,
-   "diff": -5.2,
-   "proj": 386,
-   "attain": 82.1,
-   "gap": 84,
-   "remain": 358,
-   "needPerDay": 16.3,
-   "dayRateNow": 12.4,
+   "prog": 32.3,
+   "timeProg": 35.5,
+   "diff": -3.1,
+   "proj": 428,
+   "attain": 91.1,
+   "gap": 42,
+   "remain": 318,
+   "needPerDay": 15.9,
+   "dayRateNow": 13.8,
    "lastMonAll": 574,
    "status": "behind",
    "poolKeys": [
@@ -115,7 +115,7 @@
     "sd": 25.6,
     "lo": 56,
     "hi": 107,
-    "boom": 133,
+    "boom": 132,
     "crash": 30
    },
    "totSeriesWin": [
@@ -136,9 +136,9 @@
     84,
     83,
     74,
-    83,
-    80,
-    3
+    81,
+    81,
+    23
    ],
    "channels": [
     {
@@ -164,7 +164,7 @@
       32,
       37,
       33,
-      2
+      17
      ],
      "mean": 40.5,
      "sd": 13.5,
@@ -175,16 +175,16 @@
      "recent3": [
       37,
       33,
-      2
+      17
      ],
      "norm": 181,
      "lastMon": 188,
-     "mtd": 47,
-     "proj": 162,
-     "gap": 19,
-     "dropPct": -14,
+     "mtd": 62,
+     "proj": 175,
+     "gap": 6,
+     "dropPct": -7,
      "health": "ok",
-     "supply": "watch"
+     "supply": "ok"
     },
     {
      "name": "轉化-活動",
@@ -207,27 +207,27 @@
       13,
       29,
       10,
-      23,
-      25,
-      0
+      21,
+      26,
+      3
      ],
-     "mean": 19.6,
+     "mean": 19.5,
      "sd": 11.8,
      "lo": 8,
      "hi": 31,
      "boom": 43,
      "warn": 8,
      "recent3": [
-      23,
-      25,
-      0
+      21,
+      26,
+      3
      ],
      "norm": 81,
      "lastMon": 109,
-     "mtd": 24,
-     "proj": 83,
-     "gap": 0,
-     "dropPct": -24,
+     "mtd": 26,
+     "proj": 73,
+     "gap": 8,
+     "dropPct": -33,
      "health": "ok",
      "supply": "watch"
     },
@@ -254,7 +254,7 @@
       6,
       7,
       6,
-      0
+      1
      ],
      "mean": 6.2,
      "sd": 2.4,
@@ -265,14 +265,14 @@
      "recent3": [
       7,
       6,
-      0
+      1
      ],
      "norm": 28,
      "lastMon": 33,
-     "mtd": 6,
-     "proj": 21,
-     "gap": 7,
-     "dropPct": -37,
+     "mtd": 7,
+     "proj": 20,
+     "gap": 8,
+     "dropPct": -40,
      "health": "ok",
      "supply": "behind"
     },
@@ -360,11 +360,11 @@
      "norm": 15.3,
      "lastMon": 19,
      "mtd": 6,
-     "proj": 21,
+     "proj": 17,
      "gap": 0,
-     "dropPct": 9,
+     "dropPct": -11,
      "health": "ok",
-     "supply": "ahead"
+     "supply": "ok"
     },
     {
      "name": "APP-彈窗-新用戶",
@@ -389,7 +389,7 @@
       10,
       4,
       6,
-      1
+      2
      ],
      "mean": 2.4,
      "sd": 3.3,
@@ -400,14 +400,14 @@
      "recent3": [
       4,
       6,
-      1
+      2
      ],
      "norm": 13,
      "lastMon": 22,
-     "mtd": 8,
-     "proj": 28,
+     "mtd": 9,
+     "proj": 25,
      "gap": 0,
-     "dropPct": 25,
+     "dropPct": 15,
      "health": "boom",
      "supply": "ahead"
     },
@@ -452,7 +452,7 @@
      "mtd": 1,
      "proj": 3,
      "gap": 3,
-     "dropPct": -51,
+     "dropPct": -60,
      "health": "small",
      "supply": "behind"
     },
@@ -495,9 +495,9 @@
      "norm": 2.3,
      "lastMon": 7,
      "mtd": 4,
-     "proj": 14,
+     "proj": 11,
      "gap": 0,
-     "dropPct": 97,
+     "dropPct": 61,
      "health": "small",
      "supply": "small"
     },
@@ -867,7 +867,7 @@
     62,
     50,
     47,
-    1
+    9
    ],
    "channels": [
     {
@@ -890,7 +890,7 @@
       44,
       29,
       30,
-      1
+      6
      ],
      "mean": 41.8,
      "sd": 8.6,
@@ -901,14 +901,14 @@
      "recent3": [
       29,
       30,
-      1
+      6
      ],
      "norm": 184.7,
      "lastMon": 173,
-     "mtd": 36,
-     "proj": 124,
-     "gap": 61,
-     "dropPct": -28,
+     "mtd": 41,
+     "proj": 116,
+     "gap": 69,
+     "dropPct": -33,
      "health": "ok",
      "supply": "behind"
     },
@@ -948,11 +948,11 @@
      "norm": 39,
      "lastMon": 39,
      "mtd": 11,
-     "proj": 38,
-     "gap": 1,
-     "dropPct": -3,
+     "proj": 31,
+     "gap": 8,
+     "dropPct": -21,
      "health": "ok",
-     "supply": "ok"
+     "supply": "watch"
     },
     {
      "name": "官方-官網",
@@ -974,7 +974,7 @@
       5,
       4,
       5,
-      0
+      2
      ],
      "mean": 5.9,
      "sd": 2.3,
@@ -985,16 +985,16 @@
      "recent3": [
       4,
       5,
-      0
+      2
      ],
      "norm": 25,
      "lastMon": 18,
-     "mtd": 5,
-     "proj": 17,
-     "gap": 8,
-     "dropPct": -4,
+     "mtd": 7,
+     "proj": 20,
+     "gap": 5,
+     "dropPct": 10,
      "health": "ok",
-     "supply": "behind"
+     "supply": "watch"
     },
     {
      "name": "APP-彈窗-PU",
@@ -1202,7 +1202,7 @@
      "mtd": 1,
      "proj": 3,
      "gap": 0,
-     "dropPct": 244,
+     "dropPct": 182,
      "health": "small",
      "supply": "small"
     },
@@ -1226,7 +1226,7 @@
       2,
       1,
       1,
-      0
+      1
      ],
      "mean": 0.3,
      "sd": 0.6,
@@ -1237,14 +1237,14 @@
      "recent3": [
       1,
       1,
-      0
+      1
      ],
      "norm": 0.7,
      "lastMon": 2,
-     "mtd": 2,
-     "proj": 7,
+     "mtd": 3,
+     "proj": 8,
      "gap": 0,
-     "dropPct": 244,
+     "dropPct": 323,
      "health": "small",
      "supply": "small"
     },
@@ -1318,11 +1318,11 @@
    "completedCount": 16,
    "band": {
     "mean": 106.8,
-    "sd": 22.6,
+    "sd": 22.7,
     "lo": 84,
     "hi": 129,
     "boom": 152,
-    "crash": 62
+    "crash": 61
    },
    "totSeriesWin": [
     91,
@@ -1340,8 +1340,8 @@
     118,
     153,
     105,
-    73,
-    1
+    72,
+    13
    ],
    "channels": [
     {
@@ -1363,26 +1363,26 @@
       58,
       56,
       32,
-      40,
-      1
+      39,
+      9
      ],
-     "mean": 42.9,
+     "mean": 42.8,
      "sd": 14.8,
      "lo": 28,
      "hi": 58,
-     "boom": 73,
+     "boom": 72,
      "warn": 28,
      "recent3": [
       32,
-      40,
-      1
+      39,
+      9
      ],
      "norm": 172.7,
      "lastMon": 248,
-     "mtd": 43,
-     "proj": 148,
-     "gap": 25,
-     "dropPct": -40,
+     "mtd": 50,
+     "proj": 141,
+     "gap": 32,
+     "dropPct": -43,
      "health": "ok",
      "supply": "behind"
     },
@@ -1406,7 +1406,7 @@
       23,
       38,
       7,
-      0
+      2
      ],
      "mean": 31.9,
      "sd": 20.8,
@@ -1417,14 +1417,14 @@
      "recent3": [
       38,
       7,
-      0
+      2
      ],
      "norm": 166.7,
      "lastMon": 139,
-     "mtd": 10,
+     "mtd": 12,
      "proj": 34,
-     "gap": 132,
-     "dropPct": -75,
+     "gap": 133,
+     "dropPct": -76,
      "health": "ok",
      "supply": "behind"
     },
@@ -1448,7 +1448,7 @@
       17,
       7,
       14,
-      0
+      1
      ],
      "mean": 13.6,
      "sd": 4.9,
@@ -1459,16 +1459,16 @@
      "recent3": [
       7,
       14,
-      0
+      1
      ],
      "norm": 58,
      "lastMon": 40,
-     "mtd": 13,
-     "proj": 45,
-     "gap": 13,
-     "dropPct": 12,
+     "mtd": 14,
+     "proj": 39,
+     "gap": 19,
+     "dropPct": -1,
      "health": "ok",
-     "supply": "watch"
+     "supply": "behind"
     },
     {
      "name": "年課-活動",
@@ -1490,7 +1490,7 @@
       2,
       2,
       1,
-      0
+      1
      ],
      "mean": 3.5,
      "sd": 3.5,
@@ -1501,14 +1501,14 @@
      "recent3": [
       2,
       1,
-      0
+      1
      ],
      "norm": 17.7,
      "lastMon": 12,
-     "mtd": 1,
-     "proj": 3,
-     "gap": 14,
-     "dropPct": -71,
+     "mtd": 2,
+     "proj": 6,
+     "gap": 12,
+     "dropPct": -53,
      "health": "ok",
      "supply": "behind"
     },
@@ -1549,8 +1549,8 @@
      "lastMon": 44,
      "mtd": 1,
      "proj": 3,
-     "gap": 11,
-     "dropPct": -92,
+     "gap": 12,
+     "dropPct": -94,
      "health": "boom",
      "supply": "behind"
     },
@@ -1590,11 +1590,11 @@
      "norm": 14,
      "lastMon": 20,
      "mtd": 4,
-     "proj": 14,
-     "gap": 0,
-     "dropPct": -31,
+     "proj": 11,
+     "gap": 3,
+     "dropPct": -44,
      "health": "ok",
-     "supply": "watch"
+     "supply": "behind"
     },
     {
      "name": "漸進式訊息",
@@ -1632,11 +1632,11 @@
      "norm": 13,
      "lastMon": 36,
      "mtd": 7,
-     "proj": 24,
+     "proj": 20,
      "gap": 0,
-     "dropPct": -33,
+     "dropPct": -45,
      "health": "boom",
-     "supply": "watch"
+     "supply": "behind"
     },
     {
      "name": "年課-私訊",
@@ -1950,7 +1950,7 @@
     498,
     497,
     574,
-    112
+    152
    ],
    "band": {
     "mean": 523,
@@ -1966,7 +1966,7 @@
       119,
       150,
       209,
-      44
+      55
      ],
      "mean": 159.3,
      "sd": 0,
@@ -1975,14 +1975,14 @@
      "recent3": [
       150,
       209,
-      44
+      55
      ],
      "norm": 159.3,
      "lastMon": 209,
-     "mtd": 44,
-     "proj": 152,
-     "gap": 8,
-     "dropPct": -27,
+     "mtd": 55,
+     "proj": 155,
+     "gap": 4,
+     "dropPct": -26,
      "health": "small",
      "supply": "watch"
     },
@@ -1993,7 +1993,7 @@
       112,
       117,
       129,
-      25
+      36
      ],
      "mean": 119.3,
      "sd": 0,
@@ -2002,14 +2002,14 @@
      "recent3": [
       117,
       129,
-      25
+      36
      ],
      "norm": 119.3,
      "lastMon": 129,
-     "mtd": 25,
-     "proj": 86,
-     "gap": 33,
-     "dropPct": -33,
+     "mtd": 36,
+     "proj": 101,
+     "gap": 18,
+     "dropPct": -21,
      "health": "small",
      "supply": "watch"
     },
@@ -2020,7 +2020,7 @@
       108,
       108,
       113,
-      18
+      22
      ],
      "mean": 109.7,
      "sd": 0,
@@ -2029,11 +2029,11 @@
      "recent3": [
       108,
       113,
-      18
+      22
      ],
      "norm": 109.7,
      "lastMon": 113,
-     "mtd": 18,
+     "mtd": 22,
      "proj": 62,
      "gap": 48,
      "dropPct": -45,
@@ -2047,7 +2047,7 @@
       127,
       85,
       91,
-      19
+      30
      ],
      "mean": 101,
      "sd": 0,
@@ -2056,16 +2056,16 @@
      "recent3": [
       85,
       91,
-      19
+      30
      ],
      "norm": 101,
      "lastMon": 91,
-     "mtd": 19,
-     "proj": 65,
-     "gap": 36,
-     "dropPct": -28,
+     "mtd": 30,
+     "proj": 85,
+     "gap": 16,
+     "dropPct": -7,
      "health": "small",
-     "supply": "behind"
+     "supply": "watch"
     },
     {
      "name": "公域·IG",
@@ -2074,7 +2074,7 @@
       9,
       17,
       8,
-      1
+      2
      ],
      "mean": 11.3,
      "sd": 0,
@@ -2083,14 +2083,14 @@
      "recent3": [
       17,
       8,
-      1
+      2
      ],
      "norm": 11.3,
      "lastMon": 8,
-     "mtd": 1,
-     "proj": 3,
-     "gap": 8,
-     "dropPct": -57,
+     "mtd": 2,
+     "proj": 6,
+     "gap": 6,
+     "dropPct": -30,
      "health": "small",
      "supply": "behind"
     },
@@ -2117,7 +2117,7 @@
      "mtd": 1,
      "proj": 3,
      "gap": 5,
-     "dropPct": -51,
+     "dropPct": -60,
      "health": "small",
      "supply": "behind"
     },
@@ -2128,7 +2128,7 @@
       2,
       8,
       11,
-      2
+      3
      ],
      "mean": 7,
      "sd": 0,
@@ -2137,16 +2137,16 @@
      "recent3": [
       8,
       11,
-      2
+      3
      ],
      "norm": 7,
      "lastMon": 11,
-     "mtd": 2,
-     "proj": 7,
+     "mtd": 3,
+     "proj": 8,
      "gap": 0,
-     "dropPct": -37,
+     "dropPct": -23,
      "health": "small",
-     "supply": "behind"
+     "supply": "watch"
     },
     {
      "name": "私域·campaign",
@@ -2155,7 +2155,7 @@
       4,
       6,
       5,
-      2
+      3
      ],
      "mean": 5,
      "sd": 0,
@@ -2164,14 +2164,14 @@
      "recent3": [
       6,
       5,
-      2
+      3
      ],
      "norm": 5,
      "lastMon": 5,
-     "mtd": 2,
-     "proj": 7,
+     "mtd": 3,
+     "proj": 8,
      "gap": 0,
-     "dropPct": 38,
+     "dropPct": 69,
      "health": "small",
      "supply": "ahead"
     },
