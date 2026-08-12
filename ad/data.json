@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-12 09:05",
+ "genStamp": "2026-08-12 11:16",
  "checkpointWd": "三",
  "today": "2026-08-12",
  "fetchStatus": "ok",
@@ -2969,7 +2969,7 @@
       "label": "B",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/03/0dddc6dd-c9db-4e31-9740-d5f56f5a4808.png",
       "name": "26033 我會冷靜一下（Rose）0803-B",
-      "leads": 25
+      "leads": 27
      }
     ],
     "pages": [
@@ -2982,9 +2982,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 25,
-    "s10": 83.2,
-    "cpl": 3.3,
+    "m10": 27,
+    "s10": 84.7,
+    "cpl": 3.1,
     "ctr7": 2.4,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3023,8 +3023,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 17,
-    "s10": 86,
-    "cpl": 5.1,
+    "s10": 87.6,
+    "cpl": 5.2,
     "ctr7": 5.9,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3063,8 +3063,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 10,
-    "s10": 60.7,
-    "cpl": 6.1,
+    "s10": 61.9,
+    "cpl": 6.2,
     "ctr7": 1.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3183,8 +3183,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 8.8,
-    "cpl": 4.4,
+    "s10": 9.7,
+    "cpl": 4.9,
     "ctr7": 3.5,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3223,8 +3223,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 9.3,
-    "cpl": 4.7,
+    "s10": 9.7,
+    "cpl": 4.9,
     "ctr7": 2.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3263,8 +3263,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 8.3,
-    "cpl": 8.3,
+    "s10": 8.4,
+    "cpl": 8.4,
     "ctr7": 3.1,
     "hasVariantPerf": true,
     "leadBreakdown": true
