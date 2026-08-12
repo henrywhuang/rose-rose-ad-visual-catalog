@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const candidates = JSON.parse(fs.readFileSync(path.join(__dir, 'math_candidates.json'), 'utf8'));
 const raw = JSON.parse(fs.readFileSync(path.join(__dir, 'raw_2m.json'), 'utf8'));
+const monitor = JSON.parse(fs.readFileSync(path.join(__dir, 'monitor_data.json'), 'utf8'));
 const CACHE_DIR = path.join(__dir, '.image_cache');
 const ASSET_DIR = path.join(__dir, 'assets');
 fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -104,6 +105,10 @@ for (const row of ready.sort((a, b) => b.leads - a.leads)) {
   else clusters.push({ fingerprint: row.fingerprint, members: [row] });
 }
 
+const readingFingerprints = monitor.map(row =>
+  fingerprint(path.join(__dir, row.image))
+);
+
 const CITY_RE = /(?:台北市|新北市|桃園市|台中市|台南市|高雄市|基隆市|新竹縣市|新竹市|新竹縣|嘉義縣市|彰化縣|屏東縣|宜蘭縣|花蓮縣|台東縣|苗栗縣|南投縣|雲林縣|澎湖縣|金門縣|連江縣)/g;
 const cleanName = value => String(value || '')
   .replace(/\s+20\d{2}-\d{2}-\d{2}-[a-f0-9]{20,}$/i, '')
@@ -139,6 +144,7 @@ const merged = clusters.map(cluster => {
   const names = [...new Set(members.flatMap(row => row.names || [row.name]))];
   const cities = [...new Set(names.flatMap(name => name.match(CITY_RE) || []))];
   return {
+    fingerprint: cluster.fingerprint,
     name: bestName(names),
     account: accountBreakdown.map(x => x.account).join('＋'),
     accountBreakdown,
@@ -155,10 +161,17 @@ const merged = clusters.map(cluster => {
     cacheFile: representative.cacheFile,
     imageUrl: representative.imageUrl,
   };
-}).sort((a, b) => b.leads - a.leads || a.cpl - b.cpl);
+}).sort((a, b) =>
+  b.leads - a.leads ||
+  (b.ctr ?? -1) - (a.ctr ?? -1) ||
+  (a.cpl ?? Number.POSITIVE_INFINITY) - (b.cpl ?? Number.POSITIVE_INFINITY)
+);
 
-if (merged.length < 20) throw new Error(`only ${merged.length} unique math visuals with leads`);
-const top20 = merged.slice(0, 20);
+const mathOnly = merged.filter(row =>
+  !readingFingerprints.some(reading => sameVisual(reading, row.fingerprint))
+);
+if (mathOnly.length < 20) throw new Error(`only ${mathOnly.length} math visuals remain after dashboard-wide dedupe`);
+const top20 = mathOnly.slice(0, 20);
 for (let i = 0; i < top20.length; i++) {
   const row = top20[i];
   const filename = `math_${String(i + 1).padStart(2, '0')}.jpg`;
@@ -171,6 +184,7 @@ for (let i = 0; i < top20.length; i++) {
   if (result.status !== 0) throw new Error(`convert failed: ${row.name}`);
   delete row.cacheFile;
   delete row.imageUrl;
+  delete row.fingerprint;
   row.rank = i + 1;
   row.image = `assets/${filename}`;
   row.windowFrom = raw.date_from;
@@ -184,6 +198,7 @@ console.log(JSON.stringify({
   candidates: candidates.length,
   fingerprints: ready.length,
   unique_visuals: merged.length,
+  unique_after_reading_dedupe: mathOnly.length,
   top20_leads: top20.reduce((sum, row) => sum + row.leads, 0),
   top20: top20.map(row => ({
     rank: row.rank,

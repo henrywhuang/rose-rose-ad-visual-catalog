@@ -8,7 +8,6 @@ import { fileURLToPath } from 'node:url';
 
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const candidates = JSON.parse(fs.readFileSync(path.join(__dir, 'candidates_2m.json'), 'utf8'));
-const library = JSON.parse(fs.readFileSync(path.join(__dir, 'creative_library.json'), 'utf8'));
 const raw = JSON.parse(fs.readFileSync(path.join(__dir, 'raw_2m.json'), 'utf8'));
 const CACHE_DIR = path.join(__dir, '.image_cache');
 const ASSET_DIR = path.join(__dir, 'assets');
@@ -16,12 +15,12 @@ fs.mkdirSync(CACHE_DIR, { recursive: true });
 fs.mkdirSync(ASSET_DIR, { recursive: true });
 
 const ACCOUNT_ORDER = [
-  { account: '親子愛共讀', code: 'parent_reading', slug: 'parent', target: 15 },
-  { account: '育兒小百科', code: 'child_wiki', slug: 'wiki', target: 15 },
-  { account: '輕鬆學國英數', code: 'easylearning_tw', slug: 'easy', target: 10 },
-  { account: '繪本福利社', code: 'little_pages_club', slug: 'pages', target: 10 },
-  { account: 'JoJo閱讀', code: 'jojoreading_tw', slug: 'jojo', target: 10 },
-  { account: 'Emily', code: 'mommy_emilylee', slug: 'emily', target: 10 },
+  { account: '親子愛共讀', code: 'parent_reading', slug: 'parent', target: 22 },
+  { account: '育兒小百科', code: 'child_wiki', slug: 'wiki', target: 22 },
+  { account: '輕鬆學國英數', code: 'easylearning_tw', slug: 'easy', target: 22 },
+  { account: '繪本福利社', code: 'little_pages_club', slug: 'pages', target: 22 },
+  { account: 'JoJo閱讀', code: 'jojoreading_tw', slug: 'jojo', target: 22 },
+  { account: 'Emily', code: 'mommy_emilylee', slug: 'emily', target: 22 },
 ];
 const addDays = (date, days) => {
   const value = new Date(`${date}T00:00:00Z`);
@@ -232,35 +231,16 @@ for (const spec of ACCOUNT_ORDER) {
   }
 }
 
-function libraryRows(code) {
-  return library
-    .filter(row => row.social_account_code === code && row.review_status === 'approved')
-    .map(row => {
-      const assets = parseJSON(row.assets, []);
-      const copy = parseJSON(row.copy, {});
-      const image = assets.find(a => a.kind === 'image' && a.gcs_url);
-      return image ? {
-        accountCode: code,
-        libraryId: row.id,
-        tier: 'B',
-        name: row.name,
-        names: [row.name],
-        imageUrl: image.gcs_url,
-        uploadedAt: String(row.uploaded_at || '').slice(0, 10),
-        headlines: copy.headlines || [],
-        bodies: copy.primary_texts || [],
-      } : null;
-    })
-    .filter(Boolean)
-    .sort((a, b) => String(b.uploadedAt).localeCompare(String(a.uploadedAt)) || b.libraryId - a.libraryId);
-}
-
 const chosen = [];
 const chosenFingerprints = [];
 for (const spec of ACCOUNT_ORDER) {
   const rows = perfClusters
     .filter(row => row.account === spec.account)
-    .sort((a, b) => b.score - a.score);
+    .sort((a, b) =>
+      b.total.leads - a.total.leads ||
+      (b.total.ctr ?? -1) - (a.total.ctr ?? -1) ||
+      b.score - a.score
+    );
   const local = [];
   for (const row of rows) {
     if (local.length >= spec.target) break;
@@ -268,20 +248,6 @@ for (const spec of ACCOUNT_ORDER) {
     row.tier = 'A';
     local.push(row);
     chosenFingerprints.push(row.fingerprint);
-  }
-
-  if (local.length < spec.target) {
-    for (const row of libraryRows(spec.code)) {
-      if (local.length >= spec.target) break;
-      const ready = await attachFingerprint(row);
-      if (!ready) continue;
-      if (chosenFingerprints.some(fp => sameVisual(fp, row.fingerprint))) continue;
-      local.push(row);
-      chosenFingerprints.push(row.fingerprint);
-    }
-  }
-  if (local.length < spec.target) {
-    throw new Error(`${spec.account} only has ${local.length}/${spec.target} unique usable visuals`);
   }
 
   for (let i = 0; i < local.length; i++) {
@@ -304,35 +270,35 @@ for (const spec of ACCOUNT_ORDER) {
     chosen.push({
       account: spec.account,
       rank: i + 1,
-      tier: row.tier,
+      tier: 'A',
       concept: displayName,
       adNumber,
       name: displayName,
-      leads: row.tier === 'A' ? m.leads : null,
-      spend: row.tier === 'A' ? round(m.spend) : null,
-      cpl: row.tier === 'A' ? m.cpl : null,
-      ctr: row.tier === 'A' ? m.ctr : null,
-      recent14Leads: row.tier === 'A' ? row.recent14.leads : null,
-      previous14Leads: row.tier === 'A' ? row.previous14.leads : null,
-      recent7Leads: row.tier === 'A' ? row.recent7.leads : null,
-      previous7Leads: row.tier === 'A' ? row.previous7.leads : null,
-      trendPct: row.tier === 'A' ? trendPct : null,
-      firstLeadDate: row.tier === 'A' ? row.firstLeadDate : null,
-      lastLeadDate: row.tier === 'A' ? row.lastLeadDate : null,
-      created: row.tier === 'A' ? row.created : row.uploadedAt,
-      active: row.tier === 'A' ? row.active : null,
-      variants: row.tier === 'A' ? Math.max(row.visualVariants || 1, row.adsetIds?.length || 1) : null,
-      flags: row.tier === 'A' ? row.flags : {},
+      leads: m.leads,
+      spend: round(m.spend),
+      cpl: m.cpl,
+      ctr: m.ctr,
+      recent14Leads: row.recent14.leads,
+      previous14Leads: row.previous14.leads,
+      recent7Leads: row.recent7.leads,
+      previous7Leads: row.previous7.leads,
+      trendPct,
+      firstLeadDate: row.firstLeadDate,
+      lastLeadDate: row.lastLeadDate,
+      created: row.created,
+      active: row.active,
+      variants: Math.max(row.visualVariants || 1, row.adsetIds?.length || 1),
+      flags: row.flags,
       image: `assets/${file}`,
       headlines: (row.headlines || []).slice(0, 5),
       bodies: (row.bodies || []).slice(0, 2),
-      source: row.tier === 'A' ? 'Meta Insights' : 'Arkio 素材庫',
-      libraryId: row.libraryId || null,
+      source: 'Meta Insights',
+      libraryId: null,
       windowFrom: raw.date_from,
       windowTo: raw.date_to,
     });
   }
-  console.log(`${spec.account}: ${local.filter(x => x.tier === 'A').length} performance + ${local.filter(x => x.tier === 'B').length} library = ${local.length}`);
+  console.log(`${spec.account}: ${local.length}/${spec.target} unique visuals with leads`);
 }
 
 fs.writeFileSync(path.join(__dir, 'monitor_data.json'), JSON.stringify(chosen, null, 2));
