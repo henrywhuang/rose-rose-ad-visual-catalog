@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-12 09:01",
+ "genStamp": "2026-08-12 09:25",
  "checkpointWd": "三",
  "tpDate": "2026-08-12",
  "OKR": {
@@ -10,25 +10,43 @@
   "targetEng": 880,
   "timeProg": 0.3870967741935484
  },
+ "Q3": {
+  "start": "2026-07-01",
+  "end": "2026-09-30",
+  "daysTotal": 92,
+  "targets": {
+   "read": 1250,
+   "en": 2600,
+   "math": 1440
+  },
+  "daysElapsed": 43,
+  "timeProg": 0.4673913043478261
+ },
  "subjects": [
   {
    "name": "閱讀",
    "key": "read",
    "target": 420,
-   "actual": 125,
+   "actual": 127,
    "actualPub": 89,
-   "actualPri": 36,
+   "actualPri": 38,
    "source": "lark",
-   "prog": 29.8,
+   "prog": 30.2,
    "timeProg": 38.7,
-   "diff": -8.9,
-   "proj": 323,
-   "attain": 76.9,
-   "gap": 97,
-   "remain": 295,
-   "needPerDay": 15.5,
-   "dayRateNow": 10.4,
+   "diff": -8.5,
+   "proj": 328,
+   "attain": 78.1,
+   "gap": 92,
+   "remain": 293,
+   "needPerDay": 15.4,
+   "dayRateNow": 10.6,
    "lastMonAll": 389,
+   "quarterActual": 516,
+   "quarterTarget": 1250,
+   "quarterProg": 41.3,
+   "quarterTimeProg": 46.7,
+   "quarterDiff": -5.5,
+   "quarterStatus": "behind",
    "status": "behind",
    "poolKeys": [
     "read"
@@ -52,6 +70,12 @@
    "needPerDay": 36.1,
    "dayRateNow": 16.3,
    "lastMonAll": 808,
+   "quarterActual": 1003,
+   "quarterTarget": 2600,
+   "quarterProg": 38.6,
+   "quarterTimeProg": 46.7,
+   "quarterDiff": -8.2,
+   "quarterStatus": "behind",
    "status": "behind",
    "poolKeys": [
     "en_pub",
@@ -76,6 +100,12 @@
    "needPerDay": 16.4,
    "dayRateNow": 13.3,
    "lastMonAll": 574,
+   "quarterActual": 733,
+   "quarterTarget": 1440,
+   "quarterProg": 50.9,
+   "quarterTimeProg": 46.7,
+   "quarterDiff": 4.2,
+   "quarterStatus": "ahead",
    "status": "behind",
    "poolKeys": [
     "math"
@@ -115,7 +145,7 @@
     "sd": 25.6,
     "lo": 56,
     "hi": 107,
-    "boom": 132,
+    "boom": 133,
     "crash": 30
    },
    "totSeriesWin": [
@@ -137,8 +167,8 @@
     83,
     74,
     81,
-    81,
-    32
+    82,
+    33
    ],
    "channels": [
     {
@@ -208,10 +238,10 @@
       29,
       10,
       21,
-      26,
-      6
+      27,
+      7
      ],
-     "mean": 19.5,
+     "mean": 19.6,
      "sd": 11.8,
      "lo": 8,
      "hi": 31,
@@ -219,15 +249,15 @@
      "warn": 8,
      "recent3": [
       21,
-      26,
-      6
+      27,
+      7
      ],
      "norm": 81,
      "lastMon": 109,
-     "mtd": 29,
-     "proj": 75,
-     "gap": 6,
-     "dropPct": -31,
+     "mtd": 31,
+     "proj": 80,
+     "gap": 1,
+     "dropPct": -27,
      "health": "ok",
      "supply": "watch"
     },

@@ -65,6 +65,16 @@ const OKR = {
 };
 OKR.timeProg = OKR.daysElapsed / OKR.daysInMonth;
 
+// ---- Q3 單科季目標（2026-07-01 至 2026-09-30）----
+const Q3 = {
+  start: '2026-07-01', end: '2026-09-30', daysTotal: 92,
+  targets: { read: 1250, en: 2600, math: 1440 },
+};
+const todayKey = tpNow.toISOString().slice(0, 10);
+const q3ElapsedDays = Math.max(0, Math.min(Q3.daysTotal, Math.floor((Date.parse(todayKey + 'T00:00:00Z') - Date.parse(Q3.start + 'T00:00:00Z')) / DAY) + 1));
+Q3.daysElapsed = q3ElapsedDays;
+Q3.timeProg = q3ElapsedDays / Q3.daysTotal;
+
 // ---- 統計工具 ----
 const mean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
 const sd = a => { const m = mean(a); return a.length ? Math.sqrt(a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length) : 0; };
@@ -142,24 +152,31 @@ function analyzePool(name, key, recs, cats, periodWin) {
 }
 
 // ---- 科目 OKR 卡（通用，接受數字）----
-function makeSubject(name, key, { actual, pub, pri, target, lastMon, poolKeys, source }) {
+function makeSubject(name, key, { actual, pub, pri, target, lastMon, poolKeys, source, quarterActual }) {
   const prog = target > 0 ? actual / target : 0;
   const proj = OKR.timeProg > 0.02 ? actual / OKR.timeProg : actual;
   const diff = prog - OKR.timeProg;
   const remain = Math.max(0, target - actual);
   const remainDays = Math.max(0.5, OKR.daysInMonth - OKR.daysElapsed);
+  const qTarget = Q3.targets[key] || 0;
+  const qProg = qTarget > 0 ? quarterActual / qTarget : 0;
+  const qDiff = qProg - Q3.timeProg;
   return {
     name, key, target, actual, actualPub: pub, actualPri: pri, source: source || 'lark',
     prog: R(prog * 100), timeProg: R(OKR.timeProg * 100), diff: R(diff * 100),
     proj: R0(proj), attain: R(target > 0 ? proj / target * 100 : 0), gap: R0(Math.max(0, target - proj)),
     remain, needPerDay: R(remain / remainDays), dayRateNow: R(OKR.daysElapsed > 0 ? actual / OKR.daysElapsed : 0),
     lastMonAll: lastMon,
+    quarterActual, quarterTarget: qTarget, quarterProg: R(qProg * 100),
+    quarterTimeProg: R(Q3.timeProg * 100), quarterDiff: R(qDiff * 100),
+    quarterStatus: qDiff < -0.02 ? 'behind' : qDiff < 0 ? 'watch' : 'ahead',
     status: diff < -0.02 ? 'behind' : diff < 0 ? 'watch' : 'ahead', poolKeys,
   };
 }
 function subjectFromLark(name, key, recs, target, poolKeys) {
   const mm = subjectMonthly(recs);
-  return makeSubject(name, key, { actual: mm[curYM].all, pub: mm[curYM].pub, pri: mm[curYM].pri, target, lastMon: mm[MONTHS[MONTHS.length - 2]].all, poolKeys, source: 'lark' });
+  const quarterActual = recs.filter(r => r.ts && OWNED.has(r.cat) && tpDayKey(r.ts) >= Q3.start && tpDayKey(r.ts) <= Q3.end).length;
+  return makeSubject(name, key, { actual: mm[curYM].all, pub: mm[curYM].pub, pri: mm[curYM].pri, target, lastMon: mm[MONTHS[MONTHS.length - 2]].all, poolKeys, source: 'lark', quarterActual });
 }
 
 // ---- 數學：Arkio self-traffic OKR（含渠道明細；token 過期則優雅降級）----
@@ -181,7 +198,8 @@ try {
     perMonth[ym] = (await r.json()).data.subjects;
   }
   const curM = perMonth[curYM].Math, prevM = perMonth[mathMonths[mathMonths.length - 2]].Math;
-  okrMath = makeSubject('數學', 'math', { actual: curM.actual, pub: curM.pub, pri: curM.private, target: curM.target, lastMon: prevM.actual, poolKeys: ['math'], source: 'arkio' });
+  const quarterActual = mathMonths.filter(ym => ym >= '2026-07' && ym <= '2026-09').reduce((sum, ym) => sum + (perMonth[ym]?.Math?.actual || 0), 0);
+  okrMath = makeSubject('數學', 'math', { actual: curM.actual, pub: curM.pub, pri: curM.private, target: curM.target, lastMon: prevM.actual, poolKeys: ['math'], source: 'arkio', quarterActual });
   // 家族月度矩陣
   const fam = {};
   for (const ym of mathMonths) for (const ch of (perMonth[ym].Math.channels || [])) { const f = mathFamily(ch); (fam[f] ??= {}); fam[f][ym] = (fam[f][ym] || 0) + ch.count; }
@@ -218,7 +236,7 @@ const SUBJECTS = [okrRead, okrEng];
 if (okrMath) SUBJECTS.push(okrMath);
 if (mathPool) POOLS.push(mathPool);
 
-const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), OKR, subjects: SUBJECTS, pools: POOLS, months: MONTHS, arkio: { ok: arkioOk, err: arkioErr } };
+const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), OKR, Q3, subjects: SUBJECTS, pools: POOLS, months: MONTHS, arkio: { ok: arkioOk, err: arkioErr } };
 fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
 
 // ================= HTML =================
@@ -250,6 +268,10 @@ h1{font-size:19px;margin:0 0 3px;color:#30483f}
 .track{height:9px;background:#d9e2dc;border-radius:5px;position:relative;overflow:hidden}
 .track > i{position:absolute;left:0;top:0;height:100%;border-radius:5px}
 .track > .tick{position:absolute;top:-2px;width:2px;height:13px;background:#344a42;opacity:.88}
+.qbox{margin-top:11px;padding:9px 10px;border-radius:11px;background:#ffffffa8;border:1px solid var(--line)}
+.qbox .qhd{display:flex;justify-content:space-between;gap:8px;align-items:baseline;font-size:12px;font-weight:800}
+.qbox .qdiff{font-size:11.5px;white-space:nowrap}.qbox .track{margin-top:5px;height:8px}
+.qbox .qlab{display:flex;justify-content:space-between;gap:8px;margin-top:4px;color:var(--sub);font-size:10.5px}
 .ocard .row2{display:flex;gap:6px;font-size:11.5px;color:var(--sub);margin-top:8px;flex-wrap:wrap}
 .ocard .row2 b{color:var(--txt)}
 .chip{background:#ffffffa8;border:1px solid var(--line);border-radius:8px;padding:3px 8px}
@@ -289,7 +311,7 @@ td.excl{color:var(--sub);font-style:italic}
 <div class="sec-t">① 當月 OKR 進度（自有領課）</div>
 <div id="okr" class="okr"></div>
 <div id="arkio-note"></div>
-<div class="note">月進度＝當月至今自有領課 ÷ 月目標；時間進度＝已過天數 ÷ 當月天數（深色刻度）。<b>月進度低於刻度＝落後</b>，落後的百分點就是最該補的缺口。推估月底＝當月至今 ÷ 時間進度。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
+<div class="note">月進度＝當月至今自有領課 ÷ 月目標；Q3 進度＝7/1 至今累計 ÷ 季目標。深色刻度是同期時間進度，<b>實際進度低於刻度＝落後</b>。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
 
 <div class="sec-t">② 各渠道供應診斷 + 健康基準</div>
 <nav class="tabs" id="tabs"></nav>
@@ -307,7 +329,10 @@ DATA.subjects.forEach(s => {
   const dsign = s.diff >= 0 ? '+' : '';
   const dtxt = s.diff >= 0 ? ('超前 ' + s.diff.toFixed(1) + ' pt') : ('落後 ' + Math.abs(s.diff).toFixed(1) + ' pt');
   const progW = Math.min(100, s.prog), timeX = Math.min(100, s.timeProg);
+  const qProgW = Math.min(100, s.quarterProg), qTimeX = Math.min(100, s.quarterTimeProg);
+  const qtxt = s.quarterDiff >= 0 ? ('超前 ' + s.quarterDiff.toFixed(1) + ' pt') : ('落後 ' + Math.abs(s.quarterDiff).toFixed(1) + ' pt');
   const barCol = s.status === 'behind' ? 'var(--warn)' : s.status === 'watch' ? 'var(--watch)' : 'var(--good)';
+  const qBarCol = s.quarterStatus === 'behind' ? 'var(--warn)' : s.quarterStatus === 'watch' ? 'var(--watch)' : 'var(--good)';
   const div = document.createElement('div');
   div.className = 'ocard ' + cls;
   div.innerHTML =
@@ -315,6 +340,9 @@ DATA.subjects.forEach(s => {
     '<div class="big">' + s.actual + '<small> / ' + s.target + ' 人　(' + s.prog.toFixed(1) + '%)</small></div>' +
     '<div class="dualbar"><div class="lab"><span>月進度 ' + s.prog.toFixed(1) + '%</span><span>時間 ' + s.timeProg.toFixed(1) + '% (' + O.daysElapsed + '/' + O.daysInMonth + '天)</span></div>' +
     '<div class="track"><i style="width:' + progW + '%;background:' + barCol + '"></i><span class="tick" style="left:' + timeX + '%"></span></div></div>' +
+    '<div class="qbox"><div class="qhd"><span>Q3 累計 ' + s.quarterActual + ' / ' + s.quarterTarget + '</span><span class="qdiff ' + (s.quarterDiff>=0?'pos':'neg') + '">' + (s.quarterDiff>=0?'🟢 ':'🔴 ') + qtxt + '</span></div>' +
+    '<div class="track"><i style="width:' + qProgW + '%;background:' + qBarCol + '"></i><span class="tick" style="left:' + qTimeX + '%"></span></div>' +
+    '<div class="qlab"><span>Q3 進度 ' + s.quarterProg.toFixed(1) + '%</span><span>時間 ' + s.quarterTimeProg.toFixed(1) + '% (' + DATA.Q3.daysElapsed + '/' + DATA.Q3.daysTotal + '天)</span></div></div>' +
     '<div class="row2">' +
       '<span class="chip">推估月底 <b>' + s.proj + '</b>（達成 ' + s.attain.toFixed(0) + '%）</span>' +
       (s.gap>0?'<span class="chip">預估缺口 <b class="neg">' + s.gap + '</b> 人</span>':'<span class="chip pos">預估達標 ✓</span>') +
@@ -432,5 +460,5 @@ DATA.pools.forEach(p=>{
 
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
 console.log('生成完成 @', genStamp, '週' + checkpointWd, '| 當月', curYM, 'Days', OKR.daysElapsed + '/' + OKR.daysInMonth, '時間進度', R(OKR.timeProg * 100) + '%');
-for (const s of SUBJECTS) console.log(`  [OKR] ${s.name}: ${s.actual}/${s.target} = ${s.prog}% vs 時間 ${s.timeProg}% → ${s.diff >= 0 ? '超前' : '落後'} ${Math.abs(s.diff)}pt | 推估月底 ${s.proj}(達成${s.attain}%) 缺口${s.gap}`);
+for (const s of SUBJECTS) console.log(`  [OKR] ${s.name}: ${s.actual}/${s.target} = ${s.prog}% vs 時間 ${s.timeProg}% → ${s.diff >= 0 ? '超前' : '落後'} ${Math.abs(s.diff)}pt | Q3 ${s.quarterActual}/${s.quarterTarget} = ${s.quarterProg}% vs 時間 ${s.quarterTimeProg}% → ${s.quarterDiff >= 0 ? '超前' : '落後'} ${Math.abs(s.quarterDiff)}pt | 推估月底 ${s.proj}(達成${s.attain}%) 缺口${s.gap}`);
 for (const p of POOLS) console.log(`  [池] ${p.name}: 供應不足[${p.channels.filter(c => c.supply === 'behind').map(c => c.name + '↓' + c.dropPct + '%').join(',')}] 警訊帶[${p.channels.filter(c => c.health === 'warn').map(c => c.name).join(',')}]`);
