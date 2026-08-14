@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-14 11:18",
+ "genStamp": "2026-08-14 15:52",
  "checkpointWd": "五",
  "today": "2026-08-14",
  "fetchStatus": "ok",
@@ -2969,7 +2969,7 @@
       "label": "B",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/10/73dd0aa3-10f7-4191-8c33-b64d57dd68a3.png",
       "name": "26044 我想先冷靜一下（Rose）0810-B",
-      "leads": 3
+      "leads": 5
      }
     ],
     "pages": [
@@ -2982,9 +2982,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 3,
-    "s10": 25.3,
-    "cpl": 8.4,
+    "m10": 5,
+    "s10": 27.1,
+    "cpl": 5.4,
     "ctr7": 3.1,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3023,8 +3023,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 20,
-    "cpl": 10,
+    "s10": 20.4,
+    "cpl": 10.2,
     "ctr7": 2.4,
     "hasVariantPerf": true,
     "leadBreakdown": true
