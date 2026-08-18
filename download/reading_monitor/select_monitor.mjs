@@ -28,7 +28,17 @@ const addDays = (date, days) => {
   value.setUTCDate(value.getUTCDate() + days);
   return value.toISOString().slice(0, 10);
 };
+const subtractCalendarMonths = (date, months) => {
+  const value = new Date(`${date}T00:00:00Z`);
+  const day = value.getUTCDate();
+  value.setUTCDate(1);
+  value.setUTCMonth(value.getUTCMonth() - months);
+  const endOfTargetMonth = new Date(Date.UTC(value.getUTCFullYear(), value.getUTCMonth() + 1, 0)).getUTCDate();
+  value.setUTCDate(Math.min(day, endOfTargetMonth));
+  return value.toISOString().slice(0, 10);
+};
 const NEW_CUTOFF = addDays(raw.date_to, -20);
+const READING_WINDOW_FROM = subtractCalendarMonths(raw.date_to, 4);
 
 function round(n, digits = 2) {
   return n == null || !Number.isFinite(n) ? null : Number(n.toFixed(digits));
@@ -299,7 +309,7 @@ for (const spec of ACCOUNT_ORDER) {
       bodies: (row.bodies || []).slice(0, 2),
       source: 'Meta Insights',
       libraryId: null,
-      windowFrom: raw.date_from,
+      windowFrom: READING_WINDOW_FROM,
       windowTo: raw.date_to,
     });
   }

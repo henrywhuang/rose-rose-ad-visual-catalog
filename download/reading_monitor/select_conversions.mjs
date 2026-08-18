@@ -1,5 +1,8 @@
 // Build the Arkio-verified purchase conversion module.
-// Purchase attribution comes from ad-budget dashboard h5_funnel.subs_total.
+// Purchase attribution comes from the "訂閱" field on Arkio's ad-budget
+// dashboard (h5_funnel.subs_total). The dashboard exposes that field as a
+// current cumulative value, not a date-series, so the three-month boundary is
+// applied to Meta activity: only ad sets with a real lead in the window remain.
 // Arkio exposes this at ad-set level, so multi-creative ad sets use the
 // highest-lead creative as the representative visual and keep an attribution note.
 import fs from 'node:fs';
@@ -18,13 +21,17 @@ const API = 'https://www.arkio.me/api/v1';
 const dateInShanghai = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit',
 }).format(new Date());
-const addDays = (date, days) => {
+const subtractCalendarMonths = (date, months) => {
   const value = new Date(`${date}T00:00:00Z`);
-  value.setUTCDate(value.getUTCDate() + days);
+  const day = value.getUTCDate();
+  value.setUTCDate(1);
+  value.setUTCMonth(value.getUTCMonth() - months);
+  const endOfTargetMonth = new Date(Date.UTC(value.getUTCFullYear(), value.getUTCMonth() + 1, 0)).getUTCDate();
+  value.setUTCDate(Math.min(day, endOfTargetMonth));
   return value.toISOString().slice(0, 10);
 };
 const DATE_TO = process.env.DATE_TO || dateInShanghai;
-const DATE_FROM = process.env.DATE_FROM || addDays(DATE_TO, -120);
+const DATE_FROM = process.env.DATE_FROM || subtractCalendarMonths(DATE_TO, 3);
 
 fs.mkdirSync(CACHE_DIR, { recursive: true });
 fs.mkdirSync(ASSET_DIR, { recursive: true });
@@ -218,6 +225,9 @@ for (const adset of convertedAdsets) {
   if (!visualRows.length) continue;
   visualRows.sort((a, b) => b.leads - a.leads || (b.ctr ?? -1) - (a.ctr ?? -1));
   const representative = visualRows[0];
+  // A cumulative Arkio subscription alone is not enough for this module: the
+  // ad set must also have attracted at least one Meta lead in the 3-month window.
+  if (representative.leads <= 0) continue;
   try {
     const cacheFile = await download(representative.imageUrl);
     candidates.push({
@@ -307,15 +317,17 @@ for (let i = 0; i < merged.length; i++) {
     metaWindowFrom: DATE_FROM,
     metaWindowTo: DATE_TO,
     arkioUpdatedAt: dashboard.last_updated || null,
-    attribution: 'Arkio h5_funnel.subs_total（廣告組層級）',
+    attribution: 'Arkio 投放調控「訂閱」（廣告組層級累計）',
+    qualification: `Meta ${DATE_FROM}～${DATE_TO} 有實際領課`,
+    sourceUrl: 'https://www.arkio.me/marketing/ad-budget',
   });
 }
 
 fs.writeFileSync(OUTPUT_PATH, JSON.stringify(output, null, 2));
 console.log(JSON.stringify({
   arkio_updated_at: dashboard.last_updated,
-  converted_adsets: convertedAdsets.length,
-  purchase_total: convertedAdsets.reduce((sum, row) => sum + num(row.h5_funnel?.subs_total), 0),
+  converted_adsets: candidates.length,
+  purchase_total: candidates.reduce((sum, row) => sum + row.purchases, 0),
   representative_visuals: candidates.length,
   unique_visuals: output.length,
   output_purchase_total: output.reduce((sum, row) => sum + row.purchases, 0),
