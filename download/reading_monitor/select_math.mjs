@@ -10,6 +10,7 @@ const __dir = path.dirname(fileURLToPath(import.meta.url));
 const candidates = JSON.parse(fs.readFileSync(path.join(__dir, 'math_candidates.json'), 'utf8'));
 const raw = JSON.parse(fs.readFileSync(path.join(__dir, 'raw_2m.json'), 'utf8'));
 const monitor = JSON.parse(fs.readFileSync(path.join(__dir, 'monitor_data.json'), 'utf8'));
+const conversions = JSON.parse(fs.readFileSync(path.join(__dir, 'conversion_data.json'), 'utf8'));
 const CACHE_DIR = path.join(__dir, '.image_cache');
 const ASSET_DIR = path.join(__dir, 'assets');
 fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -108,6 +109,10 @@ for (const row of ready.sort((a, b) => b.leads - a.leads)) {
 const readingFingerprints = monitor.map(row =>
   fingerprint(path.join(__dir, row.image))
 );
+const conversionFingerprints = conversions.map(row =>
+  fingerprint(path.join(__dir, row.image))
+);
+const reservedFingerprints = [...conversionFingerprints, ...readingFingerprints];
 
 const CITY_RE = /(?:台北市|新北市|桃園市|台中市|台南市|高雄市|基隆市|新竹縣市|新竹市|新竹縣|嘉義縣市|彰化縣|屏東縣|宜蘭縣|花蓮縣|台東縣|苗栗縣|南投縣|雲林縣|澎湖縣|金門縣|連江縣)/g;
 const cleanName = value => String(value || '')
@@ -168,10 +173,12 @@ const merged = clusters.map(cluster => {
 );
 
 const mathOnly = merged.filter(row =>
-  !readingFingerprints.some(reading => sameVisual(reading, row.fingerprint))
+  !reservedFingerprints.some(reserved => sameVisual(reserved, row.fingerprint))
 );
-if (mathOnly.length < 20) throw new Error(`only ${mathOnly.length} math visuals remain after dashboard-wide dedupe`);
 const top20 = mathOnly.slice(0, 20);
+if (mathOnly.length < 20) {
+  console.warn(`only ${mathOnly.length}/20 math visuals remain after dashboard-wide dedupe; keeping truthful count`);
+}
 for (let i = 0; i < top20.length; i++) {
   const row = top20[i];
   const filename = `math_${String(i + 1).padStart(2, '0')}.jpg`;
@@ -198,7 +205,7 @@ console.log(JSON.stringify({
   candidates: candidates.length,
   fingerprints: ready.length,
   unique_visuals: merged.length,
-  unique_after_reading_dedupe: mathOnly.length,
+  unique_after_dashboard_dedupe: mathOnly.length,
   top20_leads: top20.reduce((sum, row) => sum + row.leads, 0),
   top20: top20.map(row => ({
     rank: row.rank,

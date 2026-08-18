@@ -9,6 +9,7 @@ import { fileURLToPath } from 'node:url';
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const candidates = JSON.parse(fs.readFileSync(path.join(__dir, 'candidates_2m.json'), 'utf8'));
 const raw = JSON.parse(fs.readFileSync(path.join(__dir, 'raw_2m.json'), 'utf8'));
+const conversions = JSON.parse(fs.readFileSync(path.join(__dir, 'conversion_data.json'), 'utf8'));
 const CACHE_DIR = path.join(__dir, '.image_cache');
 const ASSET_DIR = path.join(__dir, 'assets');
 fs.mkdirSync(CACHE_DIR, { recursive: true });
@@ -232,7 +233,11 @@ for (const spec of ACCOUNT_ORDER) {
 }
 
 const chosen = [];
-const chosenFingerprints = [];
+// The purchase-conversion module has first claim on its representative visuals,
+// so the rest of the dashboard remains visually unique across every section.
+const chosenFingerprints = conversions.map(row =>
+  visualFingerprint(path.join(__dir, row.image))
+);
 for (const spec of ACCOUNT_ORDER) {
   const rows = perfClusters
     .filter(row => row.account === spec.account)

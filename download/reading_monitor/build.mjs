@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const data = JSON.parse(fs.readFileSync(path.join(__dir, 'monitor_data.json'), 'utf8'));
 const mathData = JSON.parse(fs.readFileSync(path.join(__dir, 'math_data.json'), 'utf8'));
+const conversionData = JSON.parse(fs.readFileSync(path.join(__dir, 'conversion_data.json'), 'utf8'));
 const readingFrom = data[0]?.windowFrom || mathData[0]?.windowFrom || '—';
 const readingTo = data[0]?.windowTo || mathData[0]?.windowTo || '—';
 const mathFrom = mathData[0]?.windowFrom || readingFrom;
@@ -30,6 +31,7 @@ const titleOf = e => {
   return t;
 };
 const mathTitleOf = e => (e.headlines && e.headlines[0]) ? e.headlines[0] : e.name;
+const conversionTitleOf = e => (e.headlines && e.headlines[0]) ? e.headlines[0] : e.name;
 
 function accStats(items) {
   const A = items.filter(e => e.tier === 'A');
@@ -84,7 +86,7 @@ function mathCard(e) {
   if (e.cities?.length) chips.push(`${e.cities.length} 個縣市版已合併`);
   return `
   <article class="card a math-card" data-tier="A">
-    <div class="chead"><span class="rank">#${e.rank}</span><span class="tag tm">🏆 台灣數學 Top 20</span></div>
+    <div class="chead"><span class="rank">#${e.rank}</span><span class="tag tm">🏆 台灣數學 Top ${mathData.length}</span></div>
     <a class="visual" href="${e.image}" target="_blank" rel="noopener"><img loading="lazy" src="${e.image}" alt="${esc(mathTitleOf(e))}"></a>
     <div class="cbody">
       <h4>${esc(mathTitleOf(e))}</h4>
@@ -95,6 +97,30 @@ function mathCard(e) {
         <div class="m"><b>${e.cpl != null ? '$' + e.cpl : '—'}</b><span>CPL</span></div>
       </div>
       ${chips.length ? `<div class="chips">${chips.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div>` : ''}
+      ${(e.headlines || []).length ? `<div class="sec">標題</div><ul class="titles">${e.headlines.slice(0, 4).map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
+      ${(e.bodies && e.bodies[0]) ? `<div class="copy"><span class="copy-tag">文案</span><p>${nl2br(e.bodies[0])}</p></div>` : ''}
+    </div>
+  </article>`;
+}
+
+function conversionCard(e) {
+  const chips = ['Arkio 廣告組歸因'];
+  if (e.creativeVariants > 1) chips.push(`${e.creativeVariants} 個素材共同歸因`);
+  if (e.convertedAdsets > 1) chips.push(`${e.convertedAdsets} 個同視覺廣告組已合併`);
+  return `
+  <article class="card a conversion-card" data-tier="purchase">
+    <div class="chead"><span class="rank">#${e.rank}</span><span class="tag tc">💳 實際購課</span></div>
+    <a class="visual" href="${e.image}" target="_blank" rel="noopener"><img loading="lazy" src="${e.image}" alt="${esc(conversionTitleOf(e))}"></a>
+    <div class="cbody">
+      <h4>${esc(conversionTitleOf(e))}</h4>
+      <div class="owner"><span>投放主</span><b>${esc(e.owner)}</b><small>${esc(e.adsetNames.join('・'))}</small></div>
+      <div class="mrow">
+        <div class="m"><b>${e.purchases}</b><span>實際購課</span></div>
+        <div class="m"><b>${e.arkioLeads.toLocaleString()}</b><span>Arkio累計領課</span></div>
+        <div class="m"><b>${e.conversionRate != null ? e.conversionRate + '%' : '—'}</b><span>領課→購課</span></div>
+      </div>
+      <div class="conversion-meta"><span>Meta ${e.metaWindowFrom}～${e.metaWindowTo}</span><b>${e.metaLeads} 領課・CTR ${e.ctr != null ? e.ctr + '%' : '—'}</b></div>
+      <div class="chips">${chips.map(x => `<span class="chip">${esc(x)}</span>`).join('')}</div>
       ${(e.headlines || []).length ? `<div class="sec">標題</div><ul class="titles">${e.headlines.slice(0, 4).map(h => `<li>${esc(h)}</li>`).join('')}</ul>` : ''}
       ${(e.bodies && e.bodies[0]) ? `<div class="copy"><span class="copy-tag">文案</span><p>${nl2br(e.bodies[0])}</p></div>` : ''}
     </div>
@@ -133,10 +159,30 @@ const mathImpressions = mathData.reduce((sum, e) => sum + (e.impressions || 0), 
 const mathClicks = mathData.reduce((sum, e) => sum + (e.clicks || 0), 0);
 const mathCpl = mathLeads ? mathSpend / mathLeads : null;
 const mathCtr = mathImpressions ? mathClicks / mathImpressions * 100 : null;
+const conversionPurchases = conversionData.reduce((sum, e) => sum + (e.purchases || 0), 0);
+const conversionArkioLeads = conversionData.reduce((sum, e) => sum + (e.arkioLeads || 0), 0);
+const conversionRate = conversionArkioLeads ? conversionPurchases / conversionArkioLeads * 100 : null;
+const convertedAdsets = conversionData.reduce((sum, e) => sum + (e.convertedAdsets || 1), 0);
+const conversionUpdatedAt = conversionData[0]?.arkioUpdatedAt || null;
+const conversionSection = `
+  <section class="acc conversion-acc" id="acc-conversion" data-acc="conversion" style="--ac:#7c3aed">
+    <div class="acc-head">
+      <div class="acc-title"><h2>實際購課轉化廣告</h2><p>Arkio 領課來源回溯至 H5 實際訂閱／購課</p></div>
+      <div class="acc-kpis">
+        <div class="k"><b>${convertedAdsets}</b><span>購課廣告組</span></div>
+        <div class="k"><b>${conversionData.length}</b><span>獨立代表視覺</span></div>
+        <div class="k"><b>${conversionPurchases}</b><span>實際購課</span></div>
+        <div class="k"><b>${conversionArkioLeads.toLocaleString()}</b><span>Arkio累計領課</span></div>
+        <div class="k"><b>${conversionRate != null ? conversionRate.toFixed(2) + '%' : '—'}</b><span>領課→購課率</span></div>
+      </div>
+    </div>
+    <div class="conversion-note"><b>購課口徑：</b>台灣閱讀／數學 H5 的 Arkio <code>h5_funnel.subs_total</code>，只列購課大於 0 的廣告組；依購課數排序，同數時以轉化率較高者優先。Arkio 目前只能歸因到廣告組，多素材廣告組以 Meta 領課較多的素材作為代表圖，並在卡片標示共同歸因。${conversionUpdatedAt ? ` Arkio 更新時間：${esc(conversionUpdatedAt)}。` : ''}</div>
+    <div class="grid">${conversionData.map(conversionCard).join('\n')}</div>
+  </section>`;
 const mathSection = `
   <section class="acc math-acc" id="acc-math" data-acc="math" style="--ac:#c14f30">
     <div class="acc-head">
-      <div class="acc-title"><h2>台灣數學廣告 Top 20</h2><p>近兩個月領課最多・排除閱讀區已入選視覺</p></div>
+      <div class="acc-title"><h2>台灣數學廣告 Top ${mathData.length}</h2><p>近兩個月領課最多・排除購課與閱讀區已入選視覺</p></div>
       <div class="acc-kpis">
         <div class="k"><b>${mathData.length}</b><span>獨立視覺</span></div>
         <div class="k"><b>${mathLeads.toLocaleString()}</b><span>近2月領課</span></div>
@@ -144,14 +190,14 @@ const mathSection = `
         <div class="k"><b>${mathCtr != null ? mathCtr.toFixed(2) + '%' : '—'}</b><span>加權CTR</span></div>
       </div>
     </div>
-    <div class="math-note">範圍：SMART BEAN-TW01 台灣投放帳號，${mathFrom} → ${mathTo}。以 Meta initiate_checkout 排名；同一視覺跨縣市或不同投放主已合併領課，並排除閱讀帳號區已入選的視覺，確保整個監控台不重複。</div>
+    <div class="math-note">範圍：SMART BEAN-TW01 台灣投放帳號，${mathFrom} → ${mathTo}。以 Meta initiate_checkout 排名；同一視覺跨縣市或不同投放主已合併領課，並排除購課轉化與閱讀帳號區已入選的視覺，確保整個監控台不重複。</div>
     <div class="grid">${mathData.map(mathCard).join('\n')}</div>
   </section>`;
 const nav = ACCOUNTS.map(a => {
   const n = data.filter(e => e.account === a.key).length;
   return `<a href="#acc-${a.slug}" style="--ac:${a.color}">${esc(a.key)} <b>${n}</b></a>`;
 }).join('');
-const fullNav = `<a href="#acc-math" style="--ac:#c14f30">台灣數學 Top <b>20</b></a>${nav}`;
+const fullNav = `<a href="#acc-conversion" style="--ac:#7c3aed">實際購課 <b>${conversionPurchases}</b></a><a href="#acc-math" style="--ac:#c14f30">台灣數學 Top <b>${mathData.length}</b></a>${nav}`;
 const genDate = process.env.GEN_DATE || mathTo;
 
 const html = `<!doctype html>
@@ -160,7 +206,7 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<title>廣告創意監控台 · 閱讀投放主 × 台灣數學 Top ｜ Rose Rose</title>
+<title>廣告創意監控台 · 實際購課 × 閱讀 × 台灣數學 ｜ Rose Rose</title>
 <style>
   :root{--bg:#eef1f6;--ink:#1a2330;--muted:#6a7889;--line:#e0e6ee;--panel:#fff;--shadow:0 10px 30px rgba(20,35,60,.08);}
   *{box-sizing:border-box}html,body{margin:0}
@@ -196,6 +242,7 @@ const html = `<!doctype html>
   .ta{background:#e6f5ec;color:#1a8a44;border:1px solid #bfe6cc}
   .tb{background:#eef0f4;color:#6a7889;border:1px solid #dde2ea}
   .tm{background:#fff0e9;color:#b84326;border:1px solid #f2c5b5}
+  .tc{background:#f2eaff;color:#6530bd;border:1px solid #d9c4fa}
   .visual{display:block;margin:10px 12px 0;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:#faf7f2;cursor:zoom-in}
   .visual img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
   .cbody{padding:10px 12px 13px}
@@ -211,6 +258,10 @@ const html = `<!doctype html>
   .chips{margin-top:6px;display:flex;gap:4px;flex-wrap:wrap}.chip{display:inline-block;background:#fff3e8;color:#c96a1b;border:1px solid #f2ddc4;border-radius:999px;font-size:10.5px;padding:1px 8px}
   .libnote{background:#f4f6f9;border:1px dashed #cfd8e3;border-radius:8px;padding:7px 9px;font-size:11.5px;color:#78859a}
   .math-note{background:#fff7f2;border:1px solid #efd5ca;border-radius:11px;padding:9px 12px;margin:-3px 0 12px;font-size:11.5px;color:#76564b}
+  .conversion-note{background:#f6f0ff;border:1px solid #dccbf7;border-radius:11px;padding:10px 12px;margin:-3px 0 12px;font-size:11.5px;color:#583c7a}
+  .conversion-note code{background:#eadffc;border-radius:5px;padding:1px 5px}
+  .conversion-meta{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:7px;border-radius:8px;padding:5px 7px;font-size:10px;background:#f6f0ff;color:#715791}
+  .conversion-meta b{font-size:10.5px;color:#583c7a;text-align:right}
   .availability,.empty{background:#fff7e8;border:1px solid #efd59d;border-radius:11px;padding:9px 12px;margin:-3px 0 12px;font-size:11.5px;color:#775b23}
   .empty{grid-column:1/-1;margin:0}
   .sec{font-size:11.5px;font-weight:700;margin:9px 0 4px;color:var(--muted)}
@@ -225,34 +276,36 @@ const html = `<!doctype html>
 <body>
 <div class="wrap">
   <header class="hero">
-    <h1>📊 廣告創意監控台 · 閱讀投放主 × 台灣數學 Top</h1>
-    <p>資料截至 ${genDate}。閱讀帳號各以 22 個實際有領課廣告為目標；台灣數學 Top 20 依近兩個月領課排名。同圖跨城市、複本與投放主皆做視覺去重與成效合併。</p>
+    <h1>📊 廣告創意監控台 · 實際購課 × 閱讀 × 台灣數學</h1>
+    <p>資料截至 ${genDate}。新增 Arkio 實際購課轉化模塊；閱讀帳號各以 22 個實際有領課廣告為目標，台灣數學榜依近兩個月領課排名。同圖跨城市、複本、投放主與模塊皆做視覺去重。</p>
     <div class="kpis">
-      <div class="kpi"><b>6</b><span>閱讀投放主</span></div>
+      <div class="kpi"><b>${conversionPurchases}</b><span>Arkio 實際購課</span></div>
+      <div class="kpi"><b>${conversionData.length}</b><span>購課代表視覺</span></div>
       <div class="kpi"><b>${data.length}</b><span>閱讀分類創意</span></div>
       <div class="kpi"><b>${mathData.length}</b><span>台灣數學 Top</span></div>
-      <div class="kpi"><b>${mathLeads.toLocaleString()}</b><span>數學 Top 20 領課</span></div>
     </div>
   </header>
 
   <div class="method">
-    <b>口徑：</b>領課＝Meta 像素 initiate_checkout，資料源＝Arkio 代理 Meta Insights（廣告層級）。
+    <b>口徑：</b>領課＝Meta 像素 initiate_checkout；購課＝Arkio H5 後端 <code>subs_total</code>。Meta 成效資料源為 Arkio 代理 Meta Insights（廣告層級）。
     閱讀榜單依近4月領課由高至低排序，領課相同時以 CTR 較高者優先；同一底圖跨城市、複本或投放主以感知雜湊去重並合併成效。
     <b>✅ 近4月有領課</b>＝期間內至少有1次可歸屬領課；不再使用素材庫或無成效廣告補數。
-    <br>閱讀區間：<b>${readingFrom} → ${readingTo}</b>，每個帳號目標 22 個；客觀不足時僅列出真實有效數量。另有<b>台灣數學廣告 Top 20</b>，按近2月領課由高至低排名並標示投放主、CTR、CPL與領課。
+    <br>閱讀區間：<b>${readingFrom} → ${readingTo}</b>，每個帳號目標 22 個；客觀不足時僅列出真實有效數量。購課模塊優先保留已轉化視覺，其餘閱讀與數學區會排除相同視覺。另有<b>台灣數學廣告 Top ${mathData.length}</b>，按近2月領課由高至低排名並標示投放主、CTR、CPL與領課；不足 20 張時不以重複或零領課素材補數。
   </div>
 
   <div class="toolbar">
     <nav class="accnav">${fullNav}</nav>
   </div>
 
+${conversionSection}
+
 ${mathSection}
 
 ${sections}
 
   <footer>
-    Rose Rose ｜ 廣告優化 · 廣告創意監控台（投放主 × Top創意）<br>
-    圖片點擊放大；CPL＝區間花費÷領課；閱讀榜單依近4月領課排序，數學榜單依近2月領課排序；閱讀區近14天與前14天用來判斷近期變化。<br>
+    Rose Rose ｜ 廣告優化 · 廣告創意監控台（實際購課 × 投放主 × Top創意）<br>
+    圖片點擊放大；CPL＝區間花費÷領課；購課榜依 Arkio 實際購課排序，閱讀榜依近4月領課排序，數學榜依近2月領課排序。<br>
     產出時間：${genDate}
   </footer>
 </div>
