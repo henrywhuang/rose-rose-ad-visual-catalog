@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-18 15:30",
+ "genStamp": "2026-08-18 22:00",
  "checkpointWd": "二",
  "today": "2026-08-18",
  "fetchStatus": "ok",
@@ -3264,6 +3264,46 @@
     "leadBreakdown": true
    },
    {
+    "num": "26065",
+    "theme": "故事線索遊戲卡0817",
+    "fullname": "26065 故事線索遊戲卡（Rose）0817",
+    "uploaded": "2026-08-17",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/5782f6d8-322f-407e-9280-8ef2dd8cb97f.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/eb2175a0-a488-470e-bd16-aa76fb84d2b6.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/eb2175a0-a488-470e-bd16-aa76fb84d2b6.png",
+      "name": "26065 故事線索遊戲卡（Rose）0817-A",
+      "leads": 1
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/5782f6d8-322f-407e-9280-8ef2dd8cb97f.png",
+      "name": "26065 故事線索遊戲卡（Rose）0817-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 4.8,
+    "cpl": 4.8,
+    "ctr7": 6,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
     "num": "26047",
     "theme": "第一句英文開口任務0810",
     "fullname": "26047 第一句英文開口任務（Rose）0810",
@@ -3377,8 +3417,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 2.2,
-    "cpl": 2.2,
+    "s10": 4.6,
+    "cpl": 4.6,
     "ctr7": 2.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -3424,44 +3464,44 @@
     "leadBreakdown": true
    },
    {
-    "num": "26065",
-    "theme": "故事線索遊戲卡0817",
-    "fullname": "26065 故事線索遊戲卡（Rose）0817",
+    "num": "26061",
+    "theme": "開學超前部署0817",
+    "fullname": "26061 開學超前部署（Rose）0817",
     "uploaded": "2026-08-17",
     "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/5782f6d8-322f-407e-9280-8ef2dd8cb97f.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/eb2175a0-a488-470e-bd16-aa76fb84d2b6.png"
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/7422cb9d-c26e-4361-9f2a-e822c3786170.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/a4cee74f-d9c9-4d8e-b104-cf283cc38e8b.png"
     ],
     "variants": [
      {
       "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/eb2175a0-a488-470e-bd16-aa76fb84d2b6.png",
-      "name": "26065 故事線索遊戲卡（Rose）0817-A",
-      "leads": 0
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/a4cee74f-d9c9-4d8e-b104-cf283cc38e8b.png",
+      "name": "26061 開學超前部署（Rose）0817-A",
+      "leads": 1
      },
      {
       "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/5782f6d8-322f-407e-9280-8ef2dd8cb97f.png",
-      "name": "26065 故事線索遊戲卡（Rose）0817-B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/7422cb9d-c26e-4361-9f2a-e822c3786170.png",
+      "name": "26061 開學超前部署（Rose）0817-B",
       "leads": 0
      }
     ],
     "pages": [
      {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
+      "code": "child_wiki",
+      "name": "育兒小百科"
      }
     ],
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 0,
-    "s10": 2.9,
-    "cpl": null,
-    "ctr7": 6,
+    "m10": 1,
+    "s10": 3.7,
+    "cpl": 3.7,
+    "ctr7": 0.6,
     "hasVariantPerf": true,
-    "leadBreakdown": false
+    "leadBreakdown": true
    },
    {
     "num": "26045",
@@ -3537,7 +3577,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 2.5,
+    "s10": 4,
     "cpl": null,
     "ctr7": 2.9,
     "hasVariantPerf": true,
@@ -3657,7 +3697,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 3.1,
+    "s10": 4.1,
     "cpl": null,
     "ctr7": 1.8,
     "hasVariantPerf": true,
@@ -3697,7 +3737,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 2.3,
+    "s10": 3.4,
     "cpl": null,
     "ctr7": 1.5,
     "hasVariantPerf": true,
@@ -3744,46 +3784,6 @@
     "leadBreakdown": false
    },
    {
-    "num": "26061",
-    "theme": "開學超前部署0817",
-    "fullname": "26061 開學超前部署（Rose）0817",
-    "uploaded": "2026-08-17",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/7422cb9d-c26e-4361-9f2a-e822c3786170.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/a4cee74f-d9c9-4d8e-b104-cf283cc38e8b.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/a4cee74f-d9c9-4d8e-b104-cf283cc38e8b.png",
-      "name": "26061 開學超前部署（Rose）0817-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/17/7422cb9d-c26e-4361-9f2a-e822c3786170.png",
-      "name": "26061 開學超前部署（Rose）0817-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 2.5,
-    "cpl": null,
-    "ctr7": 0.6,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
     "num": "26066",
     "theme": "開學情緒繪本課0817",
     "fullname": "26066 開學情緒繪本課（Rose）0817",
@@ -3817,7 +3817,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 2.5,
+    "s10": 4.3,
     "cpl": null,
     "ctr7": 0,
     "hasVariantPerf": true,
