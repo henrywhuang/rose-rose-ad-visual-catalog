@@ -7,6 +7,15 @@ import { fileURLToPath } from 'node:url';
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dir, '..', '..', '..');
 const raw = JSON.parse(fs.readFileSync(path.join(__dir, 'raw_2m.json'), 'utf8'));
+const addDays = (date, days) => {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+};
+// raw_2m.json is shared with the four-month reading roster. Keep the math
+// ranking on its own rolling two-month window even when the shared fetch is wider.
+const MATH_FROM = addDays(raw.date_to, -60);
+const MATH_TO = raw.date_to;
 const token = fs.readFileSync(path.join(ROOT, '.arkio_token'), 'utf8').trim();
 const response = await fetch('https://www.arkio.me/api/v1/social-accounts', {
   headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' },
@@ -152,6 +161,7 @@ for (const [adsetId, payload] of Object.entries(raw.adsets || {})) {
     if (!group.adsetIds.includes(adsetId)) group.adsetIds.push(adsetId);
     for (const row of ad.insights?.data || []) {
       const date = row.date_start;
+      if (!date || date < MATH_FROM || date > MATH_TO) continue;
       const day = group.days[date] ||= { leads: 0, spend: 0, impressions: 0, clicks: 0 };
       day.leads += leadOf(row);
       day.spend += num(row.spend);
@@ -185,7 +195,7 @@ const candidates = [...grouped.values()].map(group => {
 
 fs.writeFileSync(path.join(__dir, 'math_candidates.json'), JSON.stringify(candidates, null, 2));
 console.log(JSON.stringify({
-  window: `${raw.date_from}..${raw.date_to}`,
+  window: `${MATH_FROM}..${MATH_TO}`,
   matched_ads: matchedAds,
   visuals_with_leads: candidates.length,
   leads: candidates.reduce((sum, row) => sum + row.leads, 0),

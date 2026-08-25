@@ -93,6 +93,7 @@ function inferOwner(...values) {
   if (/繪本福利社|little_pages/i.test(text)) return '繪本福利社';
   if (/親子愛共讀|愛共讀|parent_reading/i.test(text)) return '親子愛共讀';
   if (/jojo閱讀|jojoreading/i.test(text)) return 'JoJo閱讀';
+  if (/emily|mommy_emilylee/i.test(text)) return 'Emily';
   if (/claire/i.test(text)) return 'Claire國小數學';
   return '';
 }

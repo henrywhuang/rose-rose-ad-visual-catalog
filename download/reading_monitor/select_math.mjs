@@ -15,6 +15,12 @@ const CACHE_DIR = path.join(__dir, '.image_cache');
 const ASSET_DIR = path.join(__dir, 'assets');
 fs.mkdirSync(CACHE_DIR, { recursive: true });
 fs.mkdirSync(ASSET_DIR, { recursive: true });
+const addDays = (date, days) => {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+};
+const MATH_FROM = addDays(raw.date_to, -60);
 
 async function download(url) {
   const key = crypto.createHash('sha256').update(url).digest('hex');
@@ -194,7 +200,7 @@ for (let i = 0; i < top20.length; i++) {
   delete row.fingerprint;
   row.rank = i + 1;
   row.image = `assets/${filename}`;
-  row.windowFrom = raw.date_from;
+  row.windowFrom = MATH_FROM;
   row.windowTo = raw.date_to;
   row.headlines = row.headlines.slice(0, 5);
   row.bodies = row.bodies.slice(0, 2);
