@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-25 11:15",
+ "genStamp": "2026-08-25 12:52",
  "checkpointWd": "二",
  "tpDate": "2026-08-25",
  "OKR": {
@@ -27,25 +27,25 @@
    "name": "閱讀",
    "key": "read",
    "target": 420,
-   "actual": 263,
+   "actual": 269,
    "actualPub": 178,
-   "actualPri": 85,
+   "actualPri": 91,
    "source": "lark",
-   "prog": 62.6,
+   "prog": 64,
    "timeProg": 80.6,
-   "diff": -18,
-   "proj": 326,
-   "attain": 77.6,
-   "gap": 94,
-   "remain": 157,
-   "needPerDay": 26.2,
-   "dayRateNow": 10.5,
+   "diff": -16.6,
+   "proj": 334,
+   "attain": 79.4,
+   "gap": 86,
+   "remain": 151,
+   "needPerDay": 25.2,
+   "dayRateNow": 10.8,
    "lastMonAll": 390,
-   "quarterActual": 653,
+   "quarterActual": 659,
    "quarterTarget": 1250,
-   "quarterProg": 52.2,
+   "quarterProg": 52.7,
    "quarterTimeProg": 60.9,
-   "quarterDiff": -8.6,
+   "quarterDiff": -8.1,
    "quarterStatus": "behind",
    "status": "behind",
    "poolKeys": [
@@ -56,25 +56,25 @@
    "name": "英語",
    "key": "en",
    "target": 880,
-   "actual": 430,
-   "actualPub": 175,
-   "actualPri": 255,
+   "actual": 451,
+   "actualPub": 177,
+   "actualPri": 274,
    "source": "lark",
-   "prog": 48.9,
+   "prog": 51.2,
    "timeProg": 80.6,
-   "diff": -31.8,
-   "proj": 533,
-   "attain": 60.6,
-   "gap": 347,
-   "remain": 450,
-   "needPerDay": 75,
-   "dayRateNow": 17.2,
+   "diff": -29.4,
+   "proj": 559,
+   "attain": 63.6,
+   "gap": 321,
+   "remain": 429,
+   "needPerDay": 71.5,
+   "dayRateNow": 18,
    "lastMonAll": 808,
-   "quarterActual": 1238,
+   "quarterActual": 1259,
    "quarterTarget": 2600,
-   "quarterProg": 47.6,
+   "quarterProg": 48.4,
    "quarterTimeProg": 60.9,
-   "quarterDiff": -13.3,
+   "quarterDiff": -12.4,
    "quarterStatus": "behind",
    "status": "behind",
    "poolKeys": [
@@ -86,25 +86,25 @@
    "name": "數學",
    "key": "math",
    "target": 470,
-   "actual": 406,
+   "actual": 410,
    "actualPub": 14,
-   "actualPri": 392,
+   "actualPri": 396,
    "source": "arkio",
-   "prog": 86.4,
+   "prog": 87.2,
    "timeProg": 80.6,
-   "diff": 5.7,
-   "proj": 503,
-   "attain": 107.1,
+   "diff": 6.6,
+   "proj": 508,
+   "attain": 108.2,
    "gap": 0,
-   "remain": 64,
-   "needPerDay": 10.7,
-   "dayRateNow": 16.2,
+   "remain": 60,
+   "needPerDay": 10,
+   "dayRateNow": 16.4,
    "lastMonAll": 574,
-   "quarterActual": 980,
+   "quarterActual": 984,
    "quarterTarget": 1440,
-   "quarterProg": 68.1,
+   "quarterProg": 68.3,
    "quarterTimeProg": 60.9,
-   "quarterDiff": 7.2,
+   "quarterDiff": 7.5,
    "quarterStatus": "ahead",
    "status": "ahead",
    "poolKeys": [
@@ -168,7 +168,7 @@
     83,
     74,
     73,
-    22
+    28
    ],
    "channels": [
     {
@@ -239,7 +239,7 @@
       28,
       18,
       26,
-      1
+      6
      ],
      "mean": 20.5,
      "sd": 11,
@@ -250,16 +250,16 @@
      "recent3": [
       18,
       26,
-      1
+      6
      ],
      "norm": 81,
      "lastMon": 109,
-     "mtd": 70,
-     "proj": 87,
+     "mtd": 75,
+     "proj": 93,
      "gap": 0,
-     "dropPct": -20,
+     "dropPct": -15,
      "health": "ok",
-     "supply": "watch"
+     "supply": "ok"
     },
     {
      "name": "官方-官網",
@@ -464,7 +464,7 @@
       0,
       2,
       2,
-      0
+      1
      ],
      "mean": 1.4,
      "sd": 1.6,
@@ -475,16 +475,16 @@
      "recent3": [
       2,
       2,
-      0
+      1
      ],
      "norm": 6,
      "lastMon": 7,
-     "mtd": 5,
-     "proj": 6,
+     "mtd": 6,
+     "proj": 7,
      "gap": 0,
-     "dropPct": -11,
+     "dropPct": 6,
      "health": "small",
-     "supply": "ok"
+     "supply": "ahead"
     },
     {
      "name": "APP-BN",
@@ -942,7 +942,7 @@
     46,
     46,
     53,
-    21
+    23
    ],
    "channels": [
     {
@@ -965,7 +965,7 @@
       30,
       35,
       42,
-      18
+      19
      ],
      "mean": 41,
      "sd": 8.7,
@@ -976,14 +976,14 @@
      "recent3": [
       35,
       42,
-      18
+      19
      ],
      "norm": 184.7,
      "lastMon": 173,
-     "mtd": 130,
-     "proj": 161,
-     "gap": 23,
-     "dropPct": -7,
+     "mtd": 131,
+     "proj": 162,
+     "gap": 22,
+     "dropPct": -6,
      "health": "ok",
      "supply": "watch"
     },
@@ -1301,7 +1301,7 @@
       1,
       0,
       0,
-      0
+      1
      ],
      "mean": 0.2,
      "sd": 0.4,
@@ -1312,14 +1312,14 @@
      "recent3": [
       0,
       0,
-      0
+      1
      ],
      "norm": 0.7,
      "lastMon": 1,
-     "mtd": 1,
-     "proj": 1,
+     "mtd": 2,
+     "proj": 2,
      "gap": 0,
-     "dropPct": 24,
+     "dropPct": 148,
      "health": "small",
      "supply": "small"
     },
@@ -1392,12 +1392,12 @@
    ],
    "completedCount": 16,
    "band": {
-    "mean": 105.2,
-    "sd": 23.7,
-    "lo": 82,
+    "mean": 106.4,
+    "sd": 22.7,
+    "lo": 84,
     "hi": 129,
-    "boom": 153,
-    "crash": 58
+    "boom": 152,
+    "crash": 61
    },
    "totSeriesWin": [
     92,
@@ -1415,7 +1415,7 @@
     105,
     72,
     93,
-    77,
+    96,
     11
    ],
    "channels": [
@@ -1606,26 +1606,26 @@
       2,
       1,
       28,
-      0,
+      19,
       0
      ],
-     "mean": 4.6,
-     "sd": 10,
+     "mean": 5.8,
+     "sd": 10.5,
      "lo": 0,
-     "hi": 15,
-     "boom": 25,
+     "hi": 16,
+     "boom": 27,
      "warn": 0,
      "recent3": [
       28,
-      0,
+      19,
       0
      ],
      "norm": 14.7,
      "lastMon": 44,
-     "mtd": 29,
-     "proj": 36,
+     "mtd": 48,
+     "proj": 60,
      "gap": 0,
-     "dropPct": -18,
+     "dropPct": 35,
      "health": "ok",
      "supply": "ahead"
     },
@@ -1983,7 +1983,7 @@
     498,
     497,
     574,
-    406
+    410
    ],
    "band": {
     "mean": 523,
@@ -2053,7 +2053,7 @@
       108,
       108,
       113,
-      55
+      57
      ],
      "mean": 109.7,
      "sd": 0,
@@ -2062,14 +2062,14 @@
      "recent3": [
       108,
       113,
-      55
+      57
      ],
      "norm": 109.7,
      "lastMon": 113,
-     "mtd": 55,
-     "proj": 68,
-     "gap": 41,
-     "dropPct": -40,
+     "mtd": 57,
+     "proj": 71,
+     "gap": 39,
+     "dropPct": -37,
      "health": "small",
      "supply": "behind"
     },
@@ -2080,7 +2080,7 @@
       127,
       85,
       91,
-      127
+      129
      ],
      "mean": 101,
      "sd": 0,
@@ -2089,14 +2089,14 @@
      "recent3": [
       85,
       91,
-      127
+      129
      ],
      "norm": 101,
      "lastMon": 91,
-     "mtd": 127,
-     "proj": 157,
+     "mtd": 129,
+     "proj": 160,
      "gap": 0,
-     "dropPct": 73,
+     "dropPct": 76,
      "health": "small",
      "supply": "ahead"
     },
