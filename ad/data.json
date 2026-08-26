@@ -1,10 +1,10 @@
 {
- "genStamp": "2026-08-25 11:15",
- "checkpointWd": "二",
- "today": "2026-08-25",
+ "genStamp": "2026-08-26 10:17",
+ "checkpointWd": "三",
+ "today": "2026-08-26",
  "fetchStatus": "ok",
  "expDate": "2026-09-04",
- "nAds": 9,
+ "nAds": 28,
  "curYM": "2026-08",
  "quarter": {
   "label": "2026-Q3",
@@ -17,8 +17,8 @@
    "2026-09"
   ]
  },
- "dayOfQuarter": 56,
- "dayOfMonth": 25,
+ "dayOfQuarter": 57,
+ "dayOfMonth": 26,
  "dim": 31,
  "subjects": [
   {
@@ -32,32 +32,32 @@
    },
    "q3": {
     "target": 3360,
-    "actual": 1923,
-    "actualBk": 1936,
-    "prog": 57.2,
-    "timeProg": 60.9,
-    "proj": 3159,
-    "attain": 94,
-    "gap": 201,
-    "remain": 1437,
-    "diff": -3.7,
+    "actual": 1943,
+    "actualBk": 1955,
+    "prog": 57.8,
+    "timeProg": 62,
+    "proj": 3136,
+    "attain": 93.3,
+    "gap": 224,
+    "remain": 1417,
+    "diff": -4.2,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-08",
     "target": 1150,
-    "actual": 897,
-    "actualBk": 906,
-    "prog": 78,
-    "timeProg": 80.6,
-    "proj": 1112,
-    "attain": 96.7,
-    "gap": 38,
-    "remain": 253,
-    "needPerDay": 42.2,
-    "dayRateNow": 35.9,
-    "recent7Rate": 13.3,
-    "diff": -2.6,
+    "actual": 917,
+    "actualBk": 925,
+    "prog": 79.7,
+    "timeProg": 83.9,
+    "proj": 1093,
+    "attain": 95,
+    "gap": 57,
+    "remain": 233,
+    "needPerDay": 46.6,
+    "dayRateNow": 35.3,
+    "recent7Rate": 14.4,
+    "diff": -4.1,
     "status": "behind"
    },
    "months": [
@@ -77,14 +77,14 @@
     {
      "ym": "2026-08",
      "target": 1150,
-     "actual": 897,
-     "actualBk": 906,
+     "actual": 917,
+     "actualBk": 925,
      "isCur": true,
      "isPast": false,
-     "proj": 1112,
-     "gap": 38,
-     "prog": 78,
-     "timeProg": 80.6,
+     "proj": 1093,
+     "gap": 57,
+     "prog": 79.7,
+     "timeProg": 83.9,
      "status": "behind"
     },
     {
@@ -202,12 +202,12 @@
      "start": "2026-08-24",
      "end": "2026-08-30",
      "effFrom": "2026-08-24",
-     "effTo": "2026-08-25",
+     "effTo": "2026-08-26",
      "isCur": true,
      "line": 288,
-     "actual": 19,
-     "actualBk": 20,
-     "gap": 269,
+     "actual": 39,
+     "actualBk": 39,
+     "gap": 249,
      "status": "current"
     }
    ]
@@ -222,12 +222,12 @@
     "actual": 31,
     "actualBk": 25,
     "prog": 62,
-    "timeProg": 60.9,
-    "proj": 51,
-    "attain": 101.9,
+    "timeProg": 62,
+    "proj": 50,
+    "attain": 100.1,
     "gap": 0,
     "remain": 19,
-    "diff": 1.1,
+    "diff": 0,
     "status": "ahead"
    },
    "cur": {
@@ -236,7 +236,7 @@
     "actual": 3,
     "actualBk": 5,
     "prog": 0,
-    "timeProg": 80.6,
+    "timeProg": 83.9,
     "proj": 4,
     "attain": 0,
     "gap": null,
@@ -269,7 +269,7 @@
      "proj": 4,
      "gap": null,
      "prog": null,
-     "timeProg": 80.6,
+     "timeProg": 83.9,
      "status": "na"
     },
     {
@@ -386,7 +386,7 @@
      "start": "2026-08-24",
      "end": "2026-08-30",
      "effFrom": "2026-08-24",
-     "effTo": "2026-08-25",
+     "effTo": "2026-08-26",
      "isCur": true,
      "line": null,
      "actual": 0,
@@ -405,12 +405,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 273,
-   "b": 279,
-   "spend": 1691,
+   "m": 275,
+   "b": 281,
+   "spend": 1714,
    "cpl": 6.2,
    "m7": 16,
-   "budget": 15,
+   "budget": 30,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -420,9 +420,9 @@
    "adviceAction": "SCALE",
    "adviceText": "爆款，建議加預算 20-30%",
    "priority": "P2",
-   "suggestedBudget": 19,
+   "suggestedBudget": 38,
    "trendWorse": false,
-   "trendBetter": true,
+   "trendBetter": false,
    "declineType": null,
    "tag": "scale",
    "tagTxt": "🔥 加碼",
@@ -463,13 +463,13 @@
    "name": "25981 暑假超前部署（Rose）",
    "campaign": "L2+L3  暑假超前部署（Rose）",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "PAUSED",
+   "paused": true,
    "m": 235,
    "b": 232,
-   "spend": 1661,
+   "spend": 1665,
    "cpl": 7.1,
-   "m7": 12,
+   "m7": 7,
    "budget": 4,
    "bm": {
     "excellent": 5,
@@ -477,15 +477,15 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "OPTIMIZE",
-   "adviceText": "降預算，趨勢向上需干預",
-   "priority": "P1",
-   "suggestedBudget": 3,
+   "adviceAction": "KEEP",
+   "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+   "priority": "P0",
+   "suggestedBudget": 4,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
+   "tag": "reactivate",
+   "tagTxt": "⏸ 已暫停(曾有量)",
    "color": "#e2603e"
   },
   {
@@ -615,11 +615,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 118,
-   "b": 122,
-   "spend": 507,
+   "m": 130,
+   "b": 133,
+   "spend": 553,
    "cpl": 4.3,
-   "m7": 39,
+   "m7": 48,
    "budget": 48,
    "bm": {
     "excellent": 5,
@@ -627,10 +627,10 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "KEEP",
-   "adviceText": "維持現狀",
+   "adviceAction": "SCALE",
+   "adviceText": "爆款，建議加預算 20-30%",
    "priority": "P2",
-   "suggestedBudget": 48,
+   "suggestedBudget": 60,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -675,12 +675,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 61,
-   "b": 57,
-   "spend": 381,
-   "cpl": 6.2,
-   "m7": 18,
-   "budget": 30,
+   "m": 64,
+   "b": 60,
+   "spend": 406,
+   "cpl": 6.3,
+   "m7": 20,
+   "budget": 10,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -690,7 +690,7 @@
    "adviceAction": "OPTIMIZE",
    "adviceText": "近 7 天趨勢惡化，且成本已超合格線，建議降預算觀察",
    "priority": "P1",
-   "suggestedBudget": 21,
+   "suggestedBudget": 7,
    "trendWorse": true,
    "trendBetter": false,
    "declineType": null,
@@ -705,11 +705,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 43,
-   "b": 45,
-   "spend": 253,
+   "m": 46,
+   "b": 48,
+   "spend": 272,
    "cpl": 5.9,
-   "m7": 7,
+   "m7": 9,
    "budget": 20,
    "bm": {
     "excellent": 5,
@@ -719,7 +719,7 @@
    },
    "adviceAction": "KEEP",
    "adviceText": "維持現狀",
-   "priority": "KEEP",
+   "priority": "P2",
    "suggestedBudget": 20,
    "trendWorse": false,
    "trendBetter": false,
@@ -2887,14 +2887,614 @@
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
    "color": "#db2777"
+  },
+  {
+   "id": "120252339274580392",
+   "name": "26086 語句表達檢核（Rose）0825",
+   "campaign": "L2+L3 語句表達檢核（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $1.13/$36.00，還有 $34.87 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#64748b"
+  },
+  {
+   "id": "120252339292810392",
+   "name": "26087 情緒表達九宮格（Rose）0825",
+   "campaign": "L2+L3 情緒表達九宮格（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $1.26/$36.00，還有 $34.74 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0f9d6b"
+  },
+  {
+   "id": "120252339304760392",
+   "name": "26088 開學正音班（Rose）0825",
+   "campaign": "L2+L3 開學正音班（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $1.02/$36.00，還有 $34.98 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#f59e0b"
+  },
+  {
+   "id": "120252339342490392",
+   "name": "26093 開學超前部署識字卡（Rose）0825",
+   "campaign": "L2+L3 開學超前部署識字卡（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.35/$36.00，還有 $35.65 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#e2603e"
+  },
+  {
+   "id": "120252339371070392",
+   "name": "26095 108課綱識字啟蒙班（Rose）0825",
+   "campaign": "L2+L3 108課綱識字啟蒙班（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.42/$36.00，還有 $35.58 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#6366f1"
+  },
+  {
+   "id": "120252339406250392",
+   "name": "26089 故事線索遊戲卡（Rose）0825",
+   "campaign": "L2+L3 故事線索遊戲卡（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.66/$36.00，還有 $35.34 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0d9488"
+  },
+  {
+   "id": "120252339432380392",
+   "name": "26091 注音練習包（Rose）0825",
+   "campaign": "L2+L3 注音練習包（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.49/$36.00，還有 $35.51 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#d946ef"
+  },
+  {
+   "id": "120252339453150392",
+   "name": "26090 閱讀專注力遊戲卡（Rose）0825",
+   "campaign": "L2+L3 閱讀專注力遊戲卡（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.48/$36.00，還有 $35.52 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0ea5e9"
+  },
+  {
+   "id": "120252339502200392",
+   "name": "26092 繪本情緒課（Rose）0825",
+   "campaign": "L2+L3 繪本情緒課（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.29/$36.00，還有 $35.71 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#ca8a04"
+  },
+  {
+   "id": "120252339595620392",
+   "name": "26094 開學識字練習（Rose）0825",
+   "campaign": "L2+L3 開學識字練習（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.49/$36.00，還有 $35.51 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#7c3aed"
+  },
+  {
+   "id": "120252340234510392",
+   "name": "26086 語句表達檢核（Rose）0825",
+   "campaign": "L2+L3 語句表達檢核（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.45/$36.00，還有 $35.55 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#16a34a"
+  },
+  {
+   "id": "120252340307620392",
+   "name": "26087 情緒表達九宮格（Rose）0825",
+   "campaign": "L2+L3 情緒表達九宮格（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.88/$36.00，還有 $35.12 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#db2777"
+  },
+  {
+   "id": "120252340362000392",
+   "name": "26088 開學正音班（Rose）0825",
+   "campaign": "L2+L3 開學正音班（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.41/$36.00，還有 $35.59 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#64748b"
+  },
+  {
+   "id": "120252340415430392",
+   "name": "26093 開學超前部署識字卡（Rose）0825",
+   "campaign": "L2+L3 開學超前部署識字卡（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.40/$36.00，還有 $35.60 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0f9d6b"
+  },
+  {
+   "id": "120252340456870392",
+   "name": "26095 108課綱識字啟蒙班（Rose）0825",
+   "campaign": "L2+L3 108課綱識字啟蒙班（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.34/$36.00，還有 $35.66 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#f59e0b"
+  },
+  {
+   "id": "120252340498980392",
+   "name": "26089 故事線索遊戲卡（Rose）0825",
+   "campaign": "L2+L3 故事線索遊戲卡（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.42/$36.00，還有 $35.58 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#e2603e"
+  },
+  {
+   "id": "120252340538630392",
+   "name": "26091 注音練習包（Rose）0825",
+   "campaign": "L2+L3 注音練習包（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.86/$36.00，還有 $35.14 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#6366f1"
+  },
+  {
+   "id": "120252340560340392",
+   "name": "26090 閱讀專注力遊戲卡（Rose）0825",
+   "campaign": "L2+L3 閱讀專注力遊戲卡（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.38/$36.00，還有 $35.62 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0d9488"
+  },
+  {
+   "id": "120252340584750392",
+   "name": "26092 繪本情緒課（Rose）0825",
+   "campaign": "L2+L3 繪本情緒課（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.37/$36.00，還有 $35.63 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#d946ef"
+  },
+  {
+   "id": "120252340606900392",
+   "name": "26094 開學識字練習（Rose）0825",
+   "campaign": "L2+L3 開學識字練習（Rose）0825",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 1,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $1.05/$36.00，還有 $34.95 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0ea5e9"
   }
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 42.2,
-  "addlPerDay": 28.9,
-  "winnerDaily": 5.6,
-  "adsNeeded": 6,
+  "needPerDay": 46.6,
+  "addlPerDay": 32.2,
+  "winnerDaily": 6.9,
+  "adsNeeded": 5,
   "topScale": [
    {
     "id": "120251174246100392",
@@ -2903,12 +3503,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 273,
-    "b": 279,
-    "spend": 1691,
+    "m": 275,
+    "b": 281,
+    "spend": 1714,
     "cpl": 6.2,
     "m7": 16,
-    "budget": 15,
+    "budget": 30,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -2918,9 +3518,9 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 19,
+    "suggestedBudget": 38,
     "trendWorse": false,
-    "trendBetter": true,
+    "trendBetter": false,
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
@@ -2933,11 +3533,11 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 118,
-    "b": 122,
-    "spend": 507,
+    "m": 130,
+    "b": 133,
+    "spend": 553,
     "cpl": 4.3,
-    "m7": 39,
+    "m7": 48,
     "budget": 48,
     "bm": {
      "excellent": 5,
@@ -2945,10 +3545,10 @@
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "KEEP",
-    "adviceText": "維持現狀",
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 48,
+    "suggestedBudget": 60,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
@@ -2987,6 +3587,36 @@
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
     "color": "#f59e0b"
+   },
+   {
+    "id": "120251357927590392",
+    "name": "25981 暑假超前部署（Rose）",
+    "campaign": "L2+L3  暑假超前部署（Rose）",
+    "bl": "Reading",
+    "status": "PAUSED",
+    "paused": true,
+    "m": 235,
+    "b": 232,
+    "spend": 1665,
+    "cpl": 7.1,
+    "m7": 7,
+    "budget": 4,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "KEEP",
+    "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+    "priority": "P0",
+    "suggestedBudget": 4,
+    "trendWorse": false,
+    "trendBetter": false,
+    "declineType": null,
+    "tag": "reactivate",
+    "tagTxt": "⏸ 已暫停(曾有量)",
+    "color": "#e2603e"
    },
    {
     "id": "120247919419730392",
@@ -3077,36 +3707,6 @@
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
     "color": "#d946ef"
-   },
-   {
-    "id": "120250705597430392",
-    "name": "25954 Codex-暑假識字練習（Rose）小百科",
-    "campaign": "L2+L3 Codex-暑假識字練習（Rose）小百科",
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "paused": true,
-    "m": 138,
-    "b": 143,
-    "spend": 919,
-    "cpl": 6.7,
-    "m7": 0,
-    "budget": 2,
-    "bm": {
-     "excellent": 5,
-     "acceptable": 8,
-     "danger": 12,
-     "scale_excellent": 5
-    },
-    "adviceAction": "--",
-    "adviceText": "數據不足，暫不判斷",
-    "priority": "--",
-    "suggestedBudget": 2,
-    "trendWorse": false,
-    "trendBetter": true,
-    "declineType": null,
-    "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
-    "color": "#0ea5e9"
    }
   ],
   "bestByCpl": [
@@ -3117,11 +3717,11 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 118,
-    "b": 122,
-    "spend": 507,
+    "m": 130,
+    "b": 133,
+    "spend": 553,
     "cpl": 4.3,
-    "m7": 39,
+    "m7": 48,
     "budget": 48,
     "bm": {
      "excellent": 5,
@@ -3129,10 +3729,10 @@
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "KEEP",
-    "adviceText": "維持現狀",
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 48,
+    "suggestedBudget": 60,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
@@ -3177,11 +3777,11 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 43,
-    "b": 45,
-    "spend": 253,
+    "m": 46,
+    "b": 48,
+    "spend": 272,
     "cpl": 5.9,
-    "m7": 7,
+    "m7": 9,
     "budget": 20,
     "bm": {
      "excellent": 5,
@@ -3191,7 +3791,7 @@
     },
     "adviceAction": "KEEP",
     "adviceText": "維持現狀",
-    "priority": "KEEP",
+    "priority": "P2",
     "suggestedBudget": 20,
     "trendWorse": false,
     "trendBetter": false,
@@ -3207,12 +3807,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 273,
-    "b": 279,
-    "spend": 1691,
+    "m": 275,
+    "b": 281,
+    "spend": 1714,
     "cpl": 6.2,
     "m7": 16,
-    "budget": 15,
+    "budget": 30,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -3222,9 +3822,9 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 19,
+    "suggestedBudget": 38,
     "trendWorse": false,
-    "trendBetter": true,
+    "trendBetter": false,
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
@@ -3234,7 +3834,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-08-16",
+  "cutoff": "2026-08-17",
   "days": 10,
   "items": [
    {
@@ -3273,7 +3873,7 @@
     "m10": 1,
     "s10": 15.3,
     "cpl": 15.3,
-    "ctr7": 4.1,
+    "ctr7": 4.8,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -3313,7 +3913,7 @@
     "m10": 1,
     "s10": 15.5,
     "cpl": 15.5,
-    "ctr7": 3.1,
+    "ctr7": 3.3,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -3358,6 +3958,126 @@
     "leadBreakdown": true
    },
    {
+    "num": "26093",
+    "theme": "開學超前部署識字卡0825",
+    "fullname": "26093 開學超前部署識字卡（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/045c5524-5133-4366-86c0-61f7f202c515.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/de73cbe7-3fae-45d6-a72c-150ed94024d1.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/de73cbe7-3fae-45d6-a72c-150ed94024d1.png",
+      "name": "26093 開學超前部署識字卡（Rose）0825-A",
+      "leads": 1
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/045c5524-5133-4366-86c0-61f7f202c515.png",
+      "name": "26093 開學超前部署識字卡（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 1.3,
+    "cpl": 1.3,
+    "ctr7": 0.8,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26086",
+    "theme": "語句表達檢核0825",
+    "fullname": "26086 語句表達檢核（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d7127a24-d3a5-4c58-9429-fded1e8da28f.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/7bfb8fbe-4140-4a52-b6d6-332d2a88a22e.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/7bfb8fbe-4140-4a52-b6d6-332d2a88a22e.png",
+      "name": "26086 語句表達檢核（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d7127a24-d3a5-4c58-9429-fded1e8da28f.png",
+      "name": "26086 語句表達檢核（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "mommy_emilylee",
+      "name": "Emily 媽咪"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.3,
+    "cpl": null,
+    "ctr7": 7.5,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26091",
+    "theme": "注音練習包0825",
+    "fullname": "26091 注音練習包（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d4f9028f-8c5f-4ce6-ab03-2572047631bc.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/a2fe8be8-2dc1-47c7-8c26-7c81811c2279.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/a2fe8be8-2dc1-47c7-8c26-7c81811c2279.png",
+      "name": "26091 注音練習包（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d4f9028f-8c5f-4ce6-ab03-2572047631bc.png",
+      "name": "26091 注音練習包（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.9,
+    "cpl": null,
+    "ctr7": 4,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
     "num": "26066",
     "theme": "開學情緒繪本課0817",
     "fullname": "26066 開學情緒繪本課（Rose）0817",
@@ -3394,6 +4114,126 @@
     "s10": 5,
     "cpl": null,
     "ctr7": 2.6,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26089",
+    "theme": "故事線索遊戲卡0825",
+    "fullname": "26089 故事線索遊戲卡（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/5f4f5e45-51e1-4a94-87e1-43d33a94cde1.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/15134ebe-6436-41d5-8570-187fea7a2a31.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/15134ebe-6436-41d5-8570-187fea7a2a31.png",
+      "name": "26089 故事線索遊戲卡（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/5f4f5e45-51e1-4a94-87e1-43d33a94cde1.png",
+      "name": "26089 故事線索遊戲卡（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.2,
+    "cpl": null,
+    "ctr7": 2.6,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26087",
+    "theme": "情緒表達九宮格0825",
+    "fullname": "26087 情緒表達九宮格（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/adba3083-af19-4683-b90d-1c02887f98f2.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/58cade90-6bb1-4585-b8b6-3c272bfb6c77.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/58cade90-6bb1-4585-b8b6-3c272bfb6c77.png",
+      "name": "26087 情緒表達九宮格（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/adba3083-af19-4683-b90d-1c02887f98f2.png",
+      "name": "26087 情緒表達九宮格（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.8,
+    "cpl": null,
+    "ctr7": 2.5,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26090",
+    "theme": "閱讀專注力遊戲卡0825",
+    "fullname": "26090 閱讀專注力遊戲卡（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/b986469a-12e1-4d6c-9550-0475eee10929.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/5c24d045-d5a2-4afa-ba61-99cd8aafc44e.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/5c24d045-d5a2-4afa-ba61-99cd8aafc44e.png",
+      "name": "26090 閱讀專注力遊戲卡（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/b986469a-12e1-4d6c-9550-0475eee10929.png",
+      "name": "26090 閱讀專注力遊戲卡（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.3,
+    "cpl": null,
+    "ctr7": 2.4,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -3478,6 +4318,126 @@
     "leadBreakdown": false
    },
    {
+    "num": "26092",
+    "theme": "繪本情緒課0825",
+    "fullname": "26092 繪本情緒課（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/a0a1bf3e-b20a-47aa-ab21-c19bcfd2877a.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/ce948dc2-43c1-43ab-a6b9-e2817616d545.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/ce948dc2-43c1-43ab-a6b9-e2817616d545.png",
+      "name": "26092 繪本情緒課（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/a0a1bf3e-b20a-47aa-ab21-c19bcfd2877a.png",
+      "name": "26092 繪本情緒課（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "jojoreading_tw",
+      "name": "JOJO 閱讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.3,
+    "cpl": null,
+    "ctr7": 1.5,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26088",
+    "theme": "開學正音班0825",
+    "fullname": "26088 開學正音班（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/163c2ab5-417a-4b8e-8dba-3bd013015cdb.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/5ac4bfc9-4765-4478-a3b8-ffa633127fb1.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/5ac4bfc9-4765-4478-a3b8-ffa633127fb1.png",
+      "name": "26088 開學正音班（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/163c2ab5-417a-4b8e-8dba-3bd013015cdb.png",
+      "name": "26088 開學正音班（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.2,
+    "cpl": null,
+    "ctr7": 1.2,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26094",
+    "theme": "開學識字練習0825",
+    "fullname": "26094 開學識字練習（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d910b8f9-065e-40d1-bfde-d997942c8991.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/f6226a62-dc87-41c5-b37b-5e2ba8dbdf87.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/f6226a62-dc87-41c5-b37b-5e2ba8dbdf87.png",
+      "name": "26094 開學識字練習（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d910b8f9-065e-40d1-bfde-d997942c8991.png",
+      "name": "26094 開學識字練習（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.8,
+    "cpl": null,
+    "ctr7": 1.2,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
     "num": "26062",
     "theme": "開學情緒繪本課0817",
     "fullname": "26062 開學情緒繪本課（Rose）0817",
@@ -3514,6 +4474,46 @@
     "s10": 3.5,
     "cpl": null,
     "ctr7": 1.1,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26095",
+    "theme": "108課綱識字啟蒙班0825",
+    "fullname": "26095 108課綱識字啟蒙班（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/dad5f416-838e-4375-a25f-e51b8b8d3447.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d88dd6d1-c1b3-4091-b87a-46ea7a9bf899.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/d88dd6d1-c1b3-4091-b87a-46ea7a9bf899.png",
+      "name": "26095 108課綱識字啟蒙班（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/dad5f416-838e-4375-a25f-e51b8b8d3447.png",
+      "name": "26095 108課綱識字啟蒙班（Rose）0825-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 1.3,
+    "cpl": null,
+    "ctr7": 0,
     "hasVariantPerf": true,
     "leadBreakdown": false
    }
