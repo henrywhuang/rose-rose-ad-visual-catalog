@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-26 10:17",
+ "genStamp": "2026-08-26 13:26",
  "checkpointWd": "三",
  "today": "2026-08-26",
  "fetchStatus": "ok",
@@ -3918,6 +3918,46 @@
     "leadBreakdown": true
    },
    {
+    "num": "26087",
+    "theme": "情緒表達九宮格0825",
+    "fullname": "26087 情緒表達九宮格（Rose）0825",
+    "uploaded": "2026-08-25",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/adba3083-af19-4683-b90d-1c02887f98f2.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/58cade90-6bb1-4585-b8b6-3c272bfb6c77.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/58cade90-6bb1-4585-b8b6-3c272bfb6c77.png",
+      "name": "26087 情緒表達九宮格（Rose）0825-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/adba3083-af19-4683-b90d-1c02887f98f2.png",
+      "name": "26087 情緒表達九宮格（Rose）0825-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 2.7,
+    "cpl": 2.7,
+    "ctr7": 2.5,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
     "num": "26061",
     "theme": "開學超前部署0817",
     "fullname": "26061 開學超前部署（Rose）0817",
@@ -3991,8 +4031,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 1.3,
-    "cpl": 1.3,
+    "s10": 1.9,
+    "cpl": 1.9,
     "ctr7": 0.8,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4031,7 +4071,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.3,
+    "s10": 2.2,
     "cpl": null,
     "ctr7": 7.5,
     "hasVariantPerf": true,
@@ -4071,7 +4111,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.9,
+    "s10": 2.7,
     "cpl": null,
     "ctr7": 4,
     "hasVariantPerf": true,
@@ -4151,49 +4191,9 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.2,
+    "s10": 2.1,
     "cpl": null,
     "ctr7": 2.6,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26087",
-    "theme": "情緒表達九宮格0825",
-    "fullname": "26087 情緒表達九宮格（Rose）0825",
-    "uploaded": "2026-08-25",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/adba3083-af19-4683-b90d-1c02887f98f2.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/58cade90-6bb1-4585-b8b6-3c272bfb6c77.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/58cade90-6bb1-4585-b8b6-3c272bfb6c77.png",
-      "name": "26087 情緒表達九宮格（Rose）0825-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/25/adba3083-af19-4683-b90d-1c02887f98f2.png",
-      "name": "26087 情緒表達九宮格（Rose）0825-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 1.8,
-    "cpl": null,
-    "ctr7": 2.5,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -4231,7 +4231,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.3,
+    "s10": 1.9,
     "cpl": null,
     "ctr7": 2.4,
     "hasVariantPerf": true,
@@ -4351,7 +4351,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.3,
+    "s10": 2.1,
     "cpl": null,
     "ctr7": 1.5,
     "hasVariantPerf": true,
@@ -4391,7 +4391,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.2,
+    "s10": 2,
     "cpl": null,
     "ctr7": 1.2,
     "hasVariantPerf": true,
@@ -4431,7 +4431,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.8,
+    "s10": 2.6,
     "cpl": null,
     "ctr7": 1.2,
     "hasVariantPerf": true,
@@ -4511,7 +4511,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 1.3,
+    "s10": 2.2,
     "cpl": null,
     "ctr7": 0,
     "hasVariantPerf": true,
