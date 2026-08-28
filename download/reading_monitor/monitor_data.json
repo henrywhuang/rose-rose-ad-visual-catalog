@@ -6,24 +6,24 @@
     "concept": "25606 醜圖-我們免費了分城市-桃園市-愛共讀 - 複本 ❌",
     "adNumber": "25606",
     "name": "25606 醜圖-我們免費了分城市-桃園市-愛共讀 - 複本 ❌",
-    "leads": 1096,
-    "spend": 7340.83,
-    "cpl": 6.7,
-    "ctr": 3.16,
-    "recent14Leads": 57,
-    "previous14Leads": 54,
-    "recent7Leads": 46,
-    "previous7Leads": 11,
-    "trendPct": 6,
-    "firstLeadDate": "2026-04-25",
-    "lastLeadDate": "2026-08-25",
+    "leads": 1094,
+    "spend": 7369.12,
+    "cpl": 6.74,
+    "ctr": 3.17,
+    "recent14Leads": 91,
+    "previous14Leads": 26,
+    "recent7Leads": 61,
+    "previous7Leads": 30,
+    "trendPct": 250,
+    "firstLeadDate": "2026-04-28",
+    "lastLeadDate": "2026-08-28",
     "created": "2025-10-21",
     "active": false,
     "variants": 3,
     "flags": {
       "efficient": true,
       "continuous": true,
-      "improving": false,
+      "improving": true,
       "newImproving": false,
       "isNew": false
     },
@@ -41,8 +41,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -55,11 +55,11 @@
     "spend": 1104.94,
     "cpl": 6.42,
     "ctr": 6.24,
-    "recent14Leads": 44,
-    "previous14Leads": 107,
+    "recent14Leads": 13,
+    "previous14Leads": 114,
     "recent7Leads": 0,
-    "previous7Leads": 44,
-    "trendPct": -59,
+    "previous7Leads": 13,
+    "trendPct": -89,
     "firstLeadDate": "2026-07-19",
     "lastLeadDate": "2026-08-17",
     "created": "2026-07-19",
@@ -86,8 +86,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -96,22 +96,22 @@
     "concept": "25791 醜圖-這次免費送-小一",
     "adNumber": "25791",
     "name": "25791 醜圖-這次免費送-小一",
-    "leads": 76,
-    "spend": 585.32,
-    "cpl": 7.7,
-    "ctr": 3.65,
+    "leads": 67,
+    "spend": 567.62,
+    "cpl": 8.47,
+    "ctr": 3.6,
     "recent14Leads": 0,
     "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
+    "firstLeadDate": "2026-04-28",
     "lastLeadDate": "2026-05-12",
     "created": "2026-04-09",
     "active": false,
     "variants": 1,
     "flags": {
-      "efficient": true,
+      "efficient": false,
       "continuous": false,
       "improving": false,
       "newImproving": false,
@@ -131,12 +131,57 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
     "rank": 4,
+    "tier": "A",
+    "concept": "26041 情緒力九宮格（Rose）0803-B",
+    "adNumber": "26041",
+    "name": "26041 情緒力九宮格（Rose）0803-B",
+    "leads": 58,
+    "spend": 327.44,
+    "cpl": 5.65,
+    "ctr": 4.5,
+    "recent14Leads": 31,
+    "previous14Leads": 27,
+    "recent7Leads": 19,
+    "previous7Leads": 12,
+    "trendPct": 15,
+    "firstLeadDate": "2026-08-04",
+    "lastLeadDate": "2026-08-28",
+    "created": "2026-08-03",
+    "active": true,
+    "variants": 1,
+    "flags": {
+      "efficient": true,
+      "continuous": true,
+      "improving": false,
+      "newImproving": false,
+      "isNew": false
+    },
+    "image": "assets/parent_04.jpg",
+    "headlines": [
+      "💬 生氣、難過，不只用哭的",
+      "😊 情緒表達九宮格｜免費領",
+      "✅ 從只會哭，到能說我現在怎麼了",
+      "每天15分鐘，看表情說一句",
+      "3-8歲情緒表達學習單"
+    ],
+    "bodies": [
+      "孩子哭著說「不要」，大人常常猜不到是生氣、委屈，還是害怕。\n​\n用情緒九宮格陪孩子每天15分鐘練：\n✅ 看一個表情\n✅ 選一個情緒詞\n✅ 用「我覺得……因為……」說一句\n​\n練習前，孩子只會哭或推開；練習後，開始能說出「我很難過，因為你先拿走了」\n​\n👉 點擊領取",
+      "孩子哭著說不要，你卻猜不到？用情緒九宮格練「我覺得…因為…」，從只會哭到能說出原因\n​\n👇 點圖領取"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "親子愛共讀",
+    "rank": 5,
     "tier": "A",
     "concept": "25928 GPT批量-我好生氣復刻(親子愛共讀)",
     "adNumber": "25928",
@@ -162,7 +207,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/parent_04.jpg",
+    "image": "assets/parent_05.jpg",
     "headlines": [
       "孩子一秒爆氣？先別急著兇回去",
       "「我生氣了！」其實是求救訊號",
@@ -174,12 +219,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
-    "rank": 5,
+    "rank": 6,
     "tier": "A",
     "concept": "25847 復刻醜圖-我不是壞小孩（Rose）",
     "adNumber": "25847",
@@ -205,7 +250,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/parent_05.jpg",
+    "image": "assets/parent_06.jpg",
     "headlines": [
       "每天15分鐘，陪孩子認識情緒",
       "3-8歲夏日閱讀清單👉",
@@ -219,12 +264,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
-    "rank": 6,
+    "rank": 7,
     "tier": "A",
     "concept": "25902 復刻-情緒抱抱（Rose）-男孩躺",
     "adNumber": "25902",
@@ -250,7 +295,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/parent_06.jpg",
+    "image": "assets/parent_07.jpg",
     "headlines": [
       "台北市3-8歲，識字基礎免費建",
       "母親節禮物，和孩子一起學識字",
@@ -264,53 +309,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "親子愛共讀",
-    "rank": 7,
-    "tier": "A",
-    "concept": "26041 情緒力九宮格（Rose）0803-B",
-    "adNumber": "26041",
-    "name": "26041 情緒力九宮格（Rose）0803-B",
-    "leads": 45,
-    "spend": 263.36,
-    "cpl": 5.85,
-    "ctr": 4.41,
-    "recent14Leads": 29,
-    "previous14Leads": 16,
-    "recent7Leads": 9,
-    "previous7Leads": 20,
-    "trendPct": 81,
-    "firstLeadDate": "2026-08-04",
-    "lastLeadDate": "2026-08-25",
-    "created": "2026-08-03",
-    "active": true,
-    "variants": 1,
-    "flags": {
-      "efficient": true,
-      "continuous": true,
-      "improving": true,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/parent_07.jpg",
-    "headlines": [
-      "💬 生氣、難過，不只用哭的",
-      "😊 情緒表達九宮格｜免費領",
-      "✅ 從只會哭，到能說我現在怎麼了",
-      "每天15分鐘，看表情說一句",
-      "3-8歲情緒表達學習單"
-    ],
-    "bodies": [
-      "孩子哭著說「不要」，大人常常猜不到是生氣、委屈，還是害怕。\n​\n用情緒九宮格陪孩子每天15分鐘練：\n✅ 看一個表情\n✅ 選一個情緒詞\n✅ 用「我覺得……因為……」說一句\n​\n練習前，孩子只會哭或推開；練習後，開始能說出「我很難過，因為你先拿走了」\n​\n👉 點擊領取",
-      "孩子哭著說不要，你卻猜不到？用情緒九宮格練「我覺得…因為…」，從只會哭到能說出原因\n​\n👇 點圖領取"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -352,55 +352,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
     "rank": 9,
-    "tier": "A",
-    "concept": "35430 自學能力測試-純字1（愛共讀）",
-    "adNumber": "35430",
-    "name": "35430 自學能力測試-純字1（愛共讀）",
-    "leads": 19,
-    "spend": 75.26,
-    "cpl": 3.96,
-    "ctr": 3.58,
-    "recent14Leads": 0,
-    "previous14Leads": 0,
-    "recent7Leads": 0,
-    "previous7Leads": 0,
-    "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
-    "lastLeadDate": "2026-05-05",
-    "created": "2026-03-05",
-    "active": false,
-    "variants": 1,
-    "flags": {
-      "efficient": true,
-      "continuous": false,
-      "improving": false,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/parent_09.jpg",
-    "headlines": [
-      "不用催、不用吼，21天讓孩子自己寫功課✏️",
-      "【開學季免費領】給4～10歲的自主學習班 >>",
-      "很多孩子不是懶，是還不會自己學✏️"
-    ],
-    "bodies": [
-      "很多家長每天最累的事情\n就是陪孩子寫作業。\n\n但其實有些孩子\n是可以自己完成作業的。\n\n差別往往在於\n有沒有建立自主學習的習慣。\n\n最近看到一個不錯的資源：\n【21天自主學習數學班】\n\n✔ 每天10分鐘\n✔ 建立學習節奏\n✔ 慢慢養成不用催的習慣\n\n現在有 #免費體驗名額\n有需要的家長可以點圖片領取。",
-      "💡 孩子寫作業一定要一直提醒嗎？\n其實很多家長不知道，\n#自主學習 是可以慢慢培養的。\n\n如果孩子有固定的練習節奏，\n就比較容易自己開始寫作業。\n\n最近整理到一個\n家長評價不錯的資源：\n\n【21天自主學習數學班】\n\n每天10分鐘練習\n幫孩子建立學習習慣。\n\n現在有 免費領取活動\n有需要的家長可以點圖片看看。"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "親子愛共讀",
-    "rank": 10,
     "tier": "A",
     "concept": "25984 GPT-專注力夏令營大字圖-復刻英文-專注力遊戲夏令營A(愛共讀)",
     "adNumber": "25984",
@@ -426,7 +383,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/parent_10.jpg",
+    "image": "assets/parent_09.jpg",
     "headlines": [
       "坐不住也能練，先陪他練",
       "4-7歲把專注力遊戲養起來",
@@ -438,12 +395,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
-    "rank": 11,
+    "rank": 10,
     "tier": "A",
     "concept": "23944 醜圖-正音班-桃園市（愛共讀）",
     "adNumber": "23944",
@@ -453,7 +410,7 @@
     "cpl": 7.37,
     "ctr": 1.72,
     "recent14Leads": 0,
-    "previous14Leads": 14,
+    "previous14Leads": 7,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": -100,
@@ -469,7 +426,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/parent_11.jpg",
+    "image": "assets/parent_10.jpg",
     "headlines": [
       "桃園補助：5日暑假正音班👉",
       "暑假限定，僅限桃園3-6歲寶貝",
@@ -481,8 +438,51 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "親子愛共讀",
+    "rank": 11,
+    "tier": "A",
+    "concept": "35430 自學能力測試-純字1（愛共讀）",
+    "adNumber": "35430",
+    "name": "35430 自學能力測試-純字1（愛共讀）",
+    "leads": 13,
+    "spend": 51.79,
+    "cpl": 3.98,
+    "ctr": 3.56,
+    "recent14Leads": 0,
+    "previous14Leads": 0,
+    "recent7Leads": 0,
+    "previous7Leads": 0,
+    "trendPct": 0,
+    "firstLeadDate": "2026-04-28",
+    "lastLeadDate": "2026-05-05",
+    "created": "2026-03-05",
+    "active": false,
+    "variants": 1,
+    "flags": {
+      "efficient": true,
+      "continuous": false,
+      "improving": false,
+      "newImproving": false,
+      "isNew": false
+    },
+    "image": "assets/parent_11.jpg",
+    "headlines": [
+      "不用催、不用吼，21天讓孩子自己寫功課✏️",
+      "【開學季免費領】給4～10歲的自主學習班 >>",
+      "很多孩子不是懶，是還不會自己學✏️"
+    ],
+    "bodies": [
+      "很多家長每天最累的事情\n就是陪孩子寫作業。\n\n但其實有些孩子\n是可以自己完成作業的。\n\n差別往往在於\n有沒有建立自主學習的習慣。\n\n最近看到一個不錯的資源：\n【21天自主學習數學班】\n\n✔ 每天10分鐘\n✔ 建立學習節奏\n✔ 慢慢養成不用催的習慣\n\n現在有 #免費體驗名額\n有需要的家長可以點圖片領取。",
+      "💡 孩子寫作業一定要一直提醒嗎？\n其實很多家長不知道，\n#自主學習 是可以慢慢培養的。\n\n如果孩子有固定的練習節奏，\n就比較容易自己開始寫作業。\n\n最近整理到一個\n家長評價不錯的資源：\n\n【21天自主學習數學班】\n\n每天10分鐘練習\n幫孩子建立學習習慣。\n\n現在有 免費領取活動\n有需要的家長可以點圖片看看。"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -526,8 +526,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -540,11 +540,11 @@
     "spend": 53.71,
     "cpl": 8.95,
     "ctr": 2.76,
-    "recent14Leads": 4,
-    "previous14Leads": 2,
+    "recent14Leads": 0,
+    "previous14Leads": 6,
     "recent7Leads": 0,
-    "previous7Leads": 4,
-    "trendPct": 100,
+    "previous7Leads": 0,
+    "trendPct": -100,
     "firstLeadDate": "2026-08-11",
     "lastLeadDate": "2026-08-14",
     "created": "2026-08-10",
@@ -553,7 +553,7 @@
     "flags": {
       "efficient": false,
       "continuous": false,
-      "improving": true,
+      "improving": false,
       "newImproving": false,
       "isNew": true
     },
@@ -571,8 +571,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -616,8 +616,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -645,7 +645,7 @@
       "continuous": false,
       "improving": false,
       "newImproving": false,
-      "isNew": true
+      "isNew": false
     },
     "image": "assets/parent_15.jpg",
     "headlines": [
@@ -659,8 +659,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -674,7 +674,7 @@
     "cpl": 7.97,
     "ctr": 2.39,
     "recent14Leads": 0,
-    "previous14Leads": 4,
+    "previous14Leads": 2,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": -100,
@@ -702,8 +702,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -747,8 +747,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -792,8 +792,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -837,8 +837,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -882,8 +882,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -927,8 +927,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "親子愛共讀",
@@ -972,8 +972,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1017,8 +1017,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1027,22 +1027,22 @@
     "concept": "25299 醜圖-博客來小孩繪本-台北市-方✅818改受眾",
     "adNumber": "25299",
     "name": "25299 醜圖-博客來小孩繪本-台北市-方✅818改受眾",
-    "leads": 200,
-    "spend": 1651.39,
-    "cpl": 8.26,
-    "ctr": 3.47,
-    "recent14Leads": 35,
+    "leads": 206,
+    "spend": 1620.98,
+    "cpl": 7.87,
+    "ctr": 3.43,
+    "recent14Leads": 63,
     "previous14Leads": 0,
-    "recent7Leads": 32,
-    "previous7Leads": 3,
+    "recent7Leads": 47,
+    "previous7Leads": 16,
     "trendPct": null,
-    "firstLeadDate": "2026-04-25",
-    "lastLeadDate": "2026-08-25",
+    "firstLeadDate": "2026-04-28",
+    "lastLeadDate": "2026-08-28",
     "created": "2025-05-20",
     "active": true,
     "variants": 6,
     "flags": {
-      "efficient": false,
+      "efficient": true,
       "continuous": true,
       "improving": true,
       "newImproving": false,
@@ -1062,8 +1062,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1077,7 +1077,7 @@
     "cpl": 6.41,
     "ctr": 2.16,
     "recent14Leads": 0,
-    "previous14Leads": 66,
+    "previous14Leads": 42,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": -100,
@@ -1107,8 +1107,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1152,8 +1152,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1167,7 +1167,7 @@
     "cpl": 6.65,
     "ctr": 1.44,
     "recent14Leads": 0,
-    "previous14Leads": 5,
+    "previous14Leads": 3,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": -100,
@@ -1197,8 +1197,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1207,16 +1207,16 @@
     "concept": "23863 醜圖-我！好！生！氣！-台中市✅",
     "adNumber": "23863",
     "name": "23863 醜圖-我！好！生！氣！-台中市✅",
-    "leads": 80,
-    "spend": 736.32,
-    "cpl": 9.2,
+    "leads": 77,
+    "spend": 705.96,
+    "cpl": 9.17,
     "ctr": 4.41,
     "recent14Leads": 1,
     "previous14Leads": 0,
-    "recent7Leads": 1,
-    "previous7Leads": 0,
+    "recent7Leads": 0,
+    "previous7Leads": 1,
     "trendPct": null,
-    "firstLeadDate": "2026-04-25",
+    "firstLeadDate": "2026-06-04",
     "lastLeadDate": "2026-08-19",
     "created": "2025-05-19",
     "active": false,
@@ -1242,8 +1242,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
@@ -1256,11 +1256,11 @@
     "spend": 534.39,
     "cpl": 6.94,
     "ctr": 2.82,
-    "recent14Leads": 17,
-    "previous14Leads": 59,
+    "recent14Leads": 6,
+    "previous14Leads": 56,
     "recent7Leads": 0,
-    "previous7Leads": 17,
-    "trendPct": -71,
+    "previous7Leads": 6,
+    "trendPct": -89,
     "firstLeadDate": "2026-07-28",
     "lastLeadDate": "2026-08-17",
     "created": "2026-07-28",
@@ -1287,12 +1287,57 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
     "rank": 8,
+    "tier": "A",
+    "concept": "25179 醜圖-3-6歲繪本情緒課-台中市✅✅",
+    "adNumber": "25179",
+    "name": "25179 醜圖-3-6歲繪本情緒課-台中市✅✅",
+    "leads": 44,
+    "spend": 351.37,
+    "cpl": 7.99,
+    "ctr": 3.22,
+    "recent14Leads": 43,
+    "previous14Leads": 0,
+    "recent7Leads": 25,
+    "previous7Leads": 18,
+    "trendPct": null,
+    "firstLeadDate": "2026-04-29",
+    "lastLeadDate": "2026-08-28",
+    "created": "2025-04-03",
+    "active": true,
+    "variants": 2,
+    "flags": {
+      "efficient": true,
+      "continuous": true,
+      "improving": true,
+      "newImproving": false,
+      "isNew": false
+    },
+    "image": "assets/wiki_08.jpg",
+    "headlines": [
+      "台中市3-6歲免費補助 >>",
+      "台中市家長限時福利 >>",
+      "台中家長免費索取 >>",
+      "桃園市3-6歲免費補助 >>",
+      "桃園市家長限時福利 >>"
+    ],
+    "bodies": [
+      "你知道嗎，幼兒園是「情緒發展關鍵期」\n學習「情緒管理」對幼兒成長有重要影響\n#台中市3至6歲 #繪本情緒課\n\n3-6歲孩子好難安靜與專注？ \n小百科 邀請 #台中市爸媽們 👩👦 \n面對孩子的壞脾氣，從「閱讀」開始📚\n5天時間，學會控制表達情感❤️\n\n #小百科社群福利 #繪本情緒課\n ▍適用年齡：3-6歲孩童\n ▍5天學：3種表達句和1種情緒\n🕒 學習時間：一天15分鐘\n💲 費用：市價499元，0元體驗限額50名\n\n\\ 情緒表達好😊開學0煩惱 /\n【 👉 點擊圖片 #陪孩子掌控情緒 】\n\n#3至6歲養成情緒素養高EQ\n#讓閱讀帶給孩子正向情緒😀",
+      "#台中市限定 #15分鐘閱讀課 #3至6歲\n ▍專家建議 #用閱讀認識情緒管理\n ▍不哭鬧吼叫，我會好好說！\n\n✦ 4堂互動閱讀課 + 1堂複習遊戲課\n✦ 5天學3種表達句型＋認識1種情緒\n✦ 幫助認識情緒、學習冷靜說出情緒\n🕒 學習時間：一天15分鐘\n💰 費用：市價499元，0元體驗名額30名\n\n🎁 #小百科 鼓勵閱讀加碼送福利\n08月01日-08月31日 領取繪本情緒課\n可獲得【超過50+頁的情緒學習卡】\n\n📣 歡迎邀請 #台中市家長 一起\n新學期不怕孩子鬧脾氣\n用閱讀讓孩子學習正確表達情緒 💖\n\n ⬇️ 【點擊圖片報名】⬇️"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "育兒小百科",
+    "rank": 9,
     "tier": "A",
     "concept": "35579 專注力-純字7-紅/藍(小百科)",
     "adNumber": "35579",
@@ -1318,7 +1363,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_08.jpg",
+    "image": "assets/wiki_09.jpg",
     "headlines": [
       "4-6 歲是專注力建立關鍵期",
       "兒童發展專家：先練專注再談學習",
@@ -1332,100 +1377,98 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "育兒小百科",
-    "rank": 9,
-    "tier": "A",
-    "concept": "24120 醜圖-情緒問題拼圖-小百科",
-    "adNumber": "24120",
-    "name": "24120 醜圖-情緒問題拼圖-小百科",
-    "leads": 41,
-    "spend": 347.72,
-    "cpl": 8.48,
-    "ctr": 3.08,
-    "recent14Leads": 0,
-    "previous14Leads": 0,
-    "recent7Leads": 0,
-    "previous7Leads": 0,
-    "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
-    "lastLeadDate": "2026-05-07",
-    "created": "2025-11-04",
-    "active": false,
-    "variants": 1,
-    "flags": {
-      "efficient": false,
-      "continuous": false,
-      "improving": false,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/wiki_09.jpg",
-    "headlines": [
-      "叮！3-6歲5日情緒閱讀課",
-      "這些情緒問題，你的孩子也有嗎👉",
-      "【3-6歲家庭】無料索取 👉"
-    ],
-    "bodies": [
-      "寶貝好愛鬧脾氣，小小年紀像個小火山？🌋\n✅ 你知道嗎，「閱讀」學習情緒管理最有效！\n#輕鬆搞定壞脾氣 #好情緒 #免費學\n\n🥺「孩子生氣時只會大叫大鬧怎麼辦？」\n【5日情緒管理小達人：壞脾氣byebye】\n❤️ 情緒課：動畫故事感受角色情緒\n❤️ 表達課：表達練習培養正面回應\n❤️ 互動課：螢幕觸控學習體感更好\n\n【情緒管理小達人】課程資訊\n⛳️ 時間：每週一至五\n⛳️ 地點：線上學習\n⛳️ 費用：完全免費\n\n\\ 培養正向情緒管理，讓壞情緒好好休息 /\n⬇️ 點擊圖片免費報名 ⬇️\n\n#給3至6歲情緒管理課\n#閱讀培養正向情緒",
-      "🥺「孩子不順心就坐在地上哭鬧怎麼辦？」\n⬇️ 點擊圖片 立即學壞脾氣對策\n#好情緒 #免費學\n\n【5日情緒管理小達人：跟壞脾氣掰掰】\n❤️ 情緒課：每日1動畫繪本，認識情緒\n❤️ 表達課：每日開口表達，練正向回應\n❤️ 互動課：螢幕觸控回饋，學習體感更好\n\n【情緒管理小達人】開班啦！\n🎯 時間：每週一至五 \n🎯 地點：線上學習超方便\n限30名！免費參加 👉 \n📢 僅#3-6歲無料體驗\n\n⬇️ 【點擊圖片報名】⬇️"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
     "rank": 10,
     "tier": "A",
-    "concept": "25800 醜圖-108課綱啟蒙班-台北市1",
-    "adNumber": "25800",
-    "name": "25800 醜圖-108課綱啟蒙班-台北市1",
-    "leads": 36,
-    "spend": 297.56,
-    "cpl": 8.27,
-    "ctr": 1.74,
-    "recent14Leads": 0,
-    "previous14Leads": 0,
-    "recent7Leads": 0,
-    "previous7Leads": 0,
-    "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
-    "lastLeadDate": "2026-05-09",
-    "created": "2026-04-24",
-    "active": false,
-    "variants": 4,
+    "concept": "26055 GPT-拒當小火山復刻 不再用哭鬧溝通圖(小百科)",
+    "adNumber": "26055",
+    "name": "26055 GPT-拒當小火山復刻 不再用哭鬧溝通圖(小百科)",
+    "leads": 40,
+    "spend": 265.48,
+    "cpl": 6.64,
+    "ctr": 3.54,
+    "recent14Leads": 29,
+    "previous14Leads": 11,
+    "recent7Leads": 20,
+    "previous7Leads": 9,
+    "trendPct": 164,
+    "firstLeadDate": "2026-08-06",
+    "lastLeadDate": "2026-08-28",
+    "created": "2026-08-06",
+    "active": true,
+    "variants": 1,
     "flags": {
-      "efficient": false,
-      "continuous": false,
-      "improving": false,
+      "efficient": true,
+      "continuous": true,
+      "improving": true,
       "newImproving": false,
       "isNew": false
     },
     "image": "assets/wiki_10.jpg",
     "headlines": [
-      "台北市限定！識字啟蒙班免費招生中",
-      "台北市 3-8歲孩子，0元上識字課",
-      "台北市家長必看，識字啟蒙免費報名",
-      "桃園市限定！識字啟蒙班免費招生中",
-      "桃園市 3-8歲孩子，0元上識字課"
+      "新北孩子練習好好說",
+      "新北幼兒0元體驗",
+      "哭鬧換成一句話💬"
     ],
     "bodies": [
-      "台北市的家長，這個免費機會別錯過。\n​\n孩子在幼兒園階段打好識字基礎，是小學閱讀的起跑線。識字量不夠，小三之後很容易跟不上、失去閱讀興趣。\n​\n【108課綱・識字啟蒙班】台北市限定，現正招生中\n✅ 招生對象：3-8歲 幼兒園在讀兒童\n✅ 上課時間：每週一至週五\n✅ 課程費用：0元（市值499元）\n✅ 加碼贈：108課綱識字卡（字詞句）\n​\n名額有限，先報先得。\n​\n👉 點擊圖片立即報名",
-      "台北市 3-8歲孩子的家長，識字啟蒙班免費開放報名了。\n​\n識字是所有學習的地基，幼兒園階段補好識字，往後閱讀、考試都更有底氣。\n​\n108課綱識字啟蒙班，台北市限定，0元報名，還加碼送108課綱識字卡。\n​\n👉 點擊圖片免費報名"
+      "新北家長｜孩子有需求時，只會用哭鬧表達嗎？😭\n​\n3-6 歲是自我表達快速發展的階段，需要有人示範「可以怎麼說」。\n​\n小百科推薦用親子繪本和句型練習，把哭鬧慢慢換成語言。\n​\n每天 15 分鐘：\n📚 從故事看懂角色的感受\n💬 練習「我想要、我不喜歡、請幫我」\n❤️ 親子一起回應，建立安全溝通\n🎁 新北市幼兒園在讀生 0 元上課\n​\n👉 點擊圖片報名，新北 3-6 歲家庭限定\n#育兒小百科 #新北市 #情緒表達 #親子溝通",
+      "新北市 3-6 歲孩子，不用每次都靠哭鬧溝通。💬\n​\n從繪本情境練習一句能說出口的話，慢慢建立表達方法。\n​\n每天 15 分鐘線上繪本，新北幼兒園在讀生 0 元上課。\n​\n👉 點擊圖片立即報名\n#新北家長 #自我表達 #小百科推薦"
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
     "rank": 11,
+    "tier": "A",
+    "concept": "26067 GPT-博客來小孩再復刻-多主題(小百科) + 26067 GPT-博客來小孩再復刻-多主題(JOJO閱讀)",
+    "adNumber": "26067",
+    "name": "26067 GPT-博客來小孩再復刻-多主題(小百科) + 26067 GPT-博客來小孩再復刻-多主題(JOJO閱讀)",
+    "leads": 38,
+    "spend": 262.56,
+    "cpl": 6.91,
+    "ctr": 3.35,
+    "recent14Leads": 38,
+    "previous14Leads": 0,
+    "recent7Leads": 33,
+    "previous7Leads": 5,
+    "trendPct": null,
+    "firstLeadDate": "2026-08-19",
+    "lastLeadDate": "2026-08-28",
+    "created": "2026-08-18",
+    "active": true,
+    "variants": 1,
+    "flags": {
+      "efficient": true,
+      "continuous": true,
+      "improving": true,
+      "newImproving": true,
+      "isNew": true
+    },
+    "image": "assets/wiki_11.jpg",
+    "headlines": [
+      "關掉螢幕不再暴走",
+      "5日練習情緒轉換",
+      "3至6歲情緒課0元"
+    ],
+    "bodies": [
+      "一關螢幕就大哭、尖叫，甚至摔東西？📱\n孩子不是故意唱反調，而是還不會面對「遊戲結束」的失落。\n先教他說出情緒，才有機會慢慢停下來。\n​\n📚 3-6歲5日繪本情緒課\n⏰ 每天15分鐘，居家就能練\n💬 認識感受、說出原因、練習轉換\n🎁 限時全台0元體驗\n​\n👉 點擊圖片，陪孩子練習好好關機\n#育兒小百科 #情緒表達 #3C教養 #JOJO閱讀",
+      "孩子一聽到「時間到了」就暴走嗎？😣\n與其一直拔平板，不如先幫他建立結束的心理準備。\n​\n5日繪本情緒課把練習拆成小步驟：\n✅ 看懂生氣和捨不得\n✅ 用一句話說出需求\n✅ 完成任務後練習離開\n​\n適合3-6歲，每天15分鐘，全台0元體驗。\n👉 點擊圖片了解課程\n#育兒小百科 #關機不暴走 #情緒練習"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "育兒小百科",
+    "rank": 12,
     "tier": "A",
     "concept": "25922 暑期幼兒英語營（Rose）-人物大",
     "adNumber": "25922",
@@ -1451,7 +1494,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_11.jpg",
+    "image": "assets/wiki_12.jpg",
     "headlines": [
       "3-8歲夏日閱讀清單👉",
       "3-8歲補助👉30頁學習單免費領",
@@ -1465,29 +1508,74 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 12,
+    "rank": 13,
+    "tier": "A",
+    "concept": "26070 GPT-我會冷靜下來-桃園市(小百科)",
+    "adNumber": "26070",
+    "name": "26070 GPT-我會冷靜下來-桃園市(小百科)",
+    "leads": 32,
+    "spend": 255.19,
+    "cpl": 7.97,
+    "ctr": 2.66,
+    "recent14Leads": 32,
+    "previous14Leads": 0,
+    "recent7Leads": 29,
+    "previous7Leads": 3,
+    "trendPct": null,
+    "firstLeadDate": "2026-08-19",
+    "lastLeadDate": "2026-08-28",
+    "created": "2026-08-18",
+    "active": true,
+    "variants": 5,
+    "flags": {
+      "efficient": true,
+      "continuous": true,
+      "improving": true,
+      "newImproving": true,
+      "isNew": true
+    },
+    "image": "assets/wiki_13.jpg",
+    "headlines": [
+      "桃園市孩子一生氣就哭",
+      "桃園市5日情緒課0元",
+      "每天15分鐘練冷靜",
+      "新竹縣市孩子一生氣就哭",
+      "新竹縣市5日情緒課0元"
+    ],
+    "bodies": [
+      "桃園市家長注意！孩子一不順心就大哭、尖叫嗎？😣\n他不是故意唱反調，只是還不會把生氣說清楚。\n先認識情緒，再練習冷靜表達。\n​\n📚 3-6歲5日繪本情緒課\n💬 看懂感受，練習說出原因\n🌱 學會冷靜句型，減少親子拉扯\n⏰ 每天15分鐘，居家就能完成\n🎁 桃園市孩子限時0元體驗\n​\n👉 點擊圖片了解課程\n#桃園市家長 #育兒小百科 #情緒表達",
+      "【桃園市3-6歲孩子限定】📣\n孩子一生氣只會哭，常常是情緒詞彙還不夠。\n與其一直叫他別哭，不如陪他練習怎麼說。\n​\n✅ 5日繪本情緒課\n✅ 每天15分鐘居家閱讀\n✅ 認情緒、說原因、練冷靜\n✅ 桃園市限時0元體驗\n​\n👉 點擊圖片開始第一天\n#桃園市 #情緒教養 #育兒小百科"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "育兒小百科",
+    "rank": 14,
     "tier": "A",
     "concept": "26030 GPT-情緒課程徵集-新竹縣市 我很生氣表達圖(小百科)",
     "adNumber": "26030",
     "name": "26030 GPT-情緒課程徵集-新竹縣市 我很生氣表達圖(小百科)",
-    "leads": 30,
-    "spend": 213.95,
-    "cpl": 7.13,
-    "ctr": 2.7,
-    "recent14Leads": 12,
+    "leads": 31,
+    "spend": 242.56,
+    "cpl": 7.82,
+    "ctr": 2.6,
+    "recent14Leads": 9,
     "previous14Leads": 17,
-    "recent7Leads": 7,
+    "recent7Leads": 4,
     "previous7Leads": 5,
-    "trendPct": -29,
+    "trendPct": -47,
     "firstLeadDate": "2026-07-28",
-    "lastLeadDate": "2026-08-25",
+    "lastLeadDate": "2026-08-26",
     "created": "2026-07-28",
-    "active": true,
+    "active": false,
     "variants": 3,
     "flags": {
       "efficient": true,
@@ -1496,7 +1584,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_12.jpg",
+    "image": "assets/wiki_14.jpg",
     "headlines": [
       "新竹縣市情緒課免費領",
       "孩子喊不要先這樣",
@@ -1510,12 +1598,55 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 13,
+    "rank": 15,
+    "tier": "A",
+    "concept": "24120 醜圖-情緒問題拼圖-小百科",
+    "adNumber": "24120",
+    "name": "24120 醜圖-情緒問題拼圖-小百科",
+    "leads": 29,
+    "spend": 223.35,
+    "cpl": 7.7,
+    "ctr": 3.21,
+    "recent14Leads": 0,
+    "previous14Leads": 0,
+    "recent7Leads": 0,
+    "previous7Leads": 0,
+    "trendPct": 0,
+    "firstLeadDate": "2026-04-28",
+    "lastLeadDate": "2026-05-07",
+    "created": "2025-11-04",
+    "active": false,
+    "variants": 1,
+    "flags": {
+      "efficient": true,
+      "continuous": false,
+      "improving": false,
+      "newImproving": false,
+      "isNew": false
+    },
+    "image": "assets/wiki_15.jpg",
+    "headlines": [
+      "叮！3-6歲5日情緒閱讀課",
+      "這些情緒問題，你的孩子也有嗎👉",
+      "【3-6歲家庭】無料索取 👉"
+    ],
+    "bodies": [
+      "寶貝好愛鬧脾氣，小小年紀像個小火山？🌋\n✅ 你知道嗎，「閱讀」學習情緒管理最有效！\n#輕鬆搞定壞脾氣 #好情緒 #免費學\n\n🥺「孩子生氣時只會大叫大鬧怎麼辦？」\n【5日情緒管理小達人：壞脾氣byebye】\n❤️ 情緒課：動畫故事感受角色情緒\n❤️ 表達課：表達練習培養正面回應\n❤️ 互動課：螢幕觸控學習體感更好\n\n【情緒管理小達人】課程資訊\n⛳️ 時間：每週一至五\n⛳️ 地點：線上學習\n⛳️ 費用：完全免費\n\n\\ 培養正向情緒管理，讓壞情緒好好休息 /\n⬇️ 點擊圖片免費報名 ⬇️\n\n#給3至6歲情緒管理課\n#閱讀培養正向情緒",
+      "🥺「孩子不順心就坐在地上哭鬧怎麼辦？」\n⬇️ 點擊圖片 立即學壞脾氣對策\n#好情緒 #免費學\n\n【5日情緒管理小達人：跟壞脾氣掰掰】\n❤️ 情緒課：每日1動畫繪本，認識情緒\n❤️ 表達課：每日開口表達，練正向回應\n❤️ 互動課：螢幕觸控回饋，學習體感更好\n\n【情緒管理小達人】開班啦！\n🎯 時間：每週一至五 \n🎯 地點：線上學習超方便\n限30名！免費參加 👉 \n📢 僅#3-6歲無料體驗\n\n⬇️ 【點擊圖片報名】⬇️"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "育兒小百科",
+    "rank": 16,
     "tier": "A",
     "concept": "35700 GPT-Claude批量-我會加減法-日系繪本(小百科)",
     "adNumber": "35700",
@@ -1541,7 +1672,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_13.jpg",
+    "image": "assets/wiki_16.jpg",
     "headlines": [
       "暑假「夏季滑坡」怎麼防？每天 10 分鐘 📚",
       "【免費】4-10 歲數感啟蒙夏令營 🎓",
@@ -1555,100 +1686,100 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 14,
+    "rank": 17,
     "tier": "A",
-    "concept": "26055 GPT-拒當小火山復刻 不再用哭鬧溝通圖(小百科)",
-    "adNumber": "26055",
-    "name": "26055 GPT-拒當小火山復刻 不再用哭鬧溝通圖(小百科)",
-    "leads": 27,
-    "spend": 150.57,
-    "cpl": 5.58,
-    "ctr": 3.99,
-    "recent14Leads": 22,
-    "previous14Leads": 5,
-    "recent7Leads": 13,
-    "previous7Leads": 9,
-    "trendPct": 340,
-    "firstLeadDate": "2026-08-06",
-    "lastLeadDate": "2026-08-25",
-    "created": "2026-08-06",
+    "concept": "26067 GPT-博客來小孩再復刻-多主題3(小百科) + 26067 GPT-博客來小孩再復刻-多主題3(JOJO閱讀)",
+    "adNumber": "26067",
+    "name": "26067 GPT-博客來小孩再復刻-多主題3(小百科) + 26067 GPT-博客來小孩再復刻-多主題3(JOJO閱讀)",
+    "leads": 28,
+    "spend": 267.87,
+    "cpl": 9.57,
+    "ctr": 2.34,
+    "recent14Leads": 28,
+    "previous14Leads": 0,
+    "recent7Leads": 25,
+    "previous7Leads": 3,
+    "trendPct": null,
+    "firstLeadDate": "2026-08-19",
+    "lastLeadDate": "2026-08-28",
+    "created": "2026-08-18",
     "active": true,
     "variants": 1,
     "flags": {
-      "efficient": true,
+      "efficient": false,
       "continuous": true,
       "improving": true,
       "newImproving": true,
       "isNew": true
     },
-    "image": "assets/wiki_14.jpg",
+    "image": "assets/wiki_17.jpg",
     "headlines": [
-      "新北孩子練習好好說",
-      "新北幼兒0元體驗",
-      "哭鬧換成一句話💬"
+      "挫折一來就崩潰嗎",
+      "教孩子再試一次",
+      "5日陪練挫折耐受力"
     ],
     "bodies": [
-      "新北家長｜孩子有需求時，只會用哭鬧表達嗎？😭\n​\n3-6 歲是自我表達快速發展的階段，需要有人示範「可以怎麼說」。\n​\n小百科推薦用親子繪本和句型練習，把哭鬧慢慢換成語言。\n​\n每天 15 分鐘：\n📚 從故事看懂角色的感受\n💬 練習「我想要、我不喜歡、請幫我」\n❤️ 親子一起回應，建立安全溝通\n🎁 新北市幼兒園在讀生 0 元上課\n​\n👉 點擊圖片報名，新北 3-6 歲家庭限定\n#育兒小百科 #新北市 #情緒表達 #親子溝通",
-      "新北市 3-6 歲孩子，不用每次都靠哭鬧溝通。💬\n​\n從繪本情境練習一句能說出口的話，慢慢建立表達方法。\n​\n每天 15 分鐘線上繪本，新北幼兒園在讀生 0 元上課。\n​\n👉 點擊圖片立即報名\n#新北家長 #自我表達 #小百科推薦"
+      "積木一倒、遊戲一輸，孩子立刻說「我不要了」？🧱\n不是抗壓性差，而是還沒學會怎麼面對失敗。\n大人先示範「停一下，再試一次」，比叫他別哭更有用。\n​\n📚 3-6歲5日繪本情緒課\n💬 說出失望與需要幫忙\n🧩 把大任務拆成下一小步\n🌱 從願意再試一次開始累積\n​\n👉 點擊圖片，全台0元體驗\n#育兒小百科 #挫折教育 #情緒韌性",
+      "孩子遇到不會的事就生氣，先別急著替他完成。\n可以陪他說：「我現在很挫折，但我想再試一個方法。」✨\n​\n5日繪本情緒課用故事帶孩子練習：\n✅ 認出挫折的感覺\n✅ 開口求助，不用哭鬧\n✅ 完成一個小步驟再前進\n​\n3-6歲每天15分鐘，限時0元體驗。\n👉 點擊圖片了解課程\n#育兒小百科 #再試一次 #幼兒情緒"
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 15,
+    "rank": 18,
     "tier": "A",
-    "concept": "35495 數學專注力課程-台中(小百科)",
-    "adNumber": "35495",
-    "name": "35495 數學專注力課程-台中(小百科)",
-    "leads": 22,
-    "spend": 142.88,
-    "cpl": 6.49,
-    "ctr": 3.46,
+    "concept": "25800 醜圖-108課綱啟蒙班-台北市1",
+    "adNumber": "25800",
+    "name": "25800 醜圖-108課綱啟蒙班-台北市1",
+    "leads": 24,
+    "spend": 213.34,
+    "cpl": 8.89,
+    "ctr": 1.72,
     "recent14Leads": 0,
     "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
-    "lastLeadDate": "2026-05-04",
-    "created": "2026-04-09",
+    "firstLeadDate": "2026-04-28",
+    "lastLeadDate": "2026-05-09",
+    "created": "2026-04-24",
     "active": false,
-    "variants": 3,
+    "variants": 2,
     "flags": {
-      "efficient": true,
+      "efficient": false,
       "continuous": false,
       "improving": false,
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_15.jpg",
+    "image": "assets/wiki_18.jpg",
     "headlines": [
-      "【台中免費】數學手寫專注課開放報名～✨",
-      "台中爸媽限定：手寫數學×21天專注訓練",
-      "【台中名額開放】孩子學算術，順便練專心",
-      "台中小學生適用：坐得住又算得快",
-      "【高雄限定】數學手寫專注課｜21天免費體驗✏️"
+      "台北市限定！識字啟蒙班免費招生中",
+      "台北市 3-8歲孩子，0元上識字課",
+      "台北市家長必看，識字啟蒙免費報名",
+      "台南市限定！識字啟蒙班免費招生中",
+      "台南市 3-8歲孩子，0元上識字課"
     ],
     "bodies": [
-      "#台中限定體驗 #數感啟蒙 💡\n孩子的專注力，需要從日常訓練開始建立。\n\nJOJO數學手寫專注力課：\n📌 台中地區免費限量開放\n✅ 手寫加減法×每日10分鐘\n✅ 固定節奏，幫助孩子建立「寫功課啟動感」\n✅ 21天完整任務卡，打卡追蹤\n\n適合幼大班到國小低年級，台中家庭優先！\n\n📲 點圖領取\n\n#台中限定 #手寫專注 #JOJO數學",
-      "台中的孩子，需要的不是更多課——\n而是一個固定、短暫、能完成的學習儀式。\n\n研究顯示：每天同樣時間動筆，\n大腦會自動把那個時段和「學習」連結起來。\n\nJOJO數學手寫課：\n✏️ 固定10分鐘，每天同一節奏\n✏️ 台中限定名額，適合國小低年級\n\n📲 免費申請，點圖了解\n\n#台中媽媽推薦 #學習節奏 #手寫練習"
+      "台北市的家長，這個免費機會別錯過。\n​\n孩子在幼兒園階段打好識字基礎，是小學閱讀的起跑線。識字量不夠，小三之後很容易跟不上、失去閱讀興趣。\n​\n【108課綱・識字啟蒙班】台北市限定，現正招生中\n✅ 招生對象：3-8歲 幼兒園在讀兒童\n✅ 上課時間：每週一至週五\n✅ 課程費用：0元（市值499元）\n✅ 加碼贈：108課綱識字卡（字詞句）\n​\n名額有限，先報先得。\n​\n👉 點擊圖片立即報名",
+      "台北市 3-8歲孩子的家長，識字啟蒙班免費開放報名了。\n​\n識字是所有學習的地基，幼兒園階段補好識字，往後閱讀、考試都更有底氣。\n​\n108課綱識字啟蒙班，台北市限定，0元報名，還加碼送108課綱識字卡。\n​\n👉 點擊圖片免費報名"
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 16,
+    "rank": 19,
     "tier": "A",
     "concept": "25943 GPT批量-情緒博客來繪本復刻-勇敢1(育兒小百科)",
     "adNumber": "25943",
@@ -1674,7 +1805,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_16.jpg",
+    "image": "assets/wiki_19.jpg",
     "headlines": [
       "孩子輸不起、一輸就崩潰？",
       "「我不怕失敗」可以慢慢教",
@@ -1686,12 +1817,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 17,
+    "rank": 20,
     "tier": "A",
     "concept": "25858 醜圖-GPT演說家復刻-桃園市1",
     "adNumber": "25858",
@@ -1717,7 +1848,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_17.jpg",
+    "image": "assets/wiki_20.jpg",
     "headlines": [
       "桃園市小小演說家 5 日自信表達課",
       "桃園市3-8歲免費，限額 200 名募集中",
@@ -1731,12 +1862,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 18,
+    "rank": 21,
     "tier": "A",
     "concept": "25992 GPT-閱讀識字夏令營徵集-高雄市閱讀識字徵集(小百科)",
     "adNumber": "25992",
@@ -1762,7 +1893,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_18.jpg",
+    "image": "assets/wiki_21.jpg",
     "headlines": [
       "高雄市0元名額開放",
       "高雄市3-6歲識字打底",
@@ -1776,12 +1907,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "育兒小百科",
-    "rank": 19,
+    "rank": 22,
     "tier": "A",
     "concept": "25332 醜圖-我不是壞小孩-通投（小百科）❌",
     "adNumber": "25332",
@@ -1807,7 +1938,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_19.jpg",
+    "image": "assets/wiki_22.jpg",
     "headlines": [
       "情緒爆炸前，他只是想被理解",
       "情緒需要練習，不是天生就會",
@@ -1820,28 +1951,28 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
-    "account": "育兒小百科",
-    "rank": 20,
+    "account": "輕鬆學國英數",
+    "rank": 1,
     "tier": "A",
-    "concept": "26039 暑假識字練習（Rose）0803-A",
-    "adNumber": "26039",
-    "name": "26039 暑假識字練習（Rose）0803-A",
-    "leads": 16,
-    "spend": 109.93,
-    "cpl": 6.87,
-    "ctr": 1.58,
-    "recent14Leads": 6,
-    "previous14Leads": 10,
+    "concept": "35770 GPT-H5九九乘法強化班B(輕鬆學)",
+    "adNumber": "35770",
+    "name": "35770 GPT-H5九九乘法強化班B(輕鬆學)",
+    "leads": 184,
+    "spend": 681.68,
+    "cpl": 3.7,
+    "ctr": 2.12,
+    "recent14Leads": 12,
+    "previous14Leads": 69,
     "recent7Leads": 0,
-    "previous7Leads": 6,
-    "trendPct": -40,
-    "firstLeadDate": "2026-08-04",
-    "lastLeadDate": "2026-08-16",
-    "created": "2026-08-03",
+    "previous7Leads": 12,
+    "trendPct": -83,
+    "firstLeadDate": "2026-06-30",
+    "lastLeadDate": "2026-08-20",
+    "created": "2026-06-30",
     "active": false,
     "variants": 1,
     "flags": {
@@ -1851,126 +1982,40 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/wiki_20.jpg",
+    "image": "assets/easy_01.jpg",
     "headlines": [
-      "✏️ 暑假識字練習｜每天10分鐘",
-      "📄 精美識字學習單免費領",
-      "✅ 從認得字，到能寫一格、說一詞",
-      "開學前先補常用字",
-      "3-8歲識字任務0元"
+      "🌞 暑假九九特訓",
+      "🧮 每天10分鐘",
+      "📩 免費領取名額",
+      "✅ 高頻題不再卡",
+      "⭐ 市價630元免費"
     ],
     "bodies": [
-      "孩子會認幾個字，但換到學習單上又不確定怎麼寫？\n​\n這份暑假識字練習把任務拆小：\n✅ 看一張圖卡\n✅ 讀一個常用字\n✅ 寫一格，再說一個詞\n​\n練習前，孩子看到字常說「我不會」；練習後，開始能照著一格一格完成，也比較願意把字念出來\n​\n👉 點擊領取",
-      "暑假每天10分鐘，讀一張、寫一格、說一詞。讓孩子從看到字說不會，到願意跟著完成識字練習\n​\n👇 點圖領取"
+      "孩子會背九九乘法，不代表真的算得快。\n​\n暑假可以用每天 10 分鐘，把高頻題練到更熟：7×8、9×6、8×7，不再每次卡住。\n九九特訓班限時 0 元，市價 630 元。\n​\n📩 點圖免費報名。",
+      "乘法表熟不熟，會直接影響後面的乘除法速度。\n​\n這次暑假九九特訓班，適合想在開學前補底的孩子。\n每天短練，不需要一次壓很久。\n​\n📩 現在 0 元領取名額。"
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "育兒小百科",
-    "rank": 21,
-    "tier": "A",
-    "concept": "25850 醜圖-博客來英語封面-Let's Go（child_wiki）",
-    "adNumber": "25850",
-    "name": "25850 醜圖-博客來英語封面-Let's Go（child_wiki）",
-    "leads": 12,
-    "spend": 103.58,
-    "cpl": 8.63,
-    "ctr": 3.15,
-    "recent14Leads": 0,
-    "previous14Leads": 0,
-    "recent7Leads": 0,
-    "previous7Leads": 0,
-    "trendPct": 0,
-    "firstLeadDate": "2026-05-15",
-    "lastLeadDate": "2026-05-23",
-    "created": "2026-05-14",
-    "active": false,
-    "variants": 1,
-    "flags": {
-      "efficient": false,
-      "continuous": false,
-      "improving": false,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/wiki_21.jpg",
-    "headlines": [
-      "Let's Go！2-8歲趣味英語啟蒙課",
-      "形音義同步，2-8歲啟蒙效果最好",
-      "2-8歲家長免費領取"
-    ],
-    "bodies": [
-      "Let's Go！\n2-8 歲趣味英語啟蒙課，免費領取。\n​\n研究顯示，2-8 歲的孩子每天接觸 15 分鐘有系統的英語輸入，1 年累積等於 90+ 小時的英語環境，足以建立基礎字母、發音、口說能力。\n​\n🗣 學發音 × 📖 學單字 × 💬 學口說\n從 A 到 Z，分齡循序漸進。\n​\n▍2-8歲家長免費領\n👉 點擊圖片立即領取",
-      "什麼樣的英語啟蒙資源，適合 2-8 歲？\n​\n關鍵不在量，而在「字母 + 發音 + 單字」三者能不能同步建立連結。\n​\n「Let's Go！」依照大腦語音敏感期設計，每個字母都同時練形、音、義。\n​\n▍2-8歲家長免費下載\n👉 點擊圖片立即領取"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "育兒小百科",
-    "rank": 22,
-    "tier": "A",
-    "concept": "26053 GPT-學習單課程列舉-復刻 暑假識字練習圖(小百科)",
-    "adNumber": "26053",
-    "name": "26053 GPT-學習單課程列舉-復刻 暑假識字練習圖(小百科)",
-    "leads": 11,
-    "spend": 104.44,
-    "cpl": 9.49,
-    "ctr": 1.72,
-    "recent14Leads": 2,
-    "previous14Leads": 9,
-    "recent7Leads": 0,
-    "previous7Leads": 2,
-    "trendPct": -78,
-    "firstLeadDate": "2026-08-07",
-    "lastLeadDate": "2026-08-13",
-    "created": "2026-08-06",
-    "active": false,
-    "variants": 1,
-    "flags": {
-      "efficient": false,
-      "continuous": false,
-      "improving": false,
-      "newImproving": false,
-      "isNew": true
-    },
-    "image": "assets/wiki_22.jpg",
-    "headlines": [
-      "暑假識字每天10分鐘",
-      "免費領識字學習單",
-      "3到8歲識字練習✏️"
-    ],
-    "bodies": [
-      "暑假想幫孩子增加識字量，不用先逼著抄滿一整頁。✏️\n​\n看圖認字、拆解筆畫，再做短短練習，孩子更容易理解也比較不排斥。\n​\n小百科推薦 3-8 歲每天 10 分鐘，暑假先把常見字打底。\n​\n暑假識字練習：\n🔤 圖像連結字義，認字更有線索\n📝 筆順與描寫，慢慢熟悉字形\n🧠 小任務反覆複習，加深印象\n🎁 報名免費體驗，加碼領識字學習單\n​\n👉 點擊圖片免費領取\n#育兒小百科 #暑假識字 #幼兒學習單 #JOJO閱讀",
-      "孩子認字容易忘，可能只是少了圖像和練習線索。🔎\n​\n把字放進圖片、故事和筆順任務裡，記憶會比單純硬背更自然。\n​\n3-8 歲暑假識字練習免費體驗，每天 10 分鐘，加碼領學習單。\n​\n👉 點擊圖片免費領取\n#識字啟蒙 #暑假學習 #小百科推薦"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 1,
+    "rank": 2,
     "tier": "A",
     "concept": "35548 加減法基礎課程-台北(輕鬆學)",
     "adNumber": "35548",
     "name": "35548 加減法基礎課程-台北(輕鬆學)",
-    "leads": 159,
-    "spend": 763.62,
-    "cpl": 4.8,
-    "ctr": 4.08,
+    "leads": 136,
+    "spend": 676.34,
+    "cpl": 4.97,
+    "ctr": 4.06,
     "recent14Leads": 0,
     "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
+    "firstLeadDate": "2026-04-28",
     "lastLeadDate": "2026-06-11",
     "created": "2026-04-22",
     "active": false,
@@ -1982,7 +2027,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_01.jpg",
+    "image": "assets/easy_02.jpg",
     "headlines": [
       "【台北免費】加減法基礎班：0元（市價630元）開放報名",
       "台北家長：把加減法打穩，小學數學省力很多",
@@ -1996,12 +2041,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 2,
+    "rank": 3,
     "tier": "A",
     "concept": "35746 caiyi-九九乘法強化班-A(輕鬆學)",
     "adNumber": "35746",
@@ -2027,7 +2072,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_02.jpg",
+    "image": "assets/easy_03.jpg",
     "headlines": [
       "暑假限定｜九九乘法強化班 0 元體驗 ☀️",
       "【免費報名】從背誦到速算，整個暑假練到熟 🎁",
@@ -2041,26 +2086,26 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 3,
+    "rank": 4,
     "tier": "A",
     "concept": "35550 加減法基礎課程-桃園(輕鬆學)",
     "adNumber": "35550",
     "name": "35550 加減法基礎課程-桃園(輕鬆學)",
-    "leads": 120,
-    "spend": 574.73,
-    "cpl": 4.79,
-    "ctr": 3.97,
+    "leads": 111,
+    "spend": 550.31,
+    "cpl": 4.96,
+    "ctr": 3.96,
     "recent14Leads": 0,
     "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": 0,
-    "firstLeadDate": "2026-04-26",
+    "firstLeadDate": "2026-04-28",
     "lastLeadDate": "2026-06-12",
     "created": "2026-04-22",
     "active": false,
@@ -2072,7 +2117,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_03.jpg",
+    "image": "assets/easy_04.jpg",
     "headlines": [
       "【桃園免費】加減法基礎班：0元（市價630元）開放報名",
       "桃園家長：把加減法打穩，小學數學省力很多",
@@ -2086,12 +2131,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 4,
+    "rank": 5,
     "tier": "A",
     "concept": "35718 caiyi-心算速算班-A(輕鬆學)",
     "adNumber": "35718",
@@ -2117,7 +2162,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_04.jpg",
+    "image": "assets/easy_05.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】口算、心算 速度與正確率一起 🎁",
@@ -2131,12 +2176,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 5,
+    "rank": 6,
     "tier": "A",
     "concept": "35719 caiyi-心算速算班-B(輕鬆學)",
     "adNumber": "35719",
@@ -2162,7 +2207,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_05.jpg",
+    "image": "assets/easy_06.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】每天 10 分鐘 練出速算反 🎁",
@@ -2176,12 +2221,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 6,
+    "rank": 7,
     "tier": "A",
     "concept": "35747 caiyi-九九乘法強化班-B(輕鬆學)",
     "adNumber": "35747",
@@ -2207,7 +2252,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_06.jpg",
+    "image": "assets/easy_07.jpg",
     "headlines": [
       "暑假限定｜九九乘法強化班 0 元體驗 ☀️",
       "【免費報名】從背誦到速算，整個暑假練到熟 🎁",
@@ -2221,12 +2266,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 7,
+    "rank": 8,
     "tier": "A",
     "concept": "35722 caiyi-九九乘法強化班-A(輕鬆學)",
     "adNumber": "35722",
@@ -2252,7 +2297,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_07.jpg",
+    "image": "assets/easy_08.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】從背誦到速算 整個暑假練到熟 🎁",
@@ -2266,26 +2311,26 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 8,
+    "rank": 9,
     "tier": "A",
     "concept": "35529 caiyi圖-加減法基礎班2-黃(輕鬆學)",
     "adNumber": "35529",
     "name": "35529 caiyi圖-加減法基礎班2-黃(輕鬆學)",
-    "leads": 49,
-    "spend": 350.23,
-    "cpl": 7.15,
+    "leads": 44,
+    "spend": 325.86,
+    "cpl": 7.41,
     "ctr": 3.6,
     "recent14Leads": 0,
     "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
+    "firstLeadDate": "2026-04-28",
     "lastLeadDate": "2026-06-06",
     "created": "2026-04-14",
     "active": false,
@@ -2297,7 +2342,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_08.jpg",
+    "image": "assets/easy_09.jpg",
     "headlines": [
       "限時免費！國小低年級加減法基礎班",
       "加減法「學了」和「自動化了」是兩件事",
@@ -2310,12 +2355,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 9,
+    "rank": 10,
     "tier": "A",
     "concept": "35723 caiyi-九九乘法強化班-B(輕鬆學)",
     "adNumber": "35723",
@@ -2341,7 +2386,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_09.jpg",
+    "image": "assets/easy_10.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】速算挑戰 + 每日進度追蹤 🎁",
@@ -2355,12 +2400,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 10,
+    "rank": 11,
     "tier": "A",
     "concept": "35686 GPT-Claude批量-計算力夏令營2(JOJO數學)",
     "adNumber": "35686",
@@ -2386,7 +2431,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_10.jpg",
+    "image": "assets/easy_11.jpg",
     "headlines": [
       "9x9 乘法入門，從理解開始學",
       "暑假銜接乘法：兩位數×一位數一次練到位",
@@ -2397,26 +2442,26 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 11,
+    "rank": 12,
     "tier": "A",
     "concept": "25796 醜圖-新舊課綱對比表格3",
     "adNumber": "25796",
     "name": "25796 醜圖-新舊課綱對比表格3",
-    "leads": 26,
-    "spend": 245.36,
-    "cpl": 9.44,
-    "ctr": 3.11,
+    "leads": 24,
+    "spend": 228.01,
+    "cpl": 9.5,
+    "ctr": 3.07,
     "recent14Leads": 0,
     "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": 0,
-    "firstLeadDate": "2026-04-25",
+    "firstLeadDate": "2026-04-28",
     "lastLeadDate": "2026-05-03",
     "created": "2026-04-24",
     "active": false,
@@ -2428,7 +2473,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_11.jpg",
+    "image": "assets/easy_12.jpg",
     "headlines": [
       "識字量縮水，90%家長還不知道",
       "108課綱少教350字，影響有多大？",
@@ -2440,12 +2485,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 12,
+    "rank": 13,
     "tier": "A",
     "concept": "35749 caiyi-心算速算班-B(輕鬆學)",
     "adNumber": "35749",
@@ -2471,7 +2516,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_12.jpg",
+    "image": "assets/easy_13.jpg",
     "headlines": [
       "暑假限定｜心算速算班 0 元體驗 ☀️",
       "【免費報名】口算、心算 速度與正確率一起 🎁",
@@ -2485,12 +2530,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 13,
+    "rank": 14,
     "tier": "A",
     "concept": "35769 GPT-H5九九乘法強化班A(輕鬆學)",
     "adNumber": "35769",
@@ -2516,7 +2561,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_13.jpg",
+    "image": "assets/easy_14.jpg",
     "headlines": [
       "🔢 九九乘法強化班",
       "⚡ 從背誦到速算",
@@ -2530,12 +2575,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 14,
+    "rank": 15,
     "tier": "A",
     "concept": "35748 caiyi-心算速算班-A(輕鬆學)",
     "adNumber": "35748",
@@ -2561,7 +2606,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_14.jpg",
+    "image": "assets/easy_15.jpg",
     "headlines": [
       "暑假限定｜心算速算班 0 元體驗 ☀️",
       "【免費報名】口算、心算 速度與正確率一起 🎁",
@@ -2575,12 +2620,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 15,
+    "rank": 16,
     "tier": "A",
     "concept": "35716 caiyi-直式計算強化班-A(輕鬆學)",
     "adNumber": "35716",
@@ -2606,7 +2651,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_15.jpg",
+    "image": "assets/easy_16.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】100 以內直式加減 × 進 🎁",
@@ -2620,12 +2665,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 16,
+    "rank": 17,
     "tier": "A",
     "concept": "35743 caiyi-計算力夏令營-B(輕鬆學)",
     "adNumber": "35743",
@@ -2651,7 +2696,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_16.jpg",
+    "image": "assets/easy_17.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】計算力 × 專注力 雙提升， 🎁",
@@ -2665,12 +2710,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 17,
+    "rank": 18,
     "tier": "A",
     "concept": "25907 幼兒入門識字學習單（easylearning_tw）",
     "adNumber": "25907",
@@ -2696,7 +2741,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_17.jpg",
+    "image": "assets/easy_18.jpg",
     "headlines": [
       "幼兒入門識字學習單，免費領",
       "9個生活高頻字，圖像+注音+漢字",
@@ -2708,12 +2753,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 18,
+    "rank": 19,
     "tier": "A",
     "concept": "25929 GPT批量-正音班大字復刻(輕鬆學)",
     "adNumber": "25929",
@@ -2739,7 +2784,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_18.jpg",
+    "image": "assets/easy_19.jpg",
     "headlines": [
       "正音班招生中：每天 10 分鐘打好注音",
       "上小一前，先把注音唸標準",
@@ -2751,12 +2796,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 19,
+    "rank": 20,
     "tier": "A",
     "concept": "35758 GPT-專業14天計算養成-通投(輕鬆學)",
     "adNumber": "35758",
@@ -2782,7 +2827,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_19.jpg",
+    "image": "assets/easy_20.jpg",
     "headlines": [
       "14 天計算挑戰：徵集全台 100 個家庭",
       "國小計算總出錯？14 天練到穩",
@@ -2794,12 +2839,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 20,
+    "rank": 21,
     "tier": "A",
     "concept": "25949 GPT批量-夏令營高轉化復刻-口說(輕鬆學)",
     "adNumber": "25949",
@@ -2825,7 +2870,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_20.jpg",
+    "image": "assets/easy_21.jpg",
     "headlines": [
       "台南 2-8 歲：暑假英語口說營免費",
       "5 日練到敢開口，0 元體驗",
@@ -2837,12 +2882,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "輕鬆學國英數",
-    "rank": 21,
+    "rank": 22,
     "tier": "A",
     "concept": "35721 caiyi-加減法素養班-B(輕鬆學)",
     "adNumber": "35721",
@@ -2868,7 +2913,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/easy_21.jpg",
+    "image": "assets/easy_22.jpg",
     "headlines": [
       "暑假限定｜計算力夏令營 0 元體驗 ☀️",
       "【免費報名】素養應用題 從讀題到答題全程 🎁",
@@ -2882,53 +2927,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "輕鬆學國英數",
-    "rank": 22,
-    "tier": "A",
-    "concept": "25999 108課綱識字卡（Rose）0721-A",
-    "adNumber": "25999",
-    "name": "25999 108課綱識字卡（Rose）0721-A",
-    "leads": 9,
-    "spend": 74.64,
-    "cpl": 8.29,
-    "ctr": 1.97,
-    "recent14Leads": 0,
-    "previous14Leads": 2,
-    "recent7Leads": 0,
-    "previous7Leads": 0,
-    "trendPct": -100,
-    "firstLeadDate": "2026-07-22",
-    "lastLeadDate": "2026-07-29",
-    "created": "2026-07-20",
-    "active": false,
-    "variants": 3,
-    "flags": {
-      "efficient": false,
-      "continuous": false,
-      "improving": false,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/easy_22.jpg",
-    "headlines": [
-      "📚 108課綱識字卡｜免費領",
-      "🧩 6張字卡：看字、配圖、說詞語",
-      "👀 孩子看到字就跳過？先從圖像接上",
-      "認得山、手、雨，才有機會自己讀",
-      "3-8歲暑假識字小任務"
-    ],
-    "bodies": [
-      "📚 孩子不是不想讀，有時候是字還沒有和畫面連起來。\n​\n先用6張常見字卡練一輪：\n✅ 看「山」找到山的圖片\n✅ 看「雨」說出下雨\n✅ 看「米」說出白米飯\n✅ 最後挑一張造一個詞\n​\n接觸前：看到字就跳過或等大人念。\n接觸後：會先看字、找圖，再試著說出詞語。\n​\n👉 點擊領取",
-      "🧩 先從6張常見字卡開始。\n看字、配圖、說詞語，把文字和生活畫面接起來。\n從看到字就跳過，到願意先猜一個\n​\n👇 點圖領取"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
@@ -2942,7 +2942,7 @@
     "cpl": 4.48,
     "ctr": 2.92,
     "recent14Leads": 0,
-    "previous14Leads": 16,
+    "previous14Leads": 7,
     "recent7Leads": 0,
     "previous7Leads": 0,
     "trendPct": -100,
@@ -2970,12 +2970,57 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
     "rank": 2,
+    "tier": "A",
+    "concept": "26000 故事線索遊戲卡（Rose）0721-A",
+    "adNumber": "26000",
+    "name": "26000 故事線索遊戲卡（Rose）0721-A",
+    "leads": 98,
+    "spend": 707.31,
+    "cpl": 7.22,
+    "ctr": 2.37,
+    "recent14Leads": 6,
+    "previous14Leads": 65,
+    "recent7Leads": 0,
+    "previous7Leads": 6,
+    "trendPct": -91,
+    "firstLeadDate": "2026-07-22",
+    "lastLeadDate": "2026-08-18",
+    "created": "2026-07-21",
+    "active": false,
+    "variants": 3,
+    "flags": {
+      "efficient": true,
+      "continuous": true,
+      "improving": false,
+      "newImproving": false,
+      "isNew": false
+    },
+    "image": "assets/pages_02.jpg",
+    "headlines": [
+      "🦊 每天一張，找出故事線索",
+      "🔎 誰、在哪裡、發生什麼事？",
+      "📖 專注力遊戲卡｜70+頁免費領",
+      "從只看畫面，到能說出故事順序",
+      "3-8歲閱讀理解遊戲"
+    ],
+    "bodies": [
+      "🦊 孩子有看圖，不代表已經抓到故事。\n​\n一張遊戲卡先找3個線索：\n✅ 誰在故事裡\n✅ 他在哪裡\n✅ 發生了什麼事\n​\n接觸前：看到狐狸，只說「一隻狐狸」。\n接觸後：能說「狐狸走在森林裡，要去找朋友」。\n​\n👇 點圖領取",
+      "🔎 每天一張，先找誰、在哪裡、發生什麼事。\n從只說出畫面裡的東西，到能把故事連成一句\n​\n👉 點擊領取"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "繪本福利社",
+    "rank": 3,
     "tier": "A",
     "concept": "35756 GPT-粉色14天計算養成-通投(繪本福利社)",
     "adNumber": "35756",
@@ -3001,7 +3046,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_02.jpg",
+    "image": "assets/pages_03.jpg",
     "headlines": [
       "暑假徵集 100 個家庭：14 天練出計算力",
       "孩子算得慢、常粗心？14 天養成試試",
@@ -3013,12 +3058,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 3,
+    "rank": 4,
     "tier": "A",
     "concept": "26002 迷宮卡（Rose）0721-B",
     "adNumber": "26002",
@@ -3044,7 +3089,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_03.jpg",
+    "image": "assets/pages_04.jpg",
     "headlines": [
       "🐰 注音迷宮卡｜找出ㄊ走到蘿蔔",
       "🧩 玩迷宮，也練ㄊ、ㄉ辨識",
@@ -3058,12 +3103,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 4,
+    "rank": 5,
     "tier": "A",
     "concept": "25937 Codex-英語繪本開口說2（Rose）-繪本福利社-B",
     "adNumber": "25937",
@@ -3089,7 +3134,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_04.jpg",
+    "image": "assets/pages_05.jpg",
     "headlines": [
       "📖 2-8歲英語繪本開口練習",
       "🗣 從 I like... 開始說一句",
@@ -3103,12 +3148,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 5,
+    "rank": 6,
     "tier": "A",
     "concept": "25973 復刻-暑假繪本練習包（Rose）-A",
     "adNumber": "25973",
@@ -3134,7 +3179,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_05.jpg",
+    "image": "assets/pages_06.jpg",
     "headlines": [
       "📚 暑假繪本練習包｜免費領",
       "故事卡＋提問單，在家就能做",
@@ -3148,12 +3193,57 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 6,
+    "rank": 7,
+    "tier": "A",
+    "concept": "26065 故事線索遊戲卡（Rose）0817-A",
+    "adNumber": "26065",
+    "name": "26065 故事線索遊戲卡（Rose）0817-A",
+    "leads": 1,
+    "spend": 11.67,
+    "cpl": 11.67,
+    "ctr": 3.95,
+    "recent14Leads": 1,
+    "previous14Leads": 0,
+    "recent7Leads": 0,
+    "previous7Leads": 1,
+    "trendPct": null,
+    "firstLeadDate": "2026-08-18",
+    "lastLeadDate": "2026-08-18",
+    "created": "2026-08-17",
+    "active": false,
+    "variants": 1,
+    "flags": {
+      "efficient": false,
+      "continuous": false,
+      "improving": false,
+      "newImproving": false,
+      "isNew": true
+    },
+    "image": "assets/pages_07.jpg",
+    "headlines": [
+      "🕵️ 開學閱讀理解先練三件事",
+      "讀完故事，只問誰、在哪裡、發生什麼事",
+      "📖 故事線索遊戲卡免費領",
+      "從讀完說不知道，到能回答三題",
+      "🎒 每天一張，找到故事線索"
+    ],
+    "bodies": [
+      "🕵️ 孩子讀完故事，只說「不知道」？\n​\n開學後可以先練三個固定問題：\n✅ 誰在故事裡？\n✅ 他在哪裡？\n✅ 發生什麼事？\n​\n接觸前：書讀完，內容也散掉。\n接觸後：孩子會回頭找線索，說出故事重點。\n​\n🎁 點圖領取",
+      "閱讀理解先不要問太難。\n讀完故事，先回答：誰、在哪裡、發生什麼事。\n​\n👉 點擊領取"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "繪本福利社",
+    "rank": 8,
     "tier": "A",
     "concept": "25959 Codex-暑假繪本練習包（Rose）-A",
     "adNumber": "25959",
@@ -3179,7 +3269,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_06.jpg",
+    "image": "assets/pages_08.jpg",
     "headlines": [
       "暑假繪本練習包｜免費領",
       "故事卡＋提問單，在家就能做",
@@ -3193,12 +3283,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 7,
+    "rank": 9,
     "tier": "A",
     "concept": "26019 暑假閱讀任務包（Rose）0730-A",
     "adNumber": "26019",
@@ -3224,7 +3314,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_07.jpg",
+    "image": "assets/pages_09.jpg",
     "headlines": [
       "🎁 暑假閱讀任務包｜免費領",
       "📄 5日共讀學習單，每天10分鐘",
@@ -3238,12 +3328,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 8,
+    "rank": 10,
     "tier": "A",
     "concept": "25970 復刻-108識字卡拼圖2（Rose）-B",
     "adNumber": "25970",
@@ -3269,7 +3359,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_08.jpg",
+    "image": "assets/pages_10.jpg",
     "headlines": [
       "📚 108課綱識字卡｜3-8歲免費領",
       "孩子看到字就等你唸？先玩16張",
@@ -3283,12 +3373,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 9,
+    "rank": 11,
     "tier": "A",
     "concept": "25985 GPT-閱讀識字夏令營大字圖-復刻英文-閱讀識字夏令營A(繪本福利社)",
     "adNumber": "25985",
@@ -3314,7 +3404,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_09.jpg",
+    "image": "assets/pages_11.jpg",
     "headlines": [
       "免費領注音識字學習單",
       "4-7歲注音識字福利",
@@ -3326,12 +3416,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 10,
+    "rank": 12,
     "tier": "A",
     "concept": "25924 GPT批量-夏令營-啟蒙(繪本福利社)",
     "adNumber": "25924",
@@ -3357,7 +3447,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_10.jpg",
+    "image": "assets/pages_12.jpg",
     "headlines": [
       "2026 美語啟蒙夏令營：4-7 歲的第一個英語暑假",
       "暑假兩個月，幫孩子打開英語耳朵",
@@ -3369,12 +3459,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "繪本福利社",
-    "rank": 11,
+    "rank": 13,
     "tier": "A",
     "concept": "25934 Codex-單字遊戲學習單（Rose）-繪本福利社-B",
     "adNumber": "25934",
@@ -3400,7 +3490,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/pages_11.jpg",
+    "image": "assets/pages_13.jpg",
     "headlines": [
       "🧩 單字先玩，不先背",
       "✏️ 配對、找一找、描一描",
@@ -3414,28 +3504,28 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
     "rank": 1,
     "tier": "A",
-    "concept": "25904 注音識字班（jojoreading_tw）",
-    "adNumber": "25904",
-    "name": "25904 注音識字班（jojoreading_tw）",
-    "leads": 600,
-    "spend": 3585.83,
-    "cpl": 5.98,
-    "ctr": 2.4,
-    "recent14Leads": 92,
-    "previous14Leads": 13,
-    "recent7Leads": 73,
-    "previous7Leads": 19,
-    "trendPct": 608,
-    "firstLeadDate": "2026-06-10",
-    "lastLeadDate": "2026-08-25",
-    "created": "2026-06-09",
+    "concept": "26033 我會冷靜一下（Rose）0803-B",
+    "adNumber": "26033",
+    "name": "26033 我會冷靜一下（Rose）0803-B",
+    "leads": 170,
+    "spend": 738.93,
+    "cpl": 4.35,
+    "ctr": 2.19,
+    "recent14Leads": 124,
+    "previous14Leads": 46,
+    "recent7Leads": 77,
+    "previous7Leads": 47,
+    "trendPct": 170,
+    "firstLeadDate": "2026-08-04",
+    "lastLeadDate": "2026-08-28",
+    "created": "2026-08-03",
     "active": true,
     "variants": 1,
     "flags": {
@@ -3447,18 +3537,20 @@
     },
     "image": "assets/jojo_01.jpg",
     "headlines": [
-      "注音識字班招生中，5日0元",
-      "4-7歲注音37音+基礎國字100",
-      "升小一銜接，每天10分鐘紮根"
+      "😌 孩子生氣時，先練一句「我想冷靜」",
+      "📚 5日繪本情緒課｜3-8歲0元",
+      "💬 從大哭大叫，到能說出我怎麼了",
+      "生氣不是壞事，孩子需要練說出口",
+      "每天15分鐘，陪孩子把情緒說清楚"
     ],
     "bodies": [
-      "🔤 注音識字班｜招生中\n5 日免費體驗，名額有限。\n​\n✅ 招生對象：4-7 歲幼大至小二\n⏰ 上課時間：每天 10 分鐘，累積成果\n📚 課程內容：注音 37 音 + 基礎國字 100\n💰 課程費用：5 日 0 元（市值 590 元）\n​\n幼兒園升小一銜接的最關鍵基礎，從注音開始紮根。\n​\n▍5日0元，立即報名\n👉 點擊圖片立即領取",
-      "🔤 注音 37 音 + 基礎國字 100，5 日打底計畫。\n4-7 歲升小一前最必要的銜接準備，免費體驗。\n​\n▍5日0元，名額有限\n👉 點擊圖片立即報名"
+      "孩子一急就大喊、推人或哭到停不下來？\n​\n這次用5日繪本情緒課，陪孩子每天15分鐘練：\n✅ 看故事人物的表情\n✅ 說出「我現在很生氣」\n✅ 再補一句「我想先冷靜」\n​\n接觸前，孩子只會用哭和吼讓大人猜；接觸後，開始能停一下，說出自己正在生氣、想先冷靜。3-8歲可做\n​\n👉 點擊領取",
+      "孩子生氣只會哭？每天15分鐘，用繪本練一句「我想先冷靜」，從用哭鬧表達，到願意說出感受\n​\n👇 點圖領取"
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -3467,19 +3559,19 @@
     "concept": "25869 注音尋寶卡",
     "adNumber": "25869",
     "name": "25869 注音尋寶卡",
-    "leads": 168,
-    "spend": 1033.01,
-    "cpl": 6.15,
+    "leads": 169,
+    "spend": 1037.39,
+    "cpl": 6.14,
     "ctr": 1.97,
     "recent14Leads": 1,
     "previous14Leads": 9,
-    "recent7Leads": 0,
-    "previous7Leads": 1,
+    "recent7Leads": 1,
+    "previous7Leads": 0,
     "trendPct": -89,
     "firstLeadDate": "2026-05-12",
-    "lastLeadDate": "2026-08-12",
+    "lastLeadDate": "2026-08-28",
     "created": "2025-08-13",
-    "active": false,
+    "active": true,
     "variants": 1,
     "flags": {
       "efficient": true,
@@ -3500,57 +3592,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
     "rank": 3,
-    "tier": "A",
-    "concept": "26033 我會冷靜一下（Rose）0803-B",
-    "adNumber": "26033",
-    "name": "26033 我會冷靜一下（Rose）0803-B",
-    "leads": 123,
-    "spend": 525.27,
-    "cpl": 4.27,
-    "ctr": 2.11,
-    "recent14Leads": 98,
-    "previous14Leads": 25,
-    "recent7Leads": 44,
-    "previous7Leads": 54,
-    "trendPct": 292,
-    "firstLeadDate": "2026-08-04",
-    "lastLeadDate": "2026-08-25",
-    "created": "2026-08-03",
-    "active": true,
-    "variants": 1,
-    "flags": {
-      "efficient": true,
-      "continuous": true,
-      "improving": true,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/jojo_03.jpg",
-    "headlines": [
-      "😌 孩子生氣時，先練一句「我想冷靜」",
-      "📚 5日繪本情緒課｜3-8歲0元",
-      "💬 從大哭大叫，到能說出我怎麼了",
-      "生氣不是壞事，孩子需要練說出口",
-      "每天15分鐘，陪孩子把情緒說清楚"
-    ],
-    "bodies": [
-      "孩子一急就大喊、推人或哭到停不下來？\n​\n這次用5日繪本情緒課，陪孩子每天15分鐘練：\n✅ 看故事人物的表情\n✅ 說出「我現在很生氣」\n✅ 再補一句「我想先冷靜」\n​\n接觸前，孩子只會用哭和吼讓大人猜；接觸後，開始能停一下，說出自己正在生氣、想先冷靜。3-8歲可做\n​\n👉 點擊領取",
-      "孩子生氣只會哭？每天15分鐘，用繪本練一句「我想先冷靜」，從用哭鬧表達，到願意說出感受\n​\n👇 點圖領取"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "JoJo閱讀",
-    "rank": 4,
     "tier": "A",
     "concept": "22144 城市版桃園市-B",
     "adNumber": "22144",
@@ -3576,7 +3623,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_04.jpg",
+    "image": "assets/jojo_03.jpg",
     "headlines": [
       "叮咚！桃園3-6歲家長免費領取",
       "桃園家長建議看看👉",
@@ -3589,12 +3636,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 5,
+    "rank": 4,
     "tier": "A",
     "concept": "25457 醜圖-ADHD自測表1",
     "adNumber": "25457",
@@ -3604,10 +3651,10 @@
     "cpl": 5.33,
     "ctr": 7.96,
     "recent14Leads": 0,
-    "previous14Leads": 6,
+    "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
-    "trendPct": -100,
+    "trendPct": 0,
     "firstLeadDate": "2026-07-03",
     "lastLeadDate": "2026-07-30",
     "created": "2025-08-12",
@@ -3620,7 +3667,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_05.jpg",
+    "image": "assets/jojo_04.jpg",
     "headlines": [
       "ADHD孩子的大腦額葉，為什麼活化程度低 30%？",
       "專注力差，不只是坐不住 >>",
@@ -3634,12 +3681,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 6,
+    "rank": 5,
     "tier": "A",
     "concept": "25923 GPT批量-學習單字母拼圖2(JoJo閱讀)",
     "adNumber": "25923",
@@ -3665,7 +3712,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_06.jpg",
+    "image": "assets/jojo_05.jpg",
     "headlines": [
       "26 個字母，從「描」到「寫」一步步來",
       "孩子記不住 ABC？先讓他「玩」起來",
@@ -3677,12 +3724,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 7,
+    "rank": 6,
     "tier": "A",
     "concept": "25892 復刻-徵集小小英語體驗家-新北市1",
     "adNumber": "25892",
@@ -3708,7 +3755,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_07.jpg",
+    "image": "assets/jojo_06.jpg",
     "headlines": [
       "徵集 新北市小小英語體驗家",
       "新北市 4-7 歲在讀兒童 0 元，限額募集",
@@ -3722,12 +3769,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 8,
+    "rank": 7,
     "tier": "A",
     "concept": "25891 復刻-美語啟蒙夏令營大字-JOJO",
     "adNumber": "25891",
@@ -3753,7 +3800,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_08.jpg",
+    "image": "assets/jojo_07.jpg",
     "headlines": [
       "2026暑假 美語啟蒙夏令營，4-7歲",
       "聽讀×口說×單字遊戲，3軸打底",
@@ -3765,12 +3812,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 9,
+    "rank": 8,
     "tier": "A",
     "concept": "25939 GPT批量-黃色學習單拼圖-注音7(JoJo閱讀)",
     "adNumber": "25939",
@@ -3796,7 +3843,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_09.jpg",
+    "image": "assets/jojo_08.jpg",
     "headlines": [
       "注音是閱讀的第一把鑰匙",
       "描熟注音，孩子才能自己讀",
@@ -3808,12 +3855,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 10,
+    "rank": 9,
     "tier": "A",
     "concept": "25939 GPT批量-黃色學習單拼圖-注音2(JoJo閱讀)",
     "adNumber": "25939",
@@ -3839,7 +3886,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_10.jpg",
+    "image": "assets/jojo_09.jpg",
     "headlines": [
       "注音是閱讀的第一把鑰匙",
       "描熟注音，孩子才能自己讀",
@@ -3851,56 +3898,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 11,
-    "tier": "A",
-    "concept": "22143 城市版新北市-B",
-    "adNumber": "22143",
-    "name": "22143 城市版新北市-B",
-    "leads": 7,
-    "spend": 92.8,
-    "cpl": 13.26,
-    "ctr": 4,
-    "recent14Leads": 0,
-    "previous14Leads": 0,
-    "recent7Leads": 0,
-    "previous7Leads": 0,
-    "trendPct": 0,
-    "firstLeadDate": "2026-04-26",
-    "lastLeadDate": "2026-06-04",
-    "created": "2025-07-03",
-    "active": false,
-    "variants": 1,
-    "flags": {
-      "efficient": false,
-      "continuous": false,
-      "improving": false,
-      "newImproving": false,
-      "isNew": false
-    },
-    "image": "assets/jojo_11.jpg",
-    "headlines": [
-      "叮咚！新北3-6歲家長免費領取",
-      "新北家長建議看看👉",
-      "【新北福利】3-6歲閱讀遊戲課",
-      "【新北免費】3-6歲閱讀遊戲課"
-    ],
-    "bodies": [
-      "暑假是3-6歲培養專注力的黃金期🌟\n#新北市專屬 #幼兒園福利 #免費領\n👉 暑假天天看卡通，擔心孩子專注力發展落後？\n👉 想引導寶貝多閱讀、培養專注力？\n\n★新北市限定★ 3-6歲閱讀遊戲課\n📚 互動繪本：4大主題童話寓言\n🧠 邏輯表達：10+次開口練習句型\n🧑‍🏫 高效學習：每週2000+字閱讀量\n📊 學習報告：4份專屬學習報告\n\n【👉  點擊圖片 免費領取】",
-      "#新北市專屬 #幼兒園福利 #免費領\n😓 暑假天天看卡通，擔心孩子專注力發展落後？\n💪 想引導寶貝多閱讀、培養專注力？\n\n暑假是3-6歲培養專注力的黃金期📚\n★新北市限定★ 3-6歲閱讀遊戲課\n░ 互動繪本：4大主題童話寓言\n░ 邏輯表達：10+次開口練習句型\n░ 高效學習：每週2000+字閱讀量\n░ 學習報告：4份專屬學習報告\n\n【👉  點擊圖片 免費領取】"
-    ],
-    "source": "Meta Insights",
-    "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
-  },
-  {
-    "account": "JoJo閱讀",
-    "rank": 12,
+    "rank": 10,
     "tier": "A",
     "concept": "25917 2026暑假-英語口說夏令營（jojoreading_tw）",
     "adNumber": "25917",
@@ -3926,7 +3929,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_12.jpg",
+    "image": "assets/jojo_10.jpg",
     "headlines": [
       "2026暑假英語口說夏令營，4-8歲",
       "跟讀×情境對話×口說發表，3模組",
@@ -3938,12 +3941,12 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
-    "rank": 13,
+    "rank": 11,
     "tier": "A",
     "concept": "25893 復刻-徵集小小英語體驗家-台北市2",
     "adNumber": "25893",
@@ -3969,7 +3972,7 @@
       "newImproving": false,
       "isNew": false
     },
-    "image": "assets/jojo_13.jpg",
+    "image": "assets/jojo_11.jpg",
     "headlines": [
       "台北市限定，小小英語體驗家募集中",
       "台北市 4-7 歲免費名額，立即報名",
@@ -3983,8 +3986,95 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "JoJo閱讀",
+    "rank": 12,
+    "tier": "A",
+    "concept": "26080 GPT-注音識字班-高雄市2(JOJO閱讀)",
+    "adNumber": "26080",
+    "name": "26080 GPT-注音識字班-高雄市2(JOJO閱讀)",
+    "leads": 5,
+    "spend": 50.01,
+    "cpl": 10,
+    "ctr": 1.87,
+    "recent14Leads": 5,
+    "previous14Leads": 0,
+    "recent7Leads": 2,
+    "previous7Leads": 3,
+    "trendPct": null,
+    "firstLeadDate": "2026-08-19",
+    "lastLeadDate": "2026-08-23",
+    "created": "2026-08-18",
+    "active": false,
+    "variants": 1,
+    "flags": {
+      "efficient": false,
+      "continuous": true,
+      "improving": true,
+      "newImproving": false,
+      "isNew": true
+    },
+    "image": "assets/jojo_12.jpg",
+    "headlines": [
+      "高雄市注音識字班招生",
+      "高雄市5日課0元體驗",
+      "每天10分鐘練注音"
+    ],
+    "bodies": [
+      "高雄市家長注意！孩子認得字，注音卻常常混在一起嗎？📣\n注音是閱讀與識字的基礎，先聽清楚、拼得出來，學習才更穩。\n每天短短練習，比一次死背更容易累積。\n​\nJOJO閱讀注音識字班：\n🔤 認識注音37音\n📖 累積100個基礎國字\n⏰ 每天10分鐘，連續5日\n🎁 高雄市3-6歲孩子限時0元體驗\n​\n👉 點擊圖片了解課程\n#高雄市家長 #注音識字 #JOJO閱讀",
+      "【高雄市3-6歲孩子限定】🌟\n注音容易搞混、看到字不敢念？先從遊戲化短任務開始。\n每天10分鐘，讓孩子一步步把聲音和文字連起來。\n​\n✅ 注音37音＋100個基礎國字\n✅ 每天10分鐘，5日居家練習\n✅ 從字音辨認到基礎識字\n✅ 高雄市限時0元體驗\n​\n👉 點擊圖片報名注音識字班\n#高雄市 #幼兒識字 #JOJO閱讀"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
+  },
+  {
+    "account": "JoJo閱讀",
+    "rank": 13,
+    "tier": "A",
+    "concept": "22143 城市版新北市-B",
+    "adNumber": "22143",
+    "name": "22143 城市版新北市-B",
+    "leads": 4,
+    "spend": 65.23,
+    "cpl": 16.31,
+    "ctr": 3.8,
+    "recent14Leads": 0,
+    "previous14Leads": 0,
+    "recent7Leads": 0,
+    "previous7Leads": 0,
+    "trendPct": 0,
+    "firstLeadDate": "2026-04-28",
+    "lastLeadDate": "2026-06-04",
+    "created": "2025-07-03",
+    "active": false,
+    "variants": 1,
+    "flags": {
+      "efficient": false,
+      "continuous": false,
+      "improving": false,
+      "newImproving": false,
+      "isNew": false
+    },
+    "image": "assets/jojo_13.jpg",
+    "headlines": [
+      "叮咚！新北3-6歲家長免費領取",
+      "新北家長建議看看👉",
+      "【新北福利】3-6歲閱讀遊戲課",
+      "【新北免費】3-6歲閱讀遊戲課"
+    ],
+    "bodies": [
+      "暑假是3-6歲培養專注力的黃金期🌟\n#新北市專屬 #幼兒園福利 #免費領\n👉 暑假天天看卡通，擔心孩子專注力發展落後？\n👉 想引導寶貝多閱讀、培養專注力？\n\n★新北市限定★ 3-6歲閱讀遊戲課\n📚 互動繪本：4大主題童話寓言\n🧠 邏輯表達：10+次開口練習句型\n🧑‍🏫 高效學習：每週2000+字閱讀量\n📊 學習報告：4份專屬學習報告\n\n【👉  點擊圖片 免費領取】",
+      "#新北市專屬 #幼兒園福利 #免費領\n😓 暑假天天看卡通，擔心孩子專注力發展落後？\n💪 想引導寶貝多閱讀、培養專注力？\n\n暑假是3-6歲培養專注力的黃金期📚\n★新北市限定★ 3-6歲閱讀遊戲課\n░ 互動繪本：4大主題童話寓言\n░ 邏輯表達：10+次開口練習句型\n░ 高效學習：每週2000+字閱讀量\n░ 學習報告：4份專屬學習報告\n\n【👉  點擊圖片 免費領取】"
+    ],
+    "source": "Meta Insights",
+    "libraryId": null,
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -3998,10 +4088,10 @@
     "cpl": 11.34,
     "ctr": 2.01,
     "recent14Leads": 0,
-    "previous14Leads": 2,
+    "previous14Leads": 0,
     "recent7Leads": 0,
     "previous7Leads": 0,
-    "trendPct": -100,
+    "trendPct": 0,
     "firstLeadDate": "2026-07-28",
     "lastLeadDate": "2026-07-30",
     "created": "2026-07-28",
@@ -4026,8 +4116,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4069,8 +4159,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4112,8 +4202,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4155,8 +4245,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4198,8 +4288,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4243,8 +4333,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4286,8 +4376,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4329,8 +4419,8 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   },
   {
     "account": "JoJo閱讀",
@@ -4372,7 +4462,7 @@
     ],
     "source": "Meta Insights",
     "libraryId": null,
-    "windowFrom": "2026-04-25",
-    "windowTo": "2026-08-25"
+    "windowFrom": "2026-04-28",
+    "windowTo": "2026-08-28"
   }
 ]
