@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-08-28 10:14",
+ "genStamp": "2026-08-28 20:21",
  "checkpointWd": "五",
  "today": "2026-08-28",
  "fetchStatus": "ok",
@@ -4138,6 +4138,46 @@
   "days": 10,
   "items": [
    {
+    "num": "26102",
+    "theme": "看圖認字卡0827",
+    "fullname": "26102 看圖認字卡（Rose）0827",
+    "uploaded": "2026-08-27",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/3636c081-70ad-4c46-bb9b-53f57444ae75.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/489e7581-0b2d-4aa8-8dd0-2728add2788d.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/489e7581-0b2d-4aa8-8dd0-2728add2788d.png",
+      "name": "26102 看圖認字卡（Rose）0827-A",
+      "leads": 3
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/3636c081-70ad-4c46-bb9b-53f57444ae75.png",
+      "name": "26102 看圖認字卡（Rose）0827-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 3,
+    "s10": 6.9,
+    "cpl": 2.3,
+    "ctr7": 1.6,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
     "num": "26086",
     "theme": "語句表達檢核0825",
     "fullname": "26086 語句表達檢核（Rose）0825",
@@ -4171,9 +4211,49 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 12.5,
-    "cpl": 6.3,
+    "s10": 14.3,
+    "cpl": 7.2,
     "ctr7": 4.7,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26101",
+    "theme": "我可以說出心情0827",
+    "fullname": "26101 我可以說出心情（Rose）0827",
+    "uploaded": "2026-08-27",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/e56e04ef-d5c3-469a-9e55-8dd6dc2aab27.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/2678f074-fc6c-42d1-ab20-bf31c53f1ced.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/2678f074-fc6c-42d1-ab20-bf31c53f1ced.png",
+      "name": "26101 我可以說出心情（Rose）0827-A",
+      "leads": 2
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/e56e04ef-d5c3-469a-9e55-8dd6dc2aab27.png",
+      "name": "26101 我可以說出心情（Rose）0827-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 2,
+    "s10": 6.7,
+    "cpl": 3.4,
+    "ctr7": 3.3,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -4211,49 +4291,9 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 13,
-    "cpl": 6.5,
+    "s10": 14.5,
+    "cpl": 7.3,
     "ctr7": 3,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26102",
-    "theme": "看圖認字卡0827",
-    "fullname": "26102 看圖認字卡（Rose）0827",
-    "uploaded": "2026-08-27",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/3636c081-70ad-4c46-bb9b-53f57444ae75.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/489e7581-0b2d-4aa8-8dd0-2728add2788d.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/489e7581-0b2d-4aa8-8dd0-2728add2788d.png",
-      "name": "26102 看圖認字卡（Rose）0827-A",
-      "leads": 2
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/3636c081-70ad-4c46-bb9b-53f57444ae75.png",
-      "name": "26102 看圖認字卡（Rose）0827-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 2,
-    "s10": 5.1,
-    "cpl": 2.6,
-    "ctr7": 1.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -4291,8 +4331,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 12.7,
-    "cpl": 6.4,
+    "s10": 12.9,
+    "cpl": 6.5,
     "ctr7": 1.4,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4331,8 +4371,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 5.5,
-    "cpl": 5.5,
+    "s10": 6.6,
+    "cpl": 6.6,
     "ctr7": 3.8,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4371,8 +4411,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 5.1,
-    "cpl": 5.1,
+    "s10": 7.3,
+    "cpl": 7.3,
     "ctr7": 2.9,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4411,8 +4451,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 11.3,
-    "cpl": 11.3,
+    "s10": 11.6,
+    "cpl": 11.6,
     "ctr7": 2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4451,8 +4491,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 5,
-    "cpl": 5,
+    "s10": 6.1,
+    "cpl": 6.1,
     "ctr7": 1.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4491,7 +4531,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 5.4,
+    "s10": 6.6,
     "cpl": null,
     "ctr7": 4.6,
     "hasVariantPerf": true,
@@ -4531,7 +4571,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 5.1,
+    "s10": 6.7,
     "cpl": null,
     "ctr7": 3.6,
     "hasVariantPerf": true,
@@ -4574,46 +4614,6 @@
     "s10": 6.6,
     "cpl": null,
     "ctr7": 3.5,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26101",
-    "theme": "我可以說出心情0827",
-    "fullname": "26101 我可以說出心情（Rose）0827",
-    "uploaded": "2026-08-27",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/e56e04ef-d5c3-469a-9e55-8dd6dc2aab27.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/2678f074-fc6c-42d1-ab20-bf31c53f1ced.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/2678f074-fc6c-42d1-ab20-bf31c53f1ced.png",
-      "name": "26101 我可以說出心情（Rose）0827-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/e56e04ef-d5c3-469a-9e55-8dd6dc2aab27.png",
-      "name": "26101 我可以說出心情（Rose）0827-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 4.7,
-    "cpl": null,
-    "ctr7": 3.3,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -4691,7 +4691,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 5.1,
+    "s10": 6.6,
     "cpl": null,
     "ctr7": 2.8,
     "hasVariantPerf": true,
@@ -4811,7 +4811,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 4.9,
+    "s10": 6.8,
     "cpl": null,
     "ctr7": 1.9,
     "hasVariantPerf": true,
@@ -4931,7 +4931,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 5.1,
+    "s10": 7,
     "cpl": null,
     "ctr7": 1.3,
     "hasVariantPerf": true,
