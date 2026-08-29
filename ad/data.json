@@ -1,7 +1,7 @@
 {
- "genStamp": "2026-08-29 15:30",
- "checkpointWd": "六",
- "today": "2026-08-29",
+ "genStamp": "2026-08-30 00:35",
+ "checkpointWd": "日",
+ "today": "2026-08-30",
  "fetchStatus": "ok",
  "expDate": "2026-09-04",
  "nAds": 37,
@@ -17,8 +17,8 @@
    "2026-09"
   ]
  },
- "dayOfQuarter": 60,
- "dayOfMonth": 29,
+ "dayOfQuarter": 61,
+ "dayOfMonth": 30,
  "dim": 31,
  "subjects": [
   {
@@ -35,12 +35,12 @@
     "actual": 2050,
     "actualBk": 2073,
     "prog": 61,
-    "timeProg": 65.2,
-    "proj": 3143,
-    "attain": 93.6,
-    "gap": 217,
+    "timeProg": 66.3,
+    "proj": 3092,
+    "attain": 92,
+    "gap": 268,
     "remain": 1310,
-    "diff": -4.2,
+    "diff": -5.3,
     "status": "behind"
    },
    "cur": {
@@ -49,15 +49,15 @@
     "actual": 1024,
     "actualBk": 1043,
     "prog": 89,
-    "timeProg": 93.5,
-    "proj": 1095,
-    "attain": 95.2,
-    "gap": 55,
+    "timeProg": 96.8,
+    "proj": 1058,
+    "attain": 92,
+    "gap": 92,
     "remain": 126,
-    "needPerDay": 63,
-    "dayRateNow": 35.3,
-    "recent7Rate": 22.6,
-    "diff": -4.5,
+    "needPerDay": 126,
+    "dayRateNow": 34.1,
+    "recent7Rate": 20.9,
+    "diff": -7.7,
     "status": "behind"
    },
    "months": [
@@ -81,10 +81,10 @@
      "actualBk": 1043,
      "isCur": true,
      "isPast": false,
-     "proj": 1095,
-     "gap": 55,
+     "proj": 1058,
+     "gap": 92,
      "prog": 89,
-     "timeProg": 93.5,
+     "timeProg": 96.8,
      "status": "behind"
     },
     {
@@ -202,7 +202,7 @@
      "start": "2026-08-24",
      "end": "2026-08-30",
      "effFrom": "2026-08-24",
-     "effTo": "2026-08-29",
+     "effTo": "2026-08-30",
      "isCur": true,
      "line": 288,
      "actual": 146,
@@ -222,12 +222,12 @@
     "actual": 31,
     "actualBk": 25,
     "prog": 62,
-    "timeProg": 65.2,
-    "proj": 48,
-    "attain": 95.1,
-    "gap": 2,
+    "timeProg": 66.3,
+    "proj": 47,
+    "attain": 93.5,
+    "gap": 3,
     "remain": 19,
-    "diff": -3.2,
+    "diff": -4.3,
     "status": "behind"
    },
    "cur": {
@@ -236,7 +236,7 @@
     "actual": 3,
     "actualBk": 5,
     "prog": 0,
-    "timeProg": 93.5,
+    "timeProg": 96.8,
     "proj": 3,
     "attain": 0,
     "gap": null,
@@ -269,7 +269,7 @@
      "proj": 3,
      "gap": null,
      "prog": null,
-     "timeProg": 93.5,
+     "timeProg": 96.8,
      "status": "na"
     },
     {
@@ -386,7 +386,7 @@
      "start": "2026-08-24",
      "end": "2026-08-30",
      "effFrom": "2026-08-24",
-     "effTo": "2026-08-29",
+     "effTo": "2026-08-30",
      "isCur": true,
      "line": null,
      "actual": 0,
@@ -409,7 +409,7 @@
    "b": 308,
    "spend": 1813,
    "cpl": 6,
-   "m7": 33,
+   "m7": 32,
    "budget": 38,
    "bm": {
     "excellent": 5,
@@ -559,7 +559,7 @@
    "b": 181,
    "spend": 754,
    "cpl": 4.3,
-   "m7": 75,
+   "m7": 67,
    "budget": 75,
    "bm": {
     "excellent": 5,
@@ -679,7 +679,7 @@
    "b": 61,
    "spend": 419,
    "cpl": 6.4,
-   "m7": 10,
+   "m7": 7,
    "budget": 7,
    "bm": {
     "excellent": 5,
@@ -3791,10 +3791,10 @@
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 63,
-  "addlPerDay": 40.4,
-  "winnerDaily": 10.7,
-  "adsNeeded": 4,
+  "needPerDay": 126,
+  "addlPerDay": 105.1,
+  "winnerDaily": 9.6,
+  "adsNeeded": 11,
   "topScale": [
    {
     "id": "120251174246100392",
@@ -3807,7 +3807,7 @@
     "b": 308,
     "spend": 1813,
     "cpl": 6,
-    "m7": 33,
+    "m7": 32,
     "budget": 38,
     "bm": {
      "excellent": 5,
@@ -3837,7 +3837,7 @@
     "b": 181,
     "spend": 754,
     "cpl": 4.3,
-    "m7": 75,
+    "m7": 67,
     "budget": 75,
     "bm": {
      "excellent": 5,
@@ -4021,7 +4021,7 @@
     "b": 181,
     "spend": 754,
     "cpl": 4.3,
-    "m7": 75,
+    "m7": 67,
     "budget": 75,
     "bm": {
      "excellent": 5,
@@ -4111,7 +4111,7 @@
     "b": 308,
     "spend": 1813,
     "cpl": 6,
-    "m7": 33,
+    "m7": 32,
     "budget": 38,
     "bm": {
      "excellent": 5,
@@ -4134,7 +4134,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-08-20",
+  "cutoff": "2026-08-21",
   "days": 10,
   "items": [
    {
@@ -4171,8 +4171,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 4,
-    "s10": 11,
-    "cpl": 2.8,
+    "s10": 12.6,
+    "cpl": 3.2,
     "ctr7": 1.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4251,8 +4251,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 18.8,
-    "cpl": 9.4,
+    "s10": 20.1,
+    "cpl": 10.1,
     "ctr7": 4.3,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4331,8 +4331,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 2,
-    "s10": 19.6,
-    "cpl": 9.8,
+    "s10": 20.6,
+    "cpl": 10.3,
     "ctr7": 3,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4411,8 +4411,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 11.5,
-    "cpl": 11.5,
+    "s10": 12.1,
+    "cpl": 12.1,
     "ctr7": 3.5,
     "hasVariantPerf": true,
     "leadBreakdown": true
