@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-09-01 13:48",
+ "genStamp": "2026-09-01 16:12",
  "checkpointWd": "二",
  "today": "2026-09-01",
  "fetchStatus": "ok",
@@ -4211,7 +4211,7 @@
       "label": "B",
       "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/08/27/ed97484d-ae30-4674-be64-af0dd4446d44.png",
       "name": "26096 開學先補識字力（Rose）0827-B",
-      "leads": 12
+      "leads": 13
      }
     ],
     "pages": [
@@ -4224,9 +4224,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 13,
-    "s10": 77.2,
-    "cpl": 5.9,
+    "m10": 14,
+    "s10": 79.3,
+    "cpl": 5.7,
     "ctr7": 1.3,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4265,8 +4265,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 3,
-    "s10": 20.5,
-    "cpl": 6.8,
+    "s10": 20.6,
+    "cpl": 6.9,
     "ctr7": 2.5,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -4305,8 +4305,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 3,
-    "s10": 20.9,
-    "cpl": 7,
+    "s10": 22,
+    "cpl": 7.3,
     "ctr7": 1.4,
     "hasVariantPerf": true,
     "leadBreakdown": true
