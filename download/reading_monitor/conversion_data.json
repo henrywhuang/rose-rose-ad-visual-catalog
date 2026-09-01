@@ -14,15 +14,15 @@
     "routeKeys": [
       "tw_math_h5"
     ],
-    "purchases": 74,
-    "arkioLeads": 3403,
-    "conversionRate": 2.17,
-    "metaLeads": 857,
-    "spend": 2910,
-    "cpl": 3.4,
-    "ctr": 4.5,
-    "impressions": 679926,
-    "clicks": 30574,
+    "purchases": 76,
+    "arkioLeads": 3440,
+    "conversionRate": 2.21,
+    "metaLeads": 873,
+    "spend": 2900.83,
+    "cpl": 3.32,
+    "ctr": 4.56,
+    "impressions": 683324,
+    "clicks": 31144,
     "creativeVariants": 1,
     "convertedAdsets": 1,
     "headlines": [
@@ -37,102 +37,57 @@
     ],
     "rank": 1,
     "image": "assets/conversion_01.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
     "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
     "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
   },
   {
-    "name": "25981 暑假超前部署（Rose）-藍綠",
+    "name": "26006 我會說出心情（Rose） 綠",
     "adsetNames": [
-      "25981 暑假超前部署（Rose）"
+      "26006 我會說出心情（Rose）"
     ],
     "adsetIds": [
-      "120251357927590392"
+      "120251557821680392"
     ],
     "owners": [
-      "育兒小百科"
+      "親子愛共讀"
     ],
-    "owner": "育兒小百科",
-    "routeKeys": [
-      "tw_reading_h5"
-    ],
-    "purchases": 5,
-    "arkioLeads": 175,
-    "conversionRate": 2.86,
-    "metaLeads": 234,
-    "spend": 1663.08,
-    "cpl": 7.11,
-    "ctr": 1.84,
-    "impressions": 374951,
-    "clicks": 6889,
-    "creativeVariants": 2,
-    "convertedAdsets": 1,
-    "headlines": [
-      "🎒 暑假超前部署｜108課綱識字卡",
-      "3-8歲，每天4張先看熟",
-      "看圖認字，再讀出詞語",
-      "📚 小一前常見字，暑假先練",
-      "🎁 免費領取識字卡"
-    ],
-    "bodies": [
-      "🎒 這類孩子不是不想讀，常常是一看到字就先放棄。\n​\n用識字卡先降低門檻：\n✅ 看圖認一個字\n✅ 讀一個詞\n✅ 用一句話說出來\n​\n接觸前：看到字就說不會。\n接觸後：看到常見字，會先試著讀詞。\n​\n👉 點擊領取",
-      "🎒 先不要急著讀整本。\n每天4張識字卡：看圖、認字、讀詞。\n從看到字就跳過，到願意先試一個詞\n​\n👇 點圖領取"
-    ],
-    "rank": 2,
-    "image": "assets/conversion_02.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
-    "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
-    "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
-  },
-  {
-    "name": "25248 B",
-    "adsetNames": [
-      "25248 純字-中班情緒痛點-短文案（Claire）"
-    ],
-    "adsetIds": [
-      "120231194115630392"
-    ],
-    "owners": [
-      "Claire國小數學"
-    ],
-    "owner": "Claire國小數學",
+    "owner": "親子愛共讀",
     "routeKeys": [
       "tw_reading_h5"
     ],
     "purchases": 2,
-    "arkioLeads": 28,
-    "conversionRate": 7.14,
-    "metaLeads": 198,
-    "spend": 1352.5,
-    "cpl": 6.83,
-    "ctr": 4.04,
-    "impressions": 465086,
-    "clicks": 18806,
-    "creativeVariants": 1,
+    "arkioLeads": 52,
+    "conversionRate": 3.85,
+    "metaLeads": 66,
+    "spend": 432.74,
+    "cpl": 6.56,
+    "ctr": 4.39,
+    "impressions": 111118,
+    "clicks": 4879,
+    "creativeVariants": 2,
     "convertedAdsets": 1,
     "headlines": [
-      "情緒敏感不是錯，4歲正是教表達的關鍵期",
-      "你知道嗎？「哭」其實是孩子唯一的語言",
-      "幼兒園階段不教情緒，小學只會更難帶",
-      "小事就大哭？其實是還說不出來"
+      "📖 用繪本，練孩子說出心情",
+      "💬 生氣、難過，不只用哭的",
+      "🧡 5日繪本情緒課｜全台0元",
+      "孩子一急就爆哭？先練一句話",
+      "3-8歲情緒表達共讀任務"
     ],
     "bodies": [
-      "我家哥哥從小就很敏感，一點小事就會大哭。\n明明只是玩具被拿走、積木倒了，情緒就崩潰到沒辦法溝通，常常讓我又心疼又無力。\n\n朋友推薦我試試 #JOJO閱讀 的情緒教養課，\n🌱 是以繪本故事+互動任務的方式幫孩子認識情緒、說出感受，\n我們每天陪他一起聽故事、玩表情卡，慢慢發現她願意開口說「我現在不開心」「我想要一個人安靜一下」…\n\n雖然還是會哭，但他開始會「說出原因」了，\n我覺得這就是很大的進步。\n\n#高敏感孩子 #情緒教養 #JOJO閱讀\n#孩子哭鬧不是故意的 \n#媽媽的耐心也需要被看見",
-      "我家哥哥從小就超敏感，別人不小心碰一下、玩具被拿走，她就會大哭。\n我有時候也會覺得「你是不是太誇張了？」但後來看了 #HSP 的說法，才知道那是他的大腦對情緒特別敏感。\n在別人眼裡是「小題大作」，對他來說是真的「受傷」了。\n\n後來我報名了 #JOJO閱讀 的情緒課，開始練習帶他說：「我不開心，因為你搶了我玩具。」\n📚 課程用繪本故事＋情境對話＋表達練習卡片\n🎈 慢慢會說出感受，也不再只是哭了\n看他學會說「我只是難過，不是生氣」的那一刻，真的好感動。\n\n\n#高敏感小孩也能穩穩長大\n#JOJO情緒課是我們的好幫手\n#孩子的情緒需要出口不是壓抑"
+      "📖 情緒不是叫孩子忍住，而是讓他有話可以說。\n​\n5日繪本任務，每天15分鐘：\n✅ 跟著角色認識生氣、難過、開心\n✅ 說出「我現在覺得……」\n✅ 用故事練一個處理方法\n​\n接觸前：生氣只會哭、推開、躲起來。\n接觸後：開始能說出一個感覺，再聽大人接話\n​\n👉 點擊領取",
+      "📖 每天15分鐘，用故事練情緒詞。\n從只會哭或躲起來，到能說「我現在很生氣」\n​\n👇 點圖領取"
     ],
-    "rank": 3,
-    "image": "assets/conversion_03.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
+    "rank": 2,
+    "image": "assets/conversion_02.jpg",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
     "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
     "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
   },
   {
@@ -151,14 +106,14 @@
       "tw_reading_h5"
     ],
     "purchases": 2,
-    "arkioLeads": 148,
-    "conversionRate": 1.35,
-    "metaLeads": 450,
-    "spend": 2998.4,
-    "cpl": 6.66,
-    "ctr": 3.25,
-    "impressions": 693185,
-    "clicks": 22529,
+    "arkioLeads": 110,
+    "conversionRate": 1.82,
+    "metaLeads": 458,
+    "spend": 3073.96,
+    "cpl": 6.71,
+    "ctr": 3.2,
+    "impressions": 716532,
+    "clicks": 22901,
     "creativeVariants": 2,
     "convertedAdsets": 1,
     "headlines": [
@@ -170,13 +125,102 @@
       "3-6歲正值孩子的「情緒發展關鍵期」🌱\n\n孩子生氣時哭鬧、說不清楚，不一定是故意不聽話，而是還在學習認識與表達情緒。\n\n推薦 JOJO閱讀「5日繪本情緒課」，用孩子聽得懂的故事陪他練習：\n✅ 跟著繪本角色認識「生氣」\n✅ 在故事情境中練習先停一下、好好說\n✅ 每天15分鐘，輕鬆融入親子共讀\n✅ 清華×台師大教育團隊設計\n\n🎁 目前開放全台3-6歲孩子0元體驗5日\n👉 點擊圖片，陪孩子開始情緒表達練習\n\n#JOJO閱讀 #情緒繪本 #親子共讀 #正向教養",
       "孩子鬧脾氣，可能只是還不知道怎麼說出感受。\n\nJOJO閱讀推薦「5日繪本情緒課」📚\n陪3-6歲孩子從故事中認識生氣、練習冷靜與表達。\n\n✅ 每天15分鐘親子共讀\n✅ 清華×台師大教育團隊設計\n🎁 全台開放0元體驗5日\n\n👉 點圖免費體驗\n\n#情緒教育 #情緒繪本 #正向教養"
     ],
+    "rank": 3,
+    "image": "assets/conversion_03.jpg",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
+    "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
+    "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
+  },
+  {
+    "name": "25904 注音識字班（jojoreading_tw）",
+    "adsetNames": [
+      "25904 注音識字班✅"
+    ],
+    "adsetIds": [
+      "120249144058400392"
+    ],
+    "owners": [
+      "JoJo閱讀",
+      "育兒小百科"
+    ],
+    "owner": "JoJo閱讀＋育兒小百科",
+    "routeKeys": [
+      "tw_reading_h5"
+    ],
+    "purchases": 2,
+    "arkioLeads": 161,
+    "conversionRate": 1.24,
+    "metaLeads": 668,
+    "spend": 4195.26,
+    "cpl": 6.28,
+    "ctr": 2.39,
+    "impressions": 1270319,
+    "clicks": 30328,
+    "creativeVariants": 1,
+    "convertedAdsets": 1,
+    "headlines": [
+      "注音識字班招生中，5日0元",
+      "4-7歲注音37音+基礎國字100",
+      "升小一銜接，每天10分鐘紮根"
+    ],
+    "bodies": [
+      "🔤 注音識字班｜招生中\n5 日免費體驗，名額有限。\n​\n✅ 招生對象：4-7 歲幼大至小二\n⏰ 上課時間：每天 10 分鐘，累積成果\n📚 課程內容：注音 37 音 + 基礎國字 100\n💰 課程費用：5 日 0 元（市值 590 元）\n​\n幼兒園升小一銜接的最關鍵基礎，從注音開始紮根。\n​\n▍5日0元，立即報名\n👉 點擊圖片立即領取",
+      "🔤 注音 37 音 + 基礎國字 100，5 日打底計畫。\n4-7 歲升小一前最必要的銜接準備，免費體驗。\n​\n▍5日0元，名額有限\n👉 點擊圖片立即報名"
+    ],
     "rank": 4,
     "image": "assets/conversion_04.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
     "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
+    "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
+  },
+  {
+    "name": "醜圖-博客來小孩繪本-台北市 1",
+    "adsetNames": [
+      "25299 醜圖-博客來小孩繪本-台北市-方✅818改受眾"
+    ],
+    "adsetIds": [
+      "120226059651610392"
+    ],
+    "owners": [
+      "育兒小百科"
+    ],
+    "owner": "育兒小百科",
+    "routeKeys": [
+      "tw_reading_h5"
+    ],
+    "purchases": 1,
+    "arkioLeads": 8,
+    "conversionRate": 12.5,
+    "metaLeads": 16,
+    "spend": 136.96,
+    "cpl": 8.56,
+    "ctr": 3.58,
+    "impressions": 21713,
+    "clicks": 778,
+    "creativeVariants": 2,
+    "convertedAdsets": 1,
+    "headlines": [
+      "台北家長免費索取 >>",
+      "台北市家長限時福利 >>",
+      "台北市3-6歲免費補助 >>"
+    ],
+    "bodies": [
+      "你知道嗎，幼兒園是「情緒發展關鍵期」\n學習「情緒管理」對幼兒成長有重要影響\n#台北市3至6歲 #繪本情緒課\n\n3-6歲孩子好難安靜與專注？ \n小百科 邀請 #台北市爸媽們 👩👦 \n面對孩子的壞脾氣，從「閱讀」開始📚\n5天時間，學會控制表達情感❤️\n\n #小百科社群福利 #繪本情緒課\n ▍適用年齡：3-6歲孩童\n ▍5天學：3種表達句和1種情緒\n🕒 學習時間：一天15分鐘\n💲 費用：市價499元，0元體驗限額50名\n\n\\ 情緒表達好😊上學0煩惱 /\n【 👉 點擊圖片 #陪孩子掌控情緒 】\n\n#3至6歲養成情緒素養高EQ\n#讓閱讀帶給孩子正向情緒😀",
+      "孩子常常哭鬧不想上學？😫\n每次面對孩子壞脾氣，媽媽覺得好無助🥺\n#台北市3至6歲限定 #繪本情緒課\n\n✦ 4堂互動閱讀課 + 1堂複習遊戲課\n✦ 5天學3種表達句型＋認識1種情緒\n✦ 幫助認識情緒、學習冷靜說出情緒\n🕒 學習時間：一天15分鐘\n💰 費用：市價499元，0元體驗名額30名\n\n🎁 #小百科 鼓勵閱讀加碼送福利\n05月20日-06月30日 領取繪本情緒課\n可獲得【超過50+頁的情緒學習卡】\n\n📣 歡迎邀請 #台北市家長 一起\n不怕孩子鬧脾氣\n用閱讀讓孩子學習正確表達情緒 💖\n\n ⬇️ 【點擊圖片報名】⬇️"
+    ],
+    "rank": 5,
+    "image": "assets/conversion_05.jpg",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
+    "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
     "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
   },
   {
@@ -214,104 +258,13 @@
       "4 歲的弟弟看到消防車，急得直跳卻只喊「那個那個」。\n 我問三遍，他還是答「不知道怎麼講」。\n 身為師大中文系畢業的媽，竟然教不出一句完整話，超挫敗。\n\n後來我把晚上的共讀時間換成 JOJO 閱讀 的線上故事。\n 15 分鐘流程很簡單：先聽故事→跟著圖卡回答「誰」「做什麼」→換孩子接一句。\n 我只負責按下一頁，不用額外備教材。\n\n兩個星期後，他指著消防車說：\n 「消防車在噴水，救火！」——第一次不用翻譯。\n 才發現語言像積木，順序給好就能自己搭。\n\n如果你也被「那個那個」逼瘋，\n 不妨試試把故事變腳手架，讓詞彙有地方落腳，真的省力許多。",
       "幼兒園同學能講完整故事，弟弟還在「嗯…」半天想詞。\n 老師提早提醒：再 3 個月就要口說評估。我的壓力瞬間爆表。\n\n我沒有時間做字卡，只能把希望放在每天 15 分鐘的 JOJO 閱讀：\n 故事旁附「情境追問」——講完頁面就會跳出「然後呢？」\n 逼得弟弟一定要把句子接下去，才會到下一張。\n\n第十天，晚餐桌他自己說：\n 「今天我在學校畫宇宙，老師說我用色很酷！」\n 那份驕傲的語氣，讓我知道方向是對的。\n\n表達力不是背單字，而是有人在旁邊一步步撐住結構。\n 故事裡就有框架，媽媽少備課，孩子多勇氣——我現在只後悔沒早點用。"
     ],
-    "rank": 5,
-    "image": "assets/conversion_05.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
-    "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
-    "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
-  },
-  {
-    "name": "26006 我會說出心情（Rose） 綠",
-    "adsetNames": [
-      "26006 我會說出心情（Rose）"
-    ],
-    "adsetIds": [
-      "120251557821680392"
-    ],
-    "owners": [
-      "親子愛共讀"
-    ],
-    "owner": "親子愛共讀",
-    "routeKeys": [
-      "tw_reading_h5"
-    ],
-    "purchases": 1,
-    "arkioLeads": 58,
-    "conversionRate": 1.72,
-    "metaLeads": 65,
-    "spend": 418.62,
-    "cpl": 6.44,
-    "ctr": 4.46,
-    "impressions": 106696,
-    "clicks": 4755,
-    "creativeVariants": 2,
-    "convertedAdsets": 1,
-    "headlines": [
-      "📖 用繪本，練孩子說出心情",
-      "💬 生氣、難過，不只用哭的",
-      "🧡 5日繪本情緒課｜全台0元",
-      "孩子一急就爆哭？先練一句話",
-      "3-8歲情緒表達共讀任務"
-    ],
-    "bodies": [
-      "📖 情緒不是叫孩子忍住，而是讓他有話可以說。\n​\n5日繪本任務，每天15分鐘：\n✅ 跟著角色認識生氣、難過、開心\n✅ 說出「我現在覺得……」\n✅ 用故事練一個處理方法\n​\n接觸前：生氣只會哭、推開、躲起來。\n接觸後：開始能說出一個感覺，再聽大人接話\n​\n👉 點擊領取",
-      "📖 每天15分鐘，用故事練情緒詞。\n從只會哭或躲起來，到能說「我現在很生氣」\n​\n👇 點圖領取"
-    ],
     "rank": 6,
     "image": "assets/conversion_06.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
     "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
-    "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
-  },
-  {
-    "name": "25904 注音識字班（jojoreading_tw）",
-    "adsetNames": [
-      "25904 注音識字班✅"
-    ],
-    "adsetIds": [
-      "120249144058400392"
-    ],
-    "owners": [
-      "JoJo閱讀",
-      "育兒小百科"
-    ],
-    "owner": "JoJo閱讀＋育兒小百科",
-    "routeKeys": [
-      "tw_reading_h5"
-    ],
-    "purchases": 1,
-    "arkioLeads": 123,
-    "conversionRate": 0.81,
-    "metaLeads": 638,
-    "spend": 3881.04,
-    "cpl": 6.08,
-    "ctr": 2.4,
-    "impressions": 1187284,
-    "clicks": 28444,
-    "creativeVariants": 1,
-    "convertedAdsets": 1,
-    "headlines": [
-      "注音識字班招生中，5日0元",
-      "4-7歲注音37音+基礎國字100",
-      "升小一銜接，每天10分鐘紮根"
-    ],
-    "bodies": [
-      "🔤 注音識字班｜招生中\n5 日免費體驗，名額有限。\n​\n✅ 招生對象：4-7 歲幼大至小二\n⏰ 上課時間：每天 10 分鐘，累積成果\n📚 課程內容：注音 37 音 + 基礎國字 100\n💰 課程費用：5 日 0 元（市值 590 元）\n​\n幼兒園升小一銜接的最關鍵基礎，從注音開始紮根。\n​\n▍5日0元，立即報名\n👉 點擊圖片立即領取",
-      "🔤 注音 37 音 + 基礎國字 100，5 日打底計畫。\n4-7 歲升小一前最必要的銜接準備，免費體驗。\n​\n▍5日0元，名額有限\n👉 點擊圖片立即報名"
-    ],
-    "rank": 7,
-    "image": "assets/conversion_07.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
-    "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
     "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
   },
   {
@@ -330,14 +283,14 @@
       "tw_reading_h5"
     ],
     "purchases": 1,
-    "arkioLeads": 181,
-    "conversionRate": 0.55,
-    "metaLeads": 300,
-    "spend": 1805.56,
-    "cpl": 6.02,
+    "arkioLeads": 171,
+    "conversionRate": 0.58,
+    "metaLeads": 338,
+    "spend": 1967.53,
+    "cpl": 5.82,
     "ctr": 2.08,
-    "impressions": 670814,
-    "clicks": 13927,
+    "impressions": 742835,
+    "clicks": 15475,
     "creativeVariants": 2,
     "convertedAdsets": 1,
     "headlines": [
@@ -351,13 +304,59 @@
       "📚 孩子在暑假很容易只翻圖、不看字。\n可以先不用要求讀整本，從一張卡做完3件事：\n✅ 看圖認一個字\n✅ 把字放進詞語\n✅ 用一句話說出來\n​\n接觸前：看到字就等大人唸。\n接觸後：看到常見字，會先試著讀出詞，再說一句。\n​\n👉 點擊領取",
       "📚 暑假先把常見字看熟。\n16張識字卡，每天4張：看圖、讀詞、說一句。\n從等大人唸，到願意先試著讀一個詞\n​\n👇 點圖領取"
     ],
+    "rank": 7,
+    "image": "assets/conversion_07.jpg",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
+    "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
+    "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
+  },
+  {
+    "name": "26033 我會冷靜一下（Rose）0803 綠",
+    "adsetNames": [
+      "26033 我會冷靜一下（Rose）0803"
+    ],
+    "adsetIds": [
+      "120251778667390392"
+    ],
+    "owners": [
+      "JoJo閱讀"
+    ],
+    "owner": "JoJo閱讀",
+    "routeKeys": [
+      "tw_reading_h5"
+    ],
+    "purchases": 1,
+    "arkioLeads": 214,
+    "conversionRate": 0.47,
+    "metaLeads": 212,
+    "spend": 1056.38,
+    "cpl": 4.98,
+    "ctr": 2.21,
+    "impressions": 453214,
+    "clicks": 10034,
+    "creativeVariants": 2,
+    "convertedAdsets": 1,
+    "headlines": [
+      "😌 孩子生氣時，先練一句「我想冷靜」",
+      "📚 5日繪本情緒課｜3-8歲0元",
+      "💬 從大哭大叫，到能說出我怎麼了",
+      "生氣不是壞事，孩子需要練說出口",
+      "每天15分鐘，陪孩子把情緒說清楚"
+    ],
+    "bodies": [
+      "孩子一急就大喊、推人或哭到停不下來？\n​\n這次用5日繪本情緒課，陪孩子每天15分鐘練：\n✅ 看故事人物的表情\n✅ 說出「我現在很生氣」\n✅ 再補一句「我想先冷靜」\n​\n接觸前，孩子只會用哭和吼讓大人猜；接觸後，開始能停一下，說出自己正在生氣、想先冷靜。3-8歲可做\n​\n👉 點擊領取",
+      "孩子生氣只會哭？每天15分鐘，用繪本練一句「我想先冷靜」，從用哭鬧表達，到願意說出感受\n​\n👇 點圖領取"
+    ],
     "rank": 8,
     "image": "assets/conversion_08.jpg",
-    "metaWindowFrom": "2026-05-28",
-    "metaWindowTo": "2026-08-28",
-    "arkioUpdatedAt": "2026-08-28T05:35:10+08:00",
+    "metaWindowFrom": "2026-06-01",
+    "metaWindowTo": "2026-09-01",
+    "arkioUpdatedAt": "2026-09-01T05:35:22+08:00",
     "attribution": "Arkio 投放調控「訂閱」（廣告組層級累計）",
-    "qualification": "Meta 2026-05-28～2026-08-28 有實際領課",
+    "qualification": "Meta 2026-06-01～2026-09-01 有實際領課",
     "sourceUrl": "https://www.arkio.me/marketing/ad-budget"
   }
 ]
