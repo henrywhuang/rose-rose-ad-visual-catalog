@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-09-01 16:12",
+ "genStamp": "2026-09-01 16:20",
  "checkpointWd": "二",
  "today": "2026-09-01",
  "fetchStatus": "ok",
@@ -41,6 +41,7 @@
     "gap": 225,
     "remain": 1213,
     "diff": -4.6,
+    "scheduleDelta": -154,
     "status": "behind"
    },
    "cur": {
@@ -70,8 +71,14 @@
      "isPast": true,
      "proj": 1026,
      "gap": 0,
+     "remain": 0,
      "prog": 102.6,
      "timeProg": 100,
+     "diff": 2.6,
+     "scheduleDelta": 26,
+     "targetDelta": 26,
+     "projectedDelta": 26,
+     "attain": 102.6,
      "status": "ahead"
     },
     {
@@ -83,8 +90,14 @@
      "isPast": true,
      "proj": 1116,
      "gap": 34,
+     "remain": 34,
      "prog": 97,
      "timeProg": 100,
+     "diff": -3,
+     "scheduleDelta": -34,
+     "targetDelta": -34,
+     "projectedDelta": -34,
+     "attain": 97,
      "status": "behind"
     },
     {
@@ -96,8 +109,14 @@
      "isPast": false,
      "proj": 150,
      "gap": 1060,
+     "remain": 1205,
      "prog": 0.4,
      "timeProg": 3.3,
+     "diff": -2.9,
+     "scheduleDelta": -35,
+     "targetDelta": -1205,
+     "projectedDelta": -1060,
+     "attain": 12.4,
      "status": "behind"
     }
    ],
@@ -240,6 +259,7 @@
     "gap": 5,
     "remain": 19,
     "diff": -6.5,
+    "scheduleDelta": -3,
     "status": "behind"
    },
    "cur": {
@@ -268,8 +288,14 @@
      "isPast": true,
      "proj": 28,
      "gap": null,
+     "remain": null,
      "prog": null,
      "timeProg": 100,
+     "diff": null,
+     "scheduleDelta": null,
+     "targetDelta": null,
+     "projectedDelta": null,
+     "attain": null,
      "status": "na"
     },
     {
@@ -280,8 +306,14 @@
      "isPast": true,
      "proj": 3,
      "gap": null,
+     "remain": null,
      "prog": null,
      "timeProg": 100,
+     "diff": null,
+     "scheduleDelta": null,
+     "targetDelta": null,
+     "projectedDelta": null,
+     "attain": null,
      "status": "na"
     },
     {
@@ -292,8 +324,14 @@
      "isPast": false,
      "proj": 0,
      "gap": null,
+     "remain": null,
      "prog": null,
      "timeProg": 3.3,
+     "diff": null,
+     "scheduleDelta": null,
+     "targetDelta": null,
+     "projectedDelta": null,
+     "attain": null,
      "status": "na"
     }
    ],

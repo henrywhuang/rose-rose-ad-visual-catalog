@@ -223,6 +223,7 @@ function subjectAnalysis(SUB) {
     gap: R0(Math.max(0, SUB.q3Target - q3Proj)), remain: R0(Math.max(0, SUB.q3Target - q3Actual)),
   };
   q3.diff = R(q3.prog - q3.timeProg);
+  q3.scheduleDelta = R0(q3Actual - SUB.q3Target * qTimeProg);
   q3.status = q3.diff < -2 ? 'behind' : q3.diff < 0 ? 'watch' : 'ahead';
   // 各月
   const months = QUARTER.months.map(ym => {
@@ -232,11 +233,18 @@ function subjectAnalysis(SUB) {
     const isCur = ym === curYM, isPast = to < today;
     const tp = isCur ? mTimeProg : (isPast ? 1 : 0);
     const proj = isCur && tp > 0.02 ? act / tp : act;
+    const prog = tgt ? R(act / tgt * 100) : null;
+    const diff = tgt ? R(prog - tp * 100) : null;
+    const scheduleDelta = tgt != null && tp > 0 ? R0(act - tgt * tp) : null;
+    const targetDelta = tgt != null && (isPast || isCur) ? R0(act - tgt) : null;
+    const projectedDelta = tgt != null && (isPast || isCur) ? R0((isCur ? proj : act) - tgt) : null;
     return {
       ym, target: tgt, actual: R0(act), actualBk: R0(bk), isCur, isPast,
       proj: R0(isCur ? proj : act), gap: tgt != null ? R0(Math.max(0, tgt - (isCur ? proj : act))) : null,
-      prog: tgt ? R(act / tgt * 100) : null, timeProg: R(tp * 100),
-      status: tgt == null ? 'na' : (isPast ? (act >= tgt ? 'ahead' : 'behind') : (isCur ? ((act / tgt) >= tp - 0.02 ? 'watch' : 'behind') : 'na')),
+      remain: tgt != null ? R0(Math.max(0, tgt - act)) : null,
+      prog, timeProg: R(tp * 100), diff, scheduleDelta, targetDelta, projectedDelta,
+      attain: tgt ? R((isCur ? proj : act) / tgt * 100) : null,
+      status: tgt == null ? 'na' : (isPast ? (act >= tgt ? 'ahead' : 'behind') : (isCur ? (diff < -2 ? 'behind' : diff < 0 ? 'watch' : 'ahead') : 'na')),
     };
   });
   // 當月細節
@@ -521,9 +529,9 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div class="meta">篩選 campaign／廣告名含「Rose」· 主數字＝Ads Manager 成果(meta)，括號為後端領課 · 每天 09:00（台北）自動更新</div>
 <div id="alerts"></div>
 
-<div class="sec-t">① 季度 / 當月 OKR 進度</div>
+<div class="sec-t">① Q3 季度 / 各月 OKR 進度</div>
 <div id="okr" class="okr"></div>
-<div class="note">進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。進度在白線左邊＝落後，差距即缺口。推估＝累計 ÷ 時間進度。Q3 累計自 7/1 起持續疊加。</div>
+<div class="note">進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。「超前／落後進度」以當下應達人數計算；已結算月份則直接比較月目標。Q3 卡同時顯示<b>當下尚缺</b>與<b>季末預估缺口</b>。</div>
 
 <div class="sec-t">② 近${RECENT_DAYS}天上架廣告分析（視覺・投放主・成效）</div>
 <div id="recentSum"></div>
@@ -535,7 +543,7 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div id="weekSum"></div>
 <div class="chartbox"><h3>每週領課 vs 合格線（Mon–Sun）</h3><canvas id="wkchart" height="200"></canvas></div>
 <div id="weekTable"></div>
-<div class="note">單週合格線＝當月目標 ÷ 4（7月 950/4≈<b>238</b>、8月 1150/4≈288、9月 1260/4=315）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
+<div class="note">單週合格線＝當月目標 ÷ 4（7月 1000/4=<b>250</b>、8月 1150/4≈288、9月 1210/4≈303）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
 
 <div class="sec-t">④ 每月缺口</div>
 <div id="monthTable"></div>
@@ -565,14 +573,22 @@ $('alerts').innerHTML=al;
 // ① OKR 卡
 const okr=$('okr');
 D.subjects.forEach(s=>{
-  const segments=[{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天'}];
-  if(s.cur.target) segments.push({scope:D.curYM+' 當月',o:s.cur,tp:s.cur.timeProg,extra:D.dayOfMonth+'/'+D.dim+'天',isMonth:true});
+  const segments=[{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天',kind:'quarter'}];
+  s.months.filter(m=>m.target!=null).forEach(m=>segments.push({
+    scope:m.ym+' 月進度',o:m,tp:m.timeProg,
+    extra:m.isCur?D.dayOfMonth+'/'+D.dim+'天':(m.isPast?'已結算':'尚未開始'),
+    kind:'month',isMonth:true,isCur:m.isCur,isPast:m.isPast
+  }));
   segments.forEach(seg=>{
     const o=seg.o;
     const cls=o.status||'na';
     const prog=o.prog||0, tp=seg.tp||0;
     const barCol=cls==='behind'?'var(--warn)':cls==='watch'?'var(--watch)':cls==='ahead'?'var(--good)':'var(--sub)';
-    const dtxt=o.target? (o.diff>=0?'🟢 超前 '+o.diff.toFixed(1)+'pt':'🔴 落後 '+Math.abs(o.diff).toFixed(1)+'pt') : '';
+    let dtxt='';
+    if(seg.kind==='quarter') dtxt=o.scheduleDelta>=0?'🟢 超前進度 '+o.scheduleDelta+'人':'🔴 落後進度 '+Math.abs(o.scheduleDelta)+'人';
+    else if(seg.isPast) dtxt=o.targetDelta>=0?'🟢 超標 '+o.targetDelta+'人':'🔴 未達 '+Math.abs(o.targetDelta)+'人';
+    else if(seg.isCur) dtxt=o.scheduleDelta>=0?'🟢 超前進度 '+o.scheduleDelta+'人':'🔴 落後進度 '+Math.abs(o.scheduleDelta)+'人';
+    else dtxt='尚未開始';
     const div=document.createElement('div'); div.className='ocard '+cls;
     div.innerHTML=
       '<div class="hd"><div class="nm">'+s.name+' <span class="pill">'+seg.scope+'</span></div><div class="df '+(o.diff>=0?'pos':'neg')+'">'+dtxt+'</div></div>'+
@@ -580,9 +596,11 @@ D.subjects.forEach(s=>{
       (o.target?('<div class="dualbar"><div class="lab"><span>進度 '+prog.toFixed(1)+'%</span><span>時間 '+tp.toFixed(1)+'% ('+seg.extra+')</span></div>'+
       '<div class="track"><i style="width:'+Math.min(100,prog)+'%;background:'+barCol+'"></i><span class="tick" style="left:'+Math.min(100,tp)+'%"></span></div></div>'):'')+
       '<div class="row2">'+
-        (o.target?'<span class="chip">推估'+(seg.isMonth?'月底':'季末')+' <b>'+o.proj+'</b>（達成 '+o.attain.toFixed(0)+'%）</span>':'')+
-        (o.target&&o.gap>0?'<span class="chip neg">預估缺口 <b>'+o.gap+'</b></span>':(o.target?'<span class="chip pos">預估達標 ✓</span>':''))+
-        (seg.isMonth&&o.target?'<span class="chip">尚缺 <b>'+o.remain+'</b>／需日均 <b>'+o.needPerDay+'</b>（近7日均 '+o.recent7Rate+'）</span>':'')+
+        (seg.kind==='quarter'?'<span class="chip neg">距 Q3 目標尚缺 <b>'+o.remain+'</b></span>':'')+
+        (o.target&&(seg.kind==='quarter'||seg.isCur)?'<span class="chip">推估'+(seg.isMonth?'月底':'季末')+' <b>'+o.proj+'</b>（達成 '+o.attain.toFixed(0)+'%）</span>':'')+
+        (o.target&&(seg.kind==='quarter'||seg.isCur)&&o.gap>0?'<span class="chip neg">預估缺口 <b>'+o.gap+'</b></span>':(o.target&&(seg.kind==='quarter'||seg.isCur)?'<span class="chip pos">預估達標 ✓</span>':''))+
+        (seg.isPast?'<span class="chip '+(o.targetDelta>=0?'pos':'neg')+'">月目標差額 <b>'+(o.targetDelta>=0?'+':'')+o.targetDelta+'</b></span>':'')+
+        (seg.isCur?'<span class="chip">距月目標尚缺 <b>'+o.remain+'</b>／需日均 <b>'+s.cur.needPerDay+'</b>（近7日均 '+s.cur.recent7Rate+'）</span>':'')+
         '<span class="chip">後端 '+o.actualBk+'</span>'+
       '</div>';
     okr.appendChild(div);
@@ -647,9 +665,15 @@ wt+='</tbody></table></div>'; $('weekTable').innerHTML=wt;
 
 // ③ 每月
 function monthTbl(){
-  let h='<div class="tablewrap"><table><thead><tr><th>月份</th><th>領課(成果)</th><th>後端</th><th>目標</th><th>時間%</th><th>推估月底</th><th>缺口</th><th>狀態</th></tr></thead><tbody>';
+  let h='<div class="tablewrap"><table><thead><tr><th>月份</th><th>領課(成果)</th><th>後端</th><th>目標</th><th>達成率</th><th>時間%</th><th>超前／落後</th><th>推估／結算</th><th>目標差額</th><th>狀態</th></tr></thead><tbody>';
   D.subjects.forEach(s=>{ s.months.forEach(m=>{ if(s.key==='en'&&m.target==null) return;
-    h+='<tr><td>'+s.name+' '+m.ym.slice(5)+'</td><td><b>'+m.actual+'</b></td><td>'+m.actualBk+'</td><td>'+(m.target??'—')+'</td><td>'+(m.isCur?m.timeProg.toFixed(0)+'%':(m.isPast?'100%':'—'))+'</td><td>'+(m.target?m.proj:'—')+'</td><td>'+(m.gap>0?'<span class="neg">-'+m.gap+'</span>':(m.target?'<span class="pos">✓</span>':'—'))+'</td><td><span class="st '+m.status+'">'+stName[m.status]+'</span></td></tr>';
+    const progressDelta=m.isPast?m.targetDelta:(m.isCur?m.scheduleDelta:null);
+    const finishDelta=m.isPast?m.targetDelta:(m.isCur?m.projectedDelta:null);
+    h+='<tr><td>'+s.name+' '+m.ym.slice(5)+'</td><td><b>'+m.actual+'</b></td><td>'+m.actualBk+'</td><td>'+(m.target??'—')+'</td><td>'+(m.prog!=null?m.prog.toFixed(1)+'%':'—')+'</td><td>'+(m.isCur?m.timeProg.toFixed(0)+'%':(m.isPast?'100%':'—'))+'</td>'+
+      '<td>'+(progressDelta==null?'—':'<span class="'+(progressDelta>=0?'pos':'neg')+'">'+(progressDelta>=0?'超前 +':'落後 ')+Math.abs(progressDelta)+'</span>')+'</td>'+
+      '<td>'+(m.isPast?m.actual:(m.isCur?m.proj:'—'))+'</td>'+
+      '<td>'+(finishDelta==null?'—':'<span class="'+(finishDelta>=0?'pos':'neg')+'">'+(finishDelta>=0?'+':'')+finishDelta+'</span>')+'</td>'+
+      '<td><span class="st '+m.status+'">'+stName[m.status]+'</span></td></tr>';
   });});
   h+='</tbody></table></div>'; return h;
 }
