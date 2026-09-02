@@ -449,9 +449,7 @@ h1{font-size:20px;margin:0 0 3px;font-weight:800;background:linear-gradient(90de
 .stale{background:#fdece6;border:1px solid #f3b7a6;color:#c2410c;border-radius:10px;padding:8px 12px;font-size:12px;margin:10px 0}
 .warnbar{background:#fff6e0;border:1px solid #f1d18a;color:#a76a10;border-radius:10px;padding:8px 12px;font-size:12px;margin:10px 0}
 .sec-t{font-size:13px;color:#0c8a5e;font-weight:800;letter-spacing:1px;margin:22px 4px 8px}
-.module-sub{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:15px 3px 7px;font-size:14px;font-weight:800;color:var(--txt)}
-.module-sub small{font-size:11px;font-weight:500;color:var(--sub)}
-.okr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.okr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px}
 @media(max-width:720px){.okr{grid-template-columns:1fr}}
 .ocard{border-radius:16px;padding:15px;border:1px solid;box-shadow:0 4px 16px rgba(38,51,44,.06)}
 .ocard.behind{background:linear-gradient(135deg,#fff0e9,#fff8f3);border-color:#f4c3ad}
@@ -531,14 +529,9 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div class="meta">篩選 campaign／廣告名含「Rose」· 主數字＝Ads Manager 成果(meta)，括號為後端領課 · 每天 09:00（台北）自動更新</div>
 <div id="alerts"></div>
 
-<div class="sec-t">① OKR 進度總覽</div>
-<div class="module-sub"><span>Q3 季度總覽</span><small>先看整季是否跟上時間</small></div>
-<div id="q3Okr" class="okr"></div>
-<div class="module-sub"><span>本月進度</span><small>再看當月速度與月底推估</small></div>
-<div id="curOkr" class="okr"></div>
-<div class="module-sub"><span>Q3 各月進度與差距</span><small>最後回看每月結算與目標差額</small></div>
-<div id="monthTable"></div>
-<div class="note">閱讀順序：<b>季度總覽 → 本月進度 → 各月差距</b>。進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。「超前／落後進度」以當下應達人數計算；已結算月份直接比較月目標。</div>
+<div class="sec-t">① Q3 季度 / 各月 OKR 進度</div>
+<div id="okr" class="okr"></div>
+<div class="note">進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。「超前／落後進度」以當下應達人數計算；已結算月份則直接比較月目標。Q3 卡同時顯示<b>當下尚缺</b>與<b>季末預估缺口</b>。</div>
 
 <div class="sec-t">② 近${RECENT_DAYS}天上架廣告分析（視覺・投放主・成效）</div>
 <div id="recentSum"></div>
@@ -552,12 +545,15 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div id="weekTable"></div>
 <div class="note">單週合格線＝當月目標 ÷ 4（7月 1000/4=<b>250</b>、8月 1150/4≈288、9月 1210/4≈303）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
 
-<div class="sec-t">④ 廣告成效排行 + 迭代建議（本季累計）</div>
+<div class="sec-t">④ 每月缺口</div>
+<div id="monthTable"></div>
+
+<div class="sec-t">⑤ 廣告成效排行 + 迭代建議（本季累計）</div>
 <div id="reco"></div>
 <nav class="tabs" id="blTabs"></nav>
 <div id="adTable"></div>
 
-<div class="sec-t">⑤ 依 Campaign 匯總</div>
+<div class="sec-t">⑥ 依 Campaign 匯總</div>
 <div id="campTable"></div>
 
 <div class="foot">Rose Rose 行銷部 · 廣告投放 OKR 監控<br>資料源 Arkio Ad Pilot dashboard · 最後更新 <span id="ls"></span></div>
@@ -574,8 +570,16 @@ if(D.fetchStatus==='stale'||D.fetchStatus==='error') al+='<div class="stale">⚠
 if(D.expDate){ const days=Math.round((Date.parse(D.expDate)-Date.parse(D.today))/86400000); if(days<=21) al+='<div class="warnbar">🔑 Arkio 憑證將於 <b>'+D.expDate+'</b> 到期（約 '+days+' 天）。到期前請重新登入 arkio.me 取新 JWT，更新本機 .arkio_token 與 GitHub secret <b>ARKIO_TOKEN</b>，否則自動更新會停擺。</div>'; }
 $('alerts').innerHTML=al;
 
-// ① OKR：固定為「季度 → 本月 → 各月表」，避免科目與月份交錯跳讀
-function appendOkrCard(target,s,seg){
+// ① OKR 卡
+const okr=$('okr');
+D.subjects.forEach(s=>{
+  const segments=[{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天',kind:'quarter'}];
+  s.months.filter(m=>m.target!=null).forEach(m=>segments.push({
+    scope:m.ym+' 月進度',o:m,tp:m.timeProg,
+    extra:m.isCur?D.dayOfMonth+'/'+D.dim+'天':(m.isPast?'已結算':'尚未開始'),
+    kind:'month',isMonth:true,isCur:m.isCur,isPast:m.isPast
+  }));
+  segments.forEach(seg=>{
     const o=seg.o;
     const cls=o.status||'na';
     const prog=o.prog||0, tp=seg.tp||0;
@@ -599,36 +603,9 @@ function appendOkrCard(target,s,seg){
         (seg.isCur?'<span class="chip">距月目標尚缺 <b>'+o.remain+'</b>／需日均 <b>'+s.cur.needPerDay+'</b>（近7日均 '+s.cur.recent7Rate+'）</span>':'')+
         '<span class="chip">後端 '+o.actualBk+'</span>'+
       '</div>';
-    target.appendChild(div);
-}
-const q3Okr=$('q3Okr'), curOkr=$('curOkr');
-D.subjects.forEach(s=>appendOkrCard(q3Okr,s,{
-  scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,
-  extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天',kind:'quarter'
-}));
-D.subjects.forEach(s=>{
-  const m=s.months.find(x=>x.isCur&&x.target!=null);
-  if(!m) return;
-  appendOkrCard(curOkr,s,{
-    scope:m.ym+' 月進度',o:m,tp:m.timeProg,
-    extra:D.dayOfMonth+'/'+D.dim+'天',kind:'month',isMonth:true,isCur:true,isPast:false
+    okr.appendChild(div);
   });
 });
-
-function monthTbl(){
-  let h='<div class="tablewrap"><table><thead><tr><th>月份</th><th>領課(成果)</th><th>後端</th><th>目標</th><th>達成率</th><th>時間%</th><th>超前／落後</th><th>推估／結算</th><th>目標差額</th><th>狀態</th></tr></thead><tbody>';
-  D.subjects.forEach(s=>{ s.months.forEach(m=>{ if(s.key==='en'&&m.target==null) return;
-    const progressDelta=m.isPast?m.targetDelta:(m.isCur?m.scheduleDelta:null);
-    const finishDelta=m.isPast?m.targetDelta:(m.isCur?m.projectedDelta:null);
-    h+='<tr><td>'+s.name+' '+m.ym.slice(5)+'</td><td><b>'+m.actual+'</b></td><td>'+m.actualBk+'</td><td>'+(m.target??'—')+'</td><td>'+(m.prog!=null?m.prog.toFixed(1)+'%':'—')+'</td><td>'+(m.isCur?m.timeProg.toFixed(0)+'%':(m.isPast?'100%':'—'))+'</td>'+
-      '<td>'+(progressDelta==null?'—':'<span class="'+(progressDelta>=0?'pos':'neg')+'">'+(progressDelta>=0?'超前 +':'落後 ')+Math.abs(progressDelta)+'</span>')+'</td>'+
-      '<td>'+(m.isPast?m.actual:(m.isCur?m.proj:'—'))+'</td>'+
-      '<td>'+(finishDelta==null?'—':'<span class="'+(finishDelta>=0?'pos':'neg')+'">'+(finishDelta>=0?'+':'')+finishDelta+'</span>')+'</td>'+
-      '<td><span class="st '+m.status+'">'+stName[m.status]+'</span></td></tr>';
-  });});
-  h+='</tbody></table></div>'; return h;
-}
-$('monthTable').innerHTML=monthTbl();
 
 // ② 近N天上架廣告分析
 const RA=D.recentAds;
@@ -685,6 +662,22 @@ $('weekSum').innerHTML=ws;
 let wt='<div class="tablewrap"><table><thead><tr><th>週(Mon–Sun)</th><th>領課(成果)</th><th>後端</th><th>合格線</th><th>缺口</th><th>狀態</th></tr></thead><tbody>';
 wk.forEach(w=>{ wt+='<tr><td>'+w.start.slice(5)+'~'+w.end.slice(5)+(w.isCur?' ⏳':'')+'</td><td><b>'+w.actual+'</b></td><td>'+w.actualBk+'</td><td>'+(w.line??'—')+'</td><td>'+(w.gap>0?'<span class="neg">-'+w.gap+'</span>':(w.line?'<span class="pos">✓</span>':'—'))+'</td><td><span class="st '+w.status+'">'+stName[w.status]+'</span></td></tr>'; });
 wt+='</tbody></table></div>'; $('weekTable').innerHTML=wt;
+
+// ③ 每月
+function monthTbl(){
+  let h='<div class="tablewrap"><table><thead><tr><th>月份</th><th>領課(成果)</th><th>後端</th><th>目標</th><th>達成率</th><th>時間%</th><th>超前／落後</th><th>推估／結算</th><th>目標差額</th><th>狀態</th></tr></thead><tbody>';
+  D.subjects.forEach(s=>{ s.months.forEach(m=>{ if(s.key==='en'&&m.target==null) return;
+    const progressDelta=m.isPast?m.targetDelta:(m.isCur?m.scheduleDelta:null);
+    const finishDelta=m.isPast?m.targetDelta:(m.isCur?m.projectedDelta:null);
+    h+='<tr><td>'+s.name+' '+m.ym.slice(5)+'</td><td><b>'+m.actual+'</b></td><td>'+m.actualBk+'</td><td>'+(m.target??'—')+'</td><td>'+(m.prog!=null?m.prog.toFixed(1)+'%':'—')+'</td><td>'+(m.isCur?m.timeProg.toFixed(0)+'%':(m.isPast?'100%':'—'))+'</td>'+
+      '<td>'+(progressDelta==null?'—':'<span class="'+(progressDelta>=0?'pos':'neg')+'">'+(progressDelta>=0?'超前 +':'落後 ')+Math.abs(progressDelta)+'</span>')+'</td>'+
+      '<td>'+(m.isPast?m.actual:(m.isCur?m.proj:'—'))+'</td>'+
+      '<td>'+(finishDelta==null?'—':'<span class="'+(finishDelta>=0?'pos':'neg')+'">'+(finishDelta>=0?'+':'')+finishDelta+'</span>')+'</td>'+
+      '<td><span class="st '+m.status+'">'+stName[m.status]+'</span></td></tr>';
+  });});
+  h+='</tbody></table></div>'; return h;
+}
+$('monthTable').innerHTML=monthTbl();
 
 // ④ 建議
 const A=D.advice;
