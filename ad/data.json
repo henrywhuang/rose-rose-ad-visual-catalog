@@ -1,10 +1,10 @@
 {
- "genStamp": "2026-09-04 11:11",
+ "genStamp": "2026-09-04 13:12",
  "checkpointWd": "五",
  "today": "2026-09-04",
- "fetchStatus": "ok",
+ "fetchStatus": "stale",
  "expDate": "2026-09-04",
- "nAds": 30,
+ "nAds": 0,
  "curYM": "2026-09",
  "quarter": {
   "label": "2026-Q3",
@@ -5371,8 +5371,5 @@
    }
   ]
  },
- "companyNote": [
-  "後端資料庫遷移中：Math APP 註冊數 + Math H5 領課數從 2026-05-26 起異常偏低。Reading / English 領課不受影響。",
-  "Damer MCP 與 Lark bitable 已交叉驗證：數字相同（共用後端），切換 Damer 無法解決，等待開發完成遷移。"
- ]
+ "companyNote": null
 }
