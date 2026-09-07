@@ -1,14 +1,14 @@
 {
- "genStamp": "2026-09-04 15:38",
- "checkpointWd": "五",
- "tpDate": "2026-09-04",
+ "genStamp": "2026-09-07 14:44",
+ "checkpointWd": "一",
+ "tpDate": "2026-09-07",
  "OKR": {
   "ym": "2026-09",
-  "daysElapsed": 4,
+  "daysElapsed": 7,
   "daysInMonth": 30,
   "targetRead": 390,
   "targetEng": 840,
-  "timeProg": 0.13333333333333333
+  "timeProg": 0.23333333333333334
  },
  "Q3": {
   "start": "2026-07-01",
@@ -24,89 +24,89 @@
    "en": 2600,
    "math": 1440
   },
-  "daysElapsed": 66,
-  "timeProg": 0.717391304347826
+  "daysElapsed": 69,
+  "timeProg": 0.75
  },
  "subjects": [
   {
    "name": "閱讀",
    "key": "read",
    "target": 390,
-   "actual": 49,
-   "actualPub": 20,
-   "actualPri": 29,
+   "actual": 74,
+   "actualPub": 41,
+   "actualPri": 33,
    "source": "lark",
-   "prog": 12.6,
-   "timeProg": 13.3,
-   "diff": -0.8,
-   "proj": 368,
-   "attain": 94.2,
-   "gap": 23,
-   "remain": 341,
-   "needPerDay": 13.1,
-   "dayRateNow": 12.3,
-   "lastMonAll": 351,
-   "quarterActual": 794,
+   "prog": 19,
+   "timeProg": 23.3,
+   "diff": -4.4,
+   "proj": 317,
+   "attain": 81.3,
+   "gap": 73,
+   "remain": 316,
+   "needPerDay": 13.7,
+   "dayRateNow": 10.6,
+   "lastMonAll": 350,
+   "quarterActual": 814,
    "quarterTarget": 1250,
-   "quarterProg": 63.5,
-   "quarterTimeProg": 71.7,
-   "quarterDiff": -8.2,
-   "quarterProj": 1107,
-   "quarterAttain": 88.5,
-   "quarterGap": 143,
-   "quarterRemain": 456,
+   "quarterProg": 65.1,
+   "quarterTimeProg": 75,
+   "quarterDiff": -9.9,
+   "quarterProj": 1085,
+   "quarterAttain": 86.8,
+   "quarterGap": 165,
+   "quarterRemain": 436,
    "quarterMonths": [
     {
      "ym": "2026-07",
-     "actual": 394,
+     "actual": 390,
      "target": 440,
      "isPast": true,
      "isCur": false,
-     "prog": 89.5,
+     "prog": 88.6,
      "timeProg": 100,
-     "diff": -10.5,
-     "proj": 394,
-     "gap": 46,
-     "remain": 46,
-     "scheduleDelta": -46,
-     "targetDelta": -46,
+     "diff": -11.4,
+     "proj": 390,
+     "gap": 50,
+     "remain": 50,
+     "scheduleDelta": -50,
+     "targetDelta": -50,
      "status": "behind"
     },
     {
      "ym": "2026-08",
-     "actual": 351,
+     "actual": 350,
      "target": 420,
      "isPast": true,
      "isCur": false,
-     "prog": 83.6,
+     "prog": 83.3,
      "timeProg": 100,
-     "diff": -16.4,
-     "proj": 351,
-     "gap": 69,
-     "remain": 69,
-     "scheduleDelta": -69,
-     "targetDelta": -69,
+     "diff": -16.7,
+     "proj": 350,
+     "gap": 70,
+     "remain": 70,
+     "scheduleDelta": -70,
+     "targetDelta": -70,
      "status": "behind"
     },
     {
      "ym": "2026-09",
-     "actual": 49,
+     "actual": 74,
      "target": 390,
      "isPast": false,
      "isCur": true,
-     "prog": 12.6,
-     "timeProg": 13.3,
-     "diff": -0.8,
-     "proj": 368,
-     "gap": 23,
-     "remain": 341,
-     "scheduleDelta": -3,
-     "targetDelta": -341,
-     "status": "watch"
+     "prog": 19,
+     "timeProg": 23.3,
+     "diff": -4.4,
+     "proj": 317,
+     "gap": 73,
+     "remain": 316,
+     "scheduleDelta": -17,
+     "targetDelta": -316,
+     "status": "behind"
     }
    ],
    "quarterStatus": "behind",
-   "status": "watch",
+   "status": "behind",
    "poolKeys": [
     "read"
    ]
@@ -115,29 +115,29 @@
    "name": "英語",
    "key": "en",
    "target": 840,
-   "actual": 109,
-   "actualPub": 22,
-   "actualPri": 87,
+   "actual": 158,
+   "actualPub": 52,
+   "actualPri": 106,
    "source": "lark",
-   "prog": 13,
-   "timeProg": 13.3,
-   "diff": -0.4,
-   "proj": 818,
-   "attain": 97.3,
-   "gap": 23,
-   "remain": 731,
-   "needPerDay": 28.1,
-   "dayRateNow": 27.3,
+   "prog": 18.8,
+   "timeProg": 23.3,
+   "diff": -4.5,
+   "proj": 677,
+   "attain": 80.6,
+   "gap": 163,
+   "remain": 682,
+   "needPerDay": 29.7,
+   "dayRateNow": 22.6,
    "lastMonAll": 692,
-   "quarterActual": 1609,
+   "quarterActual": 1658,
    "quarterTarget": 2600,
-   "quarterProg": 61.9,
-   "quarterTimeProg": 71.7,
-   "quarterDiff": -9.9,
-   "quarterProj": 2243,
-   "quarterAttain": 86.3,
-   "quarterGap": 357,
-   "quarterRemain": 991,
+   "quarterProg": 63.8,
+   "quarterTimeProg": 75,
+   "quarterDiff": -11.2,
+   "quarterProj": 2211,
+   "quarterAttain": 85,
+   "quarterGap": 389,
+   "quarterRemain": 942,
    "quarterMonths": [
     {
      "ym": "2026-07",
@@ -173,23 +173,23 @@
     },
     {
      "ym": "2026-09",
-     "actual": 109,
+     "actual": 158,
      "target": 840,
      "isPast": false,
      "isCur": true,
-     "prog": 13,
-     "timeProg": 13.3,
-     "diff": -0.4,
-     "proj": 818,
-     "gap": 23,
-     "remain": 731,
-     "scheduleDelta": -3,
-     "targetDelta": -731,
-     "status": "watch"
+     "prog": 18.8,
+     "timeProg": 23.3,
+     "diff": -4.5,
+     "proj": 677,
+     "gap": 163,
+     "remain": 682,
+     "scheduleDelta": -38,
+     "targetDelta": -682,
+     "status": "behind"
     }
    ],
    "quarterStatus": "behind",
-   "status": "watch",
+   "status": "behind",
    "poolKeys": [
     "en_pub",
     "en_pri"
@@ -199,29 +199,29 @@
    "name": "數學",
    "key": "math",
    "target": 450,
-   "actual": 85,
-   "actualPub": 2,
-   "actualPri": 83,
+   "actual": 121,
+   "actualPub": 3,
+   "actualPri": 118,
    "source": "arkio",
-   "prog": 18.9,
-   "timeProg": 13.3,
-   "diff": 5.6,
-   "proj": 638,
-   "attain": 141.7,
+   "prog": 26.9,
+   "timeProg": 23.3,
+   "diff": 3.6,
+   "proj": 519,
+   "attain": 115.2,
    "gap": 0,
-   "remain": 365,
-   "needPerDay": 14,
-   "dayRateNow": 21.3,
+   "remain": 329,
+   "needPerDay": 14.3,
+   "dayRateNow": 17.3,
    "lastMonAll": 557,
-   "quarterActual": 1216,
+   "quarterActual": 1252,
    "quarterTarget": 1440,
-   "quarterProg": 84.4,
-   "quarterTimeProg": 71.7,
-   "quarterDiff": 12.7,
-   "quarterProj": 1695,
-   "quarterAttain": 117.7,
+   "quarterProg": 86.9,
+   "quarterTimeProg": 75,
+   "quarterDiff": 11.9,
+   "quarterProj": 1669,
+   "quarterAttain": 115.9,
    "quarterGap": 0,
-   "quarterRemain": 224,
+   "quarterRemain": 188,
    "quarterMonths": [
     {
      "ym": "2026-07",
@@ -257,18 +257,18 @@
     },
     {
      "ym": "2026-09",
-     "actual": 85,
+     "actual": 121,
      "target": 450,
      "isPast": false,
      "isCur": true,
-     "prog": 18.9,
-     "timeProg": 13.3,
-     "diff": 5.6,
-     "proj": 638,
+     "prog": 26.9,
+     "timeProg": 23.3,
+     "diff": 3.6,
+     "proj": 519,
      "gap": 0,
-     "remain": 365,
-     "scheduleDelta": 25,
-     "targetDelta": -365,
+     "remain": 329,
+     "scheduleDelta": 16,
+     "targetDelta": -329,
      "status": "ahead"
     }
    ],
@@ -283,9 +283,8 @@
   {
    "key": "read",
    "name": "閱讀｜自有流量池",
-   "current": 287,
+   "current": 288,
    "winPeriods": [
-    268,
     269,
     270,
     271,
@@ -304,45 +303,45 @@
     284,
     285,
     286,
-    287
+    287,
+    288
    ],
    "completedCount": 19,
    "band": {
-    "mean": 83.3,
+    "mean": 82.6,
     "sd": 16.1,
     "lo": 67,
     "hi": 99,
     "boom": 115,
-    "crash": 51
+    "crash": 50
    },
    "totSeriesWin": [
-    80,
-    104,
-    83,
-    76,
-    67,
+    102,
+    81,
+    74,
+    65,
     52,
     71,
     69,
     115,
     112,
-    104,
-    86,
+    103,
     84,
+    83,
     75,
     80,
     83,
     72,
     72,
     98,
-    66
+    78,
+    10
    ],
    "channels": [
     {
      "name": "APP-課卡",
      "color": "#6f8f72",
      "seriesWin": [
-      44,
       48,
       45,
       48,
@@ -361,33 +360,33 @@
       37,
       27,
       48,
-      24
+      32,
+      9
      ],
-     "mean": 40.7,
-     "sd": 9,
-     "lo": 32,
-     "hi": 50,
-     "boom": 59,
-     "warn": 32,
+     "mean": 40.1,
+     "sd": 9.2,
+     "lo": 31,
+     "hi": 49,
+     "boom": 58,
+     "warn": 31,
      "recent3": [
-      27,
       48,
-      24
+      32,
+      9
      ],
-     "norm": 175.7,
-     "lastMon": 168,
-     "mtd": 13,
-     "proj": 98,
-     "gap": 78,
-     "dropPct": -42,
+     "norm": 176,
+     "lastMon": 169,
+     "mtd": 29,
+     "proj": 124,
+     "gap": 52,
+     "dropPct": -26,
      "health": "ok",
-     "supply": "behind"
+     "supply": "watch"
     },
     {
      "name": "轉化-活動",
      "color": "#7b91bd",
      "seriesWin": [
-      18,
       34,
       13,
       6,
@@ -406,25 +405,26 @@
       18,
       26,
       29,
-      27
+      33,
+      1
      ],
-     "mean": 20.7,
-     "sd": 11,
+     "mean": 21.5,
+     "sd": 11.3,
      "lo": 10,
-     "hi": 32,
-     "boom": 43,
+     "hi": 33,
+     "boom": 44,
      "warn": 10,
      "recent3": [
-      26,
       29,
-      27
+      33,
+      1
      ],
      "norm": 101.7,
      "lastMon": 98,
-     "mtd": 26,
-     "proj": 195,
+     "mtd": 33,
+     "proj": 141,
      "gap": 0,
-     "dropPct": 99,
+     "dropPct": 44,
      "health": "ok",
      "supply": "ahead"
     },
@@ -432,7 +432,6 @@
      "name": "官方-官網",
      "color": "#b27ba0",
      "seriesWin": [
-      3,
       5,
       9,
       5,
@@ -451,33 +450,33 @@
       4,
       5,
       8,
-      5
+      8,
+      0
      ],
-     "mean": 6,
-     "sd": 1.6,
-     "lo": 4,
+     "mean": 6.3,
+     "sd": 1.5,
+     "lo": 5,
      "hi": 8,
      "boom": 9,
-     "warn": 4,
+     "warn": 5,
      "recent3": [
-      5,
       8,
-      5
+      8,
+      0
      ],
      "norm": 28.3,
      "lastMon": 25,
-     "mtd": 3,
-     "proj": 23,
-     "gap": 6,
-     "dropPct": -10,
+     "mtd": 6,
+     "proj": 26,
+     "gap": 3,
+     "dropPct": 3,
      "health": "ok",
-     "supply": "watch"
+     "supply": "ok"
     },
     {
      "name": "APP-彈窗-新用戶",
      "color": "#d09a64",
      "seriesWin": [
-      0,
       0,
       0,
       0,
@@ -496,33 +495,33 @@
       6,
       5,
       4,
-      2
+      2,
+      0
      ],
-     "mean": 3.2,
+     "mean": 3.3,
      "sd": 3.2,
      "lo": 0,
      "hi": 6,
      "boom": 10,
      "warn": 0,
      "recent3": [
-      5,
       4,
-      2
+      2,
+      0
      ],
      "norm": 20.3,
      "lastMon": 22,
      "mtd": 2,
-     "proj": 15,
-     "gap": 5,
-     "dropPct": -32,
+     "proj": 9,
+     "gap": 12,
+     "dropPct": -61,
      "health": "ok",
-     "supply": "watch"
+     "supply": "behind"
     },
     {
      "name": "官方-訊息",
      "color": "#6fa6a0",
      "seriesWin": [
-      1,
       1,
       0,
       1,
@@ -541,17 +540,18 @@
       1,
       3,
       2,
+      0,
       0
      ],
-     "mean": 3.2,
-     "sd": 3.5,
+     "mean": 3.1,
+     "sd": 3.6,
      "lo": 0,
      "hi": 7,
      "boom": 10,
      "warn": 0,
      "recent3": [
-      3,
       2,
+      0,
       0
      ],
      "norm": 18.7,
@@ -567,7 +567,6 @@
      "name": "APP-彈窗-全",
      "color": "#9b83b5",
      "seriesWin": [
-      6,
       13,
       9,
       12,
@@ -586,9 +585,10 @@
       0,
       0,
       0,
+      0,
       0
      ],
-     "mean": 4.9,
+     "mean": 4.6,
      "sd": 5.9,
      "lo": 0,
      "hi": 11,
@@ -614,7 +614,6 @@
      "seriesWin": [
       1,
       1,
-      1,
       0,
       0,
       0,
@@ -631,6 +630,7 @@
       2,
       2,
       2,
+      0,
       0
      ],
      "mean": 1.4,
@@ -641,7 +641,7 @@
      "warn": 0,
      "recent3": [
       2,
-      2,
+      0,
       0
      ],
      "norm": 8,
@@ -669,85 +669,39 @@
       0,
       0,
       0,
-      0,
       5,
       2,
       4,
       4,
       3,
       4,
-      1
+      2,
+      0
      ],
-     "mean": 1.2,
+     "mean": 1.3,
      "sd": 1.8,
      "lo": 0,
      "hi": 3,
      "boom": 5,
      "warn": 0,
      "recent3": [
-      3,
       4,
-      1
+      2,
+      0
      ],
      "norm": 7.3,
      "lastMon": 15,
-     "mtd": 1,
-     "proj": 8,
+     "mtd": 2,
+     "proj": 9,
      "gap": 0,
-     "dropPct": -50,
+     "dropPct": -43,
      "health": "small",
      "supply": "behind"
     },
     {
-     "name": "轉化-私訊",
+     "name": "官方-IG",
      "color": "#96a66e",
      "seriesWin": [
-      1,
-      2,
-      2,
-      2,
-      3,
-      2,
-      1,
-      0,
-      1,
-      0,
-      1,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      6
-     ],
-     "mean": 1,
-     "sd": 0.9,
-     "lo": 0,
-     "hi": 2,
-     "boom": 3,
-     "warn": 0,
-     "recent3": [
-      0,
-      1,
-      6
-     ],
-     "norm": 3,
-     "lastMon": 3,
-     "mtd": 3,
-     "proj": 23,
-     "gap": 0,
-     "dropPct": 650,
-     "health": "small",
-     "supply": "ahead"
-    },
-    {
-     "name": "官方-IG",
-     "color": "#b58c70",
-     "seriesWin": [
-      0,
       0,
       1,
       1,
@@ -762,6 +716,7 @@
       0,
       1,
       1,
+      0,
       0,
       0,
       0,
@@ -789,10 +744,54 @@
      "supply": "small"
     },
     {
+     "name": "轉化-私訊",
+     "color": "#b58c70",
+     "seriesWin": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "mean": 0.3,
+     "sd": 0.6,
+     "lo": 0,
+     "hi": 1,
+     "boom": 1,
+     "warn": 0,
+     "recent3": [
+      1,
+      0,
+      0
+     ],
+     "norm": 1,
+     "lastMon": 1,
+     "mtd": 0,
+     "proj": 0,
+     "gap": 1,
+     "dropPct": -100,
+     "health": "small",
+     "supply": "small"
+    },
+    {
      "name": "官方-Meta",
      "color": "#6f7f78",
      "seriesWin": [
-      1,
       0,
       1,
       0,
@@ -807,6 +806,7 @@
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -843,8 +843,8 @@
       0,
       0,
       0,
-      0,
       1,
+      0,
       0,
       0,
       0,
@@ -892,8 +892,8 @@
       0,
       0,
       0,
-      0,
       1,
+      0,
       0,
       0,
       0,
@@ -943,8 +943,8 @@
       0,
       0,
       0,
-      0,
       1,
+      0,
       0,
       0
      ],
@@ -955,7 +955,7 @@
      "boom": 0,
      "warn": 0,
      "recent3": [
-      1,
+      0,
       0,
       0
      ],
@@ -972,7 +972,6 @@
      "name": "APP",
      "color": "#6f8f72",
      "seriesWin": [
-      5,
       0,
       2,
       0,
@@ -991,13 +990,14 @@
       0,
       0,
       0,
+      0,
       0
      ],
-     "mean": 0.4,
-     "sd": 1.2,
+     "mean": 0.1,
+     "sd": 0.4,
      "lo": 0,
-     "hi": 2,
-     "boom": 3,
+     "hi": 1,
+     "boom": 1,
      "warn": 0,
      "recent3": [
       0,
@@ -1019,7 +1019,6 @@
      "seriesWin": [
       0,
       0,
-      0,
       1,
       0,
       0,
@@ -1036,23 +1035,24 @@
       0,
       0,
       0,
-      1
+      1,
+      0
      ],
      "mean": 0.1,
-     "sd": 0.2,
+     "sd": 0.3,
      "lo": 0,
      "hi": 0,
-     "boom": 0,
+     "boom": 1,
      "warn": 0,
      "recent3": [
       0,
-      0,
-      1
+      1,
+      0
      ],
      "norm": 0,
      "lastMon": 0,
      "mtd": 1,
-     "proj": 8,
+     "proj": 4,
      "gap": 0,
      "dropPct": 100,
      "health": "small",
@@ -1063,9 +1063,8 @@
   {
    "key": "en_pub",
    "name": "英語｜公領域",
-   "current": 129,
+   "current": 130,
    "winPeriods": [
-    113,
     114,
     115,
     116,
@@ -1081,19 +1080,19 @@
     126,
     127,
     128,
-    129
+    129,
+    130
    ],
    "completedCount": 16,
    "band": {
-    "mean": 58.2,
-    "sd": 12.5,
+    "mean": 59.1,
+    "sd": 13.1,
     "lo": 46,
-    "hi": 71,
-    "boom": 83,
+    "hi": 72,
+    "boom": 85,
     "crash": 33
    },
    "totSeriesWin": [
-    59,
     65,
     46,
     65,
@@ -1109,14 +1108,14 @@
     46,
     51,
     89,
-    53
+    74,
+    8
    ],
    "channels": [
     {
      "name": "APP-課卡",
      "color": "#6f8f72",
      "seriesWin": [
-      46,
       44,
       27,
       46,
@@ -1132,33 +1131,33 @@
       35,
       41,
       65,
-      43
+      59,
+      5
      ],
-     "mean": 41.8,
-     "sd": 10.2,
+     "mean": 42.6,
+     "sd": 11,
      "lo": 32,
-     "hi": 52,
-     "boom": 62,
+     "hi": 54,
+     "boom": 65,
      "warn": 32,
      "recent3": [
-      41,
       65,
-      43
+      59,
+      5
      ],
      "norm": 190.3,
      "lastMon": 200,
-     "mtd": 19,
-     "proj": 143,
-     "gap": 48,
-     "dropPct": -29,
-     "health": "ok",
-     "supply": "watch"
+     "mtd": 40,
+     "proj": 171,
+     "gap": 19,
+     "dropPct": -14,
+     "health": "boom",
+     "supply": "ok"
     },
     {
      "name": "APP-彈窗-新用戶",
      "color": "#7b91bd",
      "seriesWin": [
-      6,
       14,
       10,
       9,
@@ -1174,25 +1173,26 @@
       5,
       5,
       15,
-      6
+      7,
+      1
      ],
-     "mean": 8.8,
+     "mean": 8.9,
      "sd": 3.3,
-     "lo": 5,
+     "lo": 6,
      "hi": 12,
      "boom": 15,
-     "warn": 5,
+     "warn": 6,
      "recent3": [
-      5,
       15,
-      6
+      7,
+      1
      ],
      "norm": 38,
      "lastMon": 41,
-     "mtd": 1,
-     "proj": 8,
-     "gap": 31,
-     "dropPct": -82,
+     "mtd": 3,
+     "proj": 13,
+     "gap": 25,
+     "dropPct": -69,
      "health": "ok",
      "supply": "behind"
     },
@@ -1200,7 +1200,6 @@
      "name": "官方-官網",
      "color": "#b27ba0",
      "seriesWin": [
-      6,
       7,
       7,
       8,
@@ -1216,33 +1215,33 @@
       4,
       3,
       5,
-      3
+      7,
+      1
      ],
      "mean": 5.1,
-     "sd": 1.6,
+     "sd": 1.7,
      "lo": 3,
      "hi": 7,
      "boom": 8,
      "warn": 3,
      "recent3": [
-      3,
       5,
-      3
+      7,
+      1
      ],
      "norm": 20,
      "lastMon": 17,
-     "mtd": 2,
-     "proj": 15,
-     "gap": 5,
-     "dropPct": -12,
+     "mtd": 7,
+     "proj": 30,
+     "gap": 0,
+     "dropPct": 76,
      "health": "ok",
-     "supply": "watch"
+     "supply": "ahead"
     },
     {
      "name": "APP-彈窗-PU",
      "color": "#d09a64",
      "seriesWin": [
-      1,
       0,
       2,
       0,
@@ -1258,33 +1257,75 @@
       1,
       0,
       2,
-      0
+      0,
+      1
      ],
      "mean": 0.8,
-     "sd": 0.9,
+     "sd": 1,
      "lo": 0,
      "hi": 2,
      "boom": 3,
      "warn": 0,
      "recent3": [
-      0,
       2,
-      0
+      0,
+      1
      ],
      "norm": 3.3,
      "lastMon": 3,
-     "mtd": 0,
-     "proj": 0,
-     "gap": 3,
-     "dropPct": -100,
+     "mtd": 1,
+     "proj": 4,
+     "gap": 0,
+     "dropPct": 43,
      "health": "small",
-     "supply": "behind"
+     "supply": "ahead"
     },
     {
-     "name": "APP",
+     "name": "官方-Meta",
      "color": "#6fa6a0",
      "seriesWin": [
       0,
+      0,
+      1,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1,
+      0
+     ],
+     "mean": 0.4,
+     "sd": 0.6,
+     "lo": 0,
+     "hi": 1,
+     "boom": 2,
+     "warn": 0,
+     "recent3": [
+      1,
+      1,
+      0
+     ],
+     "norm": 2,
+     "lastMon": 2,
+     "mtd": 0,
+     "proj": 0,
+     "gap": 2,
+     "dropPct": -100,
+     "health": "small",
+     "supply": "small"
+    },
+    {
+     "name": "APP",
+     "color": "#9b83b5",
+     "seriesWin": [
       0,
       0,
       0,
@@ -1292,6 +1333,7 @@
       0,
       2,
       4,
+      0,
       0,
       0,
       0,
@@ -1324,9 +1366,8 @@
     },
     {
      "name": "APP-BN",
-     "color": "#9b83b5",
+     "color": "#c87976",
      "seriesWin": [
-      0,
       0,
       0,
       0,
@@ -1341,6 +1382,7 @@
       1,
       1,
       1,
+      0,
       0,
       0
      ],
@@ -1351,54 +1393,12 @@
      "boom": 2,
      "warn": 0,
      "recent3": [
-      1,
+      0,
       0,
       0
      ],
      "norm": 2,
      "lastMon": 4,
-     "mtd": 0,
-     "proj": 0,
-     "gap": 2,
-     "dropPct": -100,
-     "health": "small",
-     "supply": "small"
-    },
-    {
-     "name": "官方-Meta",
-     "color": "#c87976",
-     "seriesWin": [
-      0,
-      0,
-      0,
-      1,
-      2,
-      1,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      1,
-      1
-     ],
-     "mean": 0.3,
-     "sd": 0.6,
-     "lo": 0,
-     "hi": 1,
-     "boom": 1,
-     "warn": 0,
-     "recent3": [
-      0,
-      1,
-      1
-     ],
-     "norm": 2,
-     "lastMon": 2,
      "mtd": 0,
      "proj": 0,
      "gap": 2,
@@ -1415,7 +1415,6 @@
       0,
       0,
       0,
-      0,
       1,
       1,
       0,
@@ -1425,6 +1424,7 @@
       0,
       0,
       1,
+      0,
       0,
       0
      ],
@@ -1435,7 +1435,7 @@
      "boom": 1,
      "warn": 0,
      "recent3": [
-      1,
+      0,
       0,
       0
      ],
@@ -1454,7 +1454,6 @@
      "seriesWin": [
       0,
       0,
-      0,
       1,
       0,
       0,
@@ -1468,6 +1467,7 @@
       0,
       0,
       1,
+      0,
       0
      ],
      "mean": 0.3,
@@ -1477,8 +1477,8 @@
      "boom": 1,
      "warn": 0,
      "recent3": [
-      0,
       1,
+      0,
       0
      ],
      "norm": 1.3,
@@ -1501,12 +1501,12 @@
       0,
       0,
       0,
-      0,
       1,
       0,
       0,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -1537,9 +1537,8 @@
   {
    "key": "en_pri",
    "name": "英語｜私領域",
-   "current": 129,
+   "current": 130,
    "winPeriods": [
-    113,
     114,
     115,
     116,
@@ -1555,19 +1554,19 @@
     126,
     127,
     128,
-    129
+    129,
+    130
    ],
    "completedCount": 16,
    "band": {
-    "mean": 110.1,
-    "sd": 25.3,
-    "lo": 85,
-    "hi": 135,
-    "boom": 161,
-    "crash": 60
+    "mean": 109.4,
+    "sd": 25.1,
+    "lo": 84,
+    "hi": 134,
+    "boom": 160,
+    "crash": 59
    },
    "totSeriesWin": [
-    120,
     105,
     137,
     111,
@@ -1583,14 +1582,14 @@
     92,
     95,
     155,
-    97
+    109,
+    4
    ],
    "channels": [
     {
      "name": "轉化-活動",
      "color": "#6f8f72",
      "seriesWin": [
-      48,
       30,
       29,
       24,
@@ -1606,25 +1605,26 @@
       36,
       57,
       46,
-      9
+      12,
+      0
      ],
-     "mean": 41.6,
-     "sd": 12.8,
-     "lo": 29,
+     "mean": 39.4,
+     "sd": 14.5,
+     "lo": 25,
      "hi": 54,
-     "boom": 67,
-     "warn": 29,
+     "boom": 68,
+     "warn": 25,
      "recent3": [
-      57,
       46,
-      9
+      12,
+      0
      ],
      "norm": 185.7,
      "lastMon": 181,
-     "mtd": 8,
-     "proj": 60,
-     "gap": 126,
-     "dropPct": -67,
+     "mtd": 11,
+     "proj": 47,
+     "gap": 139,
+     "dropPct": -74,
      "health": "ok",
      "supply": "behind"
     },
@@ -1632,7 +1632,6 @@
      "name": "數學老師-導英語",
      "color": "#7b91bd",
      "seriesWin": [
-      29,
       43,
       74,
       64,
@@ -1648,33 +1647,33 @@
       5,
       3,
       67,
-      27
+      30,
+      0
      ],
-     "mean": 34.2,
-     "sd": 21.7,
+     "mean": 34.3,
+     "sd": 21.6,
      "lo": 13,
      "hi": 56,
      "boom": 78,
      "warn": 13,
      "recent3": [
-      3,
       67,
-      27
+      30,
+      0
      ],
      "norm": 133.3,
      "lastMon": 85,
-     "mtd": 24,
-     "proj": 180,
-     "gap": 0,
-     "dropPct": 112,
+     "mtd": 27,
+     "proj": 116,
+     "gap": 18,
+     "dropPct": 36,
      "health": "ok",
-     "supply": "ahead"
+     "supply": "watch"
     },
     {
      "name": "轉化-SOP",
      "color": "#b27ba0",
      "seriesWin": [
-      14,
       23,
       22,
       10,
@@ -1690,25 +1689,26 @@
       12,
       6,
       13,
-      15
+      16,
+      1
      ],
-     "mean": 13.1,
-     "sd": 5.1,
+     "mean": 13.3,
+     "sd": 5.2,
      "lo": 8,
      "hi": 18,
-     "boom": 23,
+     "boom": 24,
      "warn": 8,
      "recent3": [
-      6,
       13,
-      15
+      16,
+      1
      ],
      "norm": 46.3,
      "lastMon": 42,
-     "mtd": 14,
-     "proj": 105,
+     "mtd": 16,
+     "proj": 69,
      "gap": 0,
-     "dropPct": 150,
+     "dropPct": 63,
      "health": "ok",
      "supply": "ahead"
     },
@@ -1716,7 +1716,6 @@
      "name": "官方-訊息",
      "color": "#d09a64",
      "seriesWin": [
-      0,
       0,
       0,
       0,
@@ -1732,33 +1731,33 @@
       28,
       19,
       11,
-      2
+      2,
+      0
      ],
-     "mean": 6.4,
-     "sd": 10.5,
+     "mean": 6.6,
+     "sd": 10.4,
      "lo": 0,
      "hi": 17,
      "boom": 27,
      "warn": 0,
      "recent3": [
-      19,
       11,
-      2
+      2,
+      0
      ],
      "norm": 34.7,
      "lastMon": 60,
      "mtd": 1,
-     "proj": 8,
-     "gap": 27,
-     "dropPct": -87,
-     "health": "boom",
+     "proj": 4,
+     "gap": 30,
+     "dropPct": -93,
+     "health": "ok",
      "supply": "behind"
     },
     {
      "name": "漸進式訊息",
      "color": "#6fa6a0",
      "seriesWin": [
-      0,
       0,
       1,
       0,
@@ -1774,33 +1773,33 @@
       4,
       4,
       6,
-      36
+      39,
+      0
      ],
-     "mean": 3.7,
-     "sd": 4.7,
+     "mean": 6.1,
+     "sd": 9.7,
      "lo": 0,
-     "hi": 8,
-     "boom": 13,
+     "hi": 16,
+     "boom": 25,
      "warn": 0,
      "recent3": [
-      4,
       6,
-      36
+      39,
+      0
      ],
      "norm": 19.3,
      "lastMon": 21,
-     "mtd": 35,
-     "proj": 263,
+     "mtd": 38,
+     "proj": 163,
      "gap": 0,
-     "dropPct": 1150,
-     "health": "ok",
+     "dropPct": 676,
+     "health": "boom",
      "supply": "ahead"
     },
     {
      "name": "轉化-私訊",
      "color": "#9b83b5",
      "seriesWin": [
-      7,
       2,
       1,
       4,
@@ -1816,25 +1815,26 @@
       4,
       1,
       3,
-      3
+      5,
+      0
      ],
-     "mean": 3.3,
-     "sd": 2.3,
+     "mean": 3.1,
+     "sd": 2.1,
      "lo": 1,
-     "hi": 6,
-     "boom": 8,
+     "hi": 5,
+     "boom": 7,
      "warn": 1,
      "recent3": [
-      1,
       3,
-      3
+      5,
+      0
      ],
      "norm": 14.3,
      "lastMon": 15,
-     "mtd": 0,
-     "proj": 0,
-     "gap": 14,
-     "dropPct": -100,
+     "mtd": 2,
+     "proj": 9,
+     "gap": 6,
+     "dropPct": -43,
      "health": "ok",
      "supply": "behind"
     },
@@ -1842,7 +1842,6 @@
      "name": "年課-活動",
      "color": "#c87976",
      "seriesWin": [
-      15,
       5,
       8,
       3,
@@ -1858,25 +1857,26 @@
       2,
       5,
       3,
-      3
-     ],
-     "mean": 4,
-     "sd": 3.3,
-     "lo": 1,
-     "hi": 7,
-     "boom": 11,
-     "warn": 1,
-     "recent3": [
-      5,
       3,
-      3
+      1
+     ],
+     "mean": 3.3,
+     "sd": 1.7,
+     "lo": 2,
+     "hi": 5,
+     "boom": 7,
+     "warn": 2,
+     "recent3": [
+      3,
+      3,
+      1
      ],
      "norm": 12,
      "lastMon": 11,
-     "mtd": 3,
-     "proj": 23,
+     "mtd": 4,
+     "proj": 17,
      "gap": 0,
-     "dropPct": 105,
+     "dropPct": 56,
      "health": "ok",
      "supply": "ahead"
     },
@@ -1884,7 +1884,6 @@
      "name": "年課-私訊",
      "color": "#849fbb",
      "seriesWin": [
-      5,
       1,
       1,
       5,
@@ -1900,33 +1899,33 @@
       0,
       0,
       1,
-      1
+      1,
+      0
      ],
-     "mean": 2,
-     "sd": 1.8,
+     "mean": 1.8,
+     "sd": 1.7,
      "lo": 0,
-     "hi": 4,
-     "boom": 6,
+     "hi": 3,
+     "boom": 5,
      "warn": 0,
      "recent3": [
-      0,
       1,
-      1
+      1,
+      0
      ],
      "norm": 8.3,
      "lastMon": 1,
      "mtd": 1,
-     "proj": 8,
-     "gap": 1,
-     "dropPct": 650,
+     "proj": 4,
+     "gap": 4,
+     "dropPct": 329,
      "health": "ok",
-     "supply": "watch"
+     "supply": "behind"
     },
     {
      "name": "轉化-群組",
      "color": "#96a66e",
      "seriesWin": [
-      0,
       0,
       0,
       1,
@@ -1942,7 +1941,8 @@
       0,
       0,
       3,
-      1
+      1,
+      2
      ],
      "mean": 0.8,
      "sd": 1,
@@ -1951,16 +1951,16 @@
      "boom": 3,
      "warn": 0,
      "recent3": [
-      0,
       3,
-      1
+      1,
+      2
      ],
      "norm": 4,
      "lastMon": 3,
-     "mtd": 1,
-     "proj": 8,
+     "mtd": 3,
+     "proj": 13,
      "gap": 0,
-     "dropPct": 150,
+     "dropPct": 329,
      "health": "small",
      "supply": "ahead"
     },
@@ -1968,7 +1968,6 @@
      "name": "轉化-訊報",
      "color": "#b58c70",
      "seriesWin": [
-      1,
       0,
       0,
       0,
@@ -1982,6 +1981,7 @@
       2,
       0,
       1,
+      0,
       0,
       0,
       0
@@ -2012,7 +2012,6 @@
      "seriesWin": [
       1,
       1,
-      1,
       0,
       1,
       1,
@@ -2026,17 +2025,18 @@
       0,
       0,
       1,
+      0,
       0
      ],
-     "mean": 0.4,
+     "mean": 0.3,
      "sd": 0.5,
      "lo": 0,
      "hi": 1,
      "boom": 1,
      "warn": 0,
      "recent3": [
-      0,
       1,
+      0,
       0
      ],
      "norm": 0.7,
@@ -2057,13 +2057,13 @@
       0,
       0,
       0,
-      0,
       1,
       0,
       0,
       1,
       0,
       1,
+      0,
       0,
       0,
       0,
@@ -2100,8 +2100,8 @@
       0,
       0,
       0,
-      0,
       1,
+      0,
       0,
       0,
       0,
@@ -2150,8 +2150,8 @@
       0,
       0,
       0,
-      0,
       1,
+      0,
       0
      ],
      "mean": 0.1,
@@ -2161,8 +2161,8 @@
      "boom": 1,
      "warn": 0,
      "recent3": [
-      0,
       1,
+      0,
       0
      ],
      "norm": 0.3,
@@ -2192,7 +2192,7 @@
     497,
     574,
     557,
-    85
+    121
    ],
    "band": {
     "mean": 542.7,
@@ -2208,7 +2208,7 @@
       150,
       209,
       152,
-      13
+      29
      ],
      "mean": 170.3,
      "sd": 0,
@@ -2217,16 +2217,16 @@
      "recent3": [
       209,
       152,
-      13
+      29
      ],
      "norm": 170.3,
      "lastMon": 152,
-     "mtd": 13,
-     "proj": 98,
-     "gap": 73,
-     "dropPct": -36,
+     "mtd": 29,
+     "proj": 124,
+     "gap": 46,
+     "dropPct": -18,
      "health": "small",
-     "supply": "behind"
+     "supply": "watch"
     },
     {
      "name": "私域·彈窗",
@@ -2235,7 +2235,7 @@
       117,
       129,
       122,
-      13
+      19
      ],
      "mean": 122.7,
      "sd": 0,
@@ -2244,16 +2244,16 @@
      "recent3": [
       129,
       122,
-      13
+      19
      ],
      "norm": 122.7,
      "lastMon": 122,
-     "mtd": 13,
-     "proj": 98,
-     "gap": 25,
-     "dropPct": -20,
+     "mtd": 19,
+     "proj": 81,
+     "gap": 41,
+     "dropPct": -33,
      "health": "small",
-     "supply": "watch"
+     "supply": "behind"
     },
     {
      "name": "私域·LINE好友",
@@ -2262,7 +2262,7 @@
       85,
       91,
       181,
-      36
+      44
      ],
      "mean": 119,
      "sd": 0,
@@ -2271,14 +2271,14 @@
      "recent3": [
       91,
       181,
-      36
+      44
      ],
      "norm": 119,
      "lastMon": 181,
-     "mtd": 36,
-     "proj": 270,
+     "mtd": 44,
+     "proj": 189,
      "gap": 0,
-     "dropPct": 49,
+     "dropPct": 4,
      "health": "small",
      "supply": "ahead"
     },
@@ -2289,7 +2289,7 @@
       108,
       113,
       75,
-      21
+      26
      ],
      "mean": 98.7,
      "sd": 0,
@@ -2298,16 +2298,16 @@
      "recent3": [
       113,
       75,
-      21
+      26
      ],
      "norm": 98.7,
      "lastMon": 75,
-     "mtd": 21,
-     "proj": 158,
+     "mtd": 26,
+     "proj": 111,
      "gap": 0,
-     "dropPct": 110,
+     "dropPct": 49,
      "health": "small",
-     "supply": "ahead"
+     "supply": "ok"
     },
     {
      "name": "公域·LINE好友",
@@ -2343,7 +2343,7 @@
       17,
       8,
       5,
-      1
+      2
      ],
      "mean": 10,
      "sd": 0,
@@ -2352,14 +2352,14 @@
      "recent3": [
       8,
       5,
-      1
+      2
      ],
      "norm": 10,
      "lastMon": 5,
-     "mtd": 1,
-     "proj": 8,
-     "gap": 3,
-     "dropPct": 50,
+     "mtd": 2,
+     "proj": 9,
+     "gap": 1,
+     "dropPct": 71,
      "health": "small",
      "supply": "watch"
     },
@@ -2411,11 +2411,11 @@
      "norm": 4.7,
      "lastMon": 2,
      "mtd": 1,
-     "proj": 8,
+     "proj": 4,
      "gap": 0,
-     "dropPct": 275,
+     "dropPct": 114,
      "health": "small",
-     "supply": "ahead"
+     "supply": "ok"
     },
     {
      "name": "私域·2026-Ava-1",

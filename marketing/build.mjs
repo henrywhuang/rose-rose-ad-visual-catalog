@@ -43,7 +43,24 @@ const cfgFields = (await (await fetch(`${BASE}/bitable/v1/apps/${APP}/tables/${C
 const catMap = {}, subMap = {};
 for (const f of cfgFields) { if (f.field_name === '渠道分類') for (const o of f.property.options) catMap[o.id] = o.name; if (f.field_name === '子類') for (const o of f.property.options) subMap[o.id] = o.name; }
 
-async function pull(tid) { let it = [], pt = ''; do { const u = new URL(`${BASE}/bitable/v1/apps/${APP}/tables/${tid}/records`); u.searchParams.set('page_size', '500'); if (pt) u.searchParams.set('page_token', pt); const j = await (await fetch(u, { headers: G })).json(); if (j.code !== 0) throw new Error('records ' + JSON.stringify(j).slice(0, 200)); it = it.concat(j.data.items || []); pt = j.data.has_more ? j.data.page_token : ''; } while (pt); return it; }
+async function fetchRetry(url, options, attempts = 5) {
+  let last;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      const res = await fetch(url, options);
+      if (res.status >= 500) throw new Error(`HTTP ${res.status}`);
+      return res;
+    } catch (e) {
+      last = e;
+      if (i === attempts - 1) break;
+      const wait = 800 * 2 ** i;
+      console.error(`Lark 分頁連線中斷，${wait}ms 後重試 (${i + 1}/${attempts - 1})`);
+      await new Promise(resolve => setTimeout(resolve, wait));
+    }
+  }
+  throw last;
+}
+async function pull(tid) { let it = [], pt = ''; do { const u = new URL(`${BASE}/bitable/v1/apps/${APP}/tables/${tid}/records`); u.searchParams.set('page_size', '500'); if (pt) u.searchParams.set('page_token', pt); const j = await (await fetchRetry(u, { headers: G })).json(); if (j.code !== 0) throw new Error('records ' + JSON.stringify(j).slice(0, 200)); it = it.concat(j.data.items || []); pt = j.data.has_more ? j.data.page_token : ''; } while (pt); return it; }
 const one = v => Array.isArray(v) ? v[0] : v;
 const txt = v => v == null ? '' : Array.isArray(v) ? v.map(txt).join('') : (typeof v === 'object' ? (v.text ?? v.name ?? '') : String(v));
 const pnum = p => { const n = parseInt(String(p).replace(/[^0-9]/g, '')); return isNaN(n) ? null : n; };
