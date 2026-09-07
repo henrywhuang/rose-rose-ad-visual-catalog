@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dir = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dir, '..', '..', '..');
-const token = fs.readFileSync(path.join(ROOT, '.arkio_token'), 'utf8').trim();
+const token = process.env.ARKIO_TOKEN || fs.readFileSync(path.join(ROOT, '.arkio_token'), 'utf8').trim();
 const headers = { Authorization: `Bearer ${token}`, Accept: 'application/json' };
 const API = 'https://www.arkio.me/api/v1/marketing/creative-library';
 const all = [];

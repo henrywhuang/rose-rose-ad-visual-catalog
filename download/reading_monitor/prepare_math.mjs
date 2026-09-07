@@ -16,7 +16,7 @@ const addDays = (date, days) => {
 // ranking on its own rolling two-month window even when the shared fetch is wider.
 const MATH_FROM = addDays(raw.date_to, -60);
 const MATH_TO = raw.date_to;
-const token = fs.readFileSync(path.join(ROOT, '.arkio_token'), 'utf8').trim();
+const token = process.env.ARKIO_TOKEN || fs.readFileSync(path.join(ROOT, '.arkio_token'), 'utf8').trim();
 const response = await fetch('https://www.arkio.me/api/v1/social-accounts', {
   headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' },
   signal: AbortSignal.timeout(30000),

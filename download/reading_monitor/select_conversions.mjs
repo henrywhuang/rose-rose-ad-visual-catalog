@@ -36,7 +36,7 @@ const DATE_FROM = process.env.DATE_FROM || subtractCalendarMonths(DATE_TO, 3);
 fs.mkdirSync(CACHE_DIR, { recursive: true });
 fs.mkdirSync(ASSET_DIR, { recursive: true });
 
-const token = fs.readFileSync(TOKEN_PATH, 'utf8').trim();
+const token = process.env.ARKIO_TOKEN || fs.readFileSync(TOKEN_PATH, 'utf8').trim();
 const headers = { Authorization: `Bearer ${token}`, Accept: 'application/json' };
 
 const DISPLAY_OVERRIDES = {

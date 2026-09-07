@@ -23,7 +23,7 @@ const DATE_TO = process.env.DATE_TO || dateInShanghai;
 const DATE_FROM = process.env.DATE_FROM || addDays(DATE_TO, -60);
 const CONCURRENCY = Math.max(1, Number(process.env.CONCURRENCY || 8));
 
-const token = fs.readFileSync(TOKEN_PATH, 'utf8').trim();
+const token = process.env.ARKIO_TOKEN || fs.readFileSync(TOKEN_PATH, 'utf8').trim();
 const headers = { Authorization: `Bearer ${token}`, Accept: 'application/json' };
 
 async function get(endpoint, timeoutMs = 45000) {
