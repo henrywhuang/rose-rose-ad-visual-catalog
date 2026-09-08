@@ -1,7 +1,7 @@
 {
- "genStamp": "2026-09-07 13:23",
- "checkpointWd": "一",
- "today": "2026-09-07",
+ "genStamp": "2026-09-08 13:25",
+ "checkpointWd": "二",
+ "today": "2026-09-08",
  "fetchStatus": "stale",
  "expDate": "2026-09-04",
  "nAds": 0,
@@ -17,8 +17,8 @@
    "2026-09"
   ]
  },
- "dayOfQuarter": 69,
- "dayOfMonth": 7,
+ "dayOfQuarter": 70,
+ "dayOfMonth": 8,
  "dim": 30,
  "subjects": [
   {
@@ -35,13 +35,13 @@
     "actual": 2250,
     "actualBk": 2276,
     "prog": 67,
-    "timeProg": 75,
-    "proj": 3000,
-    "attain": 89.3,
-    "gap": 360,
+    "timeProg": 76.1,
+    "proj": 2957,
+    "attain": 88,
+    "gap": 403,
     "remain": 1110,
-    "diff": -8,
-    "scheduleDelta": -270,
+    "diff": -9.1,
+    "scheduleDelta": -307,
     "status": "behind"
    },
    "cur": {
@@ -50,15 +50,15 @@
     "actual": 108,
     "actualBk": 110,
     "prog": 8.9,
-    "timeProg": 23.3,
-    "proj": 463,
-    "attain": 38.3,
-    "gap": 747,
+    "timeProg": 26.7,
+    "proj": 405,
+    "attain": 33.5,
+    "gap": 805,
     "remain": 1102,
-    "needPerDay": 47.9,
-    "dayRateNow": 15.4,
-    "recent7Rate": 15.4,
-    "diff": -14.4,
+    "needPerDay": 50.1,
+    "dayRateNow": 13.5,
+    "recent7Rate": 8.9,
+    "diff": -17.7,
     "status": "behind"
    },
    "months": [
@@ -107,16 +107,16 @@
      "actualBk": 110,
      "isCur": true,
      "isPast": false,
-     "proj": 463,
-     "gap": 747,
+     "proj": 405,
+     "gap": 805,
      "remain": 1102,
      "prog": 8.9,
-     "timeProg": 23.3,
-     "diff": -14.4,
-     "scheduleDelta": -174,
+     "timeProg": 26.7,
+     "diff": -17.8,
+     "scheduleDelta": -215,
      "targetDelta": -1102,
-     "projectedDelta": -747,
-     "attain": 38.3,
+     "projectedDelta": -805,
+     "attain": 33.5,
      "status": "behind"
     }
    ],
@@ -245,7 +245,7 @@
      "start": "2026-09-07",
      "end": "2026-09-13",
      "effFrom": "2026-09-07",
-     "effTo": "2026-09-07",
+     "effTo": "2026-09-08",
      "isCur": true,
      "line": 303,
      "actual": 0,
@@ -265,13 +265,13 @@
     "actual": 31,
     "actualBk": 25,
     "prog": 62,
-    "timeProg": 75,
+    "timeProg": 76.1,
     "proj": 41,
-    "attain": 82.7,
+    "attain": 81.5,
     "gap": 9,
     "remain": 19,
-    "diff": -13,
-    "scheduleDelta": -6,
+    "diff": -14.1,
+    "scheduleDelta": -7,
     "status": "behind"
    },
    "cur": {
@@ -280,7 +280,7 @@
     "actual": 0,
     "actualBk": 0,
     "prog": 0,
-    "timeProg": 23.3,
+    "timeProg": 26.7,
     "proj": 0,
     "attain": 0,
     "gap": null,
@@ -338,7 +338,7 @@
      "gap": null,
      "remain": null,
      "prog": null,
-     "timeProg": 23.3,
+     "timeProg": 26.7,
      "diff": null,
      "scheduleDelta": null,
      "targetDelta": null,
@@ -472,7 +472,7 @@
      "start": "2026-09-07",
      "end": "2026-09-13",
      "effFrom": "2026-09-07",
-     "effTo": "2026-09-07",
+     "effTo": "2026-09-08",
      "isCur": true,
      "line": null,
      "actual": 0,
@@ -495,7 +495,7 @@
    "b": 357,
    "spend": 2077,
    "cpl": 5.9,
-   "m7": 19,
+   "m7": 12,
    "budget": 45,
    "bm": {
     "excellent": 5,
@@ -555,7 +555,7 @@
    "b": 256,
    "spend": 1162,
    "cpl": 4.7,
-   "m7": 43,
+   "m7": 26,
    "budget": 30,
    "bm": {
     "excellent": 5,
@@ -645,7 +645,7 @@
    "b": 202,
    "spend": 1256,
    "cpl": 6.5,
-   "m7": 19,
+   "m7": 9,
    "budget": 55,
    "bm": {
     "excellent": 5,
@@ -765,7 +765,7 @@
    "b": 93,
    "spend": 492,
    "cpl": 5.5,
-   "m7": 17,
+   "m7": 11,
    "budget": 31,
    "bm": {
     "excellent": 5,
@@ -915,7 +915,7 @@
    "b": 14,
    "spend": 105,
    "cpl": 7,
-   "m7": 6,
+   "m7": 1,
    "budget": 12,
    "bm": {
     "excellent": 5,
@@ -1155,7 +1155,7 @@
    "b": 4,
    "spend": 26,
    "cpl": 6.6,
-   "m7": 1,
+   "m7": 0,
    "budget": 6,
    "bm": {
     "excellent": 5,
@@ -4207,10 +4207,10 @@
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 47.9,
-  "addlPerDay": 32.5,
-  "winnerDaily": 6.1,
-  "adsNeeded": 6,
+  "needPerDay": 50.1,
+  "addlPerDay": 41.2,
+  "winnerDaily": 3.7,
+  "adsNeeded": 12,
   "topScale": [
    {
     "id": "120251778667390392",
@@ -4223,7 +4223,7 @@
     "b": 256,
     "spend": 1162,
     "cpl": 4.7,
-    "m7": 43,
+    "m7": 26,
     "budget": 30,
     "bm": {
      "excellent": 5,
@@ -4253,7 +4253,7 @@
     "b": 93,
     "spend": 492,
     "cpl": 5.5,
-    "m7": 17,
+    "m7": 11,
     "budget": 31,
     "bm": {
      "excellent": 5,
@@ -4437,7 +4437,7 @@
     "b": 256,
     "spend": 1162,
     "cpl": 4.7,
-    "m7": 43,
+    "m7": 26,
     "budget": 30,
     "bm": {
      "excellent": 5,
@@ -4497,7 +4497,7 @@
     "b": 93,
     "spend": 492,
     "cpl": 5.5,
-    "m7": 17,
+    "m7": 11,
     "budget": 31,
     "bm": {
      "excellent": 5,
@@ -4527,7 +4527,7 @@
     "b": 357,
     "spend": 2077,
     "cpl": 5.9,
-    "m7": 19,
+    "m7": 12,
     "budget": 45,
     "bm": {
      "excellent": 5,
@@ -4550,7 +4550,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-08-29",
+  "cutoff": "2026-08-30",
   "days": 10,
   "items": [
    {
