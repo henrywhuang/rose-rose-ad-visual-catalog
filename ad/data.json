@@ -1,7 +1,7 @@
 {
- "genStamp": "2026-09-10 16:37",
- "checkpointWd": "四",
- "today": "2026-09-10",
+ "genStamp": "2026-09-11 13:22",
+ "checkpointWd": "五",
+ "today": "2026-09-11",
  "fetchStatus": "stale",
  "expDate": "2026-09-04",
  "nAds": 0,
@@ -17,8 +17,8 @@
    "2026-09"
   ]
  },
- "dayOfQuarter": 72,
- "dayOfMonth": 10,
+ "dayOfQuarter": 73,
+ "dayOfMonth": 11,
  "dim": 30,
  "subjects": [
   {
@@ -35,13 +35,13 @@
     "actual": 2250,
     "actualBk": 2276,
     "prog": 67,
-    "timeProg": 78.3,
-    "proj": 2875,
-    "attain": 85.6,
-    "gap": 485,
+    "timeProg": 79.3,
+    "proj": 2836,
+    "attain": 84.4,
+    "gap": 524,
     "remain": 1110,
-    "diff": -11.3,
-    "scheduleDelta": -380,
+    "diff": -12.3,
+    "scheduleDelta": -416,
     "status": "behind"
    },
    "cur": {
@@ -50,15 +50,15 @@
     "actual": 108,
     "actualBk": 110,
     "prog": 8.9,
-    "timeProg": 33.3,
-    "proj": 324,
-    "attain": 26.8,
-    "gap": 886,
+    "timeProg": 36.7,
+    "proj": 295,
+    "attain": 24.4,
+    "gap": 915,
     "remain": 1102,
-    "needPerDay": 55.1,
-    "dayRateNow": 10.8,
-    "recent7Rate": 0.3,
-    "diff": -24.4,
+    "needPerDay": 58,
+    "dayRateNow": 9.8,
+    "recent7Rate": 0,
+    "diff": -27.7,
     "status": "behind"
    },
    "months": [
@@ -107,16 +107,16 @@
      "actualBk": 110,
      "isCur": true,
      "isPast": false,
-     "proj": 324,
-     "gap": 886,
+     "proj": 295,
+     "gap": 915,
      "remain": 1102,
      "prog": 8.9,
-     "timeProg": 33.3,
-     "diff": -24.4,
-     "scheduleDelta": -295,
+     "timeProg": 36.7,
+     "diff": -27.8,
+     "scheduleDelta": -336,
      "targetDelta": -1102,
-     "projectedDelta": -886,
-     "attain": 26.8,
+     "projectedDelta": -915,
+     "attain": 24.3,
      "status": "behind"
     }
    ],
@@ -245,7 +245,7 @@
      "start": "2026-09-07",
      "end": "2026-09-13",
      "effFrom": "2026-09-07",
-     "effTo": "2026-09-10",
+     "effTo": "2026-09-11",
      "isCur": true,
      "line": 303,
      "actual": 0,
@@ -265,13 +265,13 @@
     "actual": 31,
     "actualBk": 25,
     "prog": 62,
-    "timeProg": 78.3,
-    "proj": 40,
-    "attain": 79.2,
-    "gap": 10,
+    "timeProg": 79.3,
+    "proj": 39,
+    "attain": 78.1,
+    "gap": 11,
     "remain": 19,
-    "diff": -16.3,
-    "scheduleDelta": -8,
+    "diff": -17.3,
+    "scheduleDelta": -9,
     "status": "behind"
    },
    "cur": {
@@ -280,7 +280,7 @@
     "actual": 0,
     "actualBk": 0,
     "prog": 0,
-    "timeProg": 33.3,
+    "timeProg": 36.7,
     "proj": 0,
     "attain": 0,
     "gap": null,
@@ -338,7 +338,7 @@
      "gap": null,
      "remain": null,
      "prog": null,
-     "timeProg": 33.3,
+     "timeProg": 36.7,
      "diff": null,
      "scheduleDelta": null,
      "targetDelta": null,
@@ -472,7 +472,7 @@
      "start": "2026-09-07",
      "end": "2026-09-13",
      "effFrom": "2026-09-07",
-     "effTo": "2026-09-10",
+     "effTo": "2026-09-11",
      "isCur": true,
      "line": null,
      "actual": 0,
@@ -615,7 +615,7 @@
    "b": 192,
    "spend": 1495,
    "cpl": 7.3,
-   "m7": 1,
+   "m7": 0,
    "budget": 3,
    "bm": {
     "excellent": 5,
@@ -645,7 +645,7 @@
    "b": 202,
    "spend": 1256,
    "cpl": 6.5,
-   "m7": 1,
+   "m7": 0,
    "budget": 55,
    "bm": {
     "excellent": 5,
@@ -4207,10 +4207,10 @@
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 55.1,
-  "addlPerDay": 54.8,
-  "winnerDaily": 0.1,
-  "adsNeeded": 384,
+  "needPerDay": 58,
+  "addlPerDay": 58,
+  "winnerDaily": 0,
+  "adsNeeded": null,
   "topScale": [
    {
     "id": "120251778667390392",
@@ -4550,450 +4550,9 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-09-01",
+  "cutoff": "2026-09-02",
   "days": 10,
-  "items": [
-   {
-    "num": "26120",
-    "theme": "Codex-注音識字班0901",
-    "fullname": "26120 Codex-注音識字班（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/4ebcb632-8ae2-4a31-9ca3-0f73c9aa0832.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/5147be29-c2b8-4d4a-9132-17d553b6c331.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/5147be29-c2b8-4d4a-9132-17d553b6c331.png",
-      "name": "26120 Codex-注音識字班（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/4ebcb632-8ae2-4a31-9ca3-0f73c9aa0832.png",
-      "name": "26120 Codex-注音識字班（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 1,
-    "s10": 7,
-    "cpl": 7,
-    "ctr7": 2.2,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26129",
-    "theme": "Codex-讀題抓重點0901",
-    "fullname": "26129 Codex-讀題抓重點（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/cbf55338-91a4-4273-9943-c35c2ab1ac2b.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/3c4b24fa-f356-4c35-b560-15d825ec4ccf.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/3c4b24fa-f356-4c35-b560-15d825ec4ccf.png",
-      "name": "26129 Codex-讀題抓重點（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/cbf55338-91a4-4273-9943-c35c2ab1ac2b.png",
-      "name": "26129 Codex-讀題抓重點（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "easylearning_tw",
-      "name": "輕鬆學"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 3.3,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26126",
-    "theme": "Codex-我會等一等0901",
-    "fullname": "26126 Codex-我會等一等（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/61078fd0-8139-45fe-b55a-7bf98194c8a8.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/8f2b4f74-739a-4299-a9cd-4d1df12f3ad5.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/8f2b4f74-739a-4299-a9cd-4d1df12f3ad5.png",
-      "name": "26126 Codex-我會等一等（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/61078fd0-8139-45fe-b55a-7bf98194c8a8.png",
-      "name": "26126 Codex-我會等一等（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 3.1,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26128",
-    "theme": "Codex-自主閱讀班0901",
-    "fullname": "26128 Codex-自主閱讀班（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/407ff3b3-5caf-4b6c-9b6c-38ac247d90af.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/f9f86c63-5328-4b56-b15e-1b97bbd6067b.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/f9f86c63-5328-4b56-b15e-1b97bbd6067b.png",
-      "name": "26128 Codex-自主閱讀班（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/407ff3b3-5caf-4b6c-9b6c-38ac247d90af.png",
-      "name": "26128 Codex-自主閱讀班（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "easylearning_tw",
-      "name": "輕鬆學"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 6,
-    "cpl": null,
-    "ctr7": 3.1,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26124",
-    "theme": "Codex-不喜歡可以說出來0901",
-    "fullname": "26124 Codex-不喜歡可以說出來（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/97c7cc7e-eecd-4e53-bf8f-0ac9205b6a43.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/9c678937-7d88-43b1-b2be-f0d44e6bdb47.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/9c678937-7d88-43b1-b2be-f0d44e6bdb47.png",
-      "name": "26124 Codex-不喜歡可以說出來（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/97c7cc7e-eecd-4e53-bf8f-0ac9205b6a43.png",
-      "name": "26124 Codex-不喜歡可以說出來（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 3,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26125",
-    "theme": "Codex-我再試一次0901",
-    "fullname": "26125 Codex-我再試一次（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/0b9fea91-edfb-4fdc-9028-7189cefd9395.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/e45ae289-5039-440b-8e41-b1e4ebdb0fbd.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/e45ae289-5039-440b-8e41-b1e4ebdb0fbd.png",
-      "name": "26125 Codex-我再試一次（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/0b9fea91-edfb-4fdc-9028-7189cefd9395.png",
-      "name": "26125 Codex-我再試一次（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 2.5,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26127",
-    "theme": "Codex-閱讀理解強化班0901",
-    "fullname": "26127 Codex-閱讀理解強化班（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/33907f0e-6045-4649-9f6a-a18e9ddd41d0.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/a832318d-4604-455c-8178-c9e57ca0e02f.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/a832318d-4604-455c-8178-c9e57ca0e02f.png",
-      "name": "26127 Codex-閱讀理解強化班（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/33907f0e-6045-4649-9f6a-a18e9ddd41d0.png",
-      "name": "26127 Codex-閱讀理解強化班（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "easylearning_tw",
-      "name": "輕鬆學"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 2.5,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26121",
-    "theme": "Codex-注音學習單0901",
-    "fullname": "26121 Codex-注音學習單（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/c490f05f-f419-4b93-bc1b-adab5c5f7fce.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/ddecb2b0-ca73-4f08-a9c0-6101963a485c.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/ddecb2b0-ca73-4f08-a9c0-6101963a485c.png",
-      "name": "26121 Codex-注音學習單（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/c490f05f-f419-4b93-bc1b-adab5c5f7fce.png",
-      "name": "26121 Codex-注音學習單（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 8,
-    "cpl": null,
-    "ctr7": 2.4,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26123",
-    "theme": "Codex-不是第一名也沒關係0901",
-    "fullname": "26123 Codex-不是第一名也沒關係（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/2b236801-fe07-4cdd-89f4-3ed62d3ca876.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/4488ec7e-a4e0-4334-898b-d3b842e5bc9e.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/4488ec7e-a4e0-4334-898b-d3b842e5bc9e.png",
-      "name": "26123 Codex-不是第一名也沒關係（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/2b236801-fe07-4cdd-89f4-3ed62d3ca876.png",
-      "name": "26123 Codex-不是第一名也沒關係（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 2.4,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26122",
-    "theme": "Codex-情緒表達檢核0901",
-    "fullname": "26122 Codex-情緒表達檢核（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/13827241-2740-4c98-9e0a-c66e53ba0381.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/6c50e776-e4da-442e-a31e-5fdd19aed5a3.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/6c50e776-e4da-442e-a31e-5fdd19aed5a3.png",
-      "name": "26122 Codex-情緒表達檢核（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/13827241-2740-4c98-9e0a-c66e53ba0381.png",
-      "name": "26122 Codex-情緒表達檢核（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 6,
-    "cpl": null,
-    "ctr7": 2.1,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26130",
-    "theme": "Codex-造句表達練習0901",
-    "fullname": "26130 Codex-造句表達練習（Rose）0901",
-    "uploaded": "2026-09-01",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/a5d7befb-7d52-45ee-a3a4-2e23977b69d5.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/1eeb0348-3299-4fd4-9989-c6089a37114f.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/1eeb0348-3299-4fd4-9989-c6089a37114f.png",
-      "name": "26130 Codex-造句表達練習（Rose）0901-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/01/a5d7befb-7d52-45ee-a3a4-2e23977b69d5.png",
-      "name": "26130 Codex-造句表達練習（Rose）0901-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "easylearning_tw",
-      "name": "輕鬆學"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 5,
-    "cpl": null,
-    "ctr7": 1.3,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   }
-  ]
+  "items": []
  },
  "companyNote": null
 }
