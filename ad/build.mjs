@@ -167,7 +167,10 @@ function mergeSnapshot(ledger, root) {
 const ledger = loadLedger();
 const tok = readToken();
 let fetchStatus = 'error', expDate = tok ? tokenExp(tok) : null, nAds = 0, companyGoals = null, roseCreatives = [];
-if (!tok) { console.error('⚠ 無 ARKIO_TOKEN，改用既有帳本輸出（資料不更新）'); }
+if (!tok) {
+  console.error('✗ 無 ARKIO_TOKEN：停止產生看板，保留線上最後一次成功資料。');
+  process.exit(1);
+}
 else {
   try {
     const root = await fetchDashboard(tok);
@@ -178,8 +181,9 @@ else {
     fs.writeFileSync(LEDGER_PATH, JSON.stringify(ledger, null, 0));
     console.log(`✓ 抓取成功，Rose 廣告 ${nAds} 檔併入帳本`);
   } catch (e) {
-    fetchStatus = 'stale'; ledger.last_fetch_status = 'stale:' + e.message;
-    console.error('⚠ 抓取失敗，改用既有帳本：', e.message);
+    console.error('✗ Arkio 主資料抓取失敗：', e.message);
+    console.error('✗ 停止產生看板，保留線上最後一次成功資料。');
+    process.exit(1);
   }
   try {
     const cr = await fetchCreatives(tok);

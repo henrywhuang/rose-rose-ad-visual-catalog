@@ -25,6 +25,9 @@ jobs:
         env:
           ARKIO_TOKEN: ${{ secrets.ARKIO_TOKEN }}
         run: node ad/build.mjs
+      - name: Verify live Arkio payload
+        run: |
+          node -e "const d=require('./ad/data.json'); if(d.fetchStatus!=='ok'||!d.nAds) throw new Error('Arkio payload is not live'); console.log('Arkio payload verified:', d.genStamp, d.nAds, 'ads')"
       - name: Commit if changed
         run: |
           git config user.name "rose-rose-bot"
