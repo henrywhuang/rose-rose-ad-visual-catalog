@@ -1,10 +1,10 @@
 {
- "genStamp": "2026-09-13 22:03",
- "checkpointWd": "日",
- "today": "2026-09-13",
+ "genStamp": "2026-09-14 13:32",
+ "checkpointWd": "一",
+ "today": "2026-09-14",
  "fetchStatus": "ok",
  "expDate": "2026-10-13",
- "nAds": 31,
+ "nAds": 30,
  "curYM": "2026-09",
  "quarter": {
   "label": "2026-Q3",
@@ -17,8 +17,8 @@
    "2026-09"
   ]
  },
- "dayOfQuarter": 75,
- "dayOfMonth": 13,
+ "dayOfQuarter": 76,
+ "dayOfMonth": 14,
  "dim": 30,
  "subjects": [
   {
@@ -32,33 +32,33 @@
    },
    "q3": {
     "target": 3360,
-    "actual": 2556,
-    "actualBk": 2594,
-    "prog": 76.1,
-    "timeProg": 81.5,
-    "proj": 3135,
-    "attain": 93.3,
-    "gap": 225,
-    "remain": 804,
-    "diff": -5.4,
-    "scheduleDelta": -183,
+    "actual": 2605,
+    "actualBk": 2643,
+    "prog": 77.5,
+    "timeProg": 82.6,
+    "proj": 3153,
+    "attain": 93.9,
+    "gap": 207,
+    "remain": 755,
+    "diff": -5.1,
+    "scheduleDelta": -171,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-09",
     "target": 1210,
-    "actual": 414,
-    "actualBk": 428,
-    "prog": 34.2,
-    "timeProg": 43.3,
-    "proj": 955,
-    "attain": 78.9,
-    "gap": 255,
-    "remain": 796,
-    "needPerDay": 46.8,
-    "dayRateNow": 31.8,
-    "recent7Rate": 30.4,
-    "diff": -9.1,
+    "actual": 463,
+    "actualBk": 477,
+    "prog": 38.3,
+    "timeProg": 46.7,
+    "proj": 992,
+    "attain": 82,
+    "gap": 218,
+    "remain": 747,
+    "needPerDay": 46.7,
+    "dayRateNow": 33.1,
+    "recent7Rate": 32.1,
+    "diff": -8.4,
     "status": "behind"
    },
    "months": [
@@ -103,20 +103,20 @@
     {
      "ym": "2026-09",
      "target": 1210,
-     "actual": 414,
-     "actualBk": 428,
+     "actual": 463,
+     "actualBk": 477,
      "isCur": true,
      "isPast": false,
-     "proj": 955,
-     "gap": 255,
-     "remain": 796,
-     "prog": 34.2,
-     "timeProg": 43.3,
-     "diff": -9.1,
-     "scheduleDelta": -110,
-     "targetDelta": -796,
-     "projectedDelta": -255,
-     "attain": 79,
+     "proj": 992,
+     "gap": 218,
+     "remain": 747,
+     "prog": 38.3,
+     "timeProg": 46.7,
+     "diff": -8.4,
+     "scheduleDelta": -102,
+     "targetDelta": -747,
+     "projectedDelta": -218,
+     "attain": 82,
      "status": "behind"
     }
    ],
@@ -246,11 +246,23 @@
      "end": "2026-09-13",
      "effFrom": "2026-09-07",
      "effTo": "2026-09-13",
+     "isCur": false,
+     "line": 303,
+     "actual": 261,
+     "actualBk": 263,
+     "gap": 42,
+     "status": "fail"
+    },
+    {
+     "start": "2026-09-14",
+     "end": "2026-09-20",
+     "effFrom": "2026-09-14",
+     "effTo": "2026-09-14",
      "isCur": true,
      "line": 303,
-     "actual": 213,
-     "actualBk": 215,
-     "gap": 90,
+     "actual": 1,
+     "actualBk": 1,
+     "gap": 302,
      "status": "current"
     }
    ]
@@ -265,12 +277,12 @@
     "actual": 31,
     "actualBk": 25,
     "prog": 62,
-    "timeProg": 81.5,
+    "timeProg": 82.6,
     "proj": 38,
-    "attain": 76.1,
+    "attain": 75.1,
     "gap": 12,
     "remain": 19,
-    "diff": -19.5,
+    "diff": -20.6,
     "scheduleDelta": -10,
     "status": "behind"
    },
@@ -280,7 +292,7 @@
     "actual": 0,
     "actualBk": 0,
     "prog": 0,
-    "timeProg": 43.3,
+    "timeProg": 46.7,
     "proj": 0,
     "attain": 0,
     "gap": null,
@@ -338,7 +350,7 @@
      "gap": null,
      "remain": null,
      "prog": null,
-     "timeProg": 43.3,
+     "timeProg": 46.7,
      "diff": null,
      "scheduleDelta": null,
      "targetDelta": null,
@@ -473,6 +485,18 @@
      "end": "2026-09-13",
      "effFrom": "2026-09-07",
      "effTo": "2026-09-13",
+     "isCur": false,
+     "line": null,
+     "actual": 0,
+     "actualBk": 0,
+     "gap": null,
+     "status": "na"
+    },
+    {
+     "start": "2026-09-14",
+     "end": "2026-09-20",
+     "effFrom": "2026-09-14",
+     "effTo": "2026-09-14",
      "isCur": true,
      "line": null,
      "actual": 0,
@@ -491,12 +515,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 418,
-   "b": 438,
-   "spend": 2432,
+   "m": 433,
+   "b": 453,
+   "spend": 2503,
    "cpl": 5.8,
-   "m7": 59,
-   "budget": 56,
+   "m7": 61,
+   "budget": 70,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -506,7 +530,7 @@
    "adviceAction": "SCALE",
    "adviceText": "爆款，建議加預算 20-30%",
    "priority": "P2",
-   "suggestedBudget": 70,
+   "suggestedBudget": 88,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -521,11 +545,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 353,
-   "b": 362,
-   "spend": 1604,
-   "cpl": 4.5,
-   "m7": 82,
+   "m": 373,
+   "b": 382,
+   "spend": 1702,
+   "cpl": 4.6,
+   "m7": 95,
    "budget": 88,
    "bm": {
     "excellent": 5,
@@ -543,6 +567,36 @@
    "tag": "scale",
    "tagTxt": "🔥 加碼",
    "color": "#f59e0b"
+  },
+  {
+   "id": "120251357968630392",
+   "name": "25978 復刻-情緒九宮格（Rose）",
+   "campaign": "L2+L3 復刻-情緒九宮格（Rose）",
+   "bl": "Reading",
+   "status": "PAUSED",
+   "paused": true,
+   "m": 262,
+   "b": 272,
+   "spend": 1811,
+   "cpl": 6.9,
+   "m7": 26,
+   "budget": 55,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "KEEP",
+   "adviceText": "觀察 2 天，如不改善則降預算",
+   "priority": "P1",
+   "suggestedBudget": 55,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "reactivate",
+   "tagTxt": "⏸ 已暫停(曾有量)",
+   "color": "#e2603e"
   },
   {
    "id": "120250997796650392",
@@ -572,36 +626,6 @@
    "declineType": null,
    "tag": "reactivate",
    "tagTxt": "⏸ 已暫停(曾有量)",
-   "color": "#e2603e"
-  },
-  {
-   "id": "120251357968630392",
-   "name": "25978 復刻-情緒九宮格（Rose）",
-   "campaign": "L2+L3 復刻-情緒九宮格（Rose）",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 256,
-   "b": 266,
-   "spend": 1770,
-   "cpl": 6.9,
-   "m7": 28,
-   "budget": 55,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "KEEP",
-   "adviceText": "觀察 2 天，如不改善則降預算",
-   "priority": "P1",
-   "suggestedBudget": 38,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
    "color": "#6366f1"
   },
   {
@@ -641,11 +665,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 221,
-   "b": 207,
-   "spend": 1571,
-   "cpl": 7.1,
-   "m7": 10,
+   "m": 225,
+   "b": 211,
+   "spend": 1586,
+   "cpl": 7,
+   "m7": 13,
    "budget": 15,
    "bm": {
     "excellent": 5,
@@ -735,7 +759,7 @@
    "b": 123,
    "spend": 739,
    "cpl": 6.3,
-   "m7": 15,
+   "m7": 10,
    "budget": 31,
    "bm": {
     "excellent": 5,
@@ -821,9 +845,9 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 45,
-   "b": 36,
-   "spend": 247,
+   "m": 46,
+   "b": 37,
+   "spend": 252,
    "cpl": 5.5,
    "m7": 4,
    "budget": 5,
@@ -1175,6 +1199,36 @@
    "color": "#db2777"
   },
   {
+   "id": "120249695782320392",
+   "name": "25918 復刻-識字先修班（Rose）",
+   "campaign": "L2+L3 復刻-識字先修班（Rose）",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 4,
+   "b": 3,
+   "spend": 23,
+   "cpl": 5.7,
+   "m7": 4,
+   "budget": 6,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "新品表現優異：CPL $7.62 低於合格線 $8.00，轉換 4。建議加預算 30%。",
+   "priority": "P2",
+   "suggestedBudget": 8,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#64748b"
+  },
+  {
    "id": "120251421675940392",
    "name": "26001 暑假寫字任務（Rose）0721",
    "campaign": "L2+L3 暑假寫字任務（Rose）0721",
@@ -1202,7 +1256,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251421682660392",
@@ -1232,7 +1286,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252339502200392",
@@ -1262,7 +1316,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#e2603e"
   },
   {
    "id": "120252340415430392",
@@ -1292,7 +1346,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#6366f1"
   },
   {
    "id": "120252367938680392",
@@ -1322,36 +1376,6 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
-  },
-  {
-   "id": "120249695782320392",
-   "name": "25918 復刻-識字先修班（Rose）",
-   "campaign": "L2+L3 復刻-識字先修班（Rose）",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 3,
-   "b": 3,
-   "spend": 17,
-   "cpl": 5.8,
-   "m7": 3,
-   "budget": 5,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $5.79 低於合格線 $8.00，轉換 3。建議加預算 30%。",
-   "priority": "P2",
-   "suggestedBudget": 6,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
    "color": "#0d9488"
   },
   {
@@ -1695,7 +1719,7 @@
    "b": 0,
    "spend": 16,
    "cpl": 8.2,
-   "m7": 2,
+   "m7": 0,
    "budget": 5,
    "bm": {
     "excellent": 5,
@@ -2555,16 +2579,16 @@
    "color": "#7c3aed"
   },
   {
-   "id": "120252613228220392",
-   "name": "26165 Codex-拒絕上學情緒繪本（Rose）0911",
-   "campaign": "L2 拒絕上學情緒繪本（Rose）0911",
+   "id": "120252613225580392",
+   "name": "26163 Codex-開學專注力檢核（Rose）0911",
+   "campaign": "L2 開學專注力檢核（Rose）0911",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 1,
-   "b": 1,
-   "spend": 5,
-   "cpl": 5.4,
+   "b": 2,
+   "spend": 9,
+   "cpl": 9.4,
    "m7": 1,
    "budget": 5,
    "bm": {
@@ -2574,27 +2598,57 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $5.45/$36.00，還有 $30.55 觀察空間",
+   "adviceText": "新品測試中：已花費 $9.35/$36.00，還有 $26.65 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#16a34a"
+  },
+  {
+   "id": "120252613228220392",
+   "name": "26165 Codex-拒絕上學情緒繪本（Rose）0911",
+   "campaign": "L2 拒絕上學情緒繪本（Rose）0911",
+   "bl": "Reading",
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
+   "m": 1,
+   "b": 1,
+   "spend": 10,
+   "cpl": 9.6,
+   "m7": 1,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $9.63/$36.00，還有 $26.37 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
+   "color": "#db2777"
   },
   {
    "id": "120252613230420392",
    "name": "26166 Codex-情緒表達練習班（Rose）0911",
    "campaign": "L2 情緒表達練習班（Rose）0911",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 1,
    "b": 1,
-   "spend": 6,
-   "cpl": 6.3,
+   "spend": 10,
+   "cpl": 10.3,
    "m7": 1,
    "budget": 5,
    "bm": {
@@ -2604,27 +2658,27 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $6.28/$36.00，還有 $29.72 觀察空間",
+   "adviceText": "新品測試中：已花費 $10.25/$36.00，還有 $25.75 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#db2777"
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
+   "color": "#64748b"
   },
   {
    "id": "120252613232590392",
    "name": "26167 Codex-開學溝通表達課（Rose）0911",
    "campaign": "L2 開學溝通表達課（Rose）0911",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 1,
-   "b": 1,
-   "spend": 5,
-   "cpl": 5.3,
+   "b": 2,
+   "spend": 8,
+   "cpl": 8.4,
    "m7": 1,
    "budget": 5,
    "bm": {
@@ -2634,15 +2688,45 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $5.27/$36.00，還有 $30.73 觀察空間",
+   "adviceText": "新品測試中：已花費 $8.42/$36.00，還有 $27.58 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#64748b"
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
+   "color": "#0f9d6b"
+  },
+  {
+   "id": "120252613236330392",
+   "name": "26168 Codex-開學不安情緒課（Rose）0911",
+   "campaign": "L2 開學不安情緒課（Rose）0911",
+   "bl": "Reading",
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
+   "m": 1,
+   "b": 1,
+   "spend": 9,
+   "cpl": 9.1,
+   "m7": 1,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $9.15/$36.00，還有 $26.85 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
+   "color": "#f59e0b"
   },
   {
    "id": "120251357934880392",
@@ -2672,7 +2756,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251357948340392",
@@ -2702,7 +2786,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251357961160392",
@@ -2732,7 +2816,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120251392566490392",
@@ -2762,7 +2846,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120251392697060392",
@@ -2792,7 +2876,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251392704280392",
@@ -2822,7 +2906,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120251392711460392",
@@ -2852,7 +2936,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120251392716380392",
@@ -2882,7 +2966,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120251392721370392",
@@ -2912,7 +2996,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120251392729890392",
@@ -2942,7 +3026,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120251392738000392",
@@ -2972,7 +3056,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251392746480392",
@@ -3002,7 +3086,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251557817060392",
@@ -3032,7 +3116,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251557824700392",
@@ -3062,7 +3146,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251557827710392",
@@ -3092,7 +3176,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120251557830530392",
@@ -3122,7 +3206,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120251557832590392",
@@ -3152,7 +3236,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251557834780392",
@@ -3182,7 +3266,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120251557839440392",
@@ -3212,7 +3296,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120251676769550392",
@@ -3242,7 +3326,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120251676783320392",
@@ -3272,7 +3356,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120251778676480392",
@@ -3302,7 +3386,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120251778679200392",
@@ -3332,7 +3416,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251986241650392",
@@ -3362,7 +3446,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251986250540392",
@@ -3392,7 +3476,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251986265440392",
@@ -3422,7 +3506,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251986275210392",
@@ -3452,7 +3536,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252171610660392",
@@ -3482,7 +3566,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252171614150392",
@@ -3512,7 +3596,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252171615980392",
@@ -3542,7 +3626,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252171621390392",
@@ -3572,7 +3656,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252339274580392",
@@ -3602,7 +3686,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252339292810392",
@@ -3632,7 +3716,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252339342490392",
@@ -3662,7 +3746,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252339371070392",
@@ -3692,7 +3776,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252339406250392",
@@ -3722,7 +3806,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252339432380392",
@@ -3752,7 +3836,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252339453150392",
@@ -3782,7 +3866,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252339595620392",
@@ -3812,7 +3896,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252340362000392",
@@ -3842,7 +3926,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252340456870392",
@@ -3872,7 +3956,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252340498980392",
@@ -3902,7 +3986,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252340538630392",
@@ -3932,7 +4016,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252340560340392",
@@ -3962,7 +4046,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252340584750392",
@@ -3992,7 +4076,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252367933280392",
@@ -4022,7 +4106,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252367936150392",
@@ -4052,7 +4136,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252367937550392",
@@ -4082,7 +4166,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252367942800392",
@@ -4112,7 +4196,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252367946980392",
@@ -4142,7 +4226,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252465424930392",
@@ -4172,7 +4256,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252465427420392",
@@ -4202,7 +4286,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252465433130392",
@@ -4232,7 +4316,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252465436690392",
@@ -4262,7 +4346,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252465439330392",
@@ -4292,7 +4376,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252465442740392",
@@ -4322,7 +4406,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252465447190392",
@@ -4352,7 +4436,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252465450220392",
@@ -4382,7 +4466,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252465454110392",
@@ -4412,7 +4496,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252465458220392",
@@ -4442,7 +4526,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252547941640392",
@@ -4472,7 +4556,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252547947000392",
@@ -4502,7 +4586,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252547949720392",
@@ -4532,7 +4616,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252547952260392",
@@ -4562,7 +4646,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252547954710392",
@@ -4592,7 +4676,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252547958110392",
@@ -4622,7 +4706,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252547961280392",
@@ -4652,48 +4736,18 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
-  },
-  {
-   "id": "120252613225580392",
-   "name": "26163 Codex-開學專注力檢核（Rose）0911",
-   "campaign": "L2 開學專注力檢核（Rose）0911",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 0,
-   "b": 1,
-   "spend": 5,
-   "cpl": null,
-   "m7": 0,
-   "budget": 5,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $5.38/$36.00，還有 $30.62 觀察空間",
-   "priority": "--",
-   "suggestedBudget": 5,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#ca8a04"
+   "color": "#7c3aed"
   },
   {
    "id": "120252613226750392",
    "name": "26164 Codex-專注力狀況測驗（Rose）0911",
    "campaign": "L2 專注力狀況測驗（Rose）0911",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 5,
+   "spend": 9,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -4704,44 +4758,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $5.35/$36.00，還有 $30.65 觀察空間",
+   "adviceText": "新品測試中：已花費 $8.92/$36.00，還有 $27.08 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#7c3aed"
-  },
-  {
-   "id": "120252613236330392",
-   "name": "26168 Codex-開學不安情緒課（Rose）0911",
-   "campaign": "L2 開學不安情緒課（Rose）0911",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 0,
-   "b": 0,
-   "spend": 5,
-   "cpl": null,
-   "m7": 0,
-   "budget": 5,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $5.41/$36.00，還有 $30.59 觀察空間",
-   "priority": "--",
-   "suggestedBudget": 5,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#16a34a"
   },
   {
@@ -4749,11 +4773,11 @@
    "name": "26169 Codex-收心閱讀5日包（Rose）0911",
    "campaign": "L2 收心閱讀5日包（Rose）0911",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 5,
+   "spend": 9,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -4764,14 +4788,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $5.27/$36.00，還有 $30.73 觀察空間",
+   "adviceText": "新品測試中：已花費 $8.74/$36.00，還有 $27.26 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#db2777"
   },
   {
@@ -4779,11 +4803,11 @@
    "name": "26170 Codex-5日情緒表達課（Rose）0911",
    "campaign": "L2 5日情緒表達課（Rose）0911",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 1,
-   "spend": 5,
+   "spend": 8,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -4794,22 +4818,22 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $4.70/$36.00，還有 $31.30 觀察空間",
+   "adviceText": "新品測試中：已花費 $7.67/$36.00，還有 $28.33 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#64748b"
   }
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 46.8,
-  "addlPerDay": 16.4,
-  "winnerDaily": 11.7,
+  "needPerDay": 46.7,
+  "addlPerDay": 14.6,
+  "winnerDaily": 13.6,
   "adsNeeded": 2,
   "topScale": [
    {
@@ -4819,12 +4843,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 418,
-    "b": 438,
-    "spend": 2432,
+    "m": 433,
+    "b": 453,
+    "spend": 2503,
     "cpl": 5.8,
-    "m7": 59,
-    "budget": 56,
+    "m7": 61,
+    "budget": 70,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -4834,7 +4858,7 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 70,
+    "suggestedBudget": 88,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
@@ -4849,11 +4873,11 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 353,
-    "b": 362,
-    "spend": 1604,
-    "cpl": 4.5,
-    "m7": 82,
+    "m": 373,
+    "b": 382,
+    "spend": 1702,
+    "cpl": 4.6,
+    "m7": 95,
     "budget": 88,
     "bm": {
      "excellent": 5,
@@ -4874,6 +4898,36 @@
    }
   ],
   "iterate": [
+   {
+    "id": "120251357968630392",
+    "name": "25978 復刻-情緒九宮格（Rose）",
+    "campaign": "L2+L3 復刻-情緒九宮格（Rose）",
+    "bl": "Reading",
+    "status": "PAUSED",
+    "paused": true,
+    "m": 262,
+    "b": 272,
+    "spend": 1811,
+    "cpl": 6.9,
+    "m7": 26,
+    "budget": 55,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "KEEP",
+    "adviceText": "觀察 2 天，如不改善則降預算",
+    "priority": "P1",
+    "suggestedBudget": 55,
+    "trendWorse": false,
+    "trendBetter": false,
+    "declineType": null,
+    "tag": "reactivate",
+    "tagTxt": "⏸ 已暫停(曾有量)",
+    "color": "#e2603e"
+   },
    {
     "id": "120250997796650392",
     "name": "25962 Codex-108識字卡拼圖（Rose）",
@@ -4902,7 +4956,7 @@
     "declineType": null,
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
-    "color": "#e2603e"
+    "color": "#6366f1"
    },
    {
     "id": "120251357927590392",
@@ -4993,36 +5047,6 @@
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
     "color": "#ca8a04"
-   },
-   {
-    "id": "120251778692340392",
-    "name": "26041 情緒力九宮格（Rose）0803",
-    "campaign": "L2+L3 情緒力九宮格（Rose）0803",
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "paused": true,
-    "m": 118,
-    "b": 123,
-    "spend": 739,
-    "cpl": 6.3,
-    "m7": 15,
-    "budget": 31,
-    "bm": {
-     "excellent": 5,
-     "acceptable": 8,
-     "danger": 12,
-     "scale_excellent": 5
-    },
-    "adviceAction": "OPTIMIZE",
-    "adviceText": "近 7 天趨勢惡化，且成本已超合格線，建議降預算觀察",
-    "priority": "P1",
-    "suggestedBudget": 22,
-    "trendWorse": true,
-    "trendBetter": false,
-    "declineType": null,
-    "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
-    "color": "#7c3aed"
    }
   ],
   "bestByCpl": [
@@ -5033,11 +5057,11 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 353,
-    "b": 362,
-    "spend": 1604,
-    "cpl": 4.5,
-    "m7": 82,
+    "m": 373,
+    "b": 382,
+    "spend": 1702,
+    "cpl": 4.6,
+    "m7": 95,
     "budget": 88,
     "bm": {
      "excellent": 5,
@@ -5063,9 +5087,9 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 45,
-    "b": 36,
-    "spend": 247,
+    "m": 46,
+    "b": 37,
+    "spend": 252,
     "cpl": 5.5,
     "m7": 4,
     "budget": 5,
@@ -5093,12 +5117,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 418,
-    "b": 438,
-    "spend": 2432,
+    "m": 433,
+    "b": 453,
+    "spend": 2503,
     "cpl": 5.8,
-    "m7": 59,
-    "budget": 56,
+    "m7": 61,
+    "budget": 70,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5108,7 +5132,7 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 70,
+    "suggestedBudget": 88,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
@@ -5127,7 +5151,7 @@
     "b": 123,
     "spend": 739,
     "cpl": 6.3,
-    "m7": 15,
+    "m7": 10,
     "budget": 31,
     "bm": {
      "excellent": 5,
@@ -5150,129 +5174,9 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-09-04",
+  "cutoff": "2026-09-05",
   "days": 10,
   "items": [
-   {
-    "num": "26140",
-    "theme": "Codex-拼讀順讀練習0904",
-    "fullname": "26140 Codex-拼讀順讀練習（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/1043cceb-b1bd-436c-aa50-f537d6e1ad1a.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/fc556f57-7384-4194-94c4-e9a30801978f.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/fc556f57-7384-4194-94c4-e9a30801978f.png",
-      "name": "26140 Codex-拼讀順讀練習（Rose）0904-A",
-      "leads": 1
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/1043cceb-b1bd-436c-aa50-f537d6e1ad1a.png",
-      "name": "26140 Codex-拼讀順讀練習（Rose）0904-B",
-      "leads": 1
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 2,
-    "s10": 15.5,
-    "cpl": 7.8,
-    "ctr7": 2.7,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26144",
-    "theme": "Codex-繪本情緒課0904",
-    "fullname": "26144 Codex-繪本情緒課（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/b3493866-8f10-4723-9b50-238ab507f4f9.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/520874d5-879a-4526-8da8-0fd237a29bb5.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/520874d5-879a-4526-8da8-0fd237a29bb5.png",
-      "name": "26144 Codex-繪本情緒課（Rose）0904-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/b3493866-8f10-4723-9b50-238ab507f4f9.png",
-      "name": "26144 Codex-繪本情緒課（Rose）0904-B",
-      "leads": 2
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 2,
-    "s10": 22.1,
-    "cpl": 11.1,
-    "ctr7": 2.5,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26139",
-    "theme": "Codex-情緒抗挫力0904",
-    "fullname": "26139 Codex-情緒抗挫力（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/e3925b69-d3be-4f13-a6af-47f5e6629f6a.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/40fe61ea-d03f-4c65-9050-6a0dd15ce4af.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/40fe61ea-d03f-4c65-9050-6a0dd15ce4af.png",
-      "name": "26139 Codex-情緒抗挫力（Rose）0904-A",
-      "leads": 2
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/e3925b69-d3be-4f13-a6af-47f5e6629f6a.png",
-      "name": "26139 Codex-情緒抗挫力（Rose）0904-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 2,
-    "s10": 16.4,
-    "cpl": 8.2,
-    "ctr7": 2.4,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
    {
     "num": "26166",
     "theme": "Codex-情緒表達練習班0911",
@@ -5304,12 +5208,12 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 1,
-    "s10": 10.2,
-    "cpl": 10.2,
-    "ctr7": 3,
+    "s10": 10.3,
+    "cpl": 10.3,
+    "ctr7": 2.8,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -5354,6 +5258,46 @@
     "leadBreakdown": true
    },
    {
+    "num": "26165",
+    "theme": "Codex-拒絕上學情緒繪本0911",
+    "fullname": "26165 Codex-拒絕上學情緒繪本（Rose）0911",
+    "uploaded": "2026-09-11",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/cbf37908-fc72-474d-b167-4835cdd6277b.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/dc564d71-896f-46c0-9738-89b35522ef6b.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/dc564d71-896f-46c0-9738-89b35522ef6b.png",
+      "name": "26165 Codex-拒絕上學情緒繪本（Rose）0911-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/cbf37908-fc72-474d-b167-4835cdd6277b.png",
+      "name": "26165 Codex-拒絕上學情緒繪本（Rose）0911-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 9.7,
+    "cpl": 9.7,
+    "ctr7": 2.1,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
     "num": "26163",
     "theme": "Codex-開學專注力檢核0911",
     "fullname": "26163 Codex-開學專注力檢核（Rose）0911",
@@ -5384,11 +5328,51 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 1,
-    "s10": 9.3,
-    "cpl": 9.3,
+    "s10": 9.4,
+    "cpl": 9.4,
+    "ctr7": 1.9,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26167",
+    "theme": "Codex-開學溝通表達課0911",
+    "fullname": "26167 Codex-開學溝通表達課（Rose）0911",
+    "uploaded": "2026-09-11",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/b8393b7f-3196-44fd-a7ce-fb557246e6ac.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/ac795414-e01c-4baf-8a08-d845d5c4d054.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/ac795414-e01c-4baf-8a08-d845d5c4d054.png",
+      "name": "26167 Codex-開學溝通表達課（Rose）0911-A",
+      "leads": 1
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/b8393b7f-3196-44fd-a7ce-fb557246e6ac.png",
+      "name": "26167 Codex-開學溝通表達課（Rose）0911-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 8.4,
+    "cpl": 8.4,
     "ctr7": 1.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -5424,92 +5408,12 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 1,
     "s10": 9.2,
     "cpl": 9.2,
     "ctr7": 1.7,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26165",
-    "theme": "Codex-拒絕上學情緒繪本0911",
-    "fullname": "26165 Codex-拒絕上學情緒繪本（Rose）0911",
-    "uploaded": "2026-09-11",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/cbf37908-fc72-474d-b167-4835cdd6277b.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/dc564d71-896f-46c0-9738-89b35522ef6b.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/dc564d71-896f-46c0-9738-89b35522ef6b.png",
-      "name": "26165 Codex-拒絕上學情緒繪本（Rose）0911-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/cbf37908-fc72-474d-b167-4835cdd6277b.png",
-      "name": "26165 Codex-拒絕上學情緒繪本（Rose）0911-B",
-      "leads": 1
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 1,
-    "s10": 9.6,
-    "cpl": 9.6,
-    "ctr7": 1.6,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26167",
-    "theme": "Codex-開學溝通表達課0911",
-    "fullname": "26167 Codex-開學溝通表達課（Rose）0911",
-    "uploaded": "2026-09-11",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/b8393b7f-3196-44fd-a7ce-fb557246e6ac.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/ac795414-e01c-4baf-8a08-d845d5c4d054.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/ac795414-e01c-4baf-8a08-d845d5c4d054.png",
-      "name": "26167 Codex-開學溝通表達課（Rose）0911-A",
-      "leads": 1
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/b8393b7f-3196-44fd-a7ce-fb557246e6ac.png",
-      "name": "26167 Codex-開學溝通表達課（Rose）0911-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 1,
-    "s10": 8.4,
-    "cpl": 8.4,
-    "ctr7": 1.5,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -5554,6 +5458,46 @@
     "leadBreakdown": false
    },
    {
+    "num": "26170",
+    "theme": "Codex-5日情緒表達課0911",
+    "fullname": "26170 Codex-5日情緒表達課（Rose）0911",
+    "uploaded": "2026-09-11",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/c872e17f-aca6-4648-b51d-65b80292de3b.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/0cd8c30a-db89-4634-ab8e-16cbe5e2edd7.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/0cd8c30a-db89-4634-ab8e-16cbe5e2edd7.png",
+      "name": "26170 Codex-5日情緒表達課（Rose）0911-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/c872e17f-aca6-4648-b51d-65b80292de3b.png",
+      "name": "26170 Codex-5日情緒表達課（Rose）0911-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 7.7,
+    "cpl": null,
+    "ctr7": 3.2,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
     "num": "26151",
     "theme": "Codex-專注力故事卡0907",
     "fullname": "26151 Codex-專注力故事卡（Rose）0907",
@@ -5590,6 +5534,46 @@
     "s10": 8.6,
     "cpl": null,
     "ctr7": 2.9,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26164",
+    "theme": "Codex-專注力狀況測驗0911",
+    "fullname": "26164 Codex-專注力狀況測驗（Rose）0911",
+    "uploaded": "2026-09-11",
+    "imgs": [
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/2a991004-53d8-45b1-afc3-ea2eae389881.png",
+     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/f1487339-8a4e-4808-8cc4-4068eaef4b9e.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/f1487339-8a4e-4808-8cc4-4068eaef4b9e.png",
+      "name": "26164 Codex-專注力狀況測驗（Rose）0911-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/2a991004-53d8-45b1-afc3-ea2eae389881.png",
+      "name": "26164 Codex-專注力狀況測驗（Rose）0911-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 9,
+    "cpl": null,
+    "ctr7": 2.6,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -5674,86 +5658,6 @@
     "leadBreakdown": false
    },
    {
-    "num": "26170",
-    "theme": "Codex-5日情緒表達課0911",
-    "fullname": "26170 Codex-5日情緒表達課（Rose）0911",
-    "uploaded": "2026-09-11",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/c872e17f-aca6-4648-b51d-65b80292de3b.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/0cd8c30a-db89-4634-ab8e-16cbe5e2edd7.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/0cd8c30a-db89-4634-ab8e-16cbe5e2edd7.png",
-      "name": "26170 Codex-5日情緒表達課（Rose）0911-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/c872e17f-aca6-4648-b51d-65b80292de3b.png",
-      "name": "26170 Codex-5日情緒表達課（Rose）0911-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7.7,
-    "cpl": null,
-    "ctr7": 2.4,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26164",
-    "theme": "Codex-專注力狀況測驗0911",
-    "fullname": "26164 Codex-專注力狀況測驗（Rose）0911",
-    "uploaded": "2026-09-11",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/2a991004-53d8-45b1-afc3-ea2eae389881.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/f1487339-8a4e-4808-8cc4-4068eaef4b9e.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/f1487339-8a4e-4808-8cc4-4068eaef4b9e.png",
-      "name": "26164 Codex-專注力狀況測驗（Rose）0911-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/11/2a991004-53d8-45b1-afc3-ea2eae389881.png",
-      "name": "26164 Codex-專注力狀況測驗（Rose）0911-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 8.9,
-    "cpl": null,
-    "ctr7": 2.3,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
     "num": "26169",
     "theme": "Codex-收心閱讀5日包0911",
     "fullname": "26169 Codex-收心閱讀5日包（Rose）0911",
@@ -5784,12 +5688,12 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 0,
-    "s10": 8.7,
+    "s10": 8.8,
     "cpl": null,
-    "ctr7": 2.2,
+    "ctr7": 1.8,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -5911,206 +5815,6 @@
     "cpl": null,
     "ctr7": 1.1,
     "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26141",
-    "theme": "Codex-注音識字班0904",
-    "fullname": "26141 Codex-注音識字班（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/d676fc48-67ab-4a1f-8f80-39c2a1dc075c.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/6ff7c0ad-2bc9-431b-a999-962de99edeb5.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/6ff7c0ad-2bc9-431b-a999-962de99edeb5.png",
-      "name": "26141 Codex-注音識字班（Rose）0904-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/d676fc48-67ab-4a1f-8f80-39c2a1dc075c.png",
-      "name": "26141 Codex-注音識字班（Rose）0904-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26142",
-    "theme": "Codex-我想再試一次0904",
-    "fullname": "26142 Codex-我想再試一次（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/74f3ce73-b40a-42a2-9dff-4b286beb7b31.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/3ae5e119-af21-46c5-a9cd-8b2f0c8c1c30.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/3ae5e119-af21-46c5-a9cd-8b2f0c8c1c30.png",
-      "name": "26142 Codex-我想再試一次（Rose）0904-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/74f3ce73-b40a-42a2-9dff-4b286beb7b31.png",
-      "name": "26142 Codex-我想再試一次（Rose）0904-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26143",
-    "theme": "Codex-5日親子共讀挑戰0904",
-    "fullname": "26143 Codex-5日親子共讀挑戰（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/441c54a8-7892-4844-8683-5e92ecfdf41a.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/309ed35d-6520-4450-9a2f-2838d7c28169.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/309ed35d-6520-4450-9a2f-2838d7c28169.png",
-      "name": "26143 Codex-5日親子共讀挑戰（Rose）0904-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/441c54a8-7892-4844-8683-5e92ecfdf41a.png",
-      "name": "26143 Codex-5日親子共讀挑戰（Rose）0904-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26145",
-    "theme": "Codex-專注力故事卡0904",
-    "fullname": "26145 Codex-專注力故事卡（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/c198840d-ac5c-487e-8146-6b777b9dcd91.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/678d617d-9746-4cdf-950e-6bb2205ebd3a.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/678d617d-9746-4cdf-950e-6bb2205ebd3a.png",
-      "name": "26145 Codex-專注力故事卡（Rose）0904-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/c198840d-ac5c-487e-8146-6b777b9dcd91.png",
-      "name": "26145 Codex-專注力故事卡（Rose）0904-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26146",
-    "theme": "Codex-108課綱識字卡0904",
-    "fullname": "26146 Codex-108課綱識字卡（Rose）0904",
-    "uploaded": "2026-09-04",
-    "imgs": [
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/5413cc93-f79f-411f-afaa-0166bc4db14d.png",
-     "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/b0c2b3bf-9f16-49b4-9208-2babcdd0f6c8.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/b0c2b3bf-9f16-49b4-9208-2babcdd0f6c8.png",
-      "name": "26146 Codex-108課綱識字卡（Rose）0904-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://pro-global-jomath-public.oss-ap-southeast-1.aliyuncs.com/marketing/ad/2026/09/04/5413cc93-f79f-411f-afaa-0166bc4db14d.png",
-      "name": "26146 Codex-108課綱識字卡（Rose）0904-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "easylearning_tw",
-      "name": "輕鬆學"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
     "leadBreakdown": false
    }
   ]
