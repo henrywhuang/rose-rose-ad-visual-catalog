@@ -1,10 +1,10 @@
 {
- "genStamp": "2026-09-27 13:56",
- "checkpointWd": "日",
- "today": "2026-09-27",
+ "genStamp": "2026-09-28 14:03",
+ "checkpointWd": "一",
+ "today": "2026-09-28",
  "fetchStatus": "ok",
  "expDate": "2026-10-13",
- "nAds": 18,
+ "nAds": 14,
  "curYM": "2026-09",
  "quarter": {
   "label": "2026-Q3",
@@ -17,8 +17,8 @@
    "2026-09"
   ]
  },
- "dayOfQuarter": 89,
- "dayOfMonth": 27,
+ "dayOfQuarter": 90,
+ "dayOfMonth": 28,
  "dim": 30,
  "subjects": [
   {
@@ -32,33 +32,33 @@
    },
    "q3": {
     "target": 3360,
-    "actual": 2883,
-    "actualBk": 2940,
-    "prog": 85.8,
-    "timeProg": 96.7,
-    "proj": 2980,
-    "attain": 88.7,
-    "gap": 380,
-    "remain": 477,
-    "diff": -10.9,
-    "scheduleDelta": -367,
+    "actual": 2898,
+    "actualBk": 2955,
+    "prog": 86.3,
+    "timeProg": 97.8,
+    "proj": 2962,
+    "attain": 88.2,
+    "gap": 398,
+    "remain": 462,
+    "diff": -11.5,
+    "scheduleDelta": -389,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-09",
     "target": 1210,
-    "actual": 741,
-    "actualBk": 774,
-    "prog": 61.2,
-    "timeProg": 90,
-    "proj": 823,
-    "attain": 68,
-    "gap": 387,
-    "remain": 469,
-    "needPerDay": 156.3,
-    "dayRateNow": 27.4,
-    "recent7Rate": 17.6,
-    "diff": -28.8,
+    "actual": 756,
+    "actualBk": 789,
+    "prog": 62.5,
+    "timeProg": 93.3,
+    "proj": 810,
+    "attain": 66.9,
+    "gap": 400,
+    "remain": 454,
+    "needPerDay": 227,
+    "dayRateNow": 27,
+    "recent7Rate": 16.7,
+    "diff": -30.9,
     "status": "behind"
    },
    "months": [
@@ -103,20 +103,20 @@
     {
      "ym": "2026-09",
      "target": 1210,
-     "actual": 741,
-     "actualBk": 774,
+     "actual": 756,
+     "actualBk": 789,
      "isCur": true,
      "isPast": false,
-     "proj": 823,
-     "gap": 387,
-     "remain": 469,
-     "prog": 61.2,
-     "timeProg": 90,
-     "diff": -28.8,
-     "scheduleDelta": -348,
-     "targetDelta": -469,
-     "projectedDelta": -387,
-     "attain": 68,
+     "proj": 810,
+     "gap": 400,
+     "remain": 454,
+     "prog": 62.5,
+     "timeProg": 93.3,
+     "diff": -30.8,
+     "scheduleDelta": -373,
+     "targetDelta": -454,
+     "projectedDelta": -400,
+     "attain": 66.9,
      "status": "behind"
     }
    ],
@@ -270,12 +270,24 @@
      "end": "2026-09-27",
      "effFrom": "2026-09-21",
      "effTo": "2026-09-27",
-     "isCur": true,
+     "isCur": false,
      "line": 303,
-     "actual": 123,
-     "actualBk": 122,
-     "gap": 180,
-     "status": "current"
+     "actual": 135,
+     "actualBk": 134,
+     "gap": 168,
+     "status": "fail"
+    },
+    {
+     "start": "2026-09-28",
+     "end": "2026-10-04",
+     "effFrom": "2026-09-28",
+     "effTo": "2026-09-28",
+     "isCur": true,
+     "line": null,
+     "actual": 3,
+     "actualBk": 3,
+     "gap": null,
+     "status": "na"
     }
    ]
   },
@@ -289,13 +301,13 @@
     "actual": 31,
     "actualBk": 25,
     "prog": 62,
-    "timeProg": 96.7,
+    "timeProg": 97.8,
     "proj": 32,
-    "attain": 64.1,
+    "attain": 63.4,
     "gap": 18,
     "remain": 19,
-    "diff": -34.7,
-    "scheduleDelta": -17,
+    "diff": -35.8,
+    "scheduleDelta": -18,
     "status": "behind"
    },
    "cur": {
@@ -304,7 +316,7 @@
     "actual": 0,
     "actualBk": 0,
     "prog": 0,
-    "timeProg": 90,
+    "timeProg": 93.3,
     "proj": 0,
     "attain": 0,
     "gap": null,
@@ -362,7 +374,7 @@
      "gap": null,
      "remain": null,
      "prog": null,
-     "timeProg": 90,
+     "timeProg": 93.3,
      "diff": null,
      "scheduleDelta": null,
      "targetDelta": null,
@@ -521,6 +533,18 @@
      "end": "2026-09-27",
      "effFrom": "2026-09-21",
      "effTo": "2026-09-27",
+     "isCur": false,
+     "line": null,
+     "actual": 0,
+     "actualBk": 0,
+     "gap": null,
+     "status": "na"
+    },
+    {
+     "start": "2026-09-28",
+     "end": "2026-10-04",
+     "effFrom": "2026-09-28",
+     "effTo": "2026-09-28",
      "isCur": true,
      "line": null,
      "actual": 0,
@@ -539,27 +563,27 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 559,
-   "b": 592,
-   "spend": 3184,
-   "cpl": 5.7,
-   "m7": 66,
-   "budget": 50,
+   "m": 562,
+   "b": 595,
+   "spend": 3255,
+   "cpl": 5.8,
+   "m7": 53,
+   "budget": 62,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "SCALE",
-   "adviceText": "爆款，建議加預算 20-30%",
+   "adviceAction": "KEEP",
+   "adviceText": "維持現狀",
    "priority": "P2",
    "suggestedBudget": 62,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "scale",
-   "tagTxt": "🔥 加碼",
+   "tag": "keep",
+   "tagTxt": "✅ 維持",
    "color": "#0f9d6b"
   },
   {
@@ -569,12 +593,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 441,
-   "b": 460,
-   "spend": 2015,
-   "cpl": 4.6,
-   "m7": 14,
-   "budget": 15,
+   "m": 449,
+   "b": 468,
+   "spend": 2037,
+   "cpl": 4.5,
+   "m7": 20,
+   "budget": 20,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -584,7 +608,7 @@
    "adviceAction": "SCALE",
    "adviceText": "爆款，建議加預算 20-30%",
    "priority": "P2",
-   "suggestedBudget": 19,
+   "suggestedBudget": 25,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -599,12 +623,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 266,
-   "b": 247,
-   "spend": 1833,
+   "m": 268,
+   "b": 249,
+   "spend": 1851,
    "cpl": 6.9,
-   "m7": 21,
-   "budget": 30,
+   "m7": 23,
+   "budget": 5,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -614,7 +638,7 @@
    "adviceAction": "KEEP",
    "adviceText": "維持現狀",
    "priority": "P2",
-   "suggestedBudget": 30,
+   "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -781,7 +805,7 @@
    "paused": true,
    "m": 121,
    "b": 126,
-   "spend": 772,
+   "spend": 773,
    "cpl": 6.4,
    "m7": 3,
    "budget": 31,
@@ -867,14 +891,14 @@
    "name": "25869 注音尋寶卡",
    "campaign": "L2+L3 注音尋寶卡-Rose",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 48,
-   "b": 39,
-   "spend": 271,
-   "cpl": 5.6,
-   "m7": 2,
-   "budget": 5,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
+   "m": 49,
+   "b": 40,
+   "spend": 278,
+   "cpl": 5.7,
+   "m7": 3,
+   "budget": 12,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -884,12 +908,12 @@
    "adviceAction": "--",
    "adviceText": "數據不足，暫不判斷",
    "priority": "--",
-   "suggestedBudget": 5,
+   "suggestedBudget": 12,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
+   "tag": "reactivate",
+   "tagTxt": "⏸ 已暫停(曾有量)",
    "color": "#64748b"
   },
   {
@@ -953,6 +977,36 @@
    "color": "#f59e0b"
   },
   {
+   "id": "120252647489410392",
+   "name": "26174 Codex-專注力遊戲卡（Rose）0915",
+   "campaign": "L2 專注力遊戲卡（Rose）0915",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 18,
+   "b": 18,
+   "spend": 93,
+   "cpl": 5.2,
+   "m7": 10,
+   "budget": 12,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "爆款，建議加預算 20-30%",
+   "priority": "P2",
+   "suggestedBudget": 15,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "scale",
+   "tagTxt": "🔥 加碼",
+   "color": "#e2603e"
+  },
+  {
    "id": "120252367928710392",
    "name": "26096 開學先補識字力（Rose）0827",
    "campaign": "L3 開學超前部署識字卡（Rose）0827",
@@ -980,36 +1034,6 @@
    "declineType": null,
    "tag": "reactivate",
    "tagTxt": "⏸ 已暫停(曾有量)",
-   "color": "#e2603e"
-  },
-  {
-   "id": "120252647489410392",
-   "name": "26174 Codex-專注力遊戲卡（Rose）0915",
-   "campaign": "L2 專注力遊戲卡（Rose）0915",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 17,
-   "b": 17,
-   "spend": 81,
-   "cpl": 4.8,
-   "m7": 11,
-   "budget": 10,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "SCALE",
-   "adviceText": "爆款，建議加預算 20-30%",
-   "priority": "P2",
-   "suggestedBudget": 12,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
    "color": "#6366f1"
   },
   {
@@ -1021,8 +1045,8 @@
    "paused": false,
    "m": 11,
    "b": 12,
-   "spend": 71,
-   "cpl": 6.5,
+   "spend": 80,
+   "cpl": 7.3,
    "m7": 3,
    "budget": 8,
    "bm": {
@@ -1932,7 +1956,7 @@
     "scale_excellent": 5
    },
    "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $6.46 低於合格線 $8.00，轉換 2。建議加預算 30%。",
+   "adviceText": "新品表現優異：CPL $4.01 低於合格線 $8.00，轉換 2。建議加預算 30%。",
    "priority": "P2",
    "suggestedBudget": 6,
    "trendWorse": false,
@@ -2877,12 +2901,12 @@
    "name": "26177 Codex-中班回家爆炸（Rose）0917",
    "campaign": "L2 中班回家爆炸（Rose）0917",
    "bl": "Reading",
-   "status": "CAMPAIGN_PAUSED",
-   "paused": true,
+   "status": "ACTIVE",
+   "paused": false,
    "m": 1,
    "b": 1,
-   "spend": 9,
-   "cpl": 8.9,
+   "spend": 10,
+   "cpl": 9.7,
    "m7": 0,
    "budget": 5,
    "bm": {
@@ -2892,14 +2916,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $8.91/$36.00，還有 $27.09 觀察空間",
+   "adviceText": "新品測試中：已花費 $9.68/$36.00，還有 $26.32 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
    "color": "#0ea5e9"
   },
   {
@@ -2943,7 +2967,7 @@
    "b": 1,
    "spend": 11,
    "cpl": 10.9,
-   "m7": 1,
+   "m7": 0,
    "budget": 5,
    "bm": {
     "excellent": 5,
@@ -5575,41 +5599,11 @@
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 156.3,
-  "addlPerDay": 138.7,
-  "winnerDaily": 9.4,
-  "adsNeeded": 15,
+  "needPerDay": 227,
+  "addlPerDay": 210.3,
+  "winnerDaily": 7.6,
+  "adsNeeded": 28,
   "topScale": [
-   {
-    "id": "120251174246100392",
-    "name": "25969 復刻-108識字卡拼圖2（Rose）",
-    "campaign": "L2+L3 復刻-108識字卡拼圖2（Rose）❌ 控3刀",
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "paused": false,
-    "m": 559,
-    "b": 592,
-    "spend": 3184,
-    "cpl": 5.7,
-    "m7": 66,
-    "budget": 50,
-    "bm": {
-     "excellent": 5,
-     "acceptable": 8,
-     "danger": 12,
-     "scale_excellent": 5
-    },
-    "adviceAction": "SCALE",
-    "adviceText": "爆款，建議加預算 20-30%",
-    "priority": "P2",
-    "suggestedBudget": 62,
-    "trendWorse": false,
-    "trendBetter": false,
-    "declineType": null,
-    "tag": "scale",
-    "tagTxt": "🔥 加碼",
-    "color": "#0f9d6b"
-   },
    {
     "id": "120251778667390392",
     "name": "26033 我會冷靜一下（Rose）0803",
@@ -5617,12 +5611,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 441,
-    "b": 460,
-    "spend": 2015,
-    "cpl": 4.6,
-    "m7": 14,
-    "budget": 15,
+    "m": 449,
+    "b": 468,
+    "spend": 2037,
+    "cpl": 4.5,
+    "m7": 20,
+    "budget": 20,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5632,13 +5626,43 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 19,
+    "suggestedBudget": 25,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
     "tag": "scale",
     "tagTxt": "🔥 加碼",
     "color": "#f59e0b"
+   },
+   {
+    "id": "120252647489410392",
+    "name": "26174 Codex-專注力遊戲卡（Rose）0915",
+    "campaign": "L2 專注力遊戲卡（Rose）0915",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 18,
+    "b": 18,
+    "spend": 93,
+    "cpl": 5.2,
+    "m7": 10,
+    "budget": 12,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
+    "priority": "P2",
+    "suggestedBudget": 15,
+    "trendWorse": false,
+    "trendBetter": false,
+    "declineType": null,
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#e2603e"
    }
   ],
   "iterate": [
@@ -5801,12 +5825,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 441,
-    "b": 460,
-    "spend": 2015,
-    "cpl": 4.6,
-    "m7": 14,
-    "budget": 15,
+    "m": 449,
+    "b": 468,
+    "spend": 2037,
+    "cpl": 4.5,
+    "m7": 20,
+    "budget": 20,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5816,7 +5840,7 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 19,
+    "suggestedBudget": 25,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
@@ -5831,12 +5855,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 17,
-    "b": 17,
-    "spend": 81,
-    "cpl": 4.8,
-    "m7": 11,
-    "budget": 10,
+    "m": 18,
+    "b": 18,
+    "spend": 93,
+    "cpl": 5.2,
+    "m7": 10,
+    "budget": 12,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5846,27 +5870,27 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 12,
+    "suggestedBudget": 15,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
-    "tag": "testing",
-    "tagTxt": "🧪 測試中",
-    "color": "#6366f1"
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#e2603e"
    },
    {
     "id": "120231639051860392",
     "name": "25869 注音尋寶卡",
     "campaign": "L2+L3 注音尋寶卡-Rose",
     "bl": "Reading",
-    "status": "ACTIVE",
-    "paused": false,
-    "m": 48,
-    "b": 39,
-    "spend": 271,
-    "cpl": 5.6,
-    "m7": 2,
-    "budget": 5,
+    "status": "CAMPAIGN_PAUSED",
+    "paused": true,
+    "m": 49,
+    "b": 40,
+    "spend": 278,
+    "cpl": 5.7,
+    "m7": 3,
+    "budget": 12,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5876,12 +5900,12 @@
     "adviceAction": "--",
     "adviceText": "數據不足，暫不判斷",
     "priority": "--",
-    "suggestedBudget": 5,
+    "suggestedBudget": 12,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
-    "tag": "keep",
-    "tagTxt": "✅ 維持",
+    "tag": "reactivate",
+    "tagTxt": "⏸ 已暫停(曾有量)",
     "color": "#64748b"
    },
    {
@@ -5891,34 +5915,34 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 559,
-    "b": 592,
-    "spend": 3184,
-    "cpl": 5.7,
-    "m7": 66,
-    "budget": 50,
+    "m": 562,
+    "b": 595,
+    "spend": 3255,
+    "cpl": 5.8,
+    "m7": 53,
+    "budget": 62,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "SCALE",
-    "adviceText": "爆款，建議加預算 20-30%",
+    "adviceAction": "KEEP",
+    "adviceText": "維持現狀",
     "priority": "P2",
     "suggestedBudget": 62,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
-    "tag": "scale",
-    "tagTxt": "🔥 加碼",
+    "tag": "keep",
+    "tagTxt": "✅ 維持",
     "color": "#0f9d6b"
    }
   ]
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-09-18",
+  "cutoff": "2026-09-19",
   "days": 10,
   "items": [
    {
@@ -5957,87 +5981,7 @@
     "m10": 2,
     "s10": 16.2,
     "cpl": 8.1,
-    "ctr7": 3.3,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26177",
-    "theme": "Codex-中班回家爆炸0917",
-    "fullname": "26177 Codex-中班回家爆炸（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/62a58be7-7905-4545-8ea1-dfe0ccc0565e.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/b1b0bd88-9233-4a1b-b881-f050cb0ad11f.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/b1b0bd88-9233-4a1b-b881-f050cb0ad11f.png",
-      "name": "26177 Codex-中班回家爆炸（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/62a58be7-7905-4545-8ea1-dfe0ccc0565e.png",
-      "name": "26177 Codex-中班回家爆炸（Rose）0917-B",
-      "leads": 1
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 1,
-    "s10": 8.9,
-    "cpl": 8.9,
-    "ctr7": 5.7,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26181",
-    "theme": "Codex-注音識字起步0917",
-    "fullname": "26181 Codex-注音識字起步（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/6172083f-4ffb-413d-92e5-bd11a038699b.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/7b103602-acb7-41f6-8d82-c7d4f25c7890.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/7b103602-acb7-41f6-8d82-c7d4f25c7890.png",
-      "name": "26181 Codex-注音識字起步（Rose）0917-A",
-      "leads": 1
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/6172083f-4ffb-413d-92e5-bd11a038699b.png",
-      "name": "26181 Codex-注音識字起步（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 1,
-    "s10": 9.6,
-    "cpl": 9.6,
-    "ctr7": 4.3,
+    "ctr7": 3.8,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -6082,86 +6026,6 @@
     "leadBreakdown": true
    },
    {
-    "num": "26178",
-    "theme": "Codex-放學情緒釋放0917",
-    "fullname": "26178 Codex-放學情緒釋放（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/cf2574e1-eef0-4893-ba12-6cfd992a11de.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/849e0f90-e0c4-48d0-b2d7-16da3656234b.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/849e0f90-e0c4-48d0-b2d7-16da3656234b.png",
-      "name": "26178 Codex-放學情緒釋放（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/cf2574e1-eef0-4893-ba12-6cfd992a11de.png",
-      "name": "26178 Codex-放學情緒釋放（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7.2,
-    "cpl": null,
-    "ctr7": 5.6,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26180",
-    "theme": "Codex-遊戲正音練習0917",
-    "fullname": "26180 Codex-遊戲正音練習（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/f5c7fe3d-eca9-40cb-8442-90836fcdfa23.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/abcdc0d1-4aed-47b8-a5b8-8b60200cdbf7.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/abcdc0d1-4aed-47b8-a5b8-8b60200cdbf7.png",
-      "name": "26180 Codex-遊戲正音練習（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/f5c7fe3d-eca9-40cb-8442-90836fcdfa23.png",
-      "name": "26180 Codex-遊戲正音練習（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7.1,
-    "cpl": null,
-    "ctr7": 4.3,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
     "num": "26195",
     "theme": "Codex-重講變找圖0923",
     "fullname": "26195 Codex-重講變找圖（Rose）0923",
@@ -6198,166 +6062,6 @@
     "s10": 6.4,
     "cpl": null,
     "ctr7": 4.3,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26184",
-    "theme": "Codex-平板停不下來0917",
-    "fullname": "26184 Codex-平板停不下來（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/b8a8ce5b-e0fa-4411-8abd-9ee39b166aea.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/4049e7f0-dd0e-4e0b-b27b-deae109a1e4f.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/4049e7f0-dd0e-4e0b-b27b-deae109a1e4f.png",
-      "name": "26184 Codex-平板停不下來（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/b8a8ce5b-e0fa-4411-8abd-9ee39b166aea.png",
-      "name": "26184 Codex-平板停不下來（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7.1,
-    "cpl": null,
-    "ctr7": 3.2,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26183",
-    "theme": "Codex-3C情緒切換0917",
-    "fullname": "26183 Codex-3C情緒切換（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/e1dd0d37-1f01-41ee-8316-ca80ca9db8bb.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/59d927c8-524c-4b03-b801-7587af93c2fd.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/59d927c8-524c-4b03-b801-7587af93c2fd.png",
-      "name": "26183 Codex-3C情緒切換（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/e1dd0d37-1f01-41ee-8316-ca80ca9db8bb.png",
-      "name": "26183 Codex-3C情緒切換（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7.1,
-    "cpl": null,
-    "ctr7": 3.1,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26179",
-    "theme": "Codex-ㄈㄊ正音練習0917",
-    "fullname": "26179 Codex-ㄈㄊ正音練習（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/eed0dee9-d70b-4ff9-9227-3ff1d2c13868.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/49a18def-b685-4593-a64c-ce309993f2d7.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/49a18def-b685-4593-a64c-ce309993f2d7.png",
-      "name": "26179 Codex-ㄈㄊ正音練習（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/eed0dee9-d70b-4ff9-9227-3ff1d2c13868.png",
-      "name": "26179 Codex-ㄈㄊ正音練習（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 6.5,
-    "cpl": null,
-    "ctr7": 3,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26182",
-    "theme": "Codex-開學識字任務0917",
-    "fullname": "26182 Codex-開學識字任務（Rose）0917",
-    "uploaded": "2026-09-18",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/435fb58b-911c-4148-8762-b57baf8f37ef.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/18/92338856-9c3c-4534-b0d2-c0f999f1e505.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/92338856-9c3c-4534-b0d2-c0f999f1e505.png",
-      "name": "26182 Codex-開學識字任務（Rose）0917-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/18/435fb58b-911c-4148-8762-b57baf8f37ef.png",
-      "name": "26182 Codex-開學識字任務（Rose）0917-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 7,
-    "cpl": null,
-    "ctr7": 2.7,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6436,6 +6140,46 @@
     "hasPerf": true,
     "m10": 0,
     "s10": 6.2,
+    "cpl": null,
+    "ctr7": 2.1,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26197",
+    "theme": "Codex-不是他的杯子0923",
+    "fullname": "26197 Codex-不是他的杯子（Rose）0923",
+    "uploaded": "2026-09-20",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/20/bf114139-d14e-4894-8e83-b17d7c063f23.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/20/830059ae-1cde-43e2-afe5-b61c9d6545b1.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/20/830059ae-1cde-43e2-afe5-b61c9d6545b1.png",
+      "name": "26197 Codex-不是他的杯子（Rose）0923-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/20/bf114139-d14e-4894-8e83-b17d7c063f23.png",
+      "name": "26197 Codex-不是他的杯子（Rose）0923-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 15.9,
     "cpl": null,
     "ctr7": 2.1,
     "hasVariantPerf": true,
@@ -6556,46 +6300,6 @@
     "hasPerf": true,
     "m10": 0,
     "s10": 15.1,
-    "cpl": null,
-    "ctr7": 1.8,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26197",
-    "theme": "Codex-不是他的杯子0923",
-    "fullname": "26197 Codex-不是他的杯子（Rose）0923",
-    "uploaded": "2026-09-20",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/20/bf114139-d14e-4894-8e83-b17d7c063f23.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/20/830059ae-1cde-43e2-afe5-b61c9d6545b1.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/20/830059ae-1cde-43e2-afe5-b61c9d6545b1.png",
-      "name": "26197 Codex-不是他的杯子（Rose）0923-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/20/bf114139-d14e-4894-8e83-b17d7c063f23.png",
-      "name": "26197 Codex-不是他的杯子（Rose）0923-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 15.9,
     "cpl": null,
     "ctr7": 1.7,
     "hasVariantPerf": true,
