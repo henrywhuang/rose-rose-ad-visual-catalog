@@ -85,16 +85,30 @@ const OKR = {
 };
 OKR.timeProg = OKR.daysElapsed / OKR.daysInMonth;
 
-// ---- Q3 單科季目標（2026-07-01 至 2026-09-30）----
-const Q3 = {
+// ---- 季度目標與時間進度 ----
+function withQuarterClock(q) {
+  const daysElapsed = Math.max(0, Math.min(q.daysTotal, Math.floor((Date.parse(todayKey + 'T00:00:00Z') - Date.parse(q.start + 'T00:00:00Z')) / DAY) + 1));
+  return { ...q, daysElapsed, timeProg: daysElapsed / q.daysTotal };
+}
+const todayKey = tpNow.toISOString().slice(0, 10);
+const Q3 = withQuarterClock({
+  label: 'Q3',
   start: '2026-07-01', end: '2026-09-30', daysTotal: 92,
   months: ['2026-07', '2026-08', '2026-09'],
   targets: { read: 1250, en: 2600, math: 1440 },
-};
-const todayKey = tpNow.toISOString().slice(0, 10);
-const q3ElapsedDays = Math.max(0, Math.min(Q3.daysTotal, Math.floor((Date.parse(todayKey + 'T00:00:00Z') - Date.parse(Q3.start + 'T00:00:00Z')) / DAY) + 1));
-Q3.daysElapsed = q3ElapsedDays;
-Q3.timeProg = q3ElapsedDays / Q3.daysTotal;
+});
+const Q4 = withQuarterClock({
+  label: 'Q4',
+  start: '2026-10-01', end: '2026-12-31', daysTotal: 92,
+  months: ['2026-10', '2026-11', '2026-12'],
+  targets: {
+    read: ['2026-10', '2026-11', '2026-12'].reduce((n, ym) => n + goalTarget(ym, '🎯閱｜月自有'), 0),
+    en: ['2026-10', '2026-11', '2026-12'].reduce((n, ym) => n + goalTarget(ym, '🎯英｜月自有'), 0),
+    math: 0,
+  },
+});
+const QUARTERS = [Q4, Q3];
+const ACTIVE_QUARTER = Q4;
 
 // ---- 統計工具 ----
 const mean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
@@ -191,41 +205,51 @@ function analyzePool(name, key, recs, cats, periodWin) {
 }
 
 // ---- 科目 OKR 卡（通用，接受數字）----
-function makeSubject(name, key, { actual, pub, pri, target, lastMon, poolKeys, source, quarterActual, quarterMonths }) {
+function makeQuarterStats(def, key, months) {
+  const actual = months.reduce((sum, m) => sum + m.actual, 0);
+  const target = def.targets[key] || 0;
+  const prog = target > 0 ? actual / target : 0;
+  const diff = prog - def.timeProg;
+  const proj = def.timeProg > 0.02 ? actual / def.timeProg : actual;
+  return {
+    label: def.label, actual, target, prog: R(prog * 100), timeProg: R(def.timeProg * 100), diff: R(diff * 100),
+    proj: R0(proj), attain: R(target > 0 ? proj / target * 100 : 0), gap: R0(Math.max(0, target - proj)),
+    remain: R0(Math.max(0, target - actual)), months,
+    status: diff < -0.02 ? 'behind' : diff < 0 ? 'watch' : 'ahead',
+  };
+}
+
+function makeSubject(name, key, { actual, pub, pri, target, lastMon, poolKeys, source, quarters }) {
   const prog = target > 0 ? actual / target : 0;
   const proj = OKR.timeProg > 0.02 ? actual / OKR.timeProg : actual;
   const diff = prog - OKR.timeProg;
   const remain = Math.max(0, target - actual);
   const remainDays = Math.max(0.5, OKR.daysInMonth - OKR.daysElapsed);
-  const qTarget = Q3.targets[key] || 0;
-  const qProg = qTarget > 0 ? quarterActual / qTarget : 0;
-  const qDiff = qProg - Q3.timeProg;
-  const qProj = Q3.timeProg > 0.02 ? quarterActual / Q3.timeProg : quarterActual;
+  const active = quarters.find(q => q.label === ACTIVE_QUARTER.label);
   return {
     name, key, target, actual, actualPub: pub, actualPri: pri, source: source || 'lark',
     prog: R(prog * 100), timeProg: R(OKR.timeProg * 100), diff: R(diff * 100),
     proj: R0(proj), attain: R(target > 0 ? proj / target * 100 : 0), gap: R0(Math.max(0, target - proj)),
     remain, needPerDay: R(remain / remainDays), dayRateNow: R(OKR.daysElapsed > 0 ? actual / OKR.daysElapsed : 0),
     lastMonAll: lastMon,
-    quarterActual, quarterTarget: qTarget, quarterProg: R(qProg * 100),
-    quarterTimeProg: R(Q3.timeProg * 100), quarterDiff: R(qDiff * 100),
-    quarterProj: R0(qProj), quarterAttain: R(qTarget > 0 ? qProj / qTarget * 100 : 0),
-    quarterGap: R0(Math.max(0, qTarget - qProj)), quarterRemain: R0(Math.max(0, qTarget - quarterActual)),
-    quarterMonths,
-    quarterStatus: qDiff < -0.02 ? 'behind' : qDiff < 0 ? 'watch' : 'ahead',
+    quarterActual: active.actual, quarterTarget: active.target, quarterProg: active.prog,
+    quarterTimeProg: active.timeProg, quarterDiff: active.diff,
+    quarterProj: active.proj, quarterAttain: active.attain,
+    quarterGap: active.gap, quarterRemain: active.remain,
+    quarterMonths: active.months, quarterStatus: active.status, quarters,
     status: diff < -0.02 ? 'behind' : diff < 0 ? 'watch' : 'ahead', poolKeys,
   };
 }
 function subjectFromLark(name, key, recs, target, poolKeys, targetField) {
   const mm = subjectMonthly(recs);
-  const quarterMonths = Q3.months.map(ym => makeQuarterMonth(ym, mm[ym]?.all || 0, goalTarget(ym, targetField)));
-  const quarterActual = quarterMonths.reduce((sum, m) => sum + m.actual, 0);
-  return makeSubject(name, key, { actual: mm[curYM].all, pub: mm[curYM].pub, pri: mm[curYM].pri, target, lastMon: mm[MONTHS[MONTHS.length - 2]].all, poolKeys, source: 'lark', quarterActual, quarterMonths });
+  const quarters = QUARTERS.map(q => makeQuarterStats(q, key, q.months.map(ym => makeQuarterMonth(ym, mm[ym]?.all || 0, goalTarget(ym, targetField)))));
+  return makeSubject(name, key, { actual: mm[curYM].all, pub: mm[curYM].pub, pri: mm[curYM].pri, target, lastMon: mm[MONTHS[MONTHS.length - 2]].all, poolKeys, source: 'lark', quarters });
 }
 
 // ---- 數學：Arkio self-traffic OKR（含渠道明細；token 過期則優雅降級）----
 const ARKIO_TOKEN = (process.env.ARKIO_TOKEN || (() => { const f = path.resolve(__dir, '..', '..', '.arkio_token'); return fs.existsSync(f) ? fs.readFileSync(f, 'utf8').trim() : ''; })());
 const mathMonths = MONTHS.slice(-4); // 近4月 04..07
+const mathFetchMonths = [...new Set([...mathMonths, ...Q3.months, ...Q4.months])];
 function mathFamily(ch) {
   const med = (ch.channel.split('_')[2] || '其他');
   const map = { Card: '卡片', Popup: '彈窗', LINE: 'LINE好友', SOP: 'SOP試用', IG: 'IG', FB: 'FB', Trail: '試用', Premium: 'Premium' };
@@ -236,15 +260,15 @@ try {
   if (!ARKIO_TOKEN) throw new Error('無 Arkio token');
   const AG = { Authorization: `Bearer ${ARKIO_TOKEN}`, Accept: 'application/json' };
   const perMonth = {};
-  for (const ym of mathMonths) {
+  for (const ym of mathFetchMonths) {
     const r = await fetch(`https://www.arkio.me/api/v1/ops/self-traffic/okr?from=${ym}&to=${ym}&region=TW`, { headers: AG });
     if (!r.ok) throw new Error('Arkio HTTP ' + r.status + (r.status === 401 ? '（token 已過期，請更新 .arkio_token / ARKIO_TOKEN）' : ''));
     perMonth[ym] = (await r.json()).data.subjects;
   }
+  Q4.targets.math = Q4.months.reduce((n, ym) => n + (perMonth[ym]?.Math?.target || 0), 0);
   const curM = perMonth[curYM].Math, prevM = perMonth[mathMonths[mathMonths.length - 2]].Math;
-  const quarterMonths = Q3.months.map(ym => makeQuarterMonth(ym, perMonth[ym]?.Math?.actual || 0, perMonth[ym]?.Math?.target || 0));
-  const quarterActual = quarterMonths.reduce((sum, m) => sum + m.actual, 0);
-  okrMath = makeSubject('數學', 'math', { actual: curM.actual, pub: curM.pub, pri: curM.private, target: curM.target, lastMon: prevM.actual, poolKeys: ['math'], source: 'arkio', quarterActual, quarterMonths });
+  const quarters = QUARTERS.map(q => makeQuarterStats(q, 'math', q.months.map(ym => makeQuarterMonth(ym, perMonth[ym]?.Math?.actual || 0, perMonth[ym]?.Math?.target || 0))));
+  okrMath = makeSubject('數學', 'math', { actual: curM.actual, pub: curM.pub, pri: curM.private, target: curM.target, lastMon: prevM.actual, poolKeys: ['math'], source: 'arkio', quarters });
   // 家族月度矩陣
   const fam = {};
   for (const ym of mathMonths) for (const ch of (perMonth[ym].Math.channels || [])) { const f = mathFamily(ch); (fam[f] ??= {}); fam[f][ym] = (fam[f][ym] || 0) + ch.count; }
@@ -281,7 +305,7 @@ const SUBJECTS = [okrRead, okrEng];
 if (okrMath) SUBJECTS.push(okrMath);
 if (mathPool) POOLS.push(mathPool);
 
-const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), OKR, Q3, subjects: SUBJECTS, pools: POOLS, months: MONTHS, arkio: { ok: arkioOk, err: arkioErr } };
+const payload = { genStamp, checkpointWd, tpDate: tpNow.toISOString().slice(0, 10), OKR, Q3, Q4, activeQuarter: ACTIVE_QUARTER.label, quarters: QUARTERS, subjects: SUBJECTS, pools: POOLS, months: MONTHS, arkio: { ok: arkioOk, err: arkioErr } };
 fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
 
 // ================= HTML =================
@@ -356,14 +380,17 @@ td.excl{color:var(--sub);font-style:italic}
 <div class="meta">月目標 vs 時間進度 → 渠道供應診斷 → 每期健康基準 · 自動更新每週三・五 09:00（台北）</div>
 
 <div class="sec-t">① OKR 進度總覽（自有領課）</div>
-<div class="module-sub"><span>Q3 季度總覽</span><small>先看三科整季是否跟上時間</small></div>
-<div id="q3-okr" class="okr"></div>
+<div class="module-sub"><span>Q4 季度總覽</span><small>先看三科本季是否跟上時間</small></div>
+<div id="q4-okr" class="okr"></div>
 <div class="module-sub"><span>本月進度</span><small>再看三科當月速度與月底推估</small></div>
 <div id="month-okr" class="okr"></div>
-<div class="module-sub"><span>Q3 各月進度與差距</span><small>最後按 7 → 8 → 9 月回看結算與缺口</small></div>
+<div class="module-sub"><span>Q4 各月進度與差距</span><small>10 → 11 → 12 月，未來月份先顯示目標</small></div>
+<div id="q4-months"></div>
+<div class="module-sub"><span>Q3 結算</span><small>回看更新後的 7 → 8 → 9 月實績</small></div>
+<div id="q3-okr" class="okr"></div>
 <div id="q3-months"></div>
 <div id="arkio-note"></div>
-<div class="note">閱讀順序：<b>季度總覽 → 本月進度 → 各月差距</b>。進度＝累計領課 ÷ 目標；深色刻度是同期時間進度，<b>實際進度低於刻度＝落後</b>。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
+<div class="note">閱讀順序：<b>Q4 總覽 → 本月進度 → Q4 各月 → Q3 結算</b>。進度＝累計領課 ÷ 目標；深色刻度是同期時間進度，<b>實際進度低於刻度＝落後</b>。閱讀・英語源自 Lark 體驗營追蹤；數學源自 Arkio（pro）。</div>
 
 <div class="sec-t">② 各渠道供應診斷 + 健康基準</div>
 <nav class="tabs" id="tabs"></nav>
@@ -377,17 +404,20 @@ const O = DATA.OKR;
 const stName = { behind:'🔴 落後', warn:'🔴 警訊', watch:'🟡 留意', ok:'🟢 正常', ahead:'🔥 超前', boom:'🔥 特好', small:'· 量小', na:'—' };
 
 function appendProgressCard(target, s, kind) {
-  const quarter = kind === 'quarter';
-  const actual = quarter ? s.quarterActual : s.actual;
-  const goal = quarter ? s.quarterTarget : s.target;
-  const prog = quarter ? s.quarterProg : s.prog;
-  const timeProg = quarter ? s.quarterTimeProg : s.timeProg;
-  const diff = quarter ? s.quarterDiff : s.diff;
-  const status = quarter ? s.quarterStatus : s.status;
-  const proj = quarter ? s.quarterProj : s.proj;
-  const attain = quarter ? s.quarterAttain : s.attain;
-  const gap = quarter ? s.quarterGap : s.gap;
-  const remain = quarter ? s.quarterRemain : s.remain;
+  const quarter = kind !== 'month';
+  const q = quarter ? (s.quarters || []).find(x => x.label === kind) : null;
+  if (quarter && !q) return;
+  const actual = quarter ? q.actual : s.actual;
+  const goal = quarter ? q.target : s.target;
+  const prog = quarter ? q.prog : s.prog;
+  const timeProg = quarter ? q.timeProg : s.timeProg;
+  const diff = quarter ? q.diff : s.diff;
+  const status = quarter ? q.status : s.status;
+  const proj = quarter ? q.proj : s.proj;
+  const attain = quarter ? q.attain : s.attain;
+  const gap = quarter ? q.gap : s.gap;
+  const remain = quarter ? q.remain : s.remain;
+  const qdef = quarter ? DATA.quarters.find(x => x.label === kind) : null;
   const dtxt = diff >= 0 ? ('超前 ' + diff.toFixed(1) + ' pt') : ('落後 ' + Math.abs(diff).toFixed(1) + ' pt');
   const barCol = status === 'behind' ? 'var(--warn)' : status === 'watch' ? 'var(--watch)' : 'var(--good)';
   const div = document.createElement('div');
@@ -395,7 +425,7 @@ function appendProgressCard(target, s, kind) {
   div.innerHTML =
     '<div class="hd"><div class="nm">' + s.name + '</div><div class="df ' + (diff>=0?'pos':'neg') + '">' + (diff>=0?'🟢 ':'🔴 ') + dtxt + '</div></div>' +
     '<div class="big">' + actual + '<small> / ' + goal + ' 人　(' + prog.toFixed(1) + '%)</small></div>' +
-    '<div class="dualbar"><div class="lab"><span>' + (quarter?'Q3':'月') + '進度 ' + prog.toFixed(1) + '%</span><span>時間 ' + timeProg.toFixed(1) + '% (' + (quarter?(DATA.Q3.daysElapsed+'/'+DATA.Q3.daysTotal):(O.daysElapsed+'/'+O.daysInMonth)) + '天)</span></div>' +
+    '<div class="dualbar"><div class="lab"><span>' + (quarter?kind:'月') + '進度 ' + prog.toFixed(1) + '%</span><span>時間 ' + timeProg.toFixed(1) + '% (' + (quarter?(qdef.daysElapsed+'/'+qdef.daysTotal):(O.daysElapsed+'/'+O.daysInMonth)) + '天)</span></div>' +
     '<div class="track"><i style="width:' + Math.min(100, prog) + '%;background:' + barCol + '"></i><span class="tick" style="left:' + Math.min(100, timeProg) + '%"></span></div></div>' +
     '<div class="row2">' +
       '<span class="chip">距' + (quarter?'季':'月') + '目標尚缺 <b>' + remain + '</b></span>' +
@@ -409,25 +439,32 @@ function appendProgressCard(target, s, kind) {
   target.appendChild(div);
 }
 
+const q4Okr = document.getElementById('q4-okr');
 const q3Okr = document.getElementById('q3-okr');
 const monthOkr = document.getElementById('month-okr');
-DATA.subjects.forEach(s => appendProgressCard(q3Okr, s, 'quarter'));
+DATA.subjects.forEach(s => appendProgressCard(q4Okr, s, 'Q4'));
 DATA.subjects.forEach(s => appendProgressCard(monthOkr, s, 'month'));
+DATA.subjects.forEach(s => appendProgressCard(q3Okr, s, 'Q3'));
 
-let monthTable = '<div class="tablewrap"><table><thead><tr><th>月份・科目</th><th>實際</th><th>目標</th><th>達成率</th><th>時間%</th><th>當下差距</th><th>推估／結算</th><th>目標差額</th><th>狀態</th></tr></thead><tbody>';
-DATA.Q3.months.forEach(ym => DATA.subjects.forEach(s => {
-  const m = (s.quarterMonths || []).find(x => x.ym === ym);
-  if (!m || !m.target) return;
-  const progressDelta = m.isPast ? m.targetDelta : (m.isCur ? m.scheduleDelta : null);
-  const finishDelta = m.isPast ? m.targetDelta : (m.isCur ? Math.round(m.proj - m.target) : null);
-  monthTable += '<tr><td><b>' + ym.slice(5) + '月・' + s.name + '</b></td><td>' + m.actual + '</td><td>' + m.target + '</td><td>' + m.prog.toFixed(1) + '%</td><td>' + m.timeProg.toFixed(1) + '%</td>' +
-    '<td>' + (progressDelta==null?'—':'<span class="'+(progressDelta>=0?'pos':'neg')+'">'+(progressDelta>=0?'超前 +':'落後 ')+Math.abs(progressDelta)+'</span>') + '</td>' +
-    '<td>' + (m.isPast?m.actual:(m.isCur?m.proj:'—')) + '</td>' +
-    '<td>' + (finishDelta==null?'—':'<span class="'+(finishDelta>=0?'pos':'neg')+'">'+(finishDelta>=0?'+':'')+finishDelta+'</span>') + '</td>' +
-    '<td><span class="st ' + m.status + '">' + stName[m.status] + '</span></td></tr>';
-}));
-monthTable += '</tbody></table></div>';
-document.getElementById('q3-months').innerHTML = monthTable;
+function quarterMonthTable(label) {
+  const def = DATA.quarters.find(q => q.label === label);
+  let h = '<div class="tablewrap"><table><thead><tr><th>月份・科目</th><th>實際</th><th>目標</th><th>達成率</th><th>時間%</th><th>當下差距</th><th>推估／結算</th><th>目標差額</th><th>狀態</th></tr></thead><tbody>';
+  def.months.forEach(ym => DATA.subjects.forEach(s => {
+    const q = (s.quarters || []).find(x => x.label === label);
+    const m = q && q.months.find(x => x.ym === ym);
+    if (!m || !m.target) return;
+    const progressDelta = m.isPast ? m.targetDelta : (m.isCur ? m.scheduleDelta : null);
+    const finishDelta = m.isPast ? m.targetDelta : (m.isCur ? Math.round(m.proj - m.target) : null);
+    h += '<tr><td><b>' + ym.slice(5) + '月・' + s.name + '</b></td><td>' + m.actual + '</td><td>' + m.target + '</td><td>' + m.prog.toFixed(1) + '%</td><td>' + m.timeProg.toFixed(1) + '%</td>' +
+      '<td>' + (progressDelta==null?'—':'<span class="'+(progressDelta>=0?'pos':'neg')+'">'+(progressDelta>=0?'超前 +':'落後 ')+Math.abs(progressDelta)+'</span>') + '</td>' +
+      '<td>' + (m.isPast?m.actual:(m.isCur?m.proj:'—')) + '</td>' +
+      '<td>' + (finishDelta==null?'—':'<span class="'+(finishDelta>=0?'pos':'neg')+'">'+(finishDelta>=0?'+':'')+finishDelta+'</span>') + '</td>' +
+      '<td><span class="st ' + m.status + '">' + stName[m.status] + '</span></td></tr>';
+  }));
+  return h + '</tbody></table></div>';
+}
+document.getElementById('q4-months').innerHTML = quarterMonthTable('Q4');
+document.getElementById('q3-months').innerHTML = quarterMonthTable('Q3');
 if (!DATA.arkio || !DATA.arkio.ok) document.getElementById('arkio-note').innerHTML =
   '<div class="note" style="border-color:#d6be84;background:#fff8e7;color:#80591d">⚠️ 數學（Arkio）資料暫時無法讀取：' + ((DATA.arkio&&DATA.arkio.err)||'') + '。閱讀・英語不受影響，請更新 Arkio 憑證。</div>';
 
@@ -534,5 +571,5 @@ DATA.pools.forEach(p=>{
 
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
 console.log('生成完成 @', genStamp, '週' + checkpointWd, '| 當月', curYM, 'Days', OKR.daysElapsed + '/' + OKR.daysInMonth, '時間進度', R(OKR.timeProg * 100) + '%');
-for (const s of SUBJECTS) console.log(`  [OKR] ${s.name}: ${s.actual}/${s.target} = ${s.prog}% vs 時間 ${s.timeProg}% → ${s.diff >= 0 ? '超前' : '落後'} ${Math.abs(s.diff)}pt | Q3 ${s.quarterActual}/${s.quarterTarget} = ${s.quarterProg}% vs 時間 ${s.quarterTimeProg}% → ${s.quarterDiff >= 0 ? '超前' : '落後'} ${Math.abs(s.quarterDiff)}pt | 推估月底 ${s.proj}(達成${s.attain}%) 缺口${s.gap}`);
+for (const s of SUBJECTS) console.log(`  [OKR] ${s.name}: ${s.actual}/${s.target} = ${s.prog}% vs 時間 ${s.timeProg}% → ${s.diff >= 0 ? '超前' : '落後'} ${Math.abs(s.diff)}pt | ${ACTIVE_QUARTER.label} ${s.quarterActual}/${s.quarterTarget} = ${s.quarterProg}% vs 時間 ${s.quarterTimeProg}% → ${s.quarterDiff >= 0 ? '超前' : '落後'} ${Math.abs(s.quarterDiff)}pt | 推估月底 ${s.proj}(達成${s.attain}%) 缺口${s.gap}`);
 for (const p of POOLS) console.log(`  [池] ${p.name}: 供應不足[${p.channels.filter(c => c.supply === 'behind').map(c => c.name + '↓' + c.dropPct + '%').join(',')}] 警訊帶[${p.channels.filter(c => c.health === 'warn').map(c => c.name).join(',')}]`);
