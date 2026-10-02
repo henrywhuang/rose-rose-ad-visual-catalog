@@ -2,7 +2,7 @@
 // 資料源：Arkio Ad Pilot dashboard（GET /api/v1/ad-budget/dashboard，Bearer 憑證）。
 // 篩選：campaign_name 或 adset 名稱含 "rose"（不分大小寫）。主數字＝Ads Manager 成果口徑(leads_meta)，backend 作校驗。
 // 累計法：把每次抓到的 trend_30d 每日領課併入持久帳本 ledger.json（同日以最新一次覆蓋，處理回補），
-//        因此 Q3 累計可跨越 30 天視窗，8 月後仍算得到 7/1 起的總量。
+//        因此季度累計可跨越 30 天視窗。
 // 由 GitHub Actions 每天 09:00(台北) 自動更新，或本機 `node ad/build.mjs`。
 // 憑證：環境變數 ARKIO_TOKEN，本機退回讀 ../../.arkio_token。
 import fs from 'node:fs';
@@ -14,11 +14,10 @@ const OUT = __dir;
 const LEDGER_PATH = path.join(OUT, 'ledger.json');
 
 // ============== 設定（Rose 給定目標，可調整）==============
-const QUARTER = { label: '2026-Q3', start: '2026-07-01', end: '2026-09-30', totalDays: 92, months: ['2026-07', '2026-08', '2026-09'] };
-// Rose 2026-08-03 確認：TW Reading 季目標 3,360（7月 1,000／8月 1,150／9月 1,210）。
-const READING = { key: 'read', name: '閱讀', q3Target: 3360, monthTargets: { '2026-07': 1000, '2026-08': 1150, '2026-09': 1210 } };
-// English K2 僅追蹤當季目標 50，不拆每月目標。
-const ENGLISH = { key: 'en', name: '英語', q3Target: 50, monthTargets: {} };
+const QUARTER = { label: '2026-Q4', start: '2026-10-01', end: '2026-12-31', totalDays: 92, months: ['2026-10', '2026-11', '2026-12'] };
+// Rose 2026-10-02 確認：Q4 僅追蹤 Reading，每月目標 1,100，季目標 3,300。
+const READING = { key: 'read', name: '閱讀', q3Target: 3300, monthTargets: { '2026-10': 1100, '2026-11': 1100, '2026-12': 1100 } };
+const ARCHIVE_Q3 = { label: '2026-Q3', start: '2026-07-01', end: '2026-09-30', target: 3360, monthTargets: { '2026-07': 1000, '2026-08': 1150, '2026-09': 1210 } };
 const WEEK_DIVISOR = 4;          // 單週合格線＝該週所屬月目標 ÷ 4（Rose 口徑：7月 950/4≈238）
 const PRIMARY = 'm';             // 主口徑 m=成果(meta) / b=後端(backend)
 const RECENT_DAYS = 10;          // 「近N天上架廣告分析」視窗
@@ -218,7 +217,7 @@ const sumRange = (tot, from, to, key) => Object.entries(tot).reduce((s, [d, v]) 
 function subjectAnalysis(SUB) {
   const tot = dayTotals(SUB.name === '閱讀' ? 'Reading' : 'English');
   const P = PRIMARY;
-  // Q3 累計
+  // 本季累計（欄位名 q3 為舊版相容，畫面使用 QUARTER.label）
   const q3Actual = sumRange(tot, QUARTER.start, quarterReportDate, P);
   const q3Bk = sumRange(tot, QUARTER.start, quarterReportDate, 'b');
   const q3Proj = qTimeProg > 0.02 ? q3Actual / qTimeProg : q3Actual;
@@ -254,7 +253,7 @@ function subjectAnalysis(SUB) {
     };
   });
   // 當月細節
-  // 季度結束後仍以季度最後一月作為月份摘要，不再尋找 Q3 之外的月目標。
+  // 季度結束後仍以季度最後一月作為月份摘要。
   const curMonth = months.find(m => m.isCur) || (quarterClosed ? months[months.length - 1] : months[0]);
   const monthActual = curMonth.actual;
   const monthTarget = curMonth.target || 0;
@@ -266,7 +265,7 @@ function subjectAnalysis(SUB) {
     prog: monthTarget ? R(monthActual / monthTarget * 100) : 0, timeProg: quarterClosed ? 100 : R(mTimeProg * 100),
     proj: curMonth.proj, attain: monthTarget ? R(curMonth.proj / monthTarget * 100) : 0,
     gap: curMonth.gap, remain: R0(monthRemain), needPerDay: quarterClosed ? 0 : R(monthRemain / remainDays),
-    dayRateNow: R(monthActual / daysInMonth(curMonth.ym)), recent7Rate: R(recent7 / 7),
+    dayRateNow: R(quarterClosed ? monthActual / daysInMonth(curMonth.ym) : (dayOfMonth > 0 ? monthActual / dayOfMonth : 0)), recent7Rate: R(recent7 / 7),
     diff: monthTarget ? R(monthActual / monthTarget * 100 - (quarterClosed ? 100 : mTimeProg * 100)) : 0,
   };
   cur.status = !monthTarget ? 'na' : cur.diff < -2 ? 'behind' : cur.diff < 0 ? 'watch' : 'ahead';
@@ -294,7 +293,7 @@ function subjectAnalysis(SUB) {
 
 // ---- 廣告成效排行 + 建議 ----
 function adsetRows() {
-  return adsetList.map(a => {
+  return adsetList.filter(a => a.business_line === 'Reading').map(a => {
     const q3m = sumRange({ 0: 0 }, '', '', 'm'); // placeholder
     let m = 0, b = 0, s = 0, m7 = 0;
     for (const [d, v] of Object.entries(a.daily)) { if (d >= QUARTER.start && d <= today) { m += v.m; b += v.b; s += v.s; } if (d >= addDays(today, -6)) m7 += v.m; }
@@ -319,15 +318,26 @@ function adsetRows() {
   }).sort((a, b2) => b2.m - a.m);
 }
 
-const subjects = [subjectAnalysis(READING), subjectAnalysis(ENGLISH)];
+const subjects = [subjectAnalysis(READING)];
 const rows = adsetRows();
+
+function archivedQuarter(Q) {
+  const tot = dayTotals('Reading');
+  const months = Object.entries(Q.monthTargets).map(([ym, target]) => {
+    const actual = R0(sumRange(tot, `${ym}-01`, `${ym}-${String(daysInMonth(ym)).padStart(2, '0')}`, PRIMARY));
+    return { ym, target, actual, delta: actual - target, prog: R(actual / target * 100) };
+  });
+  const actual = R0(sumRange(tot, Q.start, Q.end, PRIMARY));
+  return { label: Q.label, target: Q.target, actual, delta: actual - Q.target, prog: R(actual / Q.target * 100), months };
+}
+const archive = archivedQuarter(ARCHIVE_Q3);
 
 // ---- 近N天上架廣告分析（creative library ⋈ 帳本成效）----
 const recentCutoff = addDays(today, -(RECENT_DAYS - 1));
 const recentCreativeNums = new Set(roseCreatives
   .filter(c => (c.uploaded_at || '').slice(0, 10) >= recentCutoff)
   .map(c => numOf(c.name)).filter(Boolean));
-const recentAdsets = adsetList.filter(a => recentCreativeNums.has(numOf(a.name)));
+const recentAdsets = adsetList.filter(a => a.business_line === 'Reading' && recentCreativeNums.has(numOf(a.name)));
 let variantPerfByNum = {};
 if (tok && recentAdsets.length) {
   const fetched = await mapLimit(recentAdsets, 4, a => fetchAdVariants(tok, a, recentCutoff));
@@ -398,9 +408,10 @@ function recentAdsAnalysis() {
       hasVariantPerf, leadBreakdown: m10 > 0 && variants.some(v => v.leads != null),
     };
   });
-  // 預設依領課排序（無成效者置底）
-  out.sort((a, b) => (b.m10 ?? -1) - (a.m10 ?? -1) || (b.ctr7 ?? -1) - (a.ctr7 ?? -1));
-  return { cutoff, days: RECENT_DAYS, items: out };
+  // 英語已停投，看板僅保留 Reading。
+  const reading = out.filter(x => x.bl === 'Reading');
+  reading.sort((a, b) => (b.m10 ?? -1) - (a.m10 ?? -1) || (b.ctr7 ?? -1) - (a.ctr7 ?? -1));
+  return { cutoff, days: RECENT_DAYS, items: reading };
 }
 const recentAds = recentAdsAnalysis();
 
@@ -423,7 +434,7 @@ rows.forEach((r, i) => r.color = PALETTE[i % PALETTE.length]);
 const payload = {
   genStamp, checkpointWd, today, fetchStatus, expDate, nAds, curYM,
   quarter: QUARTER, quarterClosed, dayOfQuarter, dayOfMonth, dim,
-  subjects, rows, advice, primary: PRIMARY, recentAds,
+  subjects, rows, archive, advice, primary: PRIMARY, recentAds,
   companyNote: companyGoals?.data_quality_warnings || null,
 };
 fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
@@ -432,8 +443,8 @@ fs.writeFileSync(path.join(OUT, 'data.json'), JSON.stringify(payload, null, 1));
 const html = renderHTML(payload);
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
 
-console.log(`生成完成 @ ${genStamp} 週${checkpointWd} | Q3 第${dayOfQuarter}/${QUARTER.totalDays}天(${R(qTimeProg * 100)}%) | ${curYM} ${dayOfMonth}/${dim}天`);
-for (const s of subjects) console.log(`  [${s.name}] Q3 ${s.q3.actual}/${s.q3.target}(${s.q3.prog}%,推估${s.q3.proj}) | 當月 ${s.cur.actual}/${s.cur.target}(推估${s.cur.proj},缺${s.cur.gap}) ${s.cur.status}`);
+console.log(`生成完成 @ ${genStamp} 週${checkpointWd} | ${QUARTER.label} 第${dayOfQuarter}/${QUARTER.totalDays}天(${R(qTimeProg * 100)}%) | ${curYM} ${dayOfMonth}/${dim}天`);
+for (const s of subjects) console.log(`  [${s.name}] ${QUARTER.label} ${s.q3.actual}/${s.q3.target}(${s.q3.prog}%,推估${s.q3.proj}) | 當月 ${s.cur.actual}/${s.cur.target}(推估${s.cur.proj},缺${s.cur.gap}) ${s.cur.status}`);
 console.log(`  [補量] 安全=${safe} 需日均${needPerDay}(近7日均${rd.cur.recent7Rate}) 需再+${R(addlPerDay)}/日 ≈ ${adsNeeded}檔爆款`);
 console.log(`  [排行] 加碼:${advice.topScale.map(r => r.name.slice(0, 12)).join(',')} | 迭代:${advice.iterate.map(r => r.name.slice(0, 12)).join(',')}`);
 console.log(`  [近${RECENT_DAYS}天上架] ${recentAds.items.length} 檔（上架≥${recentAds.cutoff}）：${recentAds.items.slice(0, 6).map(r => r.theme + '(領' + (r.m10 ?? '-') + ')').join('、')}`);
@@ -444,7 +455,7 @@ function renderHTML(D) {
   return `<!doctype html>
 <html lang="zh-Hant"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>廣告 OKR 監控台｜閱讀・英語</title>
+<title>廣告 OKR 監控台｜閱讀</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 :root{--bg:#faf6ee;--card:#ffffff;--card2:#f3f7f1;--line:#e5e0d3;--txt:#26332c;--sub:#72817a;--good:#16a34a;--warn:#e2603e;--watch:#e8920c;--ahead:#0ea371;--boom:#f5a524;--accent:#0f9d6b;--accent2:#f59e0b}
@@ -532,13 +543,14 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 .rtag{font-size:10.5px;padding:2px 7px;border-radius:999px;margin-top:8px;display:inline-block}
 .rtag.act{background:#daf3e3;color:#15803d}.rtag.pau{background:#eef0ea;color:#72817a}.rtag.non{background:#fce0d8;color:#be3a26}
 </style></head><body><div class="wrap">
-<h1>廣告 OKR 監控台 · 閱讀 / 英語</h1>
+<h1>廣告 OKR 監控台 · 閱讀</h1>
 <div class="meta">篩選 campaign／廣告名含「Rose」· 主數字＝Ads Manager 成果(meta)，括號為後端領課 · 每天 09:00（台北）自動更新</div>
 <div id="alerts"></div>
 
-<div class="sec-t">① Q3 季度 / 各月 OKR 進度</div>
+<div class="sec-t">① ${D.quarter.label} 季度 / 各月 OKR 進度</div>
 <div id="okr" class="okr"></div>
-<div class="note">進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。「超前／落後進度」以當下應達人數計算；已結算月份則直接比較月目標。Q3 卡同時顯示<b>當下尚缺</b>與<b>季末預估缺口</b>。</div>
+<div class="note">進度＝累計領課 ÷ 目標；<b>白線＝時間進度</b>（已過天數÷總天數）。「超前／落後進度」以當下應達人數計算；已結算月份則直接比較月目標。季卡同時顯示<b>當下尚缺</b>與<b>季末預估缺口</b>。</div>
+<div id="archive"></div>
 
 <div class="sec-t">② 近${RECENT_DAYS}天上架廣告分析（視覺・投放主・成效）</div>
 <div id="recentSum"></div>
@@ -550,7 +562,7 @@ nav.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent
 <div id="weekSum"></div>
 <div class="chartbox"><h3>每週領課 vs 合格線（Mon–Sun）</h3><canvas id="wkchart" height="200"></canvas></div>
 <div id="weekTable"></div>
-<div class="note">單週合格線＝當月目標 ÷ 4（7月 1000/4=<b>250</b>、8月 1150/4≈288、9月 1210/4≈303）。跨月週按週結束日所屬月計。本週未結束僅供參考。</div>
+<div class="note">單週合格線＝當月目標 ÷ 4；Q4 每月 1,100，單週合格線為 <b>275</b>。跨月週按週起始日所屬月計，本週未結束僅供參考。</div>
 
 <div class="sec-t">④ 每月缺口</div>
 <div id="monthTable"></div>
@@ -580,7 +592,7 @@ $('alerts').innerHTML=al;
 // ① OKR 卡
 const okr=$('okr');
 D.subjects.forEach(s=>{
-  const segments=[{scope:'Q3 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天',kind:'quarter'}];
+  const segments=[{scope:D.quarter.label.replace('2026-','')+' 季累計',o:s.q3,tp:s.q3.timeProg,extra:'第'+D.dayOfQuarter+'/'+D.quarter.totalDays+'天',kind:'quarter'}];
   s.months.filter(m=>m.target!=null).forEach(m=>segments.push({
     scope:m.ym+' 月進度',o:m,tp:m.timeProg,
     extra:m.isCur?D.dayOfMonth+'/'+D.dim+'天':(m.isPast?'已結算':'尚未開始'),
@@ -603,7 +615,7 @@ D.subjects.forEach(s=>{
       (o.target?('<div class="dualbar"><div class="lab"><span>進度 '+prog.toFixed(1)+'%</span><span>時間 '+tp.toFixed(1)+'% ('+seg.extra+')</span></div>'+
       '<div class="track"><i style="width:'+Math.min(100,prog)+'%;background:'+barCol+'"></i><span class="tick" style="left:'+Math.min(100,tp)+'%"></span></div></div>'):'')+
       '<div class="row2">'+
-        (seg.kind==='quarter'?'<span class="chip neg">距 Q3 目標尚缺 <b>'+o.remain+'</b></span>':'')+
+        (seg.kind==='quarter'?'<span class="chip neg">距 '+D.quarter.label.replace('2026-','')+' 目標尚缺 <b>'+o.remain+'</b></span>':'')+
         (o.target&&(seg.kind==='quarter'||seg.isCur)?'<span class="chip">推估'+(seg.isMonth?'月底':'季末')+' <b>'+o.proj+'</b>（達成 '+o.attain.toFixed(0)+'%）</span>':'')+
         (o.target&&(seg.kind==='quarter'||seg.isCur)&&o.gap>0?'<span class="chip neg">預估缺口 <b>'+o.gap+'</b></span>':(o.target&&(seg.kind==='quarter'||seg.isCur)?'<span class="chip pos">預估達標 ✓</span>':''))+
         (seg.isPast?'<span class="chip '+(o.targetDelta>=0?'pos':'neg')+'">月目標差額 <b>'+(o.targetDelta>=0?'+':'')+o.targetDelta+'</b></span>':'')+
@@ -613,6 +625,11 @@ D.subjects.forEach(s=>{
     okr.appendChild(div);
   });
 });
+if(D.archive){
+  const a=D.archive;
+  $('archive').innerHTML='<div class="summary" style="margin-top:10px"><div class="hd">📌 '+a.label+' 已結算：'+a.actual+'／'+a.target+'（'+a.prog.toFixed(1)+'%），差額 <b class="'+(a.delta>=0?'pos':'neg')+'">'+(a.delta>=0?'+':'')+a.delta+'</b></div>'+
+    '<div>'+a.months.map(m=>m.ym.slice(5)+'月 '+m.actual+'／'+m.target+'（'+(m.delta>=0?'+':'')+m.delta+'）').join('　·　')+'</div></div>';
+}
 
 // ② 近N天上架廣告分析
 const RA=D.recentAds;
@@ -663,8 +680,8 @@ const cur=D.subjects[0].cur;
 const passed=wk.filter(w=>w.status==='pass').length, failed=wk.filter(w=>w.status==='fail').length;
 let ws;
 if(D.quarterClosed){
-  ws='<div class="summary '+(failed>passed?'red':'green')+'"><div class="hd">Q3 已結算　·　合格週 '+passed+' ／未達週 '+failed+'</div>'+
-    '<div>閱讀 Q3 最終 '+D.subjects[0].q3.actual+'／'+D.subjects[0].q3.target+'，缺口 <b class="neg">'+D.subjects[0].q3.remain+'</b>。</div></div>';
+  ws='<div class="summary '+(failed>passed?'red':'green')+'"><div class="hd">'+D.quarter.label+' 已結算　·　合格週 '+passed+' ／未達週 '+failed+'</div>'+
+    '<div>閱讀 '+D.quarter.label+' 最終 '+D.subjects[0].q3.actual+'／'+D.subjects[0].q3.target+'，缺口 <b class="neg">'+D.subjects[0].q3.remain+'</b>。</div></div>';
 }else{
   ws='<div class="summary '+(failed>passed?'red':'green')+'"><div class="hd">'+
     (cur.status==='behind'?'🔴 本月落後合格線':cur.status==='watch'?'🟡 貼著合格線':'🟢 合格線內')+
@@ -694,7 +711,7 @@ $('monthTable').innerHTML=monthTbl();
 
 // ④ 建議
 const A=D.advice;
-let rc='<div class="summary '+(A.safe?'green':'red')+'"><div class="hd">'+(A.quarterClosed?'Q3 已結算：最終缺口 '+D.subjects[0].q3.remain+' 人':(A.safe?'🟢 目前安全，維持現有投放即可':'🔴 需補量：預估月底缺口 '+(cur.gap||0)+' 人'))+'</div>';
+let rc='<div class="summary '+(A.safe?'green':'red')+'"><div class="hd">'+(A.quarterClosed?D.quarter.label+' 已結算：最終缺口 '+D.subjects[0].q3.remain+' 人':(A.safe?'🟢 目前安全，維持現有投放即可':'🔴 需補量：預估月底缺口 '+(cur.gap||0)+' 人'))+'</div>';
 if(!A.safe&&!A.quarterClosed){
   rc+='<div>當月尚缺 <b>'+cur.remain+'</b> 人，剩餘天數需日均 <b>'+cur.needPerDay+'</b>（近7日均僅 <b>'+cur.recent7Rate+'</b>）。';
   if(A.adsNeeded) rc+='每日缺口約 <b class="neg">'+A.addlPerDay+'</b> 人 → 以現有最強廣告日均 '+A.winnerDaily+' 估，需 <b>加碼現有爆款</b> 或再上 <b>約 '+A.adsNeeded+' 檔</b>同級新廣告。';
