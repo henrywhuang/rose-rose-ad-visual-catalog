@@ -199,7 +199,9 @@ if (!roseCreatives.length && Array.isArray(ledger.creatives)) roseCreatives = le
 const R = v => Math.round(v * 10) / 10, R0 = v => Math.round(v);
 const PALETTE = ['#0f9d6b', '#f59e0b', '#e2603e', '#6366f1', '#0d9488', '#d946ef', '#0ea5e9', '#ca8a04', '#7c3aed', '#16a34a', '#db2777', '#64748b'];
 const adsetList = Object.values(ledger.adsets);
-const dayOfQuarter = Math.max(1, Math.round((dnum(today) - dnum(QUARTER.start)) / DAY) + 1);
+const quarterClosed = today > QUARTER.end;
+const quarterReportDate = today < QUARTER.start ? QUARTER.start : (quarterClosed ? QUARTER.end : today);
+const dayOfQuarter = Math.min(QUARTER.totalDays, Math.max(1, Math.round((dnum(quarterReportDate) - dnum(QUARTER.start)) / DAY) + 1));
 const qTimeProg = Math.min(1, dayOfQuarter / QUARTER.totalDays);
 const dayOfMonth = tpNow.getUTCDate();
 const dim = daysInMonth(curYM);
@@ -217,8 +219,8 @@ function subjectAnalysis(SUB) {
   const tot = dayTotals(SUB.name === '閱讀' ? 'Reading' : 'English');
   const P = PRIMARY;
   // Q3 累計
-  const q3Actual = sumRange(tot, QUARTER.start, today, P);
-  const q3Bk = sumRange(tot, QUARTER.start, today, 'b');
+  const q3Actual = sumRange(tot, QUARTER.start, quarterReportDate, P);
+  const q3Bk = sumRange(tot, QUARTER.start, quarterReportDate, 'b');
   const q3Proj = qTimeProg > 0.02 ? q3Actual / qTimeProg : q3Actual;
   const q3 = {
     target: SUB.q3Target, actual: R0(q3Actual), actualBk: R0(q3Bk),
@@ -252,32 +254,33 @@ function subjectAnalysis(SUB) {
     };
   });
   // 當月細節
-  const curMonth = months.find(m => m.isCur);
+  // 季度結束後仍以季度最後一月作為月份摘要，不再尋找 Q3 之外的月目標。
+  const curMonth = months.find(m => m.isCur) || (quarterClosed ? months[months.length - 1] : months[0]);
   const monthActual = curMonth.actual;
   const monthTarget = curMonth.target || 0;
-  const remainDays = Math.max(0.5, dim - dayOfMonth);
+  const remainDays = quarterClosed ? 0 : Math.max(0.5, dim - dayOfMonth);
   const monthRemain = Math.max(0, monthTarget - monthActual);
   const recent7 = sumRange(tot, addDays(today, -6), today, P);
   const cur = {
-    ym: curYM, target: monthTarget, actual: monthActual, actualBk: curMonth.actualBk,
-    prog: monthTarget ? R(monthActual / monthTarget * 100) : 0, timeProg: R(mTimeProg * 100),
+    ym: curMonth.ym, target: monthTarget, actual: monthActual, actualBk: curMonth.actualBk,
+    prog: monthTarget ? R(monthActual / monthTarget * 100) : 0, timeProg: quarterClosed ? 100 : R(mTimeProg * 100),
     proj: curMonth.proj, attain: monthTarget ? R(curMonth.proj / monthTarget * 100) : 0,
-    gap: curMonth.gap, remain: R0(monthRemain), needPerDay: R(monthRemain / remainDays),
-    dayRateNow: R(dayOfMonth > 0 ? monthActual / dayOfMonth : 0), recent7Rate: R(recent7 / 7),
-    diff: monthTarget ? R(monthActual / monthTarget * 100 - mTimeProg * 100) : 0,
+    gap: curMonth.gap, remain: R0(monthRemain), needPerDay: quarterClosed ? 0 : R(monthRemain / remainDays),
+    dayRateNow: R(monthActual / daysInMonth(curMonth.ym)), recent7Rate: R(recent7 / 7),
+    diff: monthTarget ? R(monthActual / monthTarget * 100 - (quarterClosed ? 100 : mTimeProg * 100)) : 0,
   };
   cur.status = !monthTarget ? 'na' : cur.diff < -2 ? 'behind' : cur.diff < 0 ? 'watch' : 'ahead';
   // 每週（Mon-Sun）
   const weeks = [];
   let wk = mondayOf(QUARTER.start);
-  while (wk <= today) {
+  while (wk <= quarterReportDate) {
     const wEnd = addDays(wk, 6);
     const effFrom = wk < QUARTER.start ? QUARTER.start : wk;
-    const effTo = wEnd > today ? today : wEnd;
-    const monthEnd = wEnd.slice(0, 7);
-    const line = SUB.monthTargets[monthEnd] != null ? Math.round(SUB.monthTargets[monthEnd] / WEEK_DIVISOR) : null;
+    const effTo = wEnd > quarterReportDate ? quarterReportDate : wEnd;
+    const monthKey = effFrom.slice(0, 7);
+    const line = SUB.monthTargets[monthKey] != null ? Math.round(SUB.monthTargets[monthKey] / WEEK_DIVISOR) : null;
     const act = sumRange(tot, effFrom, effTo, P), bk = sumRange(tot, effFrom, effTo, 'b');
-    const isCur = today >= wk && today <= wEnd;
+    const isCur = !quarterClosed && today >= wk && today <= wEnd;
     weeks.push({
       start: wk, end: wEnd, effFrom, effTo, isCur, line,
       actual: R0(act), actualBk: R0(bk),
@@ -408,9 +411,9 @@ const winnerDaily = winners.length ? winners[0].m7 / 7 : 0;
 const needPerDay = rd.cur.needPerDay;
 const addlPerDay = Math.max(0, needPerDay - rd.cur.recent7Rate);
 const adsNeeded = winnerDaily > 0 ? Math.ceil(addlPerDay / winnerDaily) : null;
-const safe = rd.cur.status === 'ahead' || (rd.cur.gap != null && rd.cur.gap <= 0);
+const safe = !quarterClosed && (rd.cur.status === 'ahead' || (rd.cur.gap != null && rd.cur.gap <= 0));
 const advice = {
-  safe, needPerDay, addlPerDay: R(addlPerDay), winnerDaily: R(winnerDaily), adsNeeded,
+  safe, quarterClosed, needPerDay, addlPerDay: R(addlPerDay), winnerDaily: R(winnerDaily), adsNeeded,
   topScale: rows.filter(r => r.tag === 'scale').slice(0, 4),
   iterate: rows.filter(r => r.tag === 'iterate' || r.tag === 'reactivate').slice(0, 5),
   bestByCpl: rows.filter(r => r.m >= 8 && r.cpl != null).sort((a, b) => a.cpl - b.cpl).slice(0, 4),
@@ -419,7 +422,7 @@ rows.forEach((r, i) => r.color = PALETTE[i % PALETTE.length]);
 
 const payload = {
   genStamp, checkpointWd, today, fetchStatus, expDate, nAds, curYM,
-  quarter: QUARTER, dayOfQuarter, dayOfMonth, dim,
+  quarter: QUARTER, quarterClosed, dayOfQuarter, dayOfMonth, dim,
   subjects, rows, advice, primary: PRIMARY, recentAds,
   companyNote: companyGoals?.data_quality_warnings || null,
 };
@@ -658,10 +661,16 @@ renderRecent('m10');
 const wk=D.subjects[0].weeks;
 const cur=D.subjects[0].cur;
 const passed=wk.filter(w=>w.status==='pass').length, failed=wk.filter(w=>w.status==='fail').length;
-let ws='<div class="summary '+(failed>passed?'red':'green')+'"><div class="hd">'+
-  (cur.status==='behind'?'🔴 本月落後合格線':cur.status==='watch'?'🟡 貼著合格線':'🟢 合格線內')+
-  '　·　已結束週 '+passed+' 合格／'+failed+' 未達</div>'+
-  '<div>本週(進行中) '+wk[wk.length-1].actual+'／合格線 '+wk[wk.length-1].line+'，'+(wk[wk.length-1].gap>0?'還差 <b class="neg">'+wk[wk.length-1].gap+'</b>':'已達標 ✓')+'。近7日均 <b>'+cur.recent7Rate+'</b>／需日均 <b>'+cur.needPerDay+'</b>。</div></div>';
+let ws;
+if(D.quarterClosed){
+  ws='<div class="summary '+(failed>passed?'red':'green')+'"><div class="hd">Q3 已結算　·　合格週 '+passed+' ／未達週 '+failed+'</div>'+
+    '<div>閱讀 Q3 最終 '+D.subjects[0].q3.actual+'／'+D.subjects[0].q3.target+'，缺口 <b class="neg">'+D.subjects[0].q3.remain+'</b>。</div></div>';
+}else{
+  ws='<div class="summary '+(failed>passed?'red':'green')+'"><div class="hd">'+
+    (cur.status==='behind'?'🔴 本月落後合格線':cur.status==='watch'?'🟡 貼著合格線':'🟢 合格線內')+
+    '　·　已結束週 '+passed+' 合格／'+failed+' 未達</div>'+
+    '<div>本週(進行中) '+wk[wk.length-1].actual+'／合格線 '+wk[wk.length-1].line+'，'+(wk[wk.length-1].gap>0?'還差 <b class="neg">'+wk[wk.length-1].gap+'</b>':'已達標 ✓')+'。近7日均 <b>'+cur.recent7Rate+'</b>／需日均 <b>'+cur.needPerDay+'</b>。</div></div>';
+}
 $('weekSum').innerHTML=ws;
 let wt='<div class="tablewrap"><table><thead><tr><th>週(Mon–Sun)</th><th>領課(成果)</th><th>後端</th><th>合格線</th><th>缺口</th><th>狀態</th></tr></thead><tbody>';
 wk.forEach(w=>{ wt+='<tr><td>'+w.start.slice(5)+'~'+w.end.slice(5)+(w.isCur?' ⏳':'')+'</td><td><b>'+w.actual+'</b></td><td>'+w.actualBk+'</td><td>'+(w.line??'—')+'</td><td>'+(w.gap>0?'<span class="neg">-'+w.gap+'</span>':(w.line?'<span class="pos">✓</span>':'—'))+'</td><td><span class="st '+w.status+'">'+stName[w.status]+'</span></td></tr>'; });
@@ -685,8 +694,8 @@ $('monthTable').innerHTML=monthTbl();
 
 // ④ 建議
 const A=D.advice;
-let rc='<div class="summary '+(A.safe?'green':'red')+'"><div class="hd">'+(A.safe?'🟢 目前安全，維持現有投放即可':'🔴 需補量：預估月底缺口 '+(cur.gap||0)+' 人')+'</div>';
-if(!A.safe){
+let rc='<div class="summary '+(A.safe?'green':'red')+'"><div class="hd">'+(A.quarterClosed?'Q3 已結算：最終缺口 '+D.subjects[0].q3.remain+' 人':(A.safe?'🟢 目前安全，維持現有投放即可':'🔴 需補量：預估月底缺口 '+(cur.gap||0)+' 人'))+'</div>';
+if(!A.safe&&!A.quarterClosed){
   rc+='<div>當月尚缺 <b>'+cur.remain+'</b> 人，剩餘天數需日均 <b>'+cur.needPerDay+'</b>（近7日均僅 <b>'+cur.recent7Rate+'</b>）。';
   if(A.adsNeeded) rc+='每日缺口約 <b class="neg">'+A.addlPerDay+'</b> 人 → 以現有最強廣告日均 '+A.winnerDaily+' 估，需 <b>加碼現有爆款</b> 或再上 <b>約 '+A.adsNeeded+' 檔</b>同級新廣告。';
   rc+='</div>';

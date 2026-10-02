@@ -1,11 +1,11 @@
 {
- "genStamp": "2026-09-30 18:13",
- "checkpointWd": "三",
- "today": "2026-09-30",
+ "genStamp": "2026-10-02 13:48",
+ "checkpointWd": "五",
+ "today": "2026-10-02",
  "fetchStatus": "ok",
- "expDate": "2026-10-29",
- "nAds": 18,
- "curYM": "2026-09",
+ "expDate": "2026-11-01",
+ "nAds": 22,
+ "curYM": "2026-10",
  "quarter": {
   "label": "2026-Q3",
   "start": "2026-07-01",
@@ -17,9 +17,10 @@
    "2026-09"
   ]
  },
+ "quarterClosed": true,
  "dayOfQuarter": 92,
- "dayOfMonth": 30,
- "dim": 30,
+ "dayOfMonth": 2,
+ "dim": 31,
  "subjects": [
   {
    "key": "read",
@@ -32,33 +33,33 @@
    },
    "q3": {
     "target": 3360,
-    "actual": 2929,
-    "actualBk": 2985,
-    "prog": 87.2,
+    "actual": 2943,
+    "actualBk": 2999,
+    "prog": 87.6,
     "timeProg": 100,
-    "proj": 2929,
-    "attain": 87.2,
-    "gap": 431,
-    "remain": 431,
-    "diff": -12.8,
-    "scheduleDelta": -431,
+    "proj": 2943,
+    "attain": 87.6,
+    "gap": 417,
+    "remain": 417,
+    "diff": -12.4,
+    "scheduleDelta": -417,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-09",
     "target": 1210,
-    "actual": 787,
-    "actualBk": 819,
-    "prog": 65,
+    "actual": 801,
+    "actualBk": 833,
+    "prog": 66.2,
     "timeProg": 100,
-    "proj": 787,
-    "attain": 65,
-    "gap": 423,
-    "remain": 423,
-    "needPerDay": 846,
-    "dayRateNow": 26.2,
-    "recent7Rate": 15.6,
-    "diff": -35,
+    "proj": 801,
+    "attain": 66.2,
+    "gap": 409,
+    "remain": 409,
+    "needPerDay": 0,
+    "dayRateNow": 26.7,
+    "recent7Rate": 12.1,
+    "diff": -33.8,
     "status": "behind"
    },
    "months": [
@@ -103,20 +104,20 @@
     {
      "ym": "2026-09",
      "target": 1210,
-     "actual": 787,
-     "actualBk": 819,
-     "isCur": true,
-     "isPast": false,
-     "proj": 787,
-     "gap": 423,
-     "remain": 423,
-     "prog": 65,
+     "actual": 801,
+     "actualBk": 833,
+     "isCur": false,
+     "isPast": true,
+     "proj": 801,
+     "gap": 409,
+     "remain": 409,
+     "prog": 66.2,
      "timeProg": 100,
-     "diff": -35,
-     "scheduleDelta": -423,
-     "targetDelta": -423,
-     "projectedDelta": -423,
-     "attain": 65,
+     "diff": -33.8,
+     "scheduleDelta": -409,
+     "targetDelta": -409,
+     "projectedDelta": -409,
+     "attain": 66.2,
      "status": "behind"
     }
    ],
@@ -175,7 +176,7 @@
      "effFrom": "2026-07-27",
      "effTo": "2026-08-02",
      "isCur": false,
-     "line": 288,
+     "line": 250,
      "actual": 438,
      "actualBk": 440,
      "gap": 0,
@@ -235,10 +236,10 @@
      "effFrom": "2026-08-31",
      "effTo": "2026-09-06",
      "isCur": false,
-     "line": 303,
+     "line": 288,
      "actual": 233,
      "actualBk": 244,
-     "gap": 70,
+     "gap": 55,
      "status": "fail"
     },
     {
@@ -282,12 +283,12 @@
      "end": "2026-10-04",
      "effFrom": "2026-09-28",
      "effTo": "2026-09-30",
-     "isCur": true,
-     "line": null,
-     "actual": 34,
-     "actualBk": 33,
-     "gap": null,
-     "status": "na"
+     "isCur": false,
+     "line": 303,
+     "actual": 48,
+     "actualBk": 47,
+     "gap": 255,
+     "status": "fail"
     }
    ]
   },
@@ -368,8 +369,8 @@
      "ym": "2026-09",
      "actual": 0,
      "actualBk": 0,
-     "isCur": true,
-     "isPast": false,
+     "isCur": false,
+     "isPast": true,
      "proj": 0,
      "gap": null,
      "remain": null,
@@ -545,7 +546,7 @@
      "end": "2026-10-04",
      "effFrom": "2026-09-28",
      "effTo": "2026-09-30",
-     "isCur": true,
+     "isCur": false,
      "line": null,
      "actual": 0,
      "actualBk": 0,
@@ -563,27 +564,27 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 582,
-   "b": 613,
-   "spend": 3328,
+   "m": 586,
+   "b": 618,
+   "spend": 3345,
    "cpl": 5.7,
-   "m7": 54,
-   "budget": 15,
+   "m7": 38,
+   "budget": 20,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "KEEP",
-   "adviceText": "維持現狀",
+   "adviceAction": "SCALE",
+   "adviceText": "趨勢改善中，考慮加預算",
    "priority": "P2",
-   "suggestedBudget": 15,
+   "suggestedBudget": 25,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
+   "tag": "scale",
+   "tagTxt": "🔥 加碼",
    "color": "#0f9d6b"
   },
   {
@@ -593,23 +594,23 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 454,
-   "b": 474,
-   "spend": 2086,
+   "m": 459,
+   "b": 478,
+   "spend": 2103,
    "cpl": 4.6,
-   "m7": 20,
-   "budget": 25,
+   "m7": 19,
+   "budget": 28,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "KEEP",
-   "adviceText": "維持現狀",
+   "adviceAction": "SCALE",
+   "adviceText": "爆款，建議加預算 20-30%",
    "priority": "P2",
-   "suggestedBudget": 25,
-   "trendWorse": true,
+   "suggestedBudget": 35,
+   "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
    "tag": "scale",
@@ -621,13 +622,13 @@
    "name": "25884 ㄈㄊ正音班（Rose）✅",
    "campaign": "L2+L3 ㄈㄊ正音班（Rose）",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 269,
    "b": 251,
-   "spend": 1857,
+   "spend": 1859,
    "cpl": 6.9,
-   "m7": 13,
+   "m7": 6,
    "budget": 5,
    "bm": {
     "excellent": 5,
@@ -642,8 +643,8 @@
    "trendWorse": true,
    "trendBetter": false,
    "declineType": null,
-   "tag": "iterate",
-   "tagTxt": "🔧 建議迭代",
+   "tag": "reactivate",
+   "tagTxt": "⏸ 已暫停(曾有量)",
    "color": "#e2603e"
   },
   {
@@ -743,11 +744,11 @@
    "bl": "Reading",
    "status": "CAMPAIGN_PAUSED",
    "paused": true,
-   "m": 192,
-   "b": 199,
-   "spend": 1233,
+   "m": 193,
+   "b": 200,
+   "spend": 1237,
    "cpl": 6.4,
-   "m7": 0,
+   "m7": 1,
    "budget": 3,
    "bm": {
     "excellent": 5,
@@ -755,11 +756,11 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "--",
-   "adviceText": "數據不足，暫不判斷",
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $7.42/$36.00，還有 $28.58 觀察空間",
    "priority": "--",
    "suggestedBudget": 3,
-   "trendWorse": true,
+   "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
    "tag": "reactivate",
@@ -951,13 +952,13 @@
    "name": "26174 Codex-專注力遊戲卡（Rose）0915",
    "campaign": "L2 專注力遊戲卡（Rose）0915",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "PAUSED",
+   "paused": true,
    "m": 22,
    "b": 21,
-   "spend": 116,
-   "cpl": 5.3,
-   "m7": 13,
+   "spend": 122,
+   "cpl": 5.5,
+   "m7": 8,
    "budget": 6,
    "bm": {
     "excellent": 5,
@@ -967,13 +968,13 @@
    },
    "adviceAction": "KEEP",
    "adviceText": "維持現狀",
-   "priority": "P2",
+   "priority": "not_active",
    "suggestedBudget": 6,
    "trendWorse": true,
    "trendBetter": false,
    "declineType": null,
-   "tag": "iterate",
-   "tagTxt": "🔧 建議迭代",
+   "tag": "reactivate",
+   "tagTxt": "⏸ 已暫停(曾有量)",
    "color": "#f59e0b"
   },
   {
@@ -1967,6 +1968,66 @@
    "color": "#db2777"
   },
   {
+   "id": "120252883722990392",
+   "name": "26229 遮圖就忘了（Rose）0929",
+   "campaign": "L2 遮圖就忘了（Rose）0929",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 2,
+   "b": 2,
+   "spend": 7,
+   "cpl": 3.7,
+   "m7": 2,
+   "budget": 6,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "新品表現優異：CPL $7.03 低於合格線 $8.00，轉換 2。建議加預算 30%。",
+   "priority": "P2",
+   "suggestedBudget": 8,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#64748b"
+  },
+  {
+   "id": "120252883726080392",
+   "name": "26231 最後一集關不掉（Rose）0929",
+   "campaign": "L2 最後一集關不掉（Rose）0929",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 2,
+   "b": 2,
+   "spend": 7,
+   "cpl": 3.6,
+   "m7": 2,
+   "budget": 6,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "新品表現優異：CPL $4.64 低於合格線 $8.00，轉換 3。建議加預算 30%。",
+   "priority": "P2",
+   "suggestedBudget": 8,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0f9d6b"
+  },
+  {
    "id": "120251174203910392",
    "name": "25971 復刻-暑假注音先修（Rose）",
    "campaign": "L2+L3  復刻-暑假注音先修（Rose）",
@@ -1994,7 +2055,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251174248740392",
@@ -2024,7 +2085,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251174257120392",
@@ -2054,7 +2115,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251357942270392",
@@ -2084,7 +2145,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120251357954270392",
@@ -2114,7 +2175,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120251357971650392",
@@ -2144,7 +2205,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251421646040392",
@@ -2174,7 +2235,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120251557837360392",
@@ -2204,7 +2265,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120251676755020392",
@@ -2234,7 +2295,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120251676760050392",
@@ -2264,7 +2325,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120251676773910392",
@@ -2294,7 +2355,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120251676778620392",
@@ -2324,7 +2385,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251778668370392",
@@ -2354,7 +2415,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251778673230392",
@@ -2384,7 +2445,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251778695340392",
@@ -2414,7 +2475,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251986237060392",
@@ -2444,7 +2505,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120251986261560392",
@@ -2474,7 +2535,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120251986269200392",
@@ -2504,7 +2565,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252171604570392",
@@ -2534,7 +2595,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252171607620392",
@@ -2564,7 +2625,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252171618130392",
@@ -2594,7 +2655,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252340606900392",
@@ -2624,7 +2685,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252367931230392",
@@ -2654,7 +2715,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252367941110392",
@@ -2684,7 +2745,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252465419690392",
@@ -2714,7 +2775,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252547944400392",
@@ -2744,7 +2805,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252613225580392",
@@ -2774,7 +2835,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252613228220392",
@@ -2804,7 +2865,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252613230420392",
@@ -2834,7 +2895,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252613232590392",
@@ -2864,7 +2925,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252613236330392",
@@ -2894,7 +2955,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252708648910392",
@@ -2924,7 +2985,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252708655640392",
@@ -2954,7 +3015,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252735787710392",
@@ -2984,19 +3045,19 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
-   "id": "120252883722990392",
-   "name": "26229 遮圖就忘了（Rose）0929",
-   "campaign": "L2 遮圖就忘了（Rose）0929",
+   "id": "120252883722260392",
+   "name": "26228 小一題目看不懂（Rose）0929",
+   "campaign": "L3 小一題目看不懂（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 1,
    "b": 1,
-   "spend": 2,
-   "cpl": 2.4,
+   "spend": 8,
+   "cpl": 7.7,
    "m7": 1,
    "budget": 5,
    "bm": {
@@ -3006,15 +3067,15 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $2.43/$36.00，還有 $33.57 觀察空間",
+   "adviceText": "新品測試中：已花費 $10.87/$36.00，還有 $25.13 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#16a34a"
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
+   "color": "#64748b"
   },
   {
    "id": "120251357934880392",
@@ -3044,7 +3105,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251357948340392",
@@ -3074,7 +3135,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251357961160392",
@@ -3104,7 +3165,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251392566490392",
@@ -3134,7 +3195,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251392697060392",
@@ -3164,7 +3225,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120251392704280392",
@@ -3194,7 +3255,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120251392711460392",
@@ -3224,7 +3285,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251392716380392",
@@ -3254,7 +3315,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120251392721370392",
@@ -3284,7 +3345,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120251392729890392",
@@ -3314,7 +3375,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120251392738000392",
@@ -3344,7 +3405,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120251392746480392",
@@ -3374,7 +3435,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120251557817060392",
@@ -3404,7 +3465,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251557824700392",
@@ -3434,7 +3495,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251557827710392",
@@ -3464,7 +3525,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120251557830530392",
@@ -3494,7 +3555,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120251557832590392",
@@ -3524,7 +3585,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120251557834780392",
@@ -3554,7 +3615,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120251557839440392",
@@ -3584,7 +3645,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251676769550392",
@@ -3614,7 +3675,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120251676783320392",
@@ -3644,7 +3705,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120251778676480392",
@@ -3674,7 +3735,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120251778679200392",
@@ -3704,7 +3765,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120251986241650392",
@@ -3734,7 +3795,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120251986250540392",
@@ -3764,7 +3825,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251986265440392",
@@ -3794,7 +3855,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120251986275210392",
@@ -3824,7 +3885,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252171610660392",
@@ -3854,7 +3915,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252171614150392",
@@ -3884,7 +3945,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252171615980392",
@@ -3914,7 +3975,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252171621390392",
@@ -3944,7 +4005,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252339274580392",
@@ -3974,7 +4035,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252339292810392",
@@ -4004,7 +4065,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252339342490392",
@@ -4034,7 +4095,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252339371070392",
@@ -4064,7 +4125,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252339406250392",
@@ -4094,7 +4155,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252339432380392",
@@ -4124,7 +4185,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252339453150392",
@@ -4154,7 +4215,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252339595620392",
@@ -4184,7 +4245,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252340362000392",
@@ -4214,7 +4275,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252340456870392",
@@ -4244,7 +4305,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252340498980392",
@@ -4274,7 +4335,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252340538630392",
@@ -4304,7 +4365,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252340560340392",
@@ -4334,7 +4395,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252340584750392",
@@ -4364,7 +4425,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252367933280392",
@@ -4394,7 +4455,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252367936150392",
@@ -4424,7 +4485,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252367937550392",
@@ -4454,7 +4515,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252367942800392",
@@ -4484,7 +4545,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252367946980392",
@@ -4514,7 +4575,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252465424930392",
@@ -4544,7 +4605,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252465427420392",
@@ -4574,7 +4635,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252465433130392",
@@ -4604,7 +4665,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252465436690392",
@@ -4634,7 +4695,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252465439330392",
@@ -4664,7 +4725,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252465442740392",
@@ -4694,7 +4755,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252465447190392",
@@ -4724,7 +4785,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252465450220392",
@@ -4754,7 +4815,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252465454110392",
@@ -4784,7 +4845,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252465458220392",
@@ -4814,7 +4875,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252547941640392",
@@ -4844,7 +4905,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252547947000392",
@@ -4874,7 +4935,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252547949720392",
@@ -4904,7 +4965,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252547952260392",
@@ -4934,7 +4995,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252547954710392",
@@ -4964,7 +5025,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252547958110392",
@@ -4994,7 +5055,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252547961280392",
@@ -5024,7 +5085,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252613226750392",
@@ -5054,7 +5115,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252613238650392",
@@ -5084,7 +5145,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252613241210392",
@@ -5114,7 +5175,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252647484140392",
@@ -5144,7 +5205,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252647486120392",
@@ -5174,7 +5235,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252647487580392",
@@ -5204,7 +5265,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252708650360392",
@@ -5234,7 +5295,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252708651810392",
@@ -5264,7 +5325,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#e2603e"
   },
   {
    "id": "120252708653370392",
@@ -5294,7 +5355,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#6366f1"
   },
   {
    "id": "120252708658120392",
@@ -5324,7 +5385,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#0d9488"
   },
   {
    "id": "120252708660240392",
@@ -5354,7 +5415,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#d946ef"
   },
   {
    "id": "120252708662290392",
@@ -5384,7 +5445,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252735770070392",
@@ -5414,7 +5475,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#ca8a04"
   },
   {
    "id": "120252735780440392",
@@ -5444,7 +5505,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#7c3aed"
   },
   {
    "id": "120252735782240392",
@@ -5474,7 +5535,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#16a34a"
   },
   {
    "id": "120252735783590392",
@@ -5504,7 +5565,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252735785070392",
@@ -5534,7 +5595,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
   },
   {
    "id": "120252735789250392",
@@ -5564,7 +5625,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252735791550392",
@@ -5594,7 +5655,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#f59e0b"
   },
   {
    "id": "120252735794900392",
@@ -5624,48 +5685,18 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
-  },
-  {
-   "id": "120252883722260392",
-   "name": "26228 小一題目看不懂（Rose）0929",
-   "campaign": "L3 小一題目看不懂（Rose）0929",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 0,
-   "b": 0,
-   "spend": 3,
-   "cpl": null,
-   "m7": 0,
-   "budget": 5,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $2.64/$36.00，還有 $33.36 觀察空間",
-   "priority": "--",
-   "suggestedBudget": 5,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#f59e0b"
+   "color": "#e2603e"
   },
   {
    "id": "120252883725040392",
    "name": "26230 不要跟我講話（Rose）0929",
    "campaign": "L2 不要跟我講話（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 3,
+   "spend": 6,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -5676,44 +5707,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $2.76/$36.00，還有 $33.24 觀察空間",
+   "adviceText": "新品測試中：已花費 $5.53/$36.00，還有 $30.47 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
-   "color": "#e2603e"
-  },
-  {
-   "id": "120252883726080392",
-   "name": "26231 最後一集關不掉（Rose）0929",
-   "campaign": "L2 最後一集關不掉（Rose）0929",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 0,
-   "b": 0,
-   "spend": 3,
-   "cpl": null,
-   "m7": 0,
-   "budget": 5,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $3.05/$36.00，還有 $32.95 觀察空間",
-   "priority": "--",
-   "suggestedBudget": 5,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#6366f1"
   },
   {
@@ -5721,11 +5722,11 @@
    "name": "26232 陪寫一直叫坐回來（Rose）0929",
    "campaign": "L2 陪寫一直叫坐回來（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 3,
+   "spend": 4,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -5736,14 +5737,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $2.68/$36.00，還有 $33.32 觀察空間",
+   "adviceText": "新品測試中：已花費 $4.40/$36.00，還有 $31.60 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#0d9488"
   },
   {
@@ -5751,11 +5752,11 @@
    "name": "26233 關螢幕每天收尾很累（Rose）0929",
    "campaign": "L2 關螢幕每天收尾很累（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 3,
+   "spend": 4,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -5766,14 +5767,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $3.08/$36.00，還有 $32.92 觀察空間",
+   "adviceText": "新品測試中：已花費 $3.81/$36.00，還有 $32.19 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#d946ef"
   },
   {
@@ -5781,11 +5782,11 @@
    "name": "26234 30頁專注力卡（Rose）0929",
    "campaign": "L2 30頁專注力卡（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 3,
+   "spend": 5,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -5796,14 +5797,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $2.72/$36.00，還有 $33.28 觀察空間",
+   "adviceText": "新品測試中：已花費 $4.52/$36.00，還有 $31.48 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#0ea5e9"
   },
   {
@@ -5811,11 +5812,11 @@
    "name": "26235 注音會背卻念不出字（Rose）0929",
    "campaign": "L2 注音會背卻念不出字（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 3,
+   "spend": 6,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -5826,14 +5827,14 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $3.49/$36.00，還有 $32.51 觀察空間",
+   "adviceText": "新品測試中：已花費 $6.28/$36.00，還有 $29.72 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
    "color": "#ca8a04"
   },
   {
@@ -5841,11 +5842,11 @@
    "name": "26236 全台領30頁遊戲卡（Rose）0929",
    "campaign": "L2 全台領30頁遊戲卡（Rose）0929",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
    "m": 0,
    "b": 0,
-   "spend": 3,
+   "spend": 5,
    "cpl": null,
    "m7": 0,
    "budget": 5,
@@ -5856,7 +5857,37 @@
     "scale_excellent": 5
    },
    "adviceAction": "cold_start",
-   "adviceText": "新品測試中：已花費 $3.33/$36.00，還有 $32.67 觀察空間",
+   "adviceText": "新品測試中：已花費 $5.37/$36.00，還有 $30.63 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "paused",
+   "tagTxt": "⏸ 已暫停",
+   "color": "#7c3aed"
+  },
+  {
+   "id": "120252921030720392",
+   "name": "26240｜4至5歲挫折表達（Rose）1002",
+   "campaign": "L2 4至5歲挫折表達（Rose）1002",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.76/$36.00，還有 $35.24 觀察空間",
    "priority": "--",
    "suggestedBudget": 5,
    "trendWorse": false,
@@ -5864,16 +5895,107 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#7c3aed"
+   "color": "#16a34a"
+  },
+  {
+   "id": "120252921039620392",
+   "name": "26241｜4至5歲螢幕切換（Rose）1002",
+   "campaign": "L2 4至5歲螢幕切換（Rose）1002",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $0.57/$36.00，還有 $35.43 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#db2777"
+  },
+  {
+   "id": "120252921049300392",
+   "name": "26242｜4至5歲共讀理解（Rose）1002",
+   "campaign": "L2 4至5歲共讀理解（Rose）1002",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 0,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $5.67/$36.00，還有 $30.33 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#64748b"
   }
  ],
  "advice": {
   "safe": false,
-  "needPerDay": 846,
-  "addlPerDay": 830.4,
-  "winnerDaily": 7.7,
-  "adsNeeded": 108,
+  "quarterClosed": true,
+  "needPerDay": 0,
+  "addlPerDay": 0,
+  "winnerDaily": 5.4,
+  "adsNeeded": 0,
   "topScale": [
+   {
+    "id": "120251174246100392",
+    "name": "25969 復刻-108識字卡拼圖2（Rose）",
+    "campaign": "L2+L3 復刻-108識字卡拼圖2（Rose）❌ 控3刀",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 586,
+    "b": 618,
+    "spend": 3345,
+    "cpl": 5.7,
+    "m7": 38,
+    "budget": 20,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "SCALE",
+    "adviceText": "趨勢改善中，考慮加預算",
+    "priority": "P2",
+    "suggestedBudget": 25,
+    "trendWorse": false,
+    "trendBetter": false,
+    "declineType": null,
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#0f9d6b"
+   },
    {
     "id": "120251778667390392",
     "name": "26033 我會冷靜一下（Rose）0803",
@@ -5881,23 +6003,23 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 454,
-    "b": 474,
-    "spend": 2086,
+    "m": 459,
+    "b": 478,
+    "spend": 2103,
     "cpl": 4.6,
-    "m7": 20,
-    "budget": 25,
+    "m7": 19,
+    "budget": 28,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "KEEP",
-    "adviceText": "維持現狀",
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 25,
-    "trendWorse": true,
+    "suggestedBudget": 35,
+    "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
     "tag": "scale",
@@ -5911,13 +6033,13 @@
     "name": "25884 ㄈㄊ正音班（Rose）✅",
     "campaign": "L2+L3 ㄈㄊ正音班（Rose）",
     "bl": "Reading",
-    "status": "ACTIVE",
-    "paused": false,
+    "status": "CAMPAIGN_PAUSED",
+    "paused": true,
     "m": 269,
     "b": 251,
-    "spend": 1857,
+    "spend": 1859,
     "cpl": 6.9,
-    "m7": 13,
+    "m7": 6,
     "budget": 5,
     "bm": {
      "excellent": 5,
@@ -5932,8 +6054,8 @@
     "trendWorse": true,
     "trendBetter": false,
     "declineType": null,
-    "tag": "iterate",
-    "tagTxt": "🔧 建議迭代",
+    "tag": "reactivate",
+    "tagTxt": "⏸ 已暫停(曾有量)",
     "color": "#e2603e"
    },
    {
@@ -6033,11 +6155,11 @@
     "bl": "Reading",
     "status": "CAMPAIGN_PAUSED",
     "paused": true,
-    "m": 192,
-    "b": 199,
-    "spend": 1233,
+    "m": 193,
+    "b": 200,
+    "spend": 1237,
     "cpl": 6.4,
-    "m7": 0,
+    "m7": 1,
     "budget": 3,
     "bm": {
      "excellent": 5,
@@ -6045,11 +6167,11 @@
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "--",
-    "adviceText": "數據不足，暫不判斷",
+    "adviceAction": "cold_start",
+    "adviceText": "新品測試中：已花費 $7.42/$36.00，還有 $28.58 觀察空間",
     "priority": "--",
     "suggestedBudget": 3,
-    "trendWorse": true,
+    "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
     "tag": "reactivate",
@@ -6065,23 +6187,23 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 454,
-    "b": 474,
-    "spend": 2086,
+    "m": 459,
+    "b": 478,
+    "spend": 2103,
     "cpl": 4.6,
-    "m7": 20,
-    "budget": 25,
+    "m7": 19,
+    "budget": 28,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "KEEP",
-    "adviceText": "維持現狀",
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 25,
-    "trendWorse": true,
+    "suggestedBudget": 35,
+    "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
     "tag": "scale",
@@ -6093,13 +6215,13 @@
     "name": "26174 Codex-專注力遊戲卡（Rose）0915",
     "campaign": "L2 專注力遊戲卡（Rose）0915",
     "bl": "Reading",
-    "status": "ACTIVE",
-    "paused": false,
+    "status": "PAUSED",
+    "paused": true,
     "m": 22,
     "b": 21,
-    "spend": 116,
-    "cpl": 5.3,
-    "m7": 13,
+    "spend": 122,
+    "cpl": 5.5,
+    "m7": 8,
     "budget": 6,
     "bm": {
      "excellent": 5,
@@ -6109,13 +6231,13 @@
     },
     "adviceAction": "KEEP",
     "adviceText": "維持現狀",
-    "priority": "P2",
+    "priority": "not_active",
     "suggestedBudget": 6,
     "trendWorse": true,
     "trendBetter": false,
     "declineType": null,
-    "tag": "iterate",
-    "tagTxt": "🔧 建議迭代",
+    "tag": "reactivate",
+    "tagTxt": "⏸ 已暫停(曾有量)",
     "color": "#f59e0b"
    },
    {
@@ -6125,27 +6247,27 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 582,
-    "b": 613,
-    "spend": 3328,
+    "m": 586,
+    "b": 618,
+    "spend": 3345,
     "cpl": 5.7,
-    "m7": 54,
-    "budget": 15,
+    "m7": 38,
+    "budget": 20,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "KEEP",
-    "adviceText": "維持現狀",
+    "adviceAction": "SCALE",
+    "adviceText": "趨勢改善中，考慮加預算",
     "priority": "P2",
-    "suggestedBudget": 15,
+    "suggestedBudget": 25,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
-    "tag": "keep",
-    "tagTxt": "✅ 維持",
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
     "color": "#0f9d6b"
    },
    {
@@ -6182,7 +6304,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-09-21",
+  "cutoff": "2026-09-23",
   "days": 10,
   "items": [
    {
@@ -6205,7 +6327,7 @@
       "label": "B",
       "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/9bebf22b-d9b2-4ff3-a123-689b38930aaa.png",
       "name": "26231 最後一集關不掉（Rose）0929-B",
-      "leads": 1
+      "leads": 3
      }
     ],
     "pages": [
@@ -6218,10 +6340,10 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 1,
-    "s10": 4.5,
-    "cpl": 4.5,
-    "ctr7": 2.3,
+    "m10": 3,
+    "s10": 17.5,
+    "cpl": 5.8,
+    "ctr7": 2.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -6239,7 +6361,7 @@
       "label": "A",
       "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/6768a975-6851-4f37-ab37-aee4e8aaa91a.png",
       "name": "26229 遮圖就忘了（Rose）0929-A",
-      "leads": 1
+      "leads": 2
      },
      {
       "label": "B",
@@ -6258,10 +6380,50 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "hasPerf": true,
-    "m10": 1,
-    "s10": 5.6,
-    "cpl": 5.6,
+    "m10": 2,
+    "s10": 16.6,
+    "cpl": 8.3,
     "ctr7": 2.1,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26242",
+    "theme": "｜4至5歲共讀理解1002",
+    "fullname": "26242｜4至5歲共讀理解（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png",
+      "name": "26242｜4至5歲共讀理解（Rose）1002-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
+      "name": "26242｜4至5歲共讀理解（Rose）1002-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 7.2,
+    "cpl": 7.2,
+    "ctr7": 2.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -6296,42 +6458,42 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 1,
-    "s10": 5.8,
-    "cpl": 5.8,
-    "ctr7": 1.8,
+    "s10": 10.9,
+    "cpl": 10.9,
+    "ctr7": 1.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
    {
-    "num": "26235",
-    "theme": "注音會背卻念不出字0929",
-    "fullname": "26235 注音會背卻念不出字（Rose）0929",
-    "uploaded": "2026-09-29",
+    "num": "26240",
+    "theme": "｜4至5歲挫折表達1002",
+    "fullname": "26240｜4至5歲挫折表達（Rose）1002",
+    "uploaded": "2026-10-01",
     "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png"
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/f129a1fe-e7a0-4884-a154-1e749a331cc8.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a6d57e4c-404d-4f2e-85f4-13a4e388c957.png"
     ],
     "variants": [
      {
       "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png",
-      "name": "26235 注音會背卻念不出字（Rose）0929-A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a6d57e4c-404d-4f2e-85f4-13a4e388c957.png",
+      "name": "26240｜4至5歲挫折表達（Rose）1002-A",
       "leads": 0
      },
      {
       "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
-      "name": "26235 注音會背卻念不出字（Rose）0929-B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/f129a1fe-e7a0-4884-a154-1e749a331cc8.png",
+      "name": "26240｜4至5歲挫折表達（Rose）1002-B",
       "leads": 0
      }
     ],
     "pages": [
      {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
+      "code": "child_wiki",
+      "name": "育兒小百科"
      }
     ],
     "pushed": true,
@@ -6339,9 +6501,9 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 6.3,
+    "s10": 3.7,
     "cpl": null,
-    "ctr7": 3.6,
+    "ctr7": 4.9,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6376,10 +6538,50 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 0,
-    "s10": 5.3,
+    "s10": 5.4,
+    "cpl": null,
+    "ctr7": 3.8,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26235",
+    "theme": "注音會背卻念不出字0929",
+    "fullname": "26235 注音會背卻念不出字（Rose）0929",
+    "uploaded": "2026-09-29",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png",
+      "name": "26235 注音會背卻念不出字（Rose）0929-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
+      "name": "26235 注音會背卻念不出字（Rose）0929-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 6.3,
     "cpl": null,
     "ctr7": 3.4,
     "hasVariantPerf": true,
@@ -6416,12 +6618,12 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 0,
-    "s10": 4.4,
+    "s10": 4.5,
     "cpl": null,
-    "ctr7": 2.9,
+    "ctr7": 2.7,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6456,52 +6658,12 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 0,
-    "s10": 4.3,
+    "s10": 4.4,
     "cpl": null,
-    "ctr7": 2.8,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26233",
-    "theme": "關螢幕每天收尾很累0929",
-    "fullname": "26233 關螢幕每天收尾很累（Rose）0929",
-    "uploaded": "2026-09-29",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5d75763e-aa38-46b1-830c-81f38b492ce1.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/6bd441cb-27b9-4e0e-a8e6-e77f984e4b11.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/6bd441cb-27b9-4e0e-a8e6-e77f984e4b11.png",
-      "name": "26233 關螢幕每天收尾很累（Rose）0929-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5d75763e-aa38-46b1-830c-81f38b492ce1.png",
-      "name": "26233 關螢幕每天收尾很累（Rose）0929-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 3.8,
-    "cpl": null,
-    "ctr7": 1.8,
+    "ctr7": 2.6,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6536,13 +6698,213 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": "ACTIVE",
+    "status": "CAMPAIGN_PAUSED",
     "hasPerf": true,
     "m10": 0,
     "s10": 5.5,
     "cpl": null,
-    "ctr7": 1.6,
+    "ctr7": 2.5,
     "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26233",
+    "theme": "關螢幕每天收尾很累0929",
+    "fullname": "26233 關螢幕每天收尾很累（Rose）0929",
+    "uploaded": "2026-09-29",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5d75763e-aa38-46b1-830c-81f38b492ce1.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/6bd441cb-27b9-4e0e-a8e6-e77f984e4b11.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/6bd441cb-27b9-4e0e-a8e6-e77f984e4b11.png",
+      "name": "26233 關螢幕每天收尾很累（Rose）0929-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5d75763e-aa38-46b1-830c-81f38b492ce1.png",
+      "name": "26233 關螢幕每天收尾很累（Rose）0929-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 3.8,
+    "cpl": null,
+    "ctr7": 2.1,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26241",
+    "theme": "｜4至5歲螢幕切換1002",
+    "fullname": "26241｜4至5歲螢幕切換（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/418b6e97-ce03-482a-983b-85792f93c65b.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/5bd19cf6-8369-4486-af81-b5eb23e3465f.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/5bd19cf6-8369-4486-af81-b5eb23e3465f.png",
+      "name": "26241｜4至5歲螢幕切換（Rose）1002-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/418b6e97-ce03-482a-983b-85792f93c65b.png",
+      "name": "26241｜4至5歲螢幕切換（Rose）1002-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 3.3,
+    "cpl": null,
+    "ctr7": 0.7,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26237",
+    "theme": "｜6歲注音拼讀1002",
+    "fullname": "26237｜6歲注音拼讀（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png",
+      "name": "26237｜6歲注音拼讀（Rose）1002-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
+      "name": "26237｜6歲注音拼讀（Rose）1002-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26238",
+    "theme": "｜6歲短句流暢1002",
+    "fullname": "26238｜6歲短句流暢（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a8b26ba3-2a36-4b17-b2eb-2fa877c95a94.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/310b3d90-16ac-4857-afd6-7644e0e98b9d.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/310b3d90-16ac-4857-afd6-7644e0e98b9d.png",
+      "name": "26238｜6歲短句流暢（Rose）1002-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a8b26ba3-2a36-4b17-b2eb-2fa877c95a94.png",
+      "name": "26238｜6歲短句流暢（Rose）1002-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26239",
+    "theme": "｜6歲讀題理解1002",
+    "fullname": "26239｜6歲讀題理解（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/aa733d6a-4abb-455f-a863-657787b0b791.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/014a8384-da5c-4cb5-ae69-888531915d96.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/014a8384-da5c-4cb5-ae69-888531915d96.png",
+      "name": "26239｜6歲讀題理解（Rose）1002-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/aa733d6a-4abb-455f-a863-657787b0b791.png",
+      "name": "26239｜6歲讀題理解（Rose）1002-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
     "leadBreakdown": false
    }
   ]
