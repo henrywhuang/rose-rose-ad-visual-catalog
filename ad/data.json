@@ -1,9 +1,9 @@
 {
- "genStamp": "2026-10-02 13:48",
+ "genStamp": "2026-10-02 14:23",
  "checkpointWd": "五",
  "today": "2026-10-02",
  "fetchStatus": "ok",
- "expDate": "2026-11-01",
+ "expDate": "2026-10-13",
  "nAds": 22,
  "curYM": "2026-10",
  "quarter": {
@@ -6341,8 +6341,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 3,
-    "s10": 17.5,
-    "cpl": 5.8,
+    "s10": 17.6,
+    "cpl": 5.9,
     "ctr7": 2.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -6421,8 +6421,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 7.2,
-    "cpl": 7.2,
+    "s10": 7.3,
+    "cpl": 7.3,
     "ctr7": 2.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -6501,7 +6501,7 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 0,
-    "s10": 3.7,
+    "s10": 3.8,
     "cpl": null,
     "ctr7": 4.9,
     "hasVariantPerf": true,
