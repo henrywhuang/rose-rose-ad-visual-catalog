@@ -1,7 +1,7 @@
 {
- "genStamp": "2026-10-05 14:22",
- "checkpointWd": "一",
- "today": "2026-10-05",
+ "genStamp": "2026-10-06 14:58",
+ "checkpointWd": "二",
+ "today": "2026-10-06",
  "fetchStatus": "ok",
  "expDate": "2026-10-13",
  "nAds": 21,
@@ -18,8 +18,8 @@
   ]
  },
  "quarterClosed": false,
- "dayOfQuarter": 5,
- "dayOfMonth": 5,
+ "dayOfQuarter": 6,
+ "dayOfMonth": 6,
  "dim": 31,
  "subjects": [
   {
@@ -33,53 +33,53 @@
    },
    "q3": {
     "target": 3300,
-    "actual": 84,
-    "actualBk": 77,
-    "prog": 2.5,
-    "timeProg": 5.4,
-    "proj": 1546,
-    "attain": 46.8,
-    "gap": 1754,
-    "remain": 3216,
-    "diff": -2.9,
-    "scheduleDelta": -95,
+    "actual": 102,
+    "actualBk": 95,
+    "prog": 3.1,
+    "timeProg": 6.5,
+    "proj": 1564,
+    "attain": 47.4,
+    "gap": 1736,
+    "remain": 3198,
+    "diff": -3.4,
+    "scheduleDelta": -113,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-10",
     "target": 1100,
-    "actual": 84,
-    "actualBk": 77,
-    "prog": 7.6,
-    "timeProg": 16.1,
-    "proj": 521,
-    "attain": 47.4,
-    "gap": 579,
-    "remain": 1016,
-    "needPerDay": 39.1,
-    "dayRateNow": 16.8,
-    "recent7Rate": 15.4,
-    "diff": -8.5,
+    "actual": 102,
+    "actualBk": 95,
+    "prog": 9.3,
+    "timeProg": 19.4,
+    "proj": 527,
+    "attain": 47.9,
+    "gap": 573,
+    "remain": 998,
+    "needPerDay": 39.9,
+    "dayRateNow": 17,
+    "recent7Rate": 16.6,
+    "diff": -10.1,
     "status": "behind"
    },
    "months": [
     {
      "ym": "2026-10",
      "target": 1100,
-     "actual": 84,
-     "actualBk": 77,
+     "actual": 102,
+     "actualBk": 95,
      "isCur": true,
      "isPast": false,
-     "proj": 521,
-     "gap": 579,
-     "remain": 1016,
-     "prog": 7.6,
-     "timeProg": 16.1,
-     "diff": -8.5,
-     "scheduleDelta": -93,
-     "targetDelta": -1016,
-     "projectedDelta": -579,
-     "attain": 47.3,
+     "proj": 527,
+     "gap": 573,
+     "remain": 998,
+     "prog": 9.3,
+     "timeProg": 19.4,
+     "diff": -10.1,
+     "scheduleDelta": -111,
+     "targetDelta": -998,
+     "projectedDelta": -573,
+     "attain": 47.9,
      "status": "behind"
     },
     {
@@ -138,12 +138,12 @@
      "start": "2026-10-05",
      "end": "2026-10-11",
      "effFrom": "2026-10-05",
-     "effTo": "2026-10-05",
+     "effTo": "2026-10-06",
      "isCur": true,
      "line": 275,
-     "actual": 2,
-     "actualBk": 2,
-     "gap": 273,
+     "actual": 20,
+     "actualBk": 20,
+     "gap": 255,
      "status": "current"
     }
    ]
@@ -157,12 +157,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 34,
-   "b": 33,
-   "spend": 121,
-   "cpl": 3.6,
-   "m7": 44,
-   "budget": 45,
+   "m": 43,
+   "b": 43,
+   "spend": 178,
+   "cpl": 4.1,
+   "m7": 47,
+   "budget": 65,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -172,7 +172,7 @@
    "adviceAction": "SCALE",
    "adviceText": "爆款，建議加預算 20-30%",
    "priority": "P2",
-   "suggestedBudget": 56,
+   "suggestedBudget": 81,
    "trendWorse": false,
    "trendBetter": true,
    "declineType": null,
@@ -187,11 +187,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 26,
-   "b": 26,
-   "spend": 145,
-   "cpl": 5.6,
-   "m7": 33,
+   "m": 30,
+   "b": 30,
+   "spend": 180,
+   "cpl": 6,
+   "m7": 35,
    "budget": 40,
    "bm": {
     "excellent": 5,
@@ -200,7 +200,7 @@
     "scale_excellent": 5
    },
    "adviceAction": "KEEP",
-   "adviceText": "成本合格但趨勢上升，留意素材疲勞",
+   "adviceText": "維持現狀",
    "priority": "P2",
    "suggestedBudget": 40,
    "trendWorse": false,
@@ -211,48 +211,48 @@
    "color": "#f59e0b"
   },
   {
-   "id": "120231639051860392",
-   "name": "25869 注音尋寶卡",
-   "campaign": "L2+L3 注音尋寶卡-Rose",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 7,
-   "b": 6,
-   "spend": 33,
-   "cpl": 4.7,
-   "m7": 7,
-   "budget": 8,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "KEEP",
-   "adviceText": "維持現狀",
-   "priority": "KEEP",
-   "suggestedBudget": 8,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
-   "color": "#e2603e"
-  },
-  {
    "id": "120247919419730392",
    "name": "25884 ㄈㄊ正音班（Rose）✅",
    "campaign": "L2+L3 ㄈㄊ正音班（Rose）",
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 7,
-   "b": 7,
-   "spend": 20,
-   "cpl": 2.8,
-   "m7": 7,
-   "budget": 10,
+   "m": 10,
+   "b": 10,
+   "spend": 38,
+   "cpl": 3.8,
+   "m7": 10,
+   "budget": 27,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "爆款，建議加預算 20-30%",
+   "priority": "P2",
+   "suggestedBudget": 34,
+   "trendWorse": false,
+   "trendBetter": true,
+   "declineType": null,
+   "tag": "scale",
+   "tagTxt": "🔥 加碼",
+   "color": "#e2603e"
+  },
+  {
+   "id": "120231639051860392",
+   "name": "25869 注音尋寶卡",
+   "campaign": "L2+L3 注音尋寶卡-Rose",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 8,
+   "b": 6,
+   "spend": 44,
+   "cpl": 5.5,
+   "m7": 8,
+   "budget": 18,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -262,7 +262,7 @@
    "adviceAction": "KEEP",
    "adviceText": "維持現狀",
    "priority": "KEEP",
-   "suggestedBudget": 10,
+   "suggestedBudget": 18,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -279,19 +279,19 @@
    "paused": false,
    "m": 5,
    "b": 0,
-   "spend": 18,
-   "cpl": 3.6,
+   "spend": 23,
+   "cpl": 4.5,
    "m7": 5,
-   "budget": 6,
+   "budget": 8,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $3.65 低於合格線 $8.00，轉換 5。建議加預算 30%。",
-   "priority": "P2",
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $22.69/$36.00，還有 $13.31 觀察空間",
+   "priority": "--",
    "suggestedBudget": 8,
    "trendWorse": false,
    "trendBetter": false,
@@ -307,10 +307,10 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 3,
-   "b": 4,
-   "spend": 22,
-   "cpl": 7.4,
+   "m": 4,
+   "b": 5,
+   "spend": 27,
+   "cpl": 6.9,
    "m7": 4,
    "budget": 6,
    "bm": {
@@ -350,7 +350,7 @@
     "scale_excellent": 5
    },
    "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $7.24 低於合格線 $8.00，轉換 3。建議加預算 30%。",
+   "adviceText": "新品表現優異：CPL $6.28 低於合格線 $8.00，轉換 3。建議加預算 30%。",
    "priority": "P2",
    "suggestedBudget": 10,
    "trendWorse": false,
@@ -5201,7 +5201,7 @@
    "b": 0,
    "spend": 10,
    "cpl": null,
-   "m7": 2,
+   "m7": 1,
    "budget": 6,
    "bm": {
     "excellent": 5,
@@ -5554,9 +5554,9 @@
  "advice": {
   "safe": false,
   "quarterClosed": false,
-  "needPerDay": 39.1,
-  "addlPerDay": 23.7,
-  "winnerDaily": 6.3,
+  "needPerDay": 39.9,
+  "addlPerDay": 23.3,
+  "winnerDaily": 6.7,
   "adsNeeded": 4,
   "topScale": [
    {
@@ -5566,12 +5566,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 34,
-    "b": 33,
-    "spend": 121,
-    "cpl": 3.6,
-    "m7": 44,
-    "budget": 45,
+    "m": 43,
+    "b": 43,
+    "spend": 178,
+    "cpl": 4.1,
+    "m7": 47,
+    "budget": 65,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5581,40 +5581,7 @@
     "adviceAction": "SCALE",
     "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 56,
-    "trendWorse": false,
-    "trendBetter": true,
-    "declineType": null,
-    "tag": "scale",
-    "tagTxt": "🔥 加碼",
-    "color": "#0f9d6b"
-   }
-  ],
-  "iterate": [],
-  "bestByCpl": [
-   {
-    "id": "120251174246100392",
-    "name": "25969 復刻-108識字卡拼圖2（Rose）",
-    "campaign": "L2+L3 復刻-108識字卡拼圖2（Rose）❌ 控3刀",
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "paused": false,
-    "m": 34,
-    "b": 33,
-    "spend": 121,
-    "cpl": 3.6,
-    "m7": 44,
-    "budget": 45,
-    "bm": {
-     "excellent": 5,
-     "acceptable": 8,
-     "danger": 12,
-     "scale_excellent": 5
-    },
-    "adviceAction": "SCALE",
-    "adviceText": "爆款，建議加預算 20-30%",
-    "priority": "P2",
-    "suggestedBudget": 56,
+    "suggestedBudget": 81,
     "trendWorse": false,
     "trendBetter": true,
     "declineType": null,
@@ -5623,17 +5590,140 @@
     "color": "#0f9d6b"
    },
    {
+    "id": "120247919419730392",
+    "name": "25884 ㄈㄊ正音班（Rose）✅",
+    "campaign": "L2+L3 ㄈㄊ正音班（Rose）",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 10,
+    "b": 10,
+    "spend": 38,
+    "cpl": 3.8,
+    "m7": 10,
+    "budget": 27,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
+    "priority": "P2",
+    "suggestedBudget": 34,
+    "trendWorse": false,
+    "trendBetter": true,
+    "declineType": null,
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#e2603e"
+   }
+  ],
+  "iterate": [],
+  "bestByCpl": [
+   {
+    "id": "120247919419730392",
+    "name": "25884 ㄈㄊ正音班（Rose）✅",
+    "campaign": "L2+L3 ㄈㄊ正音班（Rose）",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 10,
+    "b": 10,
+    "spend": 38,
+    "cpl": 3.8,
+    "m7": 10,
+    "budget": 27,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
+    "priority": "P2",
+    "suggestedBudget": 34,
+    "trendWorse": false,
+    "trendBetter": true,
+    "declineType": null,
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#e2603e"
+   },
+   {
+    "id": "120251174246100392",
+    "name": "25969 復刻-108識字卡拼圖2（Rose）",
+    "campaign": "L2+L3 復刻-108識字卡拼圖2（Rose）❌ 控3刀",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 43,
+    "b": 43,
+    "spend": 178,
+    "cpl": 4.1,
+    "m7": 47,
+    "budget": 65,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
+    "priority": "P2",
+    "suggestedBudget": 81,
+    "trendWorse": false,
+    "trendBetter": true,
+    "declineType": null,
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#0f9d6b"
+   },
+   {
+    "id": "120231639051860392",
+    "name": "25869 注音尋寶卡",
+    "campaign": "L2+L3 注音尋寶卡-Rose",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 8,
+    "b": 6,
+    "spend": 44,
+    "cpl": 5.5,
+    "m7": 8,
+    "budget": 18,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "KEEP",
+    "adviceText": "維持現狀",
+    "priority": "KEEP",
+    "suggestedBudget": 18,
+    "trendWorse": false,
+    "trendBetter": false,
+    "declineType": null,
+    "tag": "keep",
+    "tagTxt": "✅ 維持",
+    "color": "#6366f1"
+   },
+   {
     "id": "120251778667390392",
     "name": "26033 我會冷靜一下（Rose）0803",
     "campaign": "L2+L3 我會冷靜一下（Rose）0803",
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 26,
-    "b": 26,
-    "spend": 145,
-    "cpl": 5.6,
-    "m7": 33,
+    "m": 30,
+    "b": 30,
+    "spend": 180,
+    "cpl": 6,
+    "m7": 35,
     "budget": 40,
     "bm": {
      "excellent": 5,
@@ -5642,7 +5732,7 @@
      "scale_excellent": 5
     },
     "adviceAction": "KEEP",
-    "adviceText": "成本合格但趨勢上升，留意素材疲勞",
+    "adviceText": "維持現狀",
     "priority": "P2",
     "suggestedBudget": 40,
     "trendWorse": false,
@@ -5656,49 +5746,9 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-09-26",
+  "cutoff": "2026-09-27",
   "days": 10,
   "items": [
-   {
-    "num": "26237",
-    "theme": "｜6歲注音拼讀1002",
-    "fullname": "26237｜6歲注音拼讀（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png",
-      "name": "26237｜6歲注音拼讀（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
-      "name": "26237｜6歲注音拼讀（Rose）1002-B",
-      "leads": 5
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 5,
-    "s10": 20.5,
-    "cpl": 4.1,
-    "ctr7": 4.9,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
    {
     "num": "26231",
     "theme": "最後一集關不掉0929",
@@ -5775,47 +5825,7 @@
     "m10": 2,
     "s10": 17.1,
     "cpl": 8.6,
-    "ctr7": 2.4,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26242",
-    "theme": "｜4至5歲共讀理解1002",
-    "fullname": "26242｜4至5歲共讀理解（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png",
-      "name": "26242｜4至5歲共讀理解（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
-      "name": "26242｜4至5歲共讀理解（Rose）1002-B",
-      "leads": 1
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 1,
-    "s10": 8.6,
-    "cpl": 8.6,
-    "ctr7": 3.3,
+    "ctr7": 2.5,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -5855,9 +5865,89 @@
     "m10": 1,
     "s10": 10.9,
     "cpl": 10.9,
-    "ctr7": 1.7,
+    "ctr7": 1.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
+   },
+   {
+    "num": "26236",
+    "theme": "全台領30頁遊戲卡0929",
+    "fullname": "26236 全台領30頁遊戲卡（Rose）0929",
+    "uploaded": "2026-09-29",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5e09ec87-c9fe-4789-9fc4-8ba5e873ccef.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/0a6abded-0ce7-46bf-b86e-2b0110256428.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/0a6abded-0ce7-46bf-b86e-2b0110256428.png",
+      "name": "26236 全台領30頁遊戲卡（Rose）0929-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5e09ec87-c9fe-4789-9fc4-8ba5e873ccef.png",
+      "name": "26236 全台領30頁遊戲卡（Rose）0929-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 5.4,
+    "cpl": null,
+    "ctr7": 5.4,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26237",
+    "theme": "｜6歲注音拼讀1002",
+    "fullname": "26237｜6歲注音拼讀（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png",
+      "name": "26237｜6歲注音拼讀（Rose）1002-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
+      "name": "26237｜6歲注音拼讀（Rose）1002-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 0.2,
+    "cpl": null,
+    "ctr7": 4.8,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
    },
    {
     "num": "26240",
@@ -5940,166 +6030,6 @@
     "leadBreakdown": false
    },
    {
-    "num": "26236",
-    "theme": "全台領30頁遊戲卡0929",
-    "fullname": "26236 全台領30頁遊戲卡（Rose）0929",
-    "uploaded": "2026-09-29",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5e09ec87-c9fe-4789-9fc4-8ba5e873ccef.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/0a6abded-0ce7-46bf-b86e-2b0110256428.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/0a6abded-0ce7-46bf-b86e-2b0110256428.png",
-      "name": "26236 全台領30頁遊戲卡（Rose）0929-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/5e09ec87-c9fe-4789-9fc4-8ba5e873ccef.png",
-      "name": "26236 全台領30頁遊戲卡（Rose）0929-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 5.4,
-    "cpl": null,
-    "ctr7": 3.8,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26235",
-    "theme": "注音會背卻念不出字0929",
-    "fullname": "26235 注音會背卻念不出字（Rose）0929",
-    "uploaded": "2026-09-29",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png",
-      "name": "26235 注音會背卻念不出字（Rose）0929-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
-      "name": "26235 注音會背卻念不出字（Rose）0929-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 6.3,
-    "cpl": null,
-    "ctr7": 3.4,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26234",
-    "theme": "30頁專注力卡0929",
-    "fullname": "26234 30頁專注力卡（Rose）0929",
-    "uploaded": "2026-09-29",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/999e196c-66b3-4eab-ad25-8f09734b29d0.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/61733423-7fc2-4021-93df-2fd83b8d707b.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/61733423-7fc2-4021-93df-2fd83b8d707b.png",
-      "name": "26234 30頁專注力卡（Rose）0929-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/999e196c-66b3-4eab-ad25-8f09734b29d0.png",
-      "name": "26234 30頁專注力卡（Rose）0929-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "little_pages_club",
-      "name": "小頁俱樂部"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 4.5,
-    "cpl": null,
-    "ctr7": 2.7,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26232",
-    "theme": "陪寫一直叫坐回來0929",
-    "fullname": "26232 陪寫一直叫坐回來（Rose）0929",
-    "uploaded": "2026-09-29",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/c8626c84-a868-4e70-8676-876d5b2a1639.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/2cfcbe3c-28d1-4007-8477-459906089803.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/2cfcbe3c-28d1-4007-8477-459906089803.png",
-      "name": "26232 陪寫一直叫坐回來（Rose）0929-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/c8626c84-a868-4e70-8676-876d5b2a1639.png",
-      "name": "26232 陪寫一直叫坐回來（Rose）0929-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 4.4,
-    "cpl": null,
-    "ctr7": 2.6,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
     "num": "26230",
     "theme": "不要跟我講話0929",
     "fullname": "26230 不要跟我講話（Rose）0929",
@@ -6135,7 +6065,7 @@
     "m10": 0,
     "s10": 5.5,
     "cpl": null,
-    "ctr7": 2.5,
+    "ctr7": 3.8,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6175,7 +6105,127 @@
     "m10": 0,
     "s10": 3.8,
     "cpl": null,
-    "ctr7": 2.1,
+    "ctr7": 3.3,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26242",
+    "theme": "｜4至5歲共讀理解1002",
+    "fullname": "26242｜4至5歲共讀理解（Rose）1002",
+    "uploaded": "2026-10-01",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png",
+      "name": "26242｜4至5歲共讀理解（Rose）1002-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
+      "name": "26242｜4至5歲共讀理解（Rose）1002-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 3.5,
+    "cpl": null,
+    "ctr7": 3.3,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26235",
+    "theme": "注音會背卻念不出字0929",
+    "fullname": "26235 注音會背卻念不出字（Rose）0929",
+    "uploaded": "2026-09-29",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/a89329c4-2253-4847-bd40-b35d7da0057e.png",
+      "name": "26235 注音會背卻念不出字（Rose）0929-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/4884f252-3414-45bb-95f4-a6a07ebf3219.png",
+      "name": "26235 注音會背卻念不出字（Rose）0929-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 6.3,
+    "cpl": null,
+    "ctr7": 3,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26234",
+    "theme": "30頁專注力卡0929",
+    "fullname": "26234 30頁專注力卡（Rose）0929",
+    "uploaded": "2026-09-29",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/999e196c-66b3-4eab-ad25-8f09734b29d0.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/61733423-7fc2-4021-93df-2fd83b8d707b.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/61733423-7fc2-4021-93df-2fd83b8d707b.png",
+      "name": "26234 30頁專注力卡（Rose）0929-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/999e196c-66b3-4eab-ad25-8f09734b29d0.png",
+      "name": "26234 30頁專注力卡（Rose）0929-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 4.5,
+    "cpl": null,
+    "ctr7": 2.4,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6220,6 +6270,46 @@
     "leadBreakdown": false
    },
    {
+    "num": "26232",
+    "theme": "陪寫一直叫坐回來0929",
+    "fullname": "26232 陪寫一直叫坐回來（Rose）0929",
+    "uploaded": "2026-09-29",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/c8626c84-a868-4e70-8676-876d5b2a1639.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/09/29/2cfcbe3c-28d1-4007-8477-459906089803.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/2cfcbe3c-28d1-4007-8477-459906089803.png",
+      "name": "26232 陪寫一直叫坐回來（Rose）0929-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/09/29/c8626c84-a868-4e70-8676-876d5b2a1639.png",
+      "name": "26232 陪寫一直叫坐回來（Rose）0929-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "CAMPAIGN_PAUSED",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 4.4,
+    "cpl": null,
+    "ctr7": 1.8,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
     "num": "26241",
     "theme": "｜4至5歲螢幕切換1002",
     "fullname": "26241｜4至5歲螢幕切換（Rose）1002",
@@ -6257,6 +6347,286 @@
     "cpl": null,
     "ctr7": 1.4,
     "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26243",
+    "theme": "-4歲注音識字車字卡1005",
+    "fullname": "26243 -4歲注音識字車字卡（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5a367229-bc3f-4d82-88dd-1eb572bb2d21.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/341a027a-af6c-4b82-ba61-4e057713fd5d.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/341a027a-af6c-4b82-ba61-4e057713fd5d.png",
+      "name": "26243 -4歲注音識字車字卡（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5a367229-bc3f-4d82-88dd-1eb572bb2d21.png",
+      "name": "26243 -4歲注音識字車字卡（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26244",
+    "theme": "-6歲注音拼讀APP1005",
+    "fullname": "26244 -6歲注音拼讀APP（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/75f7687c-3a46-487f-90b4-25c0ee5ad395.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/2bd68215-7d28-4c49-bdab-bf44e9e86397.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/2bd68215-7d28-4c49-bdab-bf44e9e86397.png",
+      "name": "26244 -6歲注音拼讀APP（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/75f7687c-3a46-487f-90b4-25c0ee5ad395.png",
+      "name": "26244 -6歲注音拼讀APP（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26245",
+    "theme": "-6歲短句閱讀APP1005",
+    "fullname": "26245 -6歲短句閱讀APP（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/e8daf253-af65-47eb-961c-1f21f2f3dd92.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/8d216918-4ac7-448f-8e67-67237e7c0ff6.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/8d216918-4ac7-448f-8e67-67237e7c0ff6.png",
+      "name": "26245 -6歲短句閱讀APP（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/e8daf253-af65-47eb-961c-1f21f2f3dd92.png",
+      "name": "26245 -6歲短句閱讀APP（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26246",
+    "theme": "-7歲繪本讀題理解1005",
+    "fullname": "26246 -7歲繪本讀題理解（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/0b5cbfa8-1da3-4d23-ae12-6f739b767e3d.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/9fce4383-7c5e-42a6-9c62-23ae79383ff3.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/9fce4383-7c5e-42a6-9c62-23ae79383ff3.png",
+      "name": "26246 -7歲繪本讀題理解（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/0b5cbfa8-1da3-4d23-ae12-6f739b767e3d.png",
+      "name": "26246 -7歲繪本讀題理解（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26247",
+    "theme": "-3歲玩具衝突情緒表達1005",
+    "fullname": "26247 -3歲玩具衝突情緒表達（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5bf6aa04-2639-4066-9e30-b3b3f54c34a8.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/990e3d33-eb09-4a4d-b1ca-5f9e58c6f120.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/990e3d33-eb09-4a4d-b1ca-5f9e58c6f120.png",
+      "name": "26247 -3歲玩具衝突情緒表達（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5bf6aa04-2639-4066-9e30-b3b3f54c34a8.png",
+      "name": "26247 -3歲玩具衝突情緒表達（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26249",
+    "theme": "-Q4五週年｜3歲情緒雙科1005",
+    "fullname": "26249 -Q4五週年｜3歲情緒雙科（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/7d0a2de2-9171-401f-ba85-4c820e18f09c.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/0fa3db62-c4f2-40bd-9821-0dcf35b3f9c9.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/0fa3db62-c4f2-40bd-9821-0dcf35b3f9c9.png",
+      "name": "26249 -Q4五週年｜3歲情緒雙科（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/7d0a2de2-9171-401f-ba85-4c820e18f09c.png",
+      "name": "26249 -Q4五週年｜3歲情緒雙科（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26251",
+    "theme": "-Q4五週年｜6歲準備上小一1005",
+    "fullname": "26251 -Q4五週年｜6歲準備上小一（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/3021bd73-0673-4513-8ae9-b40552c47708.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/3df1b82e-6365-4240-995a-4b0b51e7a037.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/3df1b82e-6365-4240-995a-4b0b51e7a037.png",
+      "name": "26251 -Q4五週年｜6歲準備上小一（Rose）1005-A",
+      "leads": null
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/3021bd73-0673-4513-8ae9-b40552c47708.png",
+      "name": "26251 -Q4五週年｜6歲準備上小一（Rose）1005-B",
+      "leads": null
+     }
+    ],
+    "pages": [
+     {
+      "code": "little_pages_club",
+      "name": "小頁俱樂部"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
     "leadBreakdown": false
    }
   ]
