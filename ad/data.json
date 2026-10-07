@@ -1,9 +1,9 @@
 {
- "genStamp": "2026-10-07 10:27",
+ "genStamp": "2026-10-07 14:39",
  "checkpointWd": "三",
  "today": "2026-10-07",
  "fetchStatus": "ok",
- "expDate": "2026-11-05",
+ "expDate": "2026-10-13",
  "nAds": 25,
  "curYM": "2026-10",
  "quarter": {
@@ -5990,6 +5990,46 @@
   "days": 10,
   "items": [
    {
+    "num": "26243",
+    "theme": "-4歲注音識字車字卡1005",
+    "fullname": "26243 -4歲注音識字車字卡（Rose）1005",
+    "uploaded": "2026-10-05",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5a367229-bc3f-4d82-88dd-1eb572bb2d21.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/341a027a-af6c-4b82-ba61-4e057713fd5d.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/341a027a-af6c-4b82-ba61-4e057713fd5d.png",
+      "name": "26243 -4歲注音識字車字卡（Rose）1005-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5a367229-bc3f-4d82-88dd-1eb572bb2d21.png",
+      "name": "26243 -4歲注音識字車字卡（Rose）1005-B",
+      "leads": 3
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 3,
+    "s10": 7.3,
+    "cpl": 2.4,
+    "ctr7": 4.4,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
     "num": "26231",
     "theme": "最後一集關不掉0929",
     "fullname": "26231 最後一集關不掉（Rose）0929",
@@ -6026,46 +6066,6 @@
     "s10": 21.7,
     "cpl": 7.2,
     "ctr7": 1.9,
-    "hasVariantPerf": true,
-    "leadBreakdown": true
-   },
-   {
-    "num": "26243",
-    "theme": "-4歲注音識字車字卡1005",
-    "fullname": "26243 -4歲注音識字車字卡（Rose）1005",
-    "uploaded": "2026-10-05",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5a367229-bc3f-4d82-88dd-1eb572bb2d21.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/05/341a027a-af6c-4b82-ba61-4e057713fd5d.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/341a027a-af6c-4b82-ba61-4e057713fd5d.png",
-      "name": "26243 -4歲注音識字車字卡（Rose）1005-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/05/5a367229-bc3f-4d82-88dd-1eb572bb2d21.png",
-      "name": "26243 -4歲注音識字車字卡（Rose）1005-B",
-      "leads": 2
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "ACTIVE",
-    "hasPerf": true,
-    "m10": 2,
-    "s10": 6.1,
-    "cpl": 3.1,
-    "ctr7": 4.4,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -6143,8 +6143,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 1,
-    "s10": 4.4,
-    "cpl": 4.4,
+    "s10": 5.3,
+    "cpl": 5.3,
     "ctr7": 2.9,
     "hasVariantPerf": true,
     "leadBreakdown": true
