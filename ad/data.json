@@ -1,9 +1,9 @@
 {
- "genStamp": "2026-10-08 14:45",
+ "genStamp": "2026-10-08 16:32",
  "checkpointWd": "四",
  "today": "2026-10-08",
  "fetchStatus": "ok",
- "expDate": "2026-10-13",
+ "expDate": "2026-11-07",
  "nAds": 23,
  "curYM": "2026-10",
  "quarter": {
@@ -5963,8 +5963,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 5,
-    "s10": 14.3,
-    "cpl": 2.9,
+    "s10": 14.9,
+    "cpl": 3,
     "ctr7": 4.1,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -6003,8 +6003,8 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 3,
-    "s10": 12.2,
-    "cpl": 4.1,
+    "s10": 12.6,
+    "cpl": 4.2,
     "ctr7": 2.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
