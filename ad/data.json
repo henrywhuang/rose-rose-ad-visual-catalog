@@ -1,7 +1,7 @@
 {
- "genStamp": "2026-10-10 14:30",
- "checkpointWd": "六",
- "today": "2026-10-10",
+ "genStamp": "2026-10-11 14:35",
+ "checkpointWd": "日",
+ "today": "2026-10-11",
  "fetchStatus": "ok",
  "expDate": "2026-10-13",
  "nAds": 16,
@@ -18,8 +18,8 @@
   ]
  },
  "quarterClosed": false,
- "dayOfQuarter": 10,
- "dayOfMonth": 10,
+ "dayOfQuarter": 11,
+ "dayOfMonth": 11,
  "dim": 31,
  "subjects": [
   {
@@ -33,53 +33,53 @@
    },
    "q3": {
     "target": 3300,
-    "actual": 203,
-    "actualBk": 193,
-    "prog": 6.2,
-    "timeProg": 10.9,
-    "proj": 1868,
-    "attain": 56.6,
-    "gap": 1432,
-    "remain": 3097,
-    "diff": -4.7,
-    "scheduleDelta": -156,
+    "actual": 220,
+    "actualBk": 209,
+    "prog": 6.7,
+    "timeProg": 12,
+    "proj": 1840,
+    "attain": 55.8,
+    "gap": 1460,
+    "remain": 3080,
+    "diff": -5.3,
+    "scheduleDelta": -175,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-10",
     "target": 1100,
-    "actual": 203,
-    "actualBk": 193,
-    "prog": 18.5,
-    "timeProg": 32.3,
-    "proj": 629,
-    "attain": 57.2,
-    "gap": 471,
-    "remain": 897,
-    "needPerDay": 42.7,
-    "dayRateNow": 20.3,
-    "recent7Rate": 21,
-    "diff": -13.8,
+    "actual": 220,
+    "actualBk": 209,
+    "prog": 20,
+    "timeProg": 35.5,
+    "proj": 620,
+    "attain": 56.4,
+    "gap": 480,
+    "remain": 880,
+    "needPerDay": 44,
+    "dayRateNow": 20,
+    "recent7Rate": 19.7,
+    "diff": -15.5,
     "status": "behind"
    },
    "months": [
     {
      "ym": "2026-10",
      "target": 1100,
-     "actual": 203,
-     "actualBk": 193,
+     "actual": 220,
+     "actualBk": 209,
      "isCur": true,
      "isPast": false,
-     "proj": 629,
-     "gap": 471,
-     "remain": 897,
-     "prog": 18.5,
-     "timeProg": 32.3,
-     "diff": -13.8,
-     "scheduleDelta": -152,
-     "targetDelta": -897,
-     "projectedDelta": -471,
-     "attain": 57.2,
+     "proj": 620,
+     "gap": 480,
+     "remain": 880,
+     "prog": 20,
+     "timeProg": 35.5,
+     "diff": -15.5,
+     "scheduleDelta": -170,
+     "targetDelta": -880,
+     "projectedDelta": -480,
+     "attain": 56.4,
      "status": "behind"
     },
     {
@@ -138,12 +138,12 @@
      "start": "2026-10-05",
      "end": "2026-10-11",
      "effFrom": "2026-10-05",
-     "effTo": "2026-10-10",
+     "effTo": "2026-10-11",
      "isCur": true,
      "line": 275,
-     "actual": 121,
-     "actualBk": 118,
-     "gap": 154,
+     "actual": 138,
+     "actualBk": 134,
+     "gap": 137,
      "status": "current"
     }
    ]
@@ -157,11 +157,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 82,
-   "b": 84,
-   "spend": 475,
-   "cpl": 5.8,
-   "m7": 61,
+   "m": 92,
+   "b": 93,
+   "spend": 559,
+   "cpl": 6.1,
+   "m7": 59,
    "budget": 75,
    "bm": {
     "excellent": 5,
@@ -189,10 +189,10 @@
    "paused": false,
    "m": 50,
    "b": 49,
-   "spend": 295,
-   "cpl": 5.9,
-   "m7": 29,
-   "budget": 25,
+   "spend": 300,
+   "cpl": 6,
+   "m7": 24,
+   "budget": 3,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -202,7 +202,7 @@
    "adviceAction": "KEEP",
    "adviceText": "維持現狀",
    "priority": "P2",
-   "suggestedBudget": 25,
+   "suggestedBudget": 3,
    "trendWorse": true,
    "trendBetter": false,
    "declineType": null,
@@ -217,11 +217,11 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 29,
-   "b": 28,
-   "spend": 192,
-   "cpl": 6.6,
-   "m7": 27,
+   "m": 31,
+   "b": 30,
+   "spend": 210,
+   "cpl": 6.8,
+   "m7": 24,
    "budget": 20,
    "bm": {
     "excellent": 5,
@@ -230,9 +230,9 @@
     "scale_excellent": 5
    },
    "adviceAction": "KEEP",
-   "adviceText": "維持現狀",
-   "priority": "P2",
-   "suggestedBudget": 20,
+   "adviceText": "觀察 2 天，如不改善則降預算",
+   "priority": "P1",
+   "suggestedBudget": 14,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -251,7 +251,7 @@
    "b": 8,
    "spend": 69,
    "cpl": 5.3,
-   "m7": 10,
+   "m7": 7,
    "budget": 18,
    "bm": {
     "excellent": 5,
@@ -260,8 +260,8 @@
     "scale_excellent": 5
    },
    "adviceAction": "KEEP",
-   "adviceText": "觀察 2 天，如不改善則降預算",
-   "priority": "P1",
+   "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+   "priority": "P0",
    "suggestedBudget": 18,
    "trendWorse": false,
    "trendBetter": false,
@@ -269,6 +269,36 @@
    "tag": "reactivate",
    "tagTxt": "⏸ 已暫停(曾有量)",
    "color": "#6366f1"
+  },
+  {
+   "id": "120252647489410392",
+   "name": "26174 Codex-專注力遊戲卡（Rose）0915",
+   "campaign": "L2 專注力遊戲卡（Rose）0915",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 11,
+   "b": 13,
+   "spend": 65,
+   "cpl": 5.9,
+   "m7": 8,
+   "budget": 8,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "爆款，建議加預算 20-30%",
+   "priority": "P2",
+   "suggestedBudget": 10,
+   "trendWorse": false,
+   "trendBetter": true,
+   "declineType": null,
+   "tag": "scale",
+   "tagTxt": "🔥 加碼",
+   "color": "#0d9488"
   },
   {
    "id": "120252981417920392",
@@ -279,56 +309,56 @@
    "paused": false,
    "m": 8,
    "b": 7,
-   "spend": 29,
-   "cpl": 3.6,
+   "spend": 40,
+   "cpl": 5.1,
    "m7": 8,
-   "budget": 10,
+   "budget": 13,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $4.08 低於合格線 $8.00，轉換 8。建議加預算 30%。",
-   "priority": "P2",
+   "adviceAction": "KEEP",
+   "adviceText": "維持現狀",
+   "priority": "KEEP",
    "suggestedBudget": 13,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#0d9488"
+   "color": "#d946ef"
   },
   {
-   "id": "120252647489410392",
-   "name": "26174 Codex-專注力遊戲卡（Rose）0915",
-   "campaign": "L2 專注力遊戲卡（Rose）0915",
+   "id": "120252981427000392",
+   "name": "26248 -5歲ㄉㄊ清楚發音（Rose）1005",
+   "campaign": "L2+L3 5歲ㄉㄊ清楚發音（Rose）1005",
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
    "m": 7,
-   "b": 9,
-   "spend": 57,
-   "cpl": 8.1,
-   "m7": 4,
-   "budget": 8,
+   "b": 7,
+   "spend": 39,
+   "cpl": 5.6,
+   "m7": 7,
+   "budget": 13,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "--",
-   "adviceText": "數據不足，暫不判斷",
-   "priority": "--",
-   "suggestedBudget": 8,
+   "adviceAction": "KEEP",
+   "adviceText": "維持現狀",
+   "priority": "KEEP",
+   "suggestedBudget": 13,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
-   "color": "#d946ef"
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0ea5e9"
   },
   {
    "id": "120252921005470392",
@@ -341,7 +371,7 @@
    "b": 1,
    "spend": 42,
    "cpl": 7.1,
-   "m7": 2,
+   "m7": 1,
    "budget": 8,
    "bm": {
     "excellent": 5,
@@ -358,36 +388,6 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
-  },
-  {
-   "id": "120252981427000392",
-   "name": "26248 -5歲ㄉㄊ清楚發音（Rose）1005",
-   "campaign": "L2+L3 5歲ㄉㄊ清楚發音（Rose）1005",
-   "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 6,
-   "b": 6,
-   "spend": 27,
-   "cpl": 4.5,
-   "m7": 6,
-   "budget": 10,
-   "bm": {
-    "excellent": 5,
-    "acceptable": 8,
-    "danger": 12,
-    "scale_excellent": 5
-   },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $4.48 低於合格線 $8.00，轉換 6。建議加預算 30%。",
-   "priority": "P2",
-   "suggestedBudget": 13,
-   "trendWorse": false,
-   "trendBetter": false,
-   "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
    "color": "#ca8a04"
   },
   {
@@ -5764,11 +5764,42 @@
  "advice": {
   "safe": false,
   "quarterClosed": false,
-  "needPerDay": 42.7,
-  "addlPerDay": 21.7,
-  "winnerDaily": 8.7,
+  "needPerDay": 44,
+  "addlPerDay": 24.3,
+  "winnerDaily": 8.4,
   "adsNeeded": 3,
-  "topScale": [],
+  "topScale": [
+   {
+    "id": "120252647489410392",
+    "name": "26174 Codex-專注力遊戲卡（Rose）0915",
+    "campaign": "L2 專注力遊戲卡（Rose）0915",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 11,
+    "b": 13,
+    "spend": 65,
+    "cpl": 5.9,
+    "m7": 8,
+    "budget": 8,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
+    "priority": "P2",
+    "suggestedBudget": 10,
+    "trendWorse": false,
+    "trendBetter": true,
+    "declineType": null,
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#0d9488"
+   }
+  ],
   "iterate": [
    {
     "id": "120251778667390392",
@@ -5779,10 +5810,10 @@
     "paused": false,
     "m": 50,
     "b": 49,
-    "spend": 295,
-    "cpl": 5.9,
-    "m7": 29,
-    "budget": 25,
+    "spend": 300,
+    "cpl": 6,
+    "m7": 24,
+    "budget": 3,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5792,7 +5823,7 @@
     "adviceAction": "KEEP",
     "adviceText": "維持現狀",
     "priority": "P2",
-    "suggestedBudget": 25,
+    "suggestedBudget": 3,
     "trendWorse": true,
     "trendBetter": false,
     "declineType": null,
@@ -5811,7 +5842,7 @@
     "b": 8,
     "spend": 69,
     "cpl": 5.3,
-    "m7": 10,
+    "m7": 7,
     "budget": 18,
     "bm": {
      "excellent": 5,
@@ -5820,8 +5851,8 @@
      "scale_excellent": 5
     },
     "adviceAction": "KEEP",
-    "adviceText": "觀察 2 天，如不改善則降預算",
-    "priority": "P1",
+    "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+    "priority": "P0",
     "suggestedBudget": 18,
     "trendWorse": false,
     "trendBetter": false,
@@ -5841,26 +5872,26 @@
     "paused": false,
     "m": 8,
     "b": 7,
-    "spend": 29,
-    "cpl": 3.6,
+    "spend": 40,
+    "cpl": 5.1,
     "m7": 8,
-    "budget": 10,
+    "budget": 13,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "SCALE",
-    "adviceText": "新品表現優異：CPL $4.08 低於合格線 $8.00，轉換 8。建議加預算 30%。",
-    "priority": "P2",
+    "adviceAction": "KEEP",
+    "adviceText": "維持現狀",
+    "priority": "KEEP",
     "suggestedBudget": 13,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
     "tag": "testing",
     "tagTxt": "🧪 測試中",
-    "color": "#0d9488"
+    "color": "#d946ef"
    },
    {
     "id": "120231639051860392",
@@ -5873,7 +5904,7 @@
     "b": 8,
     "spend": 69,
     "cpl": 5.3,
-    "m7": 10,
+    "m7": 7,
     "budget": 18,
     "bm": {
      "excellent": 5,
@@ -5882,8 +5913,8 @@
      "scale_excellent": 5
     },
     "adviceAction": "KEEP",
-    "adviceText": "觀察 2 天，如不改善則降預算",
-    "priority": "P1",
+    "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+    "priority": "P0",
     "suggestedBudget": 18,
     "trendWorse": false,
     "trendBetter": false,
@@ -5893,34 +5924,34 @@
     "color": "#6366f1"
    },
    {
-    "id": "120251174246100392",
-    "name": "25969 復刻-108識字卡拼圖2（Rose）",
-    "campaign": "L2+L3 復刻-108識字卡拼圖2（Rose）❌ 控3刀",
+    "id": "120252647489410392",
+    "name": "26174 Codex-專注力遊戲卡（Rose）0915",
+    "campaign": "L2 專注力遊戲卡（Rose）0915",
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 82,
-    "b": 84,
-    "spend": 475,
-    "cpl": 5.8,
-    "m7": 61,
-    "budget": 75,
+    "m": 11,
+    "b": 13,
+    "spend": 65,
+    "cpl": 5.9,
+    "m7": 8,
+    "budget": 8,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "KEEP",
-    "adviceText": "維持現狀",
+    "adviceAction": "SCALE",
+    "adviceText": "爆款，建議加預算 20-30%",
     "priority": "P2",
-    "suggestedBudget": 75,
+    "suggestedBudget": 10,
     "trendWorse": false,
-    "trendBetter": false,
+    "trendBetter": true,
     "declineType": null,
-    "tag": "keep",
-    "tagTxt": "✅ 維持",
-    "color": "#0f9d6b"
+    "tag": "scale",
+    "tagTxt": "🔥 加碼",
+    "color": "#0d9488"
    },
    {
     "id": "120251778667390392",
@@ -5931,10 +5962,10 @@
     "paused": false,
     "m": 50,
     "b": 49,
-    "spend": 295,
-    "cpl": 5.9,
-    "m7": 29,
-    "budget": 25,
+    "spend": 300,
+    "cpl": 6,
+    "m7": 24,
+    "budget": 3,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5944,7 +5975,7 @@
     "adviceAction": "KEEP",
     "adviceText": "維持現狀",
     "priority": "P2",
-    "suggestedBudget": 25,
+    "suggestedBudget": 3,
     "trendWorse": true,
     "trendBetter": false,
     "declineType": null,
@@ -5956,7 +5987,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-10-01",
+  "cutoff": "2026-10-02",
   "days": 10,
   "items": [
    {
@@ -5993,9 +6024,9 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 8,
-    "s10": 33.6,
-    "cpl": 4.2,
-    "ctr7": 3.8,
+    "s10": 47.5,
+    "cpl": 5.9,
+    "ctr7": 3.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -6033,51 +6064,11 @@
     "status": "ACTIVE",
     "hasPerf": true,
     "m10": 7,
-    "s10": 32,
-    "cpl": 4.6,
-    "ctr7": 2.1,
+    "s10": 48.1,
+    "cpl": 6.9,
+    "ctr7": 2,
     "hasVariantPerf": true,
     "leadBreakdown": true
-   },
-   {
-    "num": "26240",
-    "theme": "｜4至5歲挫折表達1002",
-    "fullname": "26240｜4至5歲挫折表達（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/f129a1fe-e7a0-4884-a154-1e749a331cc8.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a6d57e4c-404d-4f2e-85f4-13a4e388c957.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a6d57e4c-404d-4f2e-85f4-13a4e388c957.png",
-      "name": "26240｜4至5歲挫折表達（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/f129a1fe-e7a0-4884-a154-1e749a331cc8.png",
-      "name": "26240｜4至5歲挫折表達（Rose）1002-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 6.1,
-    "cpl": null,
-    "ctr7": 8.3,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
    },
    {
     "num": "26247",
@@ -6116,86 +6107,6 @@
     "s10": 4.3,
     "cpl": null,
     "ctr7": 7.9,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26242",
-    "theme": "｜4至5歲共讀理解1002",
-    "fullname": "26242｜4至5歲共讀理解（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/10bf693e-5892-4c7a-b4f5-a7bd63e03778.png",
-      "name": "26242｜4至5歲共讀理解（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/9677ca27-a3ea-4496-b197-090a627ee27a.png",
-      "name": "26242｜4至5歲共讀理解（Rose）1002-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 3.5,
-    "cpl": null,
-    "ctr7": 6.7,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26237",
-    "theme": "｜6歲注音拼讀1002",
-    "fullname": "26237｜6歲注音拼讀（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/7504774c-8f53-4afe-9a06-cac5ce386377.png",
-      "name": "26237｜6歲注音拼讀（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/8b336622-000b-4d37-9461-0fea76324e5e.png",
-      "name": "26237｜6歲注音拼讀（Rose）1002-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 0.2,
-    "cpl": null,
-    "ctr7": 4.9,
     "hasVariantPerf": true,
     "leadBreakdown": false
    },
@@ -6280,46 +6191,6 @@
     "leadBreakdown": false
    },
    {
-    "num": "26239",
-    "theme": "｜6歲讀題理解1002",
-    "fullname": "26239｜6歲讀題理解（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/aa733d6a-4abb-455f-a863-657787b0b791.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/014a8384-da5c-4cb5-ae69-888531915d96.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/014a8384-da5c-4cb5-ae69-888531915d96.png",
-      "name": "26239｜6歲讀題理解（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/aa733d6a-4abb-455f-a863-657787b0b791.png",
-      "name": "26239｜6歲讀題理解（Rose）1002-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 6.4,
-    "cpl": null,
-    "ctr7": 2.9,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
     "num": "26245",
     "theme": "-6歲短句閱讀APP1005",
     "fullname": "26245 -6歲短句閱讀APP（Rose）1005",
@@ -6396,86 +6267,6 @@
     "s10": 2.5,
     "cpl": null,
     "ctr7": 1.8,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26238",
-    "theme": "｜6歲短句流暢1002",
-    "fullname": "26238｜6歲短句流暢（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a8b26ba3-2a36-4b17-b2eb-2fa877c95a94.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/310b3d90-16ac-4857-afd6-7644e0e98b9d.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/310b3d90-16ac-4857-afd6-7644e0e98b9d.png",
-      "name": "26238｜6歲短句流暢（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/a8b26ba3-2a36-4b17-b2eb-2fa877c95a94.png",
-      "name": "26238｜6歲短句流暢（Rose）1002-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 5.6,
-    "cpl": null,
-    "ctr7": 0,
-    "hasVariantPerf": true,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26241",
-    "theme": "｜4至5歲螢幕切換1002",
-    "fullname": "26241｜4至5歲螢幕切換（Rose）1002",
-    "uploaded": "2026-10-01",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/418b6e97-ce03-482a-983b-85792f93c65b.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/01/5bd19cf6-8369-4486-af81-b5eb23e3465f.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/5bd19cf6-8369-4486-af81-b5eb23e3465f.png",
-      "name": "26241｜4至5歲螢幕切換（Rose）1002-A",
-      "leads": 0
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/01/418b6e97-ce03-482a-983b-85792f93c65b.png",
-      "name": "26241｜4至5歲螢幕切換（Rose）1002-B",
-      "leads": 0
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": "CAMPAIGN_PAUSED",
-    "hasPerf": true,
-    "m10": 0,
-    "s10": 5.2,
-    "cpl": null,
-    "ctr7": 0,
     "hasVariantPerf": true,
     "leadBreakdown": false
    }
