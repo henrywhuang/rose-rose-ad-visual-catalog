@@ -25,6 +25,7 @@ const API = 'https://www.arkio.me/api/v1/ad-budget/dashboard';
 const CREATIVE_API = 'https://www.arkio.me/api/v1/marketing/creative-library/';
 const META_ADSET_API = 'https://www.arkio.me/api/v1/meta/ads/adset/';
 const ROSE_RE = /rose/i;
+const isRunningStatus = s => /^(?:ACTIVE|CAMPAIGN_ACTIVE|ADSET_ACTIVE)$/i.test(String(s || ''));
 // 投放主（social_account_code → 粉專中文名），未列出者顯示原代碼
 const PAGE_NAME = {
   child_wiki: '育兒小百科', parent_reading: '愛共讀', easylearning_tw: '輕鬆學',
@@ -139,6 +140,7 @@ function loadLedger() {
 }
 function mergeSnapshot(ledger, root) {
   const ads = (root.adsets || []).filter(a => ROSE_RE.test(a.campaign_name || '') || ROSE_RE.test(a.name || ''));
+  const seen = new Set(ads.map(a => String(a.id)));
   for (const a of ads) {
     const t = a.trend_30d || {}; const dates = t.dates || [];
     const e = ledger.adsets[a.id] || { daily: {} };
@@ -155,9 +157,15 @@ function mergeSnapshot(ledger, root) {
       benchmark: a.benchmark || null, advice: a.advice || null,
       trend_change: a.trend_change, trend_improving: a.trend_improving, trend_worsening: a.trend_worsening,
       decline_type: a.decline_type, is_new_creative: a.is_new_creative, new_creative_phase: a.new_creative_phase,
-      last7: a.last_7d || null, last_seen: today,
+      last7: a.last_7d || null, last_seen: today, in_current_snapshot: true,
     });
     ledger.adsets[a.id] = e;
+  }
+  // Arkio 當前快照不再回傳的廣告以已關閉處理，避免沿用帳本中過期的 ACTIVE 狀態。
+  for (const [id, e] of Object.entries(ledger.adsets)) {
+    if (seen.has(String(id))) continue;
+    e.in_current_snapshot = false;
+    if (isRunningStatus(e.status)) e.status = 'INACTIVE';
   }
   return ads.length;
 }
@@ -300,11 +308,11 @@ function adsetRows() {
     const cpl = m > 0 ? s / m : null;
     const bm = a.benchmark || {};
     const adv = a.advice || {};
-    const paused = /PAUSED/i.test(a.status || '');
+    const paused = !isRunningStatus(a.status);
     // 分類
     let tag = 'keep', tagTxt = '✅ 維持';
-    if (paused && m >= 8) { tag = 'reactivate'; tagTxt = '⏸ 已暫停(曾有量)'; }
-    else if (paused) { tag = 'paused'; tagTxt = '⏸ 已暫停'; }
+    if (paused && m >= 8) { tag = 'reactivate'; tagTxt = '⏸ 已關閉／暫停(曾有量)'; }
+    else if (paused) { tag = 'paused'; tagTxt = '⏸ 已關閉／暫停'; }
     else if (a.is_new_creative || /cold_start/i.test(adv.action || '')) { tag = 'testing'; tagTxt = '🧪 測試中'; }
     else if (adv.action === 'SCALE' || (cpl != null && bm.scale_excellent && cpl <= bm.scale_excellent && m >= 10)) { tag = 'scale'; tagTxt = '🔥 加碼'; }
     else if (a.trend_worsening || (cpl != null && bm.danger && cpl >= bm.danger) || a.decline_type) { tag = 'iterate'; tagTxt = '🔧 建議迭代'; }
@@ -367,7 +375,7 @@ function recentAdsAnalysis() {
   for (const a of adsetList) {
     const n = numOf(a.name); if (!n) continue;
     let m10 = 0, s10 = 0; for (const [d, v] of Object.entries(a.daily)) { if (d >= cutoff && d <= today) { m10 += v.m; s10 += v.s; } }
-    perfByNum[n] = { name: a.name, bl: a.business_line, acct: a.account, status: a.status, paused: /PAUSED/i.test(a.status || ''), m10, s10, ctr7: a.last7?.ctr ?? null, clicks7: a.last7?.clicks ?? null, imp7: a.last7?.impressions ?? null };
+    perfByNum[n] = { name: a.name, bl: a.business_line, acct: a.account, status: a.status, paused: !isRunningStatus(a.status), m10, s10, ctr7: a.last7?.ctr ?? null, clicks7: a.last7?.clicks ?? null, imp7: a.last7?.impressions ?? null };
   }
   // creative library 依編號分組
   const byNum = {};
@@ -403,7 +411,7 @@ function recentAdsAnalysis() {
       num: g.num, theme: theme(g.names[0]), fullname: g.names[0].replace(/[-\s]*[ABＡＢ]$/, ''),
       uploaded: up, imgs: g.imgs.slice(0, 4), variants, pages, pushed: g.pushed,
       bl: p ? p.bl : (/英語|英文|english|abc|字母|發音|單字|letter|phonic/i.test(g.names[0]) ? 'English' : 'Reading'),
-      status: p ? p.status : null, hasPerf: !!p,
+      status: p ? p.status : null, paused: p ? p.paused : true, hasPerf: !!p,
       m10, s10, cpl, ctr7: p && p.ctr7 != null ? R(p.ctr7) : null,
       hasVariantPerf, leadBreakdown: m10 > 0 && variants.some(v => v.leads != null),
     };
@@ -635,7 +643,7 @@ if(D.archive){
 const RA=D.recentAds;
 const withPerf=RA.items.filter(x=>x.hasPerf);
 const totLead=withPerf.reduce((s,x)=>s+(x.m10||0),0);
-const activeN=RA.items.filter(x=>x.status&&!/PAUSED/i.test(x.status)).length;
+const activeN=RA.items.filter(x=>x.hasPerf&&!x.paused).length;
 $('recentSum').innerHTML='<div class="summary '+(totLead>0?'green':'')+'"><div class="hd">🆕 近'+RA.days+'天上架 '+RA.items.length+' 檔廣告（上架日 ≥ '+RA.cutoff+'）</div>'+
   '<div>其中 '+activeN+' 檔投放中，近'+RA.days+'天合計貢獻領課 <b>'+totLead+'</b>。剛上架者多半只有 CTR、尚無領課，看 CTR 找有潛力的續投；已有領課且 CPL 低者可加碼。</div></div>';
 const grid=$('recentGrid');
@@ -647,8 +655,8 @@ function renderRecent(sortKey){
   grid.innerHTML='';
   items.forEach((x,i)=>{
     const isNew=x.uploaded>=D.recentAds.cutoff && (x.m10==null||x.m10===0);
-    const tagCls=!x.hasPerf?'non':(x.status&&/PAUSED/i.test(x.status)?'pau':'act');
-    const tagTxt=!x.hasPerf?'無投放成效':(x.status&&/PAUSED/i.test(x.status)?'已暫停':'投放中');
+    const tagCls=!x.hasPerf?'non':(x.paused?'pau':'act');
+    const tagTxt=!x.hasPerf?'無投放成效':(x.paused?'已關閉／暫停':'投放中');
     const visualItems=(x.variants&&x.variants.length?x.variants:x.imgs.slice(0,2).map((u,j)=>({label:String.fromCharCode(65+j),img:u,leads:null}))).slice(0,2);
     const imgs=visualItems.length?visualItems.map(v=>
       '<div class="rvariant"><div class="vhead"><span class="vlabel">'+v.label+' 款</span>'+

@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-10-14 13:34",
+ "genStamp": "2026-10-14 13:35",
  "checkpointWd": "三",
  "today": "2026-10-14",
  "fetchStatus": "ok",
@@ -309,7 +309,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "reactivate",
-   "tagTxt": "⏸ 已暫停(曾有量)",
+   "tagTxt": "⏸ 已關閉／暫停(曾有量)",
    "color": "#0d9488"
   },
   {
@@ -339,7 +339,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "reactivate",
-   "tagTxt": "⏸ 已暫停(曾有量)",
+   "tagTxt": "⏸ 已關閉／暫停(曾有量)",
    "color": "#d946ef"
   },
   {
@@ -369,7 +369,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "reactivate",
-   "tagTxt": "⏸ 已暫停(曾有量)",
+   "tagTxt": "⏸ 已關閉／暫停(曾有量)",
    "color": "#0ea5e9"
   },
   {
@@ -489,7 +489,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -519,7 +519,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -669,7 +669,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -699,7 +699,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -729,7 +729,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -759,7 +759,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -789,7 +789,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -819,7 +819,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -849,7 +849,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -879,7 +879,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -887,8 +887,8 @@
    "name": "25977 復刻-怒火寶貝（Rose）",
    "campaign": "L2+L3 復刻-怒火寶貝（Rose）",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "INACTIVE",
+   "paused": true,
    "m": 0,
    "b": 0,
    "spend": 0,
@@ -908,8 +908,8 @@
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "testing",
-   "tagTxt": "🧪 測試中",
+   "tag": "paused",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -939,7 +939,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -969,7 +969,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -999,7 +999,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -1029,7 +1029,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -1059,7 +1059,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -1089,7 +1089,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -1119,7 +1119,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -1149,7 +1149,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -1179,7 +1179,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -1209,7 +1209,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -1239,7 +1239,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -1269,7 +1269,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -1299,7 +1299,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -1329,7 +1329,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -1359,7 +1359,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -1389,7 +1389,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -1419,7 +1419,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -1449,7 +1449,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -1479,7 +1479,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -1509,7 +1509,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -1539,7 +1539,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -1569,7 +1569,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -1599,7 +1599,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -1629,7 +1629,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -1659,7 +1659,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -1689,7 +1689,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -1719,7 +1719,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -1749,7 +1749,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -1779,7 +1779,7 @@
    "trendBetter": true,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -1809,7 +1809,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -1839,7 +1839,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -1869,7 +1869,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -1899,7 +1899,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -1929,7 +1929,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -1959,7 +1959,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -1989,7 +1989,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -2019,7 +2019,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -2049,7 +2049,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -2079,7 +2079,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -2109,7 +2109,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -2139,7 +2139,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -2169,7 +2169,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -2199,7 +2199,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -2229,7 +2229,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -2237,8 +2237,8 @@
    "name": "26039 暑假識字練習（Rose）0803",
    "campaign": "L2+L3 暑假識字練習（Rose）0803",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
+   "status": "INACTIVE",
+   "paused": true,
    "m": 0,
    "b": 0,
    "spend": 0,
@@ -2258,8 +2258,8 @@
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
+   "tag": "paused",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -2289,7 +2289,7 @@
    "trendBetter": true,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -2319,7 +2319,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -2349,7 +2349,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -2379,7 +2379,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -2409,7 +2409,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -2439,7 +2439,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -2469,7 +2469,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -2499,7 +2499,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -2529,7 +2529,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -2559,7 +2559,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -2589,7 +2589,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -2619,7 +2619,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -2649,7 +2649,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -2679,7 +2679,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -2709,7 +2709,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -2739,7 +2739,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -2769,7 +2769,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -2799,7 +2799,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -2829,7 +2829,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -2859,7 +2859,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -2889,7 +2889,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -2919,7 +2919,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -2949,7 +2949,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -2979,7 +2979,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -3009,7 +3009,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -3039,7 +3039,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -3069,7 +3069,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -3099,7 +3099,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -3129,7 +3129,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -3159,7 +3159,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -3189,7 +3189,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -3219,7 +3219,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -3249,7 +3249,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -3279,7 +3279,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -3309,7 +3309,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -3339,7 +3339,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -3369,7 +3369,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -3399,7 +3399,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -3429,7 +3429,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -3459,7 +3459,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -3489,7 +3489,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -3519,7 +3519,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -3549,7 +3549,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -3579,7 +3579,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -3609,7 +3609,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -3639,7 +3639,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -3669,7 +3669,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -3699,7 +3699,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -3729,7 +3729,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -3759,7 +3759,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -3789,7 +3789,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -3819,7 +3819,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -3849,7 +3849,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -3879,7 +3879,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -3909,7 +3909,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -3939,7 +3939,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -3969,7 +3969,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -3999,7 +3999,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -4029,7 +4029,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -4059,7 +4059,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -4089,7 +4089,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -4119,7 +4119,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -4149,7 +4149,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -4179,7 +4179,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -4209,7 +4209,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -4239,7 +4239,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -4269,7 +4269,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -4299,7 +4299,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -4329,7 +4329,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -4359,7 +4359,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -4389,7 +4389,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -4419,7 +4419,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -4449,7 +4449,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -4479,7 +4479,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -4509,7 +4509,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -4539,7 +4539,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -4569,7 +4569,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -4599,7 +4599,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -4629,7 +4629,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -4659,7 +4659,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -4689,7 +4689,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -4719,7 +4719,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -4749,7 +4749,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -4779,7 +4779,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -4809,7 +4809,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -4839,7 +4839,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -4869,7 +4869,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -4899,7 +4899,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -4929,7 +4929,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -4959,7 +4959,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -4989,7 +4989,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -5019,7 +5019,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -5049,7 +5049,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -5079,7 +5079,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -5109,7 +5109,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -5139,7 +5139,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -5169,7 +5169,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -5199,7 +5199,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -5229,7 +5229,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -5259,7 +5259,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -5289,7 +5289,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -5319,7 +5319,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -5349,7 +5349,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -5379,7 +5379,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -5409,7 +5409,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -5439,7 +5439,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -5469,7 +5469,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -5499,7 +5499,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -5529,7 +5529,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -5559,7 +5559,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -5589,7 +5589,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0f9d6b"
   },
   {
@@ -5619,7 +5619,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#f59e0b"
   },
   {
@@ -5649,7 +5649,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#e2603e"
   },
   {
@@ -5679,7 +5679,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#6366f1"
   },
   {
@@ -5709,7 +5709,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0d9488"
   },
   {
@@ -5739,7 +5739,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#d946ef"
   },
   {
@@ -5769,7 +5769,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#0ea5e9"
   },
   {
@@ -5799,7 +5799,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#ca8a04"
   },
   {
@@ -5829,7 +5829,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#7c3aed"
   },
   {
@@ -5859,7 +5859,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#16a34a"
   },
   {
@@ -5889,7 +5889,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#db2777"
   },
   {
@@ -5919,7 +5919,7 @@
    "trendBetter": false,
    "declineType": null,
    "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tagTxt": "⏸ 已關閉／暫停",
    "color": "#64748b"
   },
   {
@@ -6169,7 +6169,7 @@
     "trendBetter": false,
     "declineType": null,
     "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tagTxt": "⏸ 已關閉／暫停(曾有量)",
     "color": "#0d9488"
    },
    {
@@ -6199,7 +6199,7 @@
     "trendBetter": false,
     "declineType": null,
     "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tagTxt": "⏸ 已關閉／暫停(曾有量)",
     "color": "#d946ef"
    },
    {
@@ -6229,7 +6229,7 @@
     "trendBetter": false,
     "declineType": null,
     "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tagTxt": "⏸ 已關閉／暫停(曾有量)",
     "color": "#0ea5e9"
    }
   ],
@@ -6351,7 +6351,7 @@
     "trendBetter": false,
     "declineType": null,
     "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tagTxt": "⏸ 已關閉／暫停(曾有量)",
     "color": "#d946ef"
    }
   ]
@@ -6393,6 +6393,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 9,
     "s10": 59.5,
@@ -6433,6 +6434,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 8,
     "s10": 59.5,
@@ -6473,6 +6475,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 3,
     "s10": 7.1,
@@ -6513,6 +6516,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 2,
     "s10": 7.9,
@@ -6553,6 +6557,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 1,
     "s10": 7.3,
@@ -6593,6 +6598,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 1,
     "s10": 8,
@@ -6633,6 +6639,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 1,
     "s10": 8.1,
@@ -6673,6 +6680,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 1,
     "s10": 7.1,
@@ -6713,6 +6721,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 1,
     "s10": 6.9,
@@ -6753,6 +6762,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "CAMPAIGN_PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 0,
     "s10": 4.3,
@@ -6793,6 +6803,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "CAMPAIGN_PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 0,
     "s10": 2.5,
@@ -6833,6 +6844,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "CAMPAIGN_PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 0,
     "s10": 2.5,
@@ -6873,6 +6885,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "CAMPAIGN_PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 0,
     "s10": 2.2,
@@ -6913,6 +6926,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 0,
     "s10": 6.1,
@@ -6953,6 +6967,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "CAMPAIGN_PAUSED",
+    "paused": true,
     "hasPerf": true,
     "m10": 0,
     "s10": 2.5,
@@ -6993,6 +7008,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 0,
     "s10": 5.3,
@@ -7033,6 +7049,7 @@
     "pushed": true,
     "bl": "Reading",
     "status": "ACTIVE",
+    "paused": false,
     "hasPerf": true,
     "m10": 0,
     "s10": 5.9,
@@ -7060,6 +7077,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7087,6 +7105,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7114,6 +7133,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7141,6 +7161,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7168,6 +7189,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7195,6 +7217,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7222,6 +7245,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
@@ -7249,6 +7273,7 @@
     "pushed": false,
     "bl": "Reading",
     "status": null,
+    "paused": true,
     "hasPerf": false,
     "m10": null,
     "s10": null,
