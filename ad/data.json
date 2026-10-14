@@ -1,10 +1,10 @@
 {
- "genStamp": "2026-10-13 10:30",
- "checkpointWd": "二",
- "today": "2026-10-13",
+ "genStamp": "2026-10-14 12:05",
+ "checkpointWd": "三",
+ "today": "2026-10-14",
  "fetchStatus": "ok",
- "expDate": "2026-11-08",
- "nAds": 8,
+ "expDate": "2026-11-13",
+ "nAds": 18,
  "curYM": "2026-10",
  "quarter": {
   "label": "2026-Q4",
@@ -18,8 +18,8 @@
   ]
  },
  "quarterClosed": false,
- "dayOfQuarter": 13,
- "dayOfMonth": 13,
+ "dayOfQuarter": 14,
+ "dayOfMonth": 14,
  "dim": 31,
  "subjects": [
   {
@@ -33,53 +33,53 @@
    },
    "q3": {
     "target": 3300,
-    "actual": 246,
-    "actualBk": 236,
-    "prog": 7.5,
-    "timeProg": 14.1,
-    "proj": 1741,
-    "attain": 52.8,
-    "gap": 1559,
-    "remain": 3054,
-    "diff": -6.6,
-    "scheduleDelta": -220,
+    "actual": 271,
+    "actualBk": 254,
+    "prog": 8.2,
+    "timeProg": 15.2,
+    "proj": 1781,
+    "attain": 54,
+    "gap": 1519,
+    "remain": 3029,
+    "diff": -7,
+    "scheduleDelta": -231,
     "status": "behind"
    },
    "cur": {
     "ym": "2026-10",
     "target": 1100,
-    "actual": 246,
-    "actualBk": 236,
-    "prog": 22.4,
-    "timeProg": 41.9,
-    "proj": 587,
-    "attain": 53.4,
-    "gap": 513,
-    "remain": 854,
-    "needPerDay": 47.4,
-    "dayRateNow": 18.9,
-    "recent7Rate": 16.7,
-    "diff": -19.6,
+    "actual": 271,
+    "actualBk": 254,
+    "prog": 24.6,
+    "timeProg": 45.2,
+    "proj": 600,
+    "attain": 54.5,
+    "gap": 500,
+    "remain": 829,
+    "needPerDay": 48.8,
+    "dayRateNow": 19.4,
+    "recent7Rate": 16,
+    "diff": -20.5,
     "status": "behind"
    },
    "months": [
     {
      "ym": "2026-10",
      "target": 1100,
-     "actual": 246,
-     "actualBk": 236,
+     "actual": 271,
+     "actualBk": 254,
      "isCur": true,
      "isPast": false,
-     "proj": 587,
-     "gap": 513,
-     "remain": 854,
-     "prog": 22.4,
-     "timeProg": 41.9,
-     "diff": -19.5,
-     "scheduleDelta": -215,
-     "targetDelta": -854,
-     "projectedDelta": -513,
-     "attain": 53.3,
+     "proj": 600,
+     "gap": 500,
+     "remain": 829,
+     "prog": 24.6,
+     "timeProg": 45.2,
+     "diff": -20.6,
+     "scheduleDelta": -226,
+     "targetDelta": -829,
+     "projectedDelta": -500,
+     "attain": 54.6,
      "status": "behind"
     },
     {
@@ -150,12 +150,12 @@
      "start": "2026-10-12",
      "end": "2026-10-18",
      "effFrom": "2026-10-12",
-     "effTo": "2026-10-13",
+     "effTo": "2026-10-14",
      "isCur": true,
      "line": 275,
-     "actual": 15,
-     "actualBk": 16,
-     "gap": 260,
+     "actual": 40,
+     "actualBk": 34,
+     "gap": 235,
      "status": "current"
     }
    ]
@@ -169,27 +169,27 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 106,
-   "b": 109,
-   "spend": 714,
+   "m": 113,
+   "b": 113,
+   "spend": 752,
    "cpl": 6.7,
-   "m7": 53,
-   "budget": 50,
+   "m7": 52,
+   "budget": 35,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "KEEP",
-   "adviceText": "觀察 2 天，如不改善則降預算",
+   "adviceAction": "OPTIMIZE",
+   "adviceText": "近 7 天趨勢惡化，且成本已超合格線，建議降預算觀察",
    "priority": "P1",
-   "suggestedBudget": 35,
-   "trendWorse": false,
+   "suggestedBudget": 24,
+   "trendWorse": true,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
+   "tag": "iterate",
+   "tagTxt": "🔧 建議迭代",
    "color": "#0f9d6b"
   },
   {
@@ -197,13 +197,13 @@
    "name": "26033 我會冷靜一下（Rose）0803",
    "campaign": "L2+L3 我會冷靜一下（Rose）0803",
    "bl": "Reading",
-   "status": "PAUSED",
-   "paused": true,
-   "m": 50,
-   "b": 49,
-   "spend": 300,
-   "cpl": 6,
-   "m7": 16,
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 55,
+   "b": 54,
+   "spend": 304,
+   "cpl": 5.5,
+   "m7": 9,
    "budget": 3,
    "bm": {
     "excellent": 5,
@@ -213,13 +213,13 @@
    },
    "adviceAction": "KEEP",
    "adviceText": "維持現狀",
-   "priority": "not_active",
+   "priority": "P2",
    "suggestedBudget": 3,
    "trendWorse": true,
    "trendBetter": false,
    "declineType": null,
-   "tag": "reactivate",
-   "tagTxt": "⏸ 已暫停(曾有量)",
+   "tag": "iterate",
+   "tagTxt": "🔧 建議迭代",
    "color": "#f59e0b"
   },
   {
@@ -229,12 +229,12 @@
    "bl": "Reading",
    "status": "ACTIVE",
    "paused": false,
-   "m": 39,
-   "b": 38,
-   "spend": 252,
-   "cpl": 6.5,
-   "m7": 25,
-   "budget": 20,
+   "m": 42,
+   "b": 40,
+   "spend": 270,
+   "cpl": 6.4,
+   "m7": 22,
+   "budget": 14,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -242,8 +242,8 @@
     "scale_excellent": 5
    },
    "adviceAction": "KEEP",
-   "adviceText": "觀察 2 天，如不改善則降預算",
-   "priority": "P1",
+   "adviceText": "維持現狀",
+   "priority": "P2",
    "suggestedBudget": 14,
    "trendWorse": false,
    "trendBetter": false,
@@ -257,14 +257,14 @@
    "name": "25869 注音尋寶卡",
    "campaign": "L2+L3 注音尋寶卡-Rose",
    "bl": "Reading",
-   "status": "PAUSED",
-   "paused": true,
+   "status": "ACTIVE",
+   "paused": false,
    "m": 14,
    "b": 8,
-   "spend": 69,
-   "cpl": 5,
+   "spend": 73,
+   "cpl": 5.2,
    "m7": 2,
-   "budget": 18,
+   "budget": 5,
    "bm": {
     "excellent": 5,
     "acceptable": 8,
@@ -273,13 +273,13 @@
    },
    "adviceAction": "--",
    "adviceText": "數據不足，暫不判斷",
-   "priority": "not_active",
-   "suggestedBudget": 18,
+   "priority": "--",
+   "suggestedBudget": 5,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "reactivate",
-   "tagTxt": "⏸ 已暫停(曾有量)",
+   "tag": "keep",
+   "tagTxt": "✅ 維持",
    "color": "#6366f1"
   },
   {
@@ -287,13 +287,13 @@
    "name": "26174 Codex-專注力遊戲卡（Rose）0915",
    "campaign": "L2 專注力遊戲卡（Rose）0915",
    "bl": "Reading",
-   "status": "ACTIVE",
-   "paused": false,
-   "m": 12,
-   "b": 15,
-   "spend": 86,
-   "cpl": 7.2,
-   "m7": 6,
+   "status": "CAMPAIGN_PAUSED",
+   "paused": true,
+   "m": 13,
+   "b": 16,
+   "spend": 92,
+   "cpl": 7.1,
+   "m7": 7,
    "budget": 10,
    "bm": {
     "excellent": 5,
@@ -308,14 +308,14 @@
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "keep",
-   "tagTxt": "✅ 維持",
+   "tag": "reactivate",
+   "tagTxt": "⏸ 已暫停(曾有量)",
    "color": "#0d9488"
   },
   {
    "id": "120252981427000392",
    "name": "26248 -5歲ㄉㄊ清楚發音（Rose）1005",
-   "campaign": "L2+L3 5歲ㄉㄊ清楚發音（Rose）1005",
+   "campaign": "L2 5歲ㄉㄊ清楚發音（Rose）1005",
    "bl": "Reading",
    "status": "PAUSED",
    "paused": true,
@@ -323,7 +323,7 @@
    "b": 8,
    "spend": 59,
    "cpl": 6.6,
-   "m7": 8,
+   "m7": 6,
    "budget": 13,
    "bm": {
     "excellent": 5,
@@ -345,7 +345,7 @@
   {
    "id": "120252981417920392",
    "name": "26243 -4歲注音識字車字卡（Rose）1005",
-   "campaign": "L2+L3 4歲注音識字車字卡（Rose）1005",
+   "campaign": "L2 4歲注音識字車字卡（Rose）1005",
    "bl": "Reading",
    "status": "PAUSED",
    "paused": true,
@@ -353,7 +353,7 @@
    "b": 7,
    "spend": 59,
    "cpl": 7.4,
-   "m7": 6,
+   "m7": 5,
    "budget": 13,
    "bm": {
     "excellent": 5,
@@ -362,8 +362,8 @@
     "scale_excellent": 5
    },
    "adviceAction": "KEEP",
-   "adviceText": "觀察 2 天，如不改善則降預算",
-   "priority": "P1",
+   "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+   "priority": "P0",
    "suggestedBudget": 13,
    "trendWorse": false,
    "trendBetter": false,
@@ -377,12 +377,12 @@
    "name": "26237｜6歲注音拼讀（Rose）1002",
    "campaign": "L3 6歲注音拼讀（Rose）1002",
    "bl": "Reading",
-   "status": "PAUSED",
-   "paused": true,
-   "m": 6,
-   "b": 1,
-   "spend": 42,
-   "cpl": 7.1,
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 7,
+   "b": 2,
+   "spend": 52,
+   "cpl": 7.4,
    "m7": 1,
    "budget": 8,
    "bm": {
@@ -391,16 +391,76 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "--",
-   "adviceText": "數據不足，暫不判斷",
-   "priority": "not_active",
-   "suggestedBudget": 8,
+   "adviceAction": "CUT",
+   "adviceText": "建議暫停或大幅降預算",
+   "priority": "P0",
+   "suggestedBudget": 2,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
-   "tag": "paused",
-   "tagTxt": "⏸ 已暫停",
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
    "color": "#ca8a04"
+  },
+  {
+   "id": "120253093761550392",
+   "name": "26265 -4歲APP圖像識字遊戲（Rose）1007",
+   "campaign": "L2 4歲APP圖像識字遊戲（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 2,
+   "b": 1,
+   "spend": 5,
+   "cpl": 2.3,
+   "m7": 2,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "新品表現優異：CPL $4.61 低於合格線 $8.00，轉換 2。建議加預算 30%。",
+   "priority": "P2",
+   "suggestedBudget": 6,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#7c3aed"
+  },
+  {
+   "id": "120253093773700392",
+   "name": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007",
+   "campaign": "L2 JOJO 5週年｜3歲情緒表達（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 2,
+   "b": 2,
+   "spend": 4,
+   "cpl": 2.1,
+   "m7": 2,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "SCALE",
+   "adviceText": "新品表現優異：CPL $2.05 低於合格線 $8.00，轉換 2。建議加預算 30%。",
+   "priority": "P2",
+   "suggestedBudget": 6,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#16a34a"
   },
   {
    "id": "120252883726080392",
@@ -430,7 +490,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#db2777"
   },
   {
    "id": "120252921049300392",
@@ -460,7 +520,127 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#64748b"
+  },
+  {
+   "id": "120253093760090392",
+   "name": "26263 -4歲APP看圖注音（Rose）1007",
+   "campaign": "L2 4歲APP看圖注音（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 1,
+   "b": 0,
+   "spend": 5,
+   "cpl": 4.5,
+   "m7": 1,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $4.51/$36.00，還有 $31.49 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0f9d6b"
+  },
+  {
+   "id": "120253093760810392",
+   "name": "26264 -6歲APP注音拼讀（Rose）1007",
+   "campaign": "L3 6歲APP注音拼讀（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 1,
+   "b": 1,
+   "spend": 4,
+   "cpl": 4.1,
+   "m7": 1,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $4.11/$36.00，還有 $31.89 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#f59e0b"
+  },
+  {
+   "id": "120253093764350392",
+   "name": "26267 -3歲APP玩具衝突表達（Rose）1007",
+   "campaign": "L2 3歲APP玩具衝突表達（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 1,
+   "b": 1,
+   "spend": 5,
+   "cpl": 5.2,
+   "m7": 1,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $5.17/$36.00，還有 $30.83 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#e2603e"
+  },
+  {
+   "id": "120253093770220392",
+   "name": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007",
+   "campaign": "L2 JOJO 5週年｜3至5歲情緒表達（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 1,
+   "b": 0,
+   "spend": 5,
+   "cpl": 5.1,
+   "m7": 1,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $5.06/$36.00，還有 $30.94 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#6366f1"
   },
   {
    "id": "120250705597430392",
@@ -490,7 +670,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120250997796650392",
@@ -520,7 +700,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120250997803280392",
@@ -550,7 +730,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251174203910392",
@@ -580,7 +760,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120251174248740392",
@@ -610,7 +790,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120251174253190392",
@@ -640,7 +820,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120251174295520392",
@@ -670,7 +850,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120251357927590392",
@@ -700,7 +880,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120251357934880392",
@@ -730,7 +910,7 @@
    "declineType": null,
    "tag": "testing",
    "tagTxt": "🧪 測試中",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251357942270392",
@@ -760,7 +940,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120251357948340392",
@@ -790,7 +970,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120251357954270392",
@@ -820,7 +1000,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120251357961160392",
@@ -850,7 +1030,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120251357968630392",
@@ -880,7 +1060,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120251357971650392",
@@ -910,7 +1090,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120249865301330392",
@@ -940,7 +1120,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120251392566490392",
@@ -970,7 +1150,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120251392697060392",
@@ -1000,7 +1180,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120251392701640392",
@@ -1030,7 +1210,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120251392704280392",
@@ -1060,7 +1240,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120251392711460392",
@@ -1090,7 +1270,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251392716380392",
@@ -1120,7 +1300,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120251392721370392",
@@ -1150,7 +1330,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120251392729890392",
@@ -1180,7 +1360,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120251392738000392",
@@ -1210,7 +1390,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120251392746480392",
@@ -1240,7 +1420,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120251421328580392",
@@ -1270,7 +1450,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251421623250392",
@@ -1300,7 +1480,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120251421634940392",
@@ -1330,7 +1510,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120251421646040392",
@@ -1360,7 +1540,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120251421653290392",
@@ -1390,7 +1570,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120251421671390392",
@@ -1420,7 +1600,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120251421675940392",
@@ -1450,7 +1630,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251421682660392",
@@ -1480,7 +1660,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120251421690330392",
@@ -1510,7 +1690,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120251421699840392",
@@ -1540,7 +1720,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120251557817060392",
@@ -1570,7 +1750,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120251557821680392",
@@ -1600,7 +1780,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120251557824700392",
@@ -1630,7 +1810,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251557827710392",
@@ -1660,7 +1840,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120251557830530392",
@@ -1690,7 +1870,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120251557832590392",
@@ -1720,7 +1900,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120251557834780392",
@@ -1750,7 +1930,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120251557837360392",
@@ -1780,7 +1960,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120251557839440392",
@@ -1810,7 +1990,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251676755020392",
@@ -1840,7 +2020,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120251676760050392",
@@ -1870,7 +2050,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120251676764110392",
@@ -1900,7 +2080,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120251676769550392",
@@ -1930,7 +2110,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120251676773910392",
@@ -1960,7 +2140,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120251676778620392",
@@ -1990,7 +2170,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251676783320392",
@@ -2020,7 +2200,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120251778668370392",
@@ -2050,7 +2230,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120251778669520392",
@@ -2080,7 +2260,7 @@
    "declineType": null,
    "tag": "keep",
    "tagTxt": "✅ 維持",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120251778671200392",
@@ -2110,7 +2290,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120251778673230392",
@@ -2140,7 +2320,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120251778676480392",
@@ -2170,7 +2350,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120251778679200392",
@@ -2200,7 +2380,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120251778692340392",
@@ -2230,7 +2410,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120251778695340392",
@@ -2260,7 +2440,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120251778697410392",
@@ -2290,7 +2470,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120251986237060392",
@@ -2320,7 +2500,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120251986241650392",
@@ -2350,7 +2530,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120251986250540392",
@@ -2380,7 +2560,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120251986255770392",
@@ -2410,7 +2590,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120251986265440392",
@@ -2440,7 +2620,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120251986269200392",
@@ -2470,7 +2650,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120251986275210392",
@@ -2500,7 +2680,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252171604570392",
@@ -2530,7 +2710,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252171607620392",
@@ -2560,7 +2740,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252171610660392",
@@ -2590,7 +2770,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252171614150392",
@@ -2620,7 +2800,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252171615980392",
@@ -2650,7 +2830,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252171618130392",
@@ -2680,7 +2860,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252171621390392",
@@ -2710,7 +2890,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252339274580392",
@@ -2740,7 +2920,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252339292810392",
@@ -2770,7 +2950,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252339304760392",
@@ -2800,7 +2980,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252339342490392",
@@ -2830,7 +3010,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252339371070392",
@@ -2860,7 +3040,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252339406250392",
@@ -2890,7 +3070,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252339432380392",
@@ -2920,7 +3100,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252339453150392",
@@ -2950,7 +3130,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252339502200392",
@@ -2980,7 +3160,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252339595620392",
@@ -3010,7 +3190,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252340234510392",
@@ -3040,7 +3220,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252340307620392",
@@ -3070,7 +3250,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252340362000392",
@@ -3100,7 +3280,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252340415430392",
@@ -3130,7 +3310,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252340456870392",
@@ -3160,7 +3340,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252340498980392",
@@ -3190,7 +3370,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252340538630392",
@@ -3220,7 +3400,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252340560340392",
@@ -3250,7 +3430,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252340584750392",
@@ -3280,7 +3460,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252340606900392",
@@ -3310,7 +3490,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252367928710392",
@@ -3340,7 +3520,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252367931230392",
@@ -3370,7 +3550,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252367933280392",
@@ -3400,7 +3580,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252367936150392",
@@ -3430,7 +3610,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252367937550392",
@@ -3460,7 +3640,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252367938680392",
@@ -3490,7 +3670,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252367941110392",
@@ -3520,7 +3700,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252367942800392",
@@ -3550,7 +3730,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252367944780392",
@@ -3580,7 +3760,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252367946980392",
@@ -3610,7 +3790,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252465419690392",
@@ -3640,7 +3820,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252465424930392",
@@ -3670,7 +3850,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252465427420392",
@@ -3700,7 +3880,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252465433130392",
@@ -3730,7 +3910,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252465436690392",
@@ -3760,7 +3940,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252465439330392",
@@ -3790,7 +3970,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252465442740392",
@@ -3820,7 +4000,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252465447190392",
@@ -3850,7 +4030,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252465450220392",
@@ -3880,7 +4060,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252465454110392",
@@ -3910,7 +4090,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252465458220392",
@@ -3940,7 +4120,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120249695782320392",
@@ -3970,7 +4150,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252503058010392",
@@ -4000,7 +4180,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252503061380392",
@@ -4030,7 +4210,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252503080630392",
@@ -4060,7 +4240,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252547941640392",
@@ -4090,7 +4270,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252547944400392",
@@ -4120,7 +4300,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252547947000392",
@@ -4150,7 +4330,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252547949720392",
@@ -4180,7 +4360,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252547952260392",
@@ -4210,7 +4390,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252547954710392",
@@ -4240,7 +4420,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252547958110392",
@@ -4270,7 +4450,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252547961280392",
@@ -4300,7 +4480,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252613225580392",
@@ -4330,7 +4510,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252613226750392",
@@ -4360,7 +4540,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252613228220392",
@@ -4390,7 +4570,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252613230420392",
@@ -4420,7 +4600,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252613232590392",
@@ -4450,7 +4630,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252613236330392",
@@ -4480,7 +4660,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252613238650392",
@@ -4510,7 +4690,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252613241210392",
@@ -4540,7 +4720,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252647484140392",
@@ -4570,7 +4750,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252647486120392",
@@ -4600,7 +4780,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252647487580392",
@@ -4630,7 +4810,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252647491010392",
@@ -4660,7 +4840,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252647493990392",
@@ -4690,7 +4870,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252708648910392",
@@ -4720,7 +4900,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252708650360392",
@@ -4750,7 +4930,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252708651810392",
@@ -4780,7 +4960,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252708653370392",
@@ -4810,7 +4990,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252708655640392",
@@ -4840,7 +5020,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252708658120392",
@@ -4870,7 +5050,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252708660240392",
@@ -4900,7 +5080,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252708662290392",
@@ -4930,7 +5110,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252735770070392",
@@ -4960,7 +5140,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252735771140392",
@@ -4990,7 +5170,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252735780440392",
@@ -5020,7 +5200,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252735782240392",
@@ -5050,7 +5230,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252735783590392",
@@ -5080,7 +5260,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252735785070392",
@@ -5110,7 +5290,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252735787710392",
@@ -5140,7 +5320,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252735789250392",
@@ -5170,7 +5350,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252735791550392",
@@ -5200,7 +5380,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252735794900392",
@@ -5230,7 +5410,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252883722260392",
@@ -5260,7 +5440,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252883722990392",
@@ -5290,7 +5470,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252883725040392",
@@ -5320,7 +5500,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252883727090392",
@@ -5350,7 +5530,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252883729020392",
@@ -5380,7 +5560,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
   },
   {
    "id": "120252883729970392",
@@ -5410,7 +5590,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0ea5e9"
+   "color": "#0f9d6b"
   },
   {
    "id": "120252883731530392",
@@ -5440,7 +5620,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#ca8a04"
+   "color": "#f59e0b"
   },
   {
    "id": "120252883732710392",
@@ -5470,7 +5650,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#7c3aed"
+   "color": "#e2603e"
   },
   {
    "id": "120252921030720392",
@@ -5500,7 +5680,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#16a34a"
+   "color": "#6366f1"
   },
   {
    "id": "120252921039620392",
@@ -5530,7 +5710,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#db2777"
+   "color": "#0d9488"
   },
   {
    "id": "120252921012940392",
@@ -5560,7 +5740,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#64748b"
+   "color": "#d946ef"
   },
   {
    "id": "120252921022560392",
@@ -5590,7 +5770,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0f9d6b"
+   "color": "#0ea5e9"
   },
   {
    "id": "120252981420350392",
@@ -5620,7 +5800,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#f59e0b"
+   "color": "#ca8a04"
   },
   {
    "id": "120252981421500392",
@@ -5650,7 +5830,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#e2603e"
+   "color": "#7c3aed"
   },
   {
    "id": "120252981423790392",
@@ -5680,7 +5860,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#6366f1"
+   "color": "#16a34a"
   },
   {
    "id": "120252981425470392",
@@ -5710,7 +5890,7 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#0d9488"
+   "color": "#db2777"
   },
   {
    "id": "120252981430250392",
@@ -5740,7 +5920,127 @@
    "declineType": null,
    "tag": "paused",
    "tagTxt": "⏸ 已暫停",
-   "color": "#d946ef"
+   "color": "#64748b"
+  },
+  {
+   "id": "120253093762740392",
+   "name": "26266 -5歲APP辨音正音（Rose）1007",
+   "campaign": "L2 5歲APP辨音正音（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 4,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $4.22/$36.00，還有 $31.78 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#0f9d6b"
+  },
+  {
+   "id": "120253093765900392",
+   "name": "26268 -4-5歲APP冷靜表達（Rose）1007",
+   "campaign": "L2 4-5歲APP冷靜表達（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 4,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $4.34/$36.00，還有 $31.66 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#f59e0b"
+  },
+  {
+   "id": "120253093768680392",
+   "name": "26269 -JOJO 5週年｜我們免費了（Rose）1007",
+   "campaign": "L2+L3 JOJO 5週年｜我們免費了（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 5,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $4.62/$36.00，還有 $31.38 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#e2603e"
+  },
+  {
+   "id": "120253093771480392",
+   "name": "26271 -JOJO 5週年｜6至8歲識字理解（Rose）1007",
+   "campaign": "L3 JOJO 5週年｜6至8歲識字理解（Rose）1007",
+   "bl": "Reading",
+   "status": "ACTIVE",
+   "paused": false,
+   "m": 0,
+   "b": 0,
+   "spend": 5,
+   "cpl": null,
+   "m7": 0,
+   "budget": 5,
+   "bm": {
+    "excellent": 5,
+    "acceptable": 8,
+    "danger": 12,
+    "scale_excellent": 5
+   },
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $4.59/$36.00，還有 $31.41 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 5,
+   "trendWorse": false,
+   "trendBetter": false,
+   "declineType": null,
+   "tag": "testing",
+   "tagTxt": "🧪 測試中",
+   "color": "#6366f1"
   }
  ],
  "archive": {
@@ -5776,24 +6076,54 @@
  "advice": {
   "safe": false,
   "quarterClosed": false,
-  "needPerDay": 47.4,
-  "addlPerDay": 30.7,
-  "winnerDaily": 7.6,
+  "needPerDay": 48.8,
+  "addlPerDay": 32.8,
+  "winnerDaily": 7.4,
   "adsNeeded": 5,
   "topScale": [],
   "iterate": [
+   {
+    "id": "120251174246100392",
+    "name": "25969 復刻-108識字卡拼圖2（Rose）",
+    "campaign": "L2+L3 復刻-108識字卡拼圖2（Rose）❌ 控3刀",
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 113,
+    "b": 113,
+    "spend": 752,
+    "cpl": 6.7,
+    "m7": 52,
+    "budget": 35,
+    "bm": {
+     "excellent": 5,
+     "acceptable": 8,
+     "danger": 12,
+     "scale_excellent": 5
+    },
+    "adviceAction": "OPTIMIZE",
+    "adviceText": "近 7 天趨勢惡化，且成本已超合格線，建議降預算觀察",
+    "priority": "P1",
+    "suggestedBudget": 24,
+    "trendWorse": true,
+    "trendBetter": false,
+    "declineType": null,
+    "tag": "iterate",
+    "tagTxt": "🔧 建議迭代",
+    "color": "#0f9d6b"
+   },
    {
     "id": "120251778667390392",
     "name": "26033 我會冷靜一下（Rose）0803",
     "campaign": "L2+L3 我會冷靜一下（Rose）0803",
     "bl": "Reading",
-    "status": "PAUSED",
-    "paused": true,
-    "m": 50,
-    "b": 49,
-    "spend": 300,
-    "cpl": 6,
-    "m7": 16,
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 55,
+    "b": 54,
+    "spend": 304,
+    "cpl": 5.5,
+    "m7": 9,
     "budget": 3,
     "bm": {
      "excellent": 5,
@@ -5803,49 +6133,49 @@
     },
     "adviceAction": "KEEP",
     "adviceText": "維持現狀",
-    "priority": "not_active",
+    "priority": "P2",
     "suggestedBudget": 3,
     "trendWorse": true,
     "trendBetter": false,
     "declineType": null,
-    "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tag": "iterate",
+    "tagTxt": "🔧 建議迭代",
     "color": "#f59e0b"
    },
    {
-    "id": "120231639051860392",
-    "name": "25869 注音尋寶卡",
-    "campaign": "L2+L3 注音尋寶卡-Rose",
+    "id": "120252647489410392",
+    "name": "26174 Codex-專注力遊戲卡（Rose）0915",
+    "campaign": "L2 專注力遊戲卡（Rose）0915",
     "bl": "Reading",
-    "status": "PAUSED",
+    "status": "CAMPAIGN_PAUSED",
     "paused": true,
-    "m": 14,
-    "b": 8,
-    "spend": 69,
-    "cpl": 5,
-    "m7": 2,
-    "budget": 18,
+    "m": 13,
+    "b": 16,
+    "spend": 92,
+    "cpl": 7.1,
+    "m7": 7,
+    "budget": 10,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
      "danger": 12,
      "scale_excellent": 5
     },
-    "adviceAction": "--",
-    "adviceText": "數據不足，暫不判斷",
-    "priority": "not_active",
-    "suggestedBudget": 18,
+    "adviceAction": "KEEP",
+    "adviceText": "維持現狀",
+    "priority": "P2",
+    "suggestedBudget": 10,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
     "tag": "reactivate",
     "tagTxt": "⏸ 已暫停(曾有量)",
-    "color": "#6366f1"
+    "color": "#0d9488"
    },
    {
     "id": "120252981427000392",
     "name": "26248 -5歲ㄉㄊ清楚發音（Rose）1005",
-    "campaign": "L2+L3 5歲ㄉㄊ清楚發音（Rose）1005",
+    "campaign": "L2 5歲ㄉㄊ清楚發音（Rose）1005",
     "bl": "Reading",
     "status": "PAUSED",
     "paused": true,
@@ -5853,7 +6183,7 @@
     "b": 8,
     "spend": 59,
     "cpl": 6.6,
-    "m7": 8,
+    "m7": 6,
     "budget": 13,
     "bm": {
      "excellent": 5,
@@ -5875,7 +6205,7 @@
    {
     "id": "120252981417920392",
     "name": "26243 -4歲注音識字車字卡（Rose）1005",
-    "campaign": "L2+L3 4歲注音識字車字卡（Rose）1005",
+    "campaign": "L2 4歲注音識字車字卡（Rose）1005",
     "bl": "Reading",
     "status": "PAUSED",
     "paused": true,
@@ -5883,7 +6213,7 @@
     "b": 7,
     "spend": 59,
     "cpl": 7.4,
-    "m7": 6,
+    "m7": 5,
     "budget": 13,
     "bm": {
      "excellent": 5,
@@ -5892,8 +6222,8 @@
      "scale_excellent": 5
     },
     "adviceAction": "KEEP",
-    "adviceText": "觀察 2 天，如不改善則降預算",
-    "priority": "P1",
+    "adviceText": "主指標在警戒區，但當前預算已是建議下限，維持觀察",
+    "priority": "P0",
     "suggestedBudget": 13,
     "trendWorse": false,
     "trendBetter": false,
@@ -5909,14 +6239,14 @@
     "name": "25869 注音尋寶卡",
     "campaign": "L2+L3 注音尋寶卡-Rose",
     "bl": "Reading",
-    "status": "PAUSED",
-    "paused": true,
+    "status": "ACTIVE",
+    "paused": false,
     "m": 14,
     "b": 8,
-    "spend": 69,
-    "cpl": 5,
+    "spend": 73,
+    "cpl": 5.2,
     "m7": 2,
-    "budget": 18,
+    "budget": 5,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5925,13 +6255,13 @@
     },
     "adviceAction": "--",
     "adviceText": "數據不足，暫不判斷",
-    "priority": "not_active",
-    "suggestedBudget": 18,
+    "priority": "--",
+    "suggestedBudget": 5,
     "trendWorse": false,
     "trendBetter": false,
     "declineType": null,
-    "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tag": "keep",
+    "tagTxt": "✅ 維持",
     "color": "#6366f1"
    },
    {
@@ -5939,13 +6269,13 @@
     "name": "26033 我會冷靜一下（Rose）0803",
     "campaign": "L2+L3 我會冷靜一下（Rose）0803",
     "bl": "Reading",
-    "status": "PAUSED",
-    "paused": true,
-    "m": 50,
-    "b": 49,
-    "spend": 300,
-    "cpl": 6,
-    "m7": 16,
+    "status": "ACTIVE",
+    "paused": false,
+    "m": 55,
+    "b": 54,
+    "spend": 304,
+    "cpl": 5.5,
+    "m7": 9,
     "budget": 3,
     "bm": {
      "excellent": 5,
@@ -5955,13 +6285,13 @@
     },
     "adviceAction": "KEEP",
     "adviceText": "維持現狀",
-    "priority": "not_active",
+    "priority": "P2",
     "suggestedBudget": 3,
     "trendWorse": true,
     "trendBetter": false,
     "declineType": null,
-    "tag": "reactivate",
-    "tagTxt": "⏸ 已暫停(曾有量)",
+    "tag": "iterate",
+    "tagTxt": "🔧 建議迭代",
     "color": "#f59e0b"
    },
    {
@@ -5971,12 +6301,12 @@
     "bl": "Reading",
     "status": "ACTIVE",
     "paused": false,
-    "m": 39,
-    "b": 38,
-    "spend": 252,
-    "cpl": 6.5,
-    "m7": 25,
-    "budget": 20,
+    "m": 42,
+    "b": 40,
+    "spend": 270,
+    "cpl": 6.4,
+    "m7": 22,
+    "budget": 14,
     "bm": {
      "excellent": 5,
      "acceptable": 8,
@@ -5984,8 +6314,8 @@
      "scale_excellent": 5
     },
     "adviceAction": "KEEP",
-    "adviceText": "觀察 2 天，如不改善則降預算",
-    "priority": "P1",
+    "adviceText": "維持現狀",
+    "priority": "P2",
     "suggestedBudget": 14,
     "trendWorse": false,
     "trendBetter": false,
@@ -5997,7 +6327,7 @@
    {
     "id": "120252981427000392",
     "name": "26248 -5歲ㄉㄊ清楚發音（Rose）1005",
-    "campaign": "L2+L3 5歲ㄉㄊ清楚發音（Rose）1005",
+    "campaign": "L2 5歲ㄉㄊ清楚發音（Rose）1005",
     "bl": "Reading",
     "status": "PAUSED",
     "paused": true,
@@ -6005,7 +6335,7 @@
     "b": 8,
     "spend": 59,
     "cpl": 6.6,
-    "m7": 8,
+    "m7": 6,
     "budget": 13,
     "bm": {
      "excellent": 5,
@@ -6028,7 +6358,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-10-04",
+  "cutoff": "2026-10-05",
   "days": 10,
   "items": [
    {
@@ -6107,7 +6437,287 @@
     "m10": 8,
     "s10": 59.5,
     "cpl": 7.4,
-    "ctr7": 3.5,
+    "ctr7": 3.4,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26265",
+    "theme": "-4歲APP圖像識字遊戲1007",
+    "fullname": "26265 -4歲APP圖像識字遊戲（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/4dc06ff0-8736-4983-9085-02f93667b062.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7cc1955e-c187-4dfa-8241-b4159be97c62.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7cc1955e-c187-4dfa-8241-b4159be97c62.png",
+      "name": "26265 -4歲APP圖像識字遊戲（Rose）1007-A",
+      "leads": 3
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/4dc06ff0-8736-4983-9085-02f93667b062.png",
+      "name": "26265 -4歲APP圖像識字遊戲（Rose）1007-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 3,
+    "s10": 6.7,
+    "cpl": 2.2,
+    "ctr7": 2.5,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26272",
+    "theme": "-JOJO 5週年｜3歲情緒表達1007",
+    "fullname": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/29dfa44d-89e7-49f1-b04e-3c5259ab02d1.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a67df1b5-cf84-4028-aeac-2b5722d752ff.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a67df1b5-cf84-4028-aeac-2b5722d752ff.png",
+      "name": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007-A",
+      "leads": 1
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/29dfa44d-89e7-49f1-b04e-3c5259ab02d1.png",
+      "name": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "jojoreading_tw",
+      "name": "JOJO 閱讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 2,
+    "s10": 7.1,
+    "cpl": 3.6,
+    "ctr7": 2.6,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26267",
+    "theme": "-3歲APP玩具衝突表達1007",
+    "fullname": "26267 -3歲APP玩具衝突表達（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/45bf2973-bfee-4505-92fa-7b10356527e4.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a6b2b02d-39bc-472a-80c9-abc33467e3f0.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a6b2b02d-39bc-472a-80c9-abc33467e3f0.png",
+      "name": "26267 -3歲APP玩具衝突表達（Rose）1007-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/45bf2973-bfee-4505-92fa-7b10356527e4.png",
+      "name": "26267 -3歲APP玩具衝突表達（Rose）1007-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 7,
+    "cpl": 7,
+    "ctr7": 5.7,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26270",
+    "theme": "-JOJO 5週年｜3至5歲情緒表達1007",
+    "fullname": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/f1a72411-7f52-4cb8-a8de-1ee5e3166e1e.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/96947fb1-070c-44a6-b3b5-a65d4819cc92.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/96947fb1-070c-44a6-b3b5-a65d4819cc92.png",
+      "name": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/f1a72411-7f52-4cb8-a8de-1ee5e3166e1e.png",
+      "name": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "jojoreading_tw",
+      "name": "JOJO 閱讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 7.4,
+    "cpl": 7.4,
+    "ctr7": 4.3,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26263",
+    "theme": "-4歲APP看圖注音1007",
+    "fullname": "26263 -4歲APP看圖注音（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/41ba82c5-0208-4812-92bb-18d3b36b8f3e.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/de264022-5721-4943-a75d-c17b13facdfe.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/de264022-5721-4943-a75d-c17b13facdfe.png",
+      "name": "26263 -4歲APP看圖注音（Rose）1007-A",
+      "leads": 1
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/41ba82c5-0208-4812-92bb-18d3b36b8f3e.png",
+      "name": "26263 -4歲APP看圖注音（Rose）1007-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 7.7,
+    "cpl": 7.7,
+    "ctr7": 3.6,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26264",
+    "theme": "-6歲APP注音拼讀1007",
+    "fullname": "26264 -6歲APP注音拼讀（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/680dcf10-175b-4c54-93fd-fb0574f6899e.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/5546d0fd-e58f-4187-8077-53ca13200aa8.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/5546d0fd-e58f-4187-8077-53ca13200aa8.png",
+      "name": "26264 -6歲APP注音拼讀（Rose）1007-A",
+      "leads": 1
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/680dcf10-175b-4c54-93fd-fb0574f6899e.png",
+      "name": "26264 -6歲APP注音拼讀（Rose）1007-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 6.8,
+    "cpl": 6.8,
+    "ctr7": 2.7,
+    "hasVariantPerf": true,
+    "leadBreakdown": true
+   },
+   {
+    "num": "26266",
+    "theme": "-5歲APP辨音正音1007",
+    "fullname": "26266 -5歲APP辨音正音（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/535a685a-de1d-4327-b402-866839c21f17.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/c735aecf-e107-4620-822c-0db5356bd6e1.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/c735aecf-e107-4620-822c-0db5356bd6e1.png",
+      "name": "26266 -5歲APP辨音正音（Rose）1007-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/535a685a-de1d-4327-b402-866839c21f17.png",
+      "name": "26266 -5歲APP辨音正音（Rose）1007-B",
+      "leads": 1
+     }
+    ],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 1,
+    "s10": 6.4,
+    "cpl": 6.4,
+    "ctr7": 1.7,
     "hasVariantPerf": true,
     "leadBreakdown": true
    },
@@ -6272,6 +6882,46 @@
     "leadBreakdown": false
    },
    {
+    "num": "26269",
+    "theme": "-JOJO 5週年｜我們免費了1007",
+    "fullname": "26269 -JOJO 5週年｜我們免費了（Rose）1007",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/8465bb13-ddd2-4a42-8f4a-3143d4e7968b.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/dfdfccb8-c9ce-4e1f-99cb-f7e70acacc85.png"
+    ],
+    "variants": [
+     {
+      "label": "A",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/dfdfccb8-c9ce-4e1f-99cb-f7e70acacc85.png",
+      "name": "26269 -JOJO 5週年｜我們免費了（Rose）1007-A",
+      "leads": 0
+     },
+     {
+      "label": "B",
+      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/8465bb13-ddd2-4a42-8f4a-3143d4e7968b.png",
+      "name": "26269 -JOJO 5週年｜我們免費了（Rose）1007-B",
+      "leads": 0
+     }
+    ],
+    "pages": [
+     {
+      "code": "jojoreading_tw",
+      "name": "JOJO 閱讀"
+     }
+    ],
+    "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 6.1,
+    "cpl": null,
+    "ctr7": 2.1,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
     "num": "26249",
     "theme": "-Q4五週年｜3歲情緒雙科1005",
     "fullname": "26249 -Q4五週年｜3歲情緒雙科（Rose）1005",
@@ -6312,206 +6962,6 @@
     "leadBreakdown": false
    },
    {
-    "num": "26263",
-    "theme": "-4歲APP看圖注音1007",
-    "fullname": "26263 -4歲APP看圖注音（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/41ba82c5-0208-4812-92bb-18d3b36b8f3e.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/de264022-5721-4943-a75d-c17b13facdfe.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/de264022-5721-4943-a75d-c17b13facdfe.png",
-      "name": "26263 -4歲APP看圖注音（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/41ba82c5-0208-4812-92bb-18d3b36b8f3e.png",
-      "name": "26263 -4歲APP看圖注音（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26264",
-    "theme": "-6歲APP注音拼讀1007",
-    "fullname": "26264 -6歲APP注音拼讀（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/680dcf10-175b-4c54-93fd-fb0574f6899e.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/5546d0fd-e58f-4187-8077-53ca13200aa8.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/5546d0fd-e58f-4187-8077-53ca13200aa8.png",
-      "name": "26264 -6歲APP注音拼讀（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/680dcf10-175b-4c54-93fd-fb0574f6899e.png",
-      "name": "26264 -6歲APP注音拼讀（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26265",
-    "theme": "-4歲APP圖像識字遊戲1007",
-    "fullname": "26265 -4歲APP圖像識字遊戲（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/4dc06ff0-8736-4983-9085-02f93667b062.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7cc1955e-c187-4dfa-8241-b4159be97c62.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7cc1955e-c187-4dfa-8241-b4159be97c62.png",
-      "name": "26265 -4歲APP圖像識字遊戲（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/4dc06ff0-8736-4983-9085-02f93667b062.png",
-      "name": "26265 -4歲APP圖像識字遊戲（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "parent_reading",
-      "name": "愛共讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26266",
-    "theme": "-5歲APP辨音正音1007",
-    "fullname": "26266 -5歲APP辨音正音（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/535a685a-de1d-4327-b402-866839c21f17.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/c735aecf-e107-4620-822c-0db5356bd6e1.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/c735aecf-e107-4620-822c-0db5356bd6e1.png",
-      "name": "26266 -5歲APP辨音正音（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/535a685a-de1d-4327-b402-866839c21f17.png",
-      "name": "26266 -5歲APP辨音正音（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "easylearning_tw",
-      "name": "輕鬆學"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26267",
-    "theme": "-3歲APP玩具衝突表達1007",
-    "fullname": "26267 -3歲APP玩具衝突表達（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/45bf2973-bfee-4505-92fa-7b10356527e4.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a6b2b02d-39bc-472a-80c9-abc33467e3f0.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a6b2b02d-39bc-472a-80c9-abc33467e3f0.png",
-      "name": "26267 -3歲APP玩具衝突表達（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/45bf2973-bfee-4505-92fa-7b10356527e4.png",
-      "name": "26267 -3歲APP玩具衝突表達（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "child_wiki",
-      "name": "育兒小百科"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
     "num": "26268",
     "theme": "-4-5歲APP冷靜表達1007",
     "fullname": "26268 -4-5歲APP冷靜表達（Rose）1007",
@@ -6525,13 +6975,13 @@
       "label": "A",
       "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/5e53eac1-881a-43ee-aae5-08e3b0da17ed.png",
       "name": "26268 -4-5歲APP冷靜表達（Rose）1007-A",
-      "leads": null
+      "leads": 0
      },
      {
       "label": "B",
       "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/f57863c0-0882-4939-bb0b-7128ca258a06.png",
       "name": "26268 -4-5歲APP冷靜表達（Rose）1007-B",
-      "leads": null
+      "leads": 0
      }
     ],
     "pages": [
@@ -6542,93 +6992,13 @@
     ],
     "pushed": true,
     "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 5.2,
     "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26269",
-    "theme": "-JOJO 5週年｜我們免費了1007",
-    "fullname": "26269 -JOJO 5週年｜我們免費了（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/8465bb13-ddd2-4a42-8f4a-3143d4e7968b.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/dfdfccb8-c9ce-4e1f-99cb-f7e70acacc85.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/dfdfccb8-c9ce-4e1f-99cb-f7e70acacc85.png",
-      "name": "26269 -JOJO 5週年｜我們免費了（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/8465bb13-ddd2-4a42-8f4a-3143d4e7968b.png",
-      "name": "26269 -JOJO 5週年｜我們免費了（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "jojoreading_tw",
-      "name": "JOJO 閱讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
-    "leadBreakdown": false
-   },
-   {
-    "num": "26270",
-    "theme": "-JOJO 5週年｜3至5歲情緒表達1007",
-    "fullname": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007",
-    "uploaded": "2026-10-13",
-    "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/f1a72411-7f52-4cb8-a8de-1ee5e3166e1e.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/96947fb1-070c-44a6-b3b5-a65d4819cc92.png"
-    ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/96947fb1-070c-44a6-b3b5-a65d4819cc92.png",
-      "name": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/f1a72411-7f52-4cb8-a8de-1ee5e3166e1e.png",
-      "name": "26270 -JOJO 5週年｜3至5歲情緒表達（Rose）1007-B",
-      "leads": null
-     }
-    ],
-    "pages": [
-     {
-      "code": "jojoreading_tw",
-      "name": "JOJO 閱讀"
-     }
-    ],
-    "pushed": true,
-    "bl": "Reading",
-    "status": null,
-    "hasPerf": false,
-    "m10": null,
-    "s10": null,
-    "cpl": null,
-    "ctr7": null,
-    "hasVariantPerf": false,
+    "ctr7": 1.8,
+    "hasVariantPerf": true,
     "leadBreakdown": false
    },
    {
@@ -6645,13 +7015,13 @@
       "label": "A",
       "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/b6d7fed5-2827-4820-8de7-4e7c983e7738.png",
       "name": "26271 -JOJO 5週年｜6至8歲識字理解（Rose）1007-A",
-      "leads": null
+      "leads": 0
      },
      {
       "label": "B",
       "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/6877c8a1-0c95-4a31-8bac-8158f7c4c721.png",
       "name": "26271 -JOJO 5週年｜6至8歲識字理解（Rose）1007-B",
-      "leads": null
+      "leads": 0
      }
     ],
     "pages": [
@@ -6661,6 +7031,33 @@
      }
     ],
     "pushed": true,
+    "bl": "Reading",
+    "status": "ACTIVE",
+    "hasPerf": true,
+    "m10": 0,
+    "s10": 5.9,
+    "cpl": null,
+    "ctr7": 1.6,
+    "hasVariantPerf": true,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26273",
+    "theme": "-4-5歲幼兒園心情說不完整1013-B-鼠尾草綠",
+    "fullname": "26273 -4-5歲幼兒園心情說不完整（Rose）1013-B-鼠尾草綠",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/c62f7d87-ec13-4196-8176-178072d49b3f.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/cc29fc3d-6400-40a9-a212-7353d98bd185.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
     "bl": "Reading",
     "status": null,
     "hasPerf": false,
@@ -6672,35 +7069,184 @@
     "leadBreakdown": false
    },
    {
-    "num": "26272",
-    "theme": "-JOJO 5週年｜3歲情緒表達1007",
-    "fullname": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007",
+    "num": "26274",
+    "theme": "-6歲APP注音拼讀1013-B-淡藍黃",
+    "fullname": "26274 -6歲APP注音拼讀（Rose）1013-B-淡藍黃",
     "uploaded": "2026-10-13",
     "imgs": [
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/29dfa44d-89e7-49f1-b04e-3c5259ab02d1.png",
-     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a67df1b5-cf84-4028-aeac-2b5722d752ff.png"
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/999aed24-62d4-4326-b530-fa4a32ecadf8.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/48206fbf-b6a1-4755-8ac0-c2647d6e7af6.png"
     ],
-    "variants": [
-     {
-      "label": "A",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a67df1b5-cf84-4028-aeac-2b5722d752ff.png",
-      "name": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007-A",
-      "leads": null
-     },
-     {
-      "label": "B",
-      "img": "https://cdn.jojo-math.com/marketing/ad/2026/10/13/29dfa44d-89e7-49f1-b04e-3c5259ab02d1.png",
-      "name": "26272 -JOJO 5週年｜3歲情緒表達（Rose）1007-B",
-      "leads": null
-     }
-    ],
+    "variants": [],
     "pages": [
      {
-      "code": "jojoreading_tw",
-      "name": "JOJO 閱讀"
+      "code": "parent_reading",
+      "name": "愛共讀"
      }
     ],
-    "pushed": true,
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26275",
+    "theme": "-6歲APP注音正音1013-B-青綠珊瑚",
+    "fullname": "26275 -6歲APP注音正音（Rose）1013-B-青綠珊瑚",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/0dbf7693-e180-42f1-b496-ba1d93fddc07.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/b4691c8f-0779-4d05-9553-3933a41dfd84.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26276",
+    "theme": "-3-5歲螢幕收尾1013-B-淡藍黃",
+    "fullname": "26276 -3-5歲螢幕收尾（Rose）1013-B-淡藍黃",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/a015ad14-15fe-4e43-87c7-77d3e54382bc.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/fd703ef0-b8aa-46c7-8119-e3ac20c169bf.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26277",
+    "theme": "-4-5歲被拒絕情緒表達1013-B-薄荷黃",
+    "fullname": "26277 -4-5歲被拒絕情緒表達（Rose）1013-B-薄荷黃",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7c20d7bc-393d-446e-9b02-fb90b31302c4.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/ff408494-48f4-4b37-bc01-78af9486852b.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26278",
+    "theme": "-4-6歲故事原因理解1013-B-薄荷珊瑚",
+    "fullname": "26278 -4-6歲故事原因理解（Rose）1013-B-薄荷珊瑚",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/b01629e8-f13d-4bf0-8e41-b3acf81afc55.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7a1caac5-fcef-460a-b321-b95dd8d9e370.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "parent_reading",
+      "name": "愛共讀"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26279",
+    "theme": "-6歲APP短句閱讀1013-B-天藍綠",
+    "fullname": "26279 -6歲APP短句閱讀（Rose）1013-B-天藍綠",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/65c8f238-e92b-41cc-861c-1beeb51290c6.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/b6a96fa8-c5f8-4d7b-ab9d-dea5e880e404.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "easylearning_tw",
+      "name": "輕鬆學"
+     }
+    ],
+    "pushed": false,
+    "bl": "Reading",
+    "status": null,
+    "hasPerf": false,
+    "m10": null,
+    "s10": null,
+    "cpl": null,
+    "ctr7": null,
+    "hasVariantPerf": false,
+    "leadBreakdown": false
+   },
+   {
+    "num": "26280",
+    "theme": "-4-5歲螢幕收尾對話1013-B-粉藍薰衣草",
+    "fullname": "26280 -4-5歲螢幕收尾對話（Rose）1013-B-粉藍薰衣草",
+    "uploaded": "2026-10-13",
+    "imgs": [
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/7df61ecd-3e1a-4389-9d3e-68f43b15ea2e.png",
+     "https://cdn.jojo-math.com/marketing/ad/2026/10/13/8a1b38f8-62d0-4f7c-8bee-775c162f5500.png"
+    ],
+    "variants": [],
+    "pages": [
+     {
+      "code": "child_wiki",
+      "name": "育兒小百科"
+     }
+    ],
+    "pushed": false,
     "bl": "Reading",
     "status": null,
     "hasPerf": false,
