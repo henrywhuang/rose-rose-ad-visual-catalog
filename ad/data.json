@@ -1,5 +1,5 @@
 {
- "genStamp": "2026-10-15 12:11",
+ "genStamp": "2026-10-15 13:22",
  "checkpointWd": "四",
  "today": "2026-10-15",
  "fetchStatus": "ok",
@@ -6427,8 +6427,8 @@
     "paused": false,
     "hasPerf": true,
     "m10": 4,
-    "s10": 13.8,
-    "cpl": 3.5,
+    "s10": 14.7,
+    "cpl": 3.7,
     "ctr7": 3.2,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -6468,8 +6468,8 @@
     "paused": false,
     "hasPerf": true,
     "m10": 3,
-    "s10": 13.3,
-    "cpl": 4.4,
+    "s10": 13.4,
+    "cpl": 4.5,
     "ctr7": 2.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
@@ -6509,8 +6509,8 @@
     "paused": true,
     "hasPerf": true,
     "m10": 2,
-    "s10": 9.7,
-    "cpl": 4.9,
+    "s10": 10,
+    "cpl": 5,
     "ctr7": 3.6,
     "hasVariantPerf": true,
     "leadBreakdown": true
