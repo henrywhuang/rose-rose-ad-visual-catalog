@@ -1,7 +1,7 @@
 {
- "genStamp": "2026-10-27 13:46",
- "checkpointWd": "二",
- "today": "2026-10-27",
+ "genStamp": "2026-10-28 13:54",
+ "checkpointWd": "三",
+ "today": "2026-10-28",
  "fetchStatus": "ok",
  "expDate": "2026-11-13",
  "nAds": 13,
@@ -18,8 +18,8 @@
   ]
  },
  "quarterClosed": false,
- "dayOfQuarter": 27,
- "dayOfMonth": 27,
+ "dayOfQuarter": 28,
+ "dayOfMonth": 28,
  "dim": 31,
  "subjects": [
   {
@@ -36,13 +36,13 @@
     "actual": 448,
     "actualBk": 420,
     "prog": 13.6,
-    "timeProg": 29.3,
-    "proj": 1527,
-    "attain": 46.3,
-    "gap": 1773,
+    "timeProg": 30.4,
+    "proj": 1472,
+    "attain": 44.6,
+    "gap": 1828,
     "remain": 2852,
-    "diff": -15.7,
-    "scheduleDelta": -520,
+    "diff": -16.8,
+    "scheduleDelta": -556,
     "status": "behind"
    },
    "cur": {
@@ -51,15 +51,15 @@
     "actual": 448,
     "actualBk": 420,
     "prog": 40.7,
-    "timeProg": 87.1,
-    "proj": 514,
-    "attain": 46.7,
-    "gap": 586,
+    "timeProg": 90.3,
+    "proj": 496,
+    "attain": 45.1,
+    "gap": 604,
     "remain": 652,
-    "needPerDay": 163,
-    "dayRateNow": 16.6,
-    "recent7Rate": 16.1,
-    "diff": -46.4,
+    "needPerDay": 217.3,
+    "dayRateNow": 16,
+    "recent7Rate": 12.6,
+    "diff": -49.6,
     "status": "behind"
    },
    "months": [
@@ -70,16 +70,16 @@
      "actualBk": 420,
      "isCur": true,
      "isPast": false,
-     "proj": 514,
-     "gap": 586,
+     "proj": 496,
+     "gap": 604,
      "remain": 652,
      "prog": 40.7,
-     "timeProg": 87.1,
-     "diff": -46.4,
-     "scheduleDelta": -510,
+     "timeProg": 90.3,
+     "diff": -49.6,
+     "scheduleDelta": -546,
      "targetDelta": -652,
-     "projectedDelta": -586,
-     "attain": 46.8,
+     "projectedDelta": -604,
+     "attain": 45.1,
      "status": "behind"
     },
     {
@@ -174,7 +174,7 @@
      "start": "2026-10-26",
      "end": "2026-11-01",
      "effFrom": "2026-10-26",
-     "effTo": "2026-10-27",
+     "effTo": "2026-10-28",
      "isCur": true,
      "line": 275,
      "actual": 2,
@@ -197,7 +197,7 @@
    "b": 134,
    "spend": 836,
    "cpl": 6.3,
-   "m7": 13,
+   "m7": 10,
    "budget": 11,
    "bm": {
     "excellent": 5,
@@ -227,7 +227,7 @@
    "b": 128,
    "spend": 596,
    "cpl": 4.6,
-   "m7": 54,
+   "m7": 45,
    "budget": 48,
    "bm": {
     "excellent": 5,
@@ -287,7 +287,7 @@
    "b": 35,
    "spend": 315,
    "cpl": 7.2,
-   "m7": 16,
+   "m7": 10,
    "budget": 38,
    "bm": {
     "excellent": 5,
@@ -317,7 +317,7 @@
    "b": 22,
    "spend": 77,
    "cpl": 3.8,
-   "m7": 16,
+   "m7": 13,
    "budget": 16,
    "bm": {
     "excellent": 5,
@@ -527,7 +527,7 @@
    "b": 4,
    "spend": 29,
    "cpl": 4.8,
-   "m7": 6,
+   "m7": 4,
    "budget": 8,
    "bm": {
     "excellent": 5,
@@ -535,10 +535,10 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $7.16 低於合格線 $8.00，轉換 6。建議加預算 30%。",
-   "priority": "P2",
-   "suggestedBudget": 10,
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $28.64/$36.00，還有 $7.36 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 8,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -557,7 +557,7 @@
    "b": 3,
    "spend": 24,
    "cpl": 6,
-   "m7": 4,
+   "m7": 3,
    "budget": 6,
    "bm": {
     "excellent": 5,
@@ -565,10 +565,10 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $7.96 低於合格線 $8.00，轉換 4。建議加預算 30%。",
-   "priority": "P2",
-   "suggestedBudget": 8,
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $23.88/$36.00，還有 $12.12 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 6,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -797,7 +797,7 @@
    "b": 1,
    "spend": 9,
    "cpl": 8.9,
-   "m7": 1,
+   "m7": 0,
    "budget": 5,
    "bm": {
     "excellent": 5,
@@ -6340,8 +6340,8 @@
  "advice": {
   "safe": false,
   "quarterClosed": false,
-  "needPerDay": 163,
-  "addlPerDay": 146.9,
+  "needPerDay": 217.3,
+  "addlPerDay": 204.7,
   "winnerDaily": 0,
   "adsNeeded": null,
   "topScale": [],
@@ -6357,7 +6357,7 @@
     "b": 134,
     "spend": 836,
     "cpl": 6.3,
-    "m7": 13,
+    "m7": 10,
     "budget": 11,
     "bm": {
      "excellent": 5,
@@ -6387,7 +6387,7 @@
     "b": 128,
     "spend": 596,
     "cpl": 4.6,
-    "m7": 54,
+    "m7": 45,
     "budget": 48,
     "bm": {
      "excellent": 5,
@@ -6447,7 +6447,7 @@
     "b": 35,
     "spend": 315,
     "cpl": 7.2,
-    "m7": 16,
+    "m7": 10,
     "budget": 38,
     "bm": {
      "excellent": 5,
@@ -6477,7 +6477,7 @@
     "b": 22,
     "spend": 77,
     "cpl": 3.8,
-    "m7": 16,
+    "m7": 13,
     "budget": 16,
     "bm": {
      "excellent": 5,
@@ -6509,7 +6509,7 @@
     "b": 22,
     "spend": 77,
     "cpl": 3.8,
-    "m7": 16,
+    "m7": 13,
     "budget": 16,
     "bm": {
      "excellent": 5,
@@ -6539,7 +6539,7 @@
     "b": 128,
     "spend": 596,
     "cpl": 4.6,
-    "m7": 54,
+    "m7": 45,
     "budget": 48,
     "bm": {
      "excellent": 5,
@@ -6569,7 +6569,7 @@
     "b": 134,
     "spend": 836,
     "cpl": 6.3,
-    "m7": 13,
+    "m7": 10,
     "budget": 11,
     "bm": {
      "excellent": 5,
@@ -6622,7 +6622,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-10-18",
+  "cutoff": "2026-10-19",
   "days": 10,
   "items": [
    {
@@ -6711,7 +6711,7 @@
     "m10": 1,
     "s10": 9,
     "cpl": 9,
-    "ctr7": 5.1,
+    "ctr7": 4.4,
     "hasVariantPerf": false,
     "leadBreakdown": false
    },
@@ -6745,7 +6745,7 @@
     "m10": 1,
     "s10": 11,
     "cpl": 11,
-    "ctr7": 1.8,
+    "ctr7": 2.1,
     "hasVariantPerf": false,
     "leadBreakdown": false
    },
@@ -6809,7 +6809,7 @@
     "m10": 0,
     "s10": 12,
     "cpl": null,
-    "ctr7": 2.2,
+    "ctr7": 2.4,
     "hasVariantPerf": false,
     "leadBreakdown": false
    },
@@ -6839,7 +6839,7 @@
     "m10": 0,
     "s10": 11,
     "cpl": null,
-    "ctr7": 2.2,
+    "ctr7": 2,
     "hasVariantPerf": false,
     "leadBreakdown": false
    },
@@ -6873,7 +6873,7 @@
     "m10": 0,
     "s10": 12,
     "cpl": null,
-    "ctr7": 1.7,
+    "ctr7": 1.9,
     "hasVariantPerf": false,
     "leadBreakdown": false
    }
