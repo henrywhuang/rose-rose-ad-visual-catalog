@@ -1,10 +1,10 @@
 {
- "genStamp": "2026-10-29 14:35",
- "checkpointWd": "四",
- "today": "2026-10-29",
+ "genStamp": "2026-10-30 14:34",
+ "checkpointWd": "五",
+ "today": "2026-10-30",
  "fetchStatus": "ok",
  "expDate": "2026-11-13",
- "nAds": 11,
+ "nAds": 6,
  "curYM": "2026-10",
  "quarter": {
   "label": "2026-Q4",
@@ -18,8 +18,8 @@
   ]
  },
  "quarterClosed": false,
- "dayOfQuarter": 29,
- "dayOfMonth": 29,
+ "dayOfQuarter": 30,
+ "dayOfMonth": 30,
  "dim": 31,
  "subjects": [
   {
@@ -36,13 +36,13 @@
     "actual": 449,
     "actualBk": 420,
     "prog": 13.6,
-    "timeProg": 31.5,
-    "proj": 1424,
-    "attain": 43.2,
-    "gap": 1876,
+    "timeProg": 32.6,
+    "proj": 1377,
+    "attain": 41.7,
+    "gap": 1923,
     "remain": 2851,
-    "diff": -17.9,
-    "scheduleDelta": -591,
+    "diff": -19,
+    "scheduleDelta": -627,
     "status": "behind"
    },
    "cur": {
@@ -51,15 +51,15 @@
     "actual": 449,
     "actualBk": 420,
     "prog": 40.8,
-    "timeProg": 93.5,
-    "proj": 480,
-    "attain": 43.6,
-    "gap": 620,
+    "timeProg": 96.8,
+    "proj": 464,
+    "attain": 42.2,
+    "gap": 636,
     "remain": 651,
-    "needPerDay": 325.5,
-    "dayRateNow": 15.5,
-    "recent7Rate": 9.7,
-    "diff": -52.7,
+    "needPerDay": 651,
+    "dayRateNow": 15,
+    "recent7Rate": 5.3,
+    "diff": -56,
     "status": "behind"
    },
    "months": [
@@ -70,16 +70,16 @@
      "actualBk": 420,
      "isCur": true,
      "isPast": false,
-     "proj": 480,
-     "gap": 620,
+     "proj": 464,
+     "gap": 636,
      "remain": 651,
      "prog": 40.8,
-     "timeProg": 93.5,
-     "diff": -52.7,
-     "scheduleDelta": -580,
+     "timeProg": 96.8,
+     "diff": -56,
+     "scheduleDelta": -616,
      "targetDelta": -651,
-     "projectedDelta": -620,
-     "attain": 43.6,
+     "projectedDelta": -636,
+     "attain": 42.2,
      "status": "behind"
     },
     {
@@ -174,7 +174,7 @@
      "start": "2026-10-26",
      "end": "2026-11-01",
      "effFrom": "2026-10-26",
-     "effTo": "2026-10-29",
+     "effTo": "2026-10-30",
      "isCur": true,
      "line": 275,
      "actual": 3,
@@ -197,7 +197,7 @@
    "b": 134,
    "spend": 836,
    "cpl": 6.3,
-   "m7": 8,
+   "m7": 5,
    "budget": 11,
    "bm": {
     "excellent": 5,
@@ -227,7 +227,7 @@
    "b": 128,
    "spend": 596,
    "cpl": 4.6,
-   "m7": 37,
+   "m7": 23,
    "budget": 48,
    "bm": {
     "excellent": 5,
@@ -287,7 +287,7 @@
    "b": 35,
    "spend": 315,
    "cpl": 7.2,
-   "m7": 6,
+   "m7": 5,
    "budget": 38,
    "bm": {
     "excellent": 5,
@@ -317,7 +317,7 @@
    "b": 22,
    "spend": 77,
    "cpl": 3.8,
-   "m7": 11,
+   "m7": 3,
    "budget": 16,
    "bm": {
     "excellent": 5,
@@ -326,7 +326,7 @@
     "scale_excellent": 5
    },
    "adviceAction": "SCALE",
-   "adviceText": "爆款，建議加預算 20-30%",
+   "adviceText": "新品畢業優績：CPL $4.71 低於整體優秀線 $5.00，建議加預算。",
    "priority": "P2",
    "suggestedBudget": 20,
    "trendWorse": false,
@@ -527,7 +527,7 @@
    "b": 4,
    "spend": 29,
    "cpl": 4.8,
-   "m7": 4,
+   "m7": 1,
    "budget": 8,
    "bm": {
     "excellent": 5,
@@ -535,10 +535,10 @@
     "danger": 12,
     "scale_excellent": 5
    },
-   "adviceAction": "SCALE",
-   "adviceText": "新品表現優異：CPL $5.57 低於合格線 $8.00，轉換 6。建議加預算 30%。",
-   "priority": "P2",
-   "suggestedBudget": 10,
+   "adviceAction": "cold_start",
+   "adviceText": "新品測試中：已花費 $28.64/$36.00，還有 $7.36 觀察空間",
+   "priority": "--",
+   "suggestedBudget": 8,
    "trendWorse": false,
    "trendBetter": false,
    "declineType": null,
@@ -557,7 +557,7 @@
    "b": 3,
    "spend": 24,
    "cpl": 6,
-   "m7": 2,
+   "m7": 0,
    "budget": 6,
    "bm": {
     "excellent": 5,
@@ -6340,8 +6340,8 @@
  "advice": {
   "safe": false,
   "quarterClosed": false,
-  "needPerDay": 325.5,
-  "addlPerDay": 315.8,
+  "needPerDay": 651,
+  "addlPerDay": 645.7,
   "winnerDaily": 0,
   "adsNeeded": null,
   "topScale": [],
@@ -6357,7 +6357,7 @@
     "b": 134,
     "spend": 836,
     "cpl": 6.3,
-    "m7": 8,
+    "m7": 5,
     "budget": 11,
     "bm": {
      "excellent": 5,
@@ -6387,7 +6387,7 @@
     "b": 128,
     "spend": 596,
     "cpl": 4.6,
-    "m7": 37,
+    "m7": 23,
     "budget": 48,
     "bm": {
      "excellent": 5,
@@ -6447,7 +6447,7 @@
     "b": 35,
     "spend": 315,
     "cpl": 7.2,
-    "m7": 6,
+    "m7": 5,
     "budget": 38,
     "bm": {
      "excellent": 5,
@@ -6477,7 +6477,7 @@
     "b": 22,
     "spend": 77,
     "cpl": 3.8,
-    "m7": 11,
+    "m7": 3,
     "budget": 16,
     "bm": {
      "excellent": 5,
@@ -6486,7 +6486,7 @@
      "scale_excellent": 5
     },
     "adviceAction": "SCALE",
-    "adviceText": "爆款，建議加預算 20-30%",
+    "adviceText": "新品畢業優績：CPL $4.71 低於整體優秀線 $5.00，建議加預算。",
     "priority": "P2",
     "suggestedBudget": 20,
     "trendWorse": false,
@@ -6509,7 +6509,7 @@
     "b": 22,
     "spend": 77,
     "cpl": 3.8,
-    "m7": 11,
+    "m7": 3,
     "budget": 16,
     "bm": {
      "excellent": 5,
@@ -6518,7 +6518,7 @@
      "scale_excellent": 5
     },
     "adviceAction": "SCALE",
-    "adviceText": "爆款，建議加預算 20-30%",
+    "adviceText": "新品畢業優績：CPL $4.71 低於整體優秀線 $5.00，建議加預算。",
     "priority": "P2",
     "suggestedBudget": 20,
     "trendWorse": false,
@@ -6539,7 +6539,7 @@
     "b": 128,
     "spend": 596,
     "cpl": 4.6,
-    "m7": 37,
+    "m7": 23,
     "budget": 48,
     "bm": {
      "excellent": 5,
@@ -6569,7 +6569,7 @@
     "b": 134,
     "spend": 836,
     "cpl": 6.3,
-    "m7": 8,
+    "m7": 5,
     "budget": 11,
     "bm": {
      "excellent": 5,
@@ -6622,7 +6622,7 @@
  },
  "primary": "m",
  "recentAds": {
-  "cutoff": "2026-10-20",
+  "cutoff": "2026-10-21",
   "days": 10,
   "items": [
    {
@@ -6651,7 +6651,7 @@
     "m10": 6,
     "s10": 29,
     "cpl": 4.8,
-    "ctr7": 2.6,
+    "ctr7": 3,
     "hasVariantPerf": false,
     "leadBreakdown": false
    },
@@ -6681,7 +6681,7 @@
     "m10": 4,
     "s10": 24,
     "cpl": 6,
-    "ctr7": 3.2,
+    "ctr7": 2.7,
     "hasVariantPerf": false,
     "leadBreakdown": false
    },
